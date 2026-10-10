@@ -1,0 +1,7 @@
+@charset "UTF-8";
+/* CSS Document */
+section#page-title{display:none;}
+.hero.hero-side-nav .hero-content {height:240px; display: flex; flex-direction: column; justify-content: center; padding-bottom:80px;}
+@media (min-width:992px) {
+[dir="rtl"] .hero.hero-side-nav figure.hero-bg-img img {object-position: right;}
+}

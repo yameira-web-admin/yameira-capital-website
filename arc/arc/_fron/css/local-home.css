@@ -1,0 +1,39 @@
+/*
+ * Local deployment adjustments for the preserved YMC homepage snapshot.
+ * Keep layout and component styling in the upstream theme and place only
+ * offline behavior fixes in this file.
+ */
+
+.local-consent-hidden {
+  display: none !important;
+}
+
+.local-nav-hidden {
+  display: none !important;
+}
+
+body.local-consent-accepted > .modal-backdrop {
+  display: none !important;
+  pointer-events: none !important;
+}
+
+#contents > .hero {
+  background: #080b10;
+}
+
+@media (min-width: 992px) {
+  .ibkr-header .navbar.navbar-top {
+    border-bottom: 1px solid #d1d5db !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

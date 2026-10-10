@@ -1,0 +1,22 @@
+# 浏览器测试数据和缓存
+**/.edge-about-check*/
+**/.edge-about-check-*/
+**/.edge-about-check-*/
+
+# 本地临时文件
+**/.wrangler/
+**/node_modules/
+**/__pycache__/
+**/*.log
+
+# 环境配置及凭证
+**/.env
+**/.env.*
+**/*.pem
+**/*.key
+
+# 系统文件
+Thumbs.db
+.DS_Store
+**/.edge-about*/**/.edge-home*/
+**/.edge-*/

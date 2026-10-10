@@ -1,0 +1,324 @@
+.account-diagram {
+    position: relative;
+    margin: 0;
+    width: 100%
+}
+
+.account-ratio-wrapper {
+    width: 100%;
+    max-width: 100%;
+    height: 0;
+    padding-bottom: var(--chart-aspect);
+    position: relative
+}
+
+[dir="ltr"] .account-scale-wrapper {
+    position: absolute;
+    top: 0;
+    inset-inline-start: 0;
+    transform-origin: top left;
+    transform: scale(var(--chart-scale))
+}
+
+[dir="rtl"] .account-scale-wrapper {
+    position: absolute;
+    top: 0;
+    inset-inline-start: 0;
+    transform-origin: top right;
+    transform: scale(var(--chart-scale))
+}
+
+.account-diagram-content {
+    width: 100%;
+    height: 100%;
+    position: relative
+}
+
+.account-list {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 1rem;
+    row-gap: 1rem;
+    position: relative
+}
+
+.account-list.account-list-parent {
+    padding: 0
+}
+
+.account-list li {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    position: relative
+}
+
+.account-list:not(.account-list-parent):not(.account-list-only-child):not(.account-list-sub-accounts):not(.account-list-separate),
+.account-list:not(.account-list-parent) li {
+    padding: 1rem 0 0 0
+}
+
+.account-list.account-list-parent:not(.account-list-only-child) li {
+    padding: 0 0 1rem 0
+}
+
+[dir="ltr"] .account-list:not(.account-list-parent):not(:first-child):not(.account-list-only-child):not(.account-list-sub-accounts):not(.account-list-separate):after,
+[dir="ltr"] .account-list:not(.account-list-parent):not(.account-list-sub-accounts) li:after {
+    content: '';
+    inset-inline-start: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: var(--chart-line-weight, 1px);
+    height: 1rem;
+    background: var(--neutral-30);
+    position: absolute;
+    display: block
+}
+
+[dir="rtl"] .account-list:not(.account-list-parent):not(:first-child):not(.account-list-only-child):not(.account-list-sub-accounts):not(.account-list-separate):after,
+[dir="rtl"] .account-list:not(.account-list-parent):not(.account-list-sub-accounts) li:after {
+    content: '';
+    inset-inline-start: 50%;
+    top: 0;
+    transform: translateX(50%);
+    width: var(--chart-line-weight, 1px);
+    height: 1rem;
+    background: var(--neutral-30);
+    position: absolute;
+    display: block
+}
+
+[dir="ltr"] .account-list.account-list-parent:not(:first-child):not(.account-list-only-child):after,
+[dir="ltr"] .account-list.account-list-parent:not(.account-list-only-child) li:after {
+    content: '';
+    inset-inline-start: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: var(--chart-line-weight, 1px);
+    height: 1rem;
+    background: var(--neutral-30);
+    position: absolute;
+    display: block
+}
+
+[dir="rtl"] .account-list.account-list-parent:not(:first-child):not(.account-list-only-child):after,
+[dir="rtl"] .account-list.account-list-parent:not(.account-list-only-child) li:after {
+    content: '';
+    inset-inline-start: 50%;
+    bottom: 0;
+    transform: translateX(50%);
+    width: var(--chart-line-weight, 1px);
+    height: 1rem;
+    background: var(--neutral-30);
+    position: absolute;
+    display: block
+}
+
+[dir="ltr"] .account-list:not(.account-list-parent) li:not(:only-child):before {
+    content: '';
+    position: absolute;
+    background: var(--neutral-30);
+    width: calc(100% + 3rem);
+    height: var(--chart-line-weight, 1px);
+    display: block;
+    inset-inline-start: 50%;
+    top: 0;
+    transform: translate(-50%, -50%)
+}
+
+[dir="rtl"] .account-list:not(.account-list-parent) li:not(:only-child):before {
+    content: '';
+    position: absolute;
+    background: var(--neutral-30);
+    width: calc(100% + 3rem);
+    height: var(--chart-line-weight, 1px);
+    display: block;
+    inset-inline-start: 50%;
+    top: 0;
+    transform: translate(50%, -50%)
+}
+
+[dir="ltr"] .account-list.account-list-parent li:not(:only-child):before {
+    content: '';
+    position: absolute;
+    background: var(--neutral-30);
+    width: calc(100% + 3rem);
+    height: var(--chart-line-weight, 1px);
+    display: block;
+    inset-inline-start: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%)
+}
+
+[dir="rtl"] .account-list.account-list-parent li:not(:only-child):before {
+    content: '';
+    position: absolute;
+    background: var(--neutral-30);
+    width: calc(100% + 3rem);
+    height: var(--chart-line-weight, 1px);
+    display: block;
+    inset-inline-start: 50%;
+    top: 100%;
+    transform: translate(50%, -50%)
+}
+
+.account-list:not(.account-list-parent) li:first-child:not(:only-child):before {
+    content: '';
+    position: absolute;
+    background: var(--neutral-30);
+    width: 100%;
+    height: var(--chart-line-weight, 1px);
+    display: block;
+    top: 0;
+    inset-inline-start: 50%;
+    inset-inline-end: unset;
+    transform: translateY(-50%)
+}
+
+.account-list.account-list-parent li:first-child:not(:only-child):before {
+    content: '';
+    position: absolute;
+    background: var(--neutral-30);
+    width: 100%;
+    height: var(--chart-line-weight, 1px);
+    display: block;
+    top: 100%;
+    inset-inline-start: 50%;
+    inset-inline-end: unset;
+    transform: translateY(-50%)
+}
+
+.account-list:not(.account-list-parent) li:last-child:not(:only-child):before {
+    content: '';
+    position: absolute;
+    background: var(--neutral-30);
+    width: 100%;
+    height: var(--chart-line-weight, 1px);
+    display: block;
+    top: 0;
+    inset-inline-start: unset;
+    inset-inline-end: 50%;
+    transform: translateY(-50%)
+}
+
+.account-list.account-list-parent li:last-child:not(:only-child):before {
+    content: '';
+    position: absolute;
+    background: var(--neutral-30);
+    width: 100%;
+    height: var(--chart-line-weight, 1px);
+    display: block;
+    top: 100%;
+    inset-inline-start: unset;
+    inset-inline-end: 50%;
+    transform: translateY(-50%)
+}
+
+.account-list.account-list-only-child>li {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.account-item {
+    text-align: center;
+    font-size: .875rem;
+    line-height: 1.1;
+    padding: .75rem 1rem
+}
+
+.account-item:not(.account-item-img) {
+    background: var(--neutral-10);
+    border: var(--chart-line-weight, 1px) solid var(--neutral-30);
+    color: var(--neutral-100)
+}
+
+.account-item-primary:not(.account-item-img) {
+    background: var(--neutral-90);
+    border: var(--chart-line-weight, 1px) solid var(--neutral-90);
+    color: var(--neutral-3)
+}
+
+.account-item.account-item-img svg {
+    display: inline-block
+}
+
+.account-item.account-item-img svg path {
+    fill: inherit
+}
+
+.account-item.account-item-img svg .account-icon {
+    fill: var(--neutral-50);
+    color: var(--neutral-30)
+}
+
+.account-list.account-list-sub-accounts .account-item {
+    position: relative
+}
+
+.marker-s-1,
+.marker-s-2,
+.marker-e-1,
+.marker-e-2 {
+    position: absolute;
+    top: 100%
+}
+
+.marker-s-1 {
+    inset-inline-end: var(--marker-s-1-x);
+    border-inline-end: var(--chart-line-weight, 1px) solid var(--neutral-30);
+    -webkit-border-inline-end: var(--chart-line-weight, 1px) solid var(--neutral-30);
+    -moz-border-inline-end: var(--chart-line-weight, 1px) solid var(--neutral-30);
+    border-bottom: var(--chart-line-weight, 1px) solid var(--neutral-30)
+}
+
+.marker-s-2 {
+    inset-inline-end: var(--marker-s-2-x);
+    border-inline-end: var(--chart-line-weight, 1px) solid var(--neutral-30);
+    -webkit-border-inline-end: var(--chart-line-weight, 1px) solid var(--neutral-30);
+    -moz-border-inline-end: var(--chart-line-weight, 1px) solid var(--neutral-30);
+    border-bottom: var(--chart-line-weight, 1px) solid var(--neutral-30)
+}
+
+.marker-s-1:before,
+.marker-s-2:before {
+    content: '';
+    background: var(--neutral-30);
+    width: var(--chart-line-weight, 1px);
+    height: 1rem;
+    display: block;
+    position: absolute;
+    inset-inline-start: 0;
+    bottom: 0
+}
+
+.marker-e-1 {
+    inset-inline-start: var(--marker-e-1-x);
+    border-inline-start: var(--chart-line-weight, 1px) solid var(--neutral-30);
+    -webkit-border-inline-start: var(--chart-line-weight, 1px) solid var(--neutral-30);
+    -moz-border-inline-start: var(--chart-line-weight, 1px) solid var(--neutral-30);
+    border-bottom: var(--chart-line-weight, 1px) solid var(--neutral-30)
+}
+
+.marker-e-2 {
+    inset-inline-start: var(--marker-e-2-x);
+    border-inline-start: var(--chart-line-weight, 1px) solid var(--neutral-30);
+    -webkit-border-inline-start: var(--chart-line-weight, 1px) solid var(--neutral-30);
+    -moz-border-inline-start: var(--chart-line-weight, 1px) solid var(--neutral-30);
+    border-bottom: var(--chart-line-weight, 1px) solid var(--neutral-30)
+}
+
+.marker-e-1:before,
+.marker-e-2:before {
+    content: '';
+    background: var(--neutral-30);
+    width: var(--chart-line-weight, 1px);
+    height: 1rem;
+    display: block;
+    position: absolute;
+    inset-inline-end: 0;
+    bottom: 0
+}
