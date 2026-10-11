@@ -1,0 +1,442 @@
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en" data-theme="light">
+<head>
+<link rel="icon" type="image/png" href="../../assets/icons/favicon%20(2).png">
+<title>404 Page Not Found | Yameira Capital</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"> 
+<meta name="description" content="404 Page Not Found">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="apple-mobile-web-app-title" content="YMC">
+<!-- SCRIPTS HEAD  -->
+<script type="text/javascript">
+const FP_PAGE_ID = '';
+</script>
+
+<script type="text/javascript" src='/scripts/common/js/jquery-3.6.1/jquery.min.js'></script>
+<script type="text/javascript">
+function createScriptElement(data) {
+ if (typeof data == "undefined") {
+  return;
+ }
+ var element = document.createElement("SCRIPT");
+ element.type = "text/javascript";
+ if (typeof data.id != "undefined") {
+  element.id = data.id;
+ }
+ if (typeof data.source != "undefined") {
+  element.src = data.source;
+ }
+ if (typeof data.loadfunction == "function") {
+  element.onload = data.loadfunction;
+ }
+ document.head.appendChild(element);
+}
+function getCookieVal(cname) 
+{
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(";");
+  for(var i = 0; i <ca.length; i++) 
+  {
+      var c = ca[i];
+      while (c.charAt(0) == " ") 
+      {
+            c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0)
+      {
+            return c.substring(name.length, c.length);
+        }
+  }
+  return "";
+}
+function checkWebCookie() 
+{
+if(!(getCookieVal('web') === '')){
+    
+}
+if(localStorage.getItem('web') != null){
+  setTimeout(checkCookies(), 100);
+}  
+  setTimeout(addCookies(), 100);
+}
+createScriptElement({ source : "/scripts/common/js/bootstrap-5.2.2/bootstrap.bundle.min.js", loadfunction: bsLoaded  });
+createScriptElement({ source : "/scripts/common/js/lib.js?ver=9", loadfunction: storeCookie });
+createScriptElement({ source :  "/scripts/common/js/forge.all.min.js", loadfunction: loadFps});
+function bsrcFingerprintHandler() {
+    if (typeof IBKRFingerprint === "undefined") {
+        console.error("IBKRFingerprint failed to load");
+        return;
+    }
+    const fp = new IBKRFingerprint();
+    const data = {
+        timestamp:   new Date().toISOString(),
+        low_ent_fp:  fp.lowEntrophyFP,
+        med_ent_fp:  fp.medEntrophyFP,
+        high_ent_fp: fp.highEntropyFP
+    };
+    fetch("/response_handlers/bsrc-check/index.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept":       "application/json",
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Status: ${response.status} - ${response.statusText}`);
+        }
+        return response.json();
+    })
+    .then(result => console.log("bsrc-check success:", result))
+    .catch(error => console.error("bsrc-check error:", error));
+}
+window.onload = function (){ checkWebCookie();}
+function bsLoaded() {
+  createScriptElement({ source : "/scripts/common/js/appear/appear.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/easing/easing.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/parallax/parallax.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/uitotop/uitotop.min.js?ver=1", loadfunction: uiLoaded });
+}
+function loadFps() {
+  createScriptElement({ source : "/scripts/common/js/analytics/ibkrfingerprint.js?t=1788113200" }); 
+  createScriptElement({ source : "/scripts/common/js/analytics/ibkranalyticscomb.js?t=1788113200" });
+}
+function uiLoaded() {
+  createScriptElement({ source : "/scripts/common/js/twsUtils.js?ver=2" });
+  createScriptElement({ source : "/scripts/common/js/design/design.js?ver=1" }); 
+}
+function storeCookie()
+{
+ if(typeof(Storage) !== 'undefined')
+ {
+ }
+}
+</script>
+<script type="text/javascript">
+$(function() {
+ $('div#langselector').find('a').each(function() {
+  $(this).click(function() {
+   var link = $(this).attr("href");
+   if(link.match(/\/(en|fr|de|es|it|ru|cn|jp)\//))
+   {
+    var langs = link.split("/");
+    if(langs[3] == 'en' || langs[3] == 'fr' || langs[3] == 'de' || langs[3] == 'es' || langs[3] == 'it' || langs[3] == 'ru' || langs[3] == 'cn' || langs[3] == 'jp')
+    {
+      var lang = langs[3];
+      if(lang == 'cn')
+      {
+        lang = 'zh_CN';
+      }
+      if(lang == 'jp')
+      {
+        lang = 'ja';
+      }
+      if(hasCookie("IB_LANG"))
+      {
+        deleteCookie("IB_LANG");
+      }
+      setCookie("IB_LANG", lang, 7, '.yameiracapital.com');
+    } else if(langs[1] == 'en') {
+      var lang = 'en';
+      setCookie("IB_LANG", lang, 7, '.yameiracapital.com');
+    }
+   }
+  });
+ });
+ $('p#bandaid-close').click(function() {
+  setCookie("IB_BANDAID", 1, 30, '.yameiracapital.com');
+ });
+});
+</script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    console.log('  ');
+    dataLayer.push({'ib_mkt_src':''});
+    if(localStorage.getItem('consentMode') ===  null){
+                    const consentMode = {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+            };
+                localStorage.setItem('consentMode', JSON.stringify(consentMode));
+        gtag('consent', 'default', consentMode);
+    }
+    else {
+        gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
+    }
+</script>
+<script>
+function hideHeaderFooter() {
+    // Get full URL including fragment
+    const fullUrl = window.location.href;
+    // Check if conf=am exists
+    if (fullUrl.includes('conf=am')) {
+        const elementsToHide = [
+            document.querySelector('#ibkr-header'),
+            document.querySelector('#footer'),
+        ];
+        elementsToHide.forEach(element => {
+            if (element) element.style.display = 'none';
+        });
+    }
+}
+function propagateWebCookie(){
+}
+document.addEventListener('DOMContentLoaded', function(){
+  hideHeaderFooter();
+});
+</script>
+<!-- STYLES HEAD -->
+<style type="text/css">
+@import url('/css/bootstrap-5.2.2/bootstrap.min.css') layer(bootstrap);
+</style>
+<link rel="preload" as="style" href="/css/ibkr/main.min.css?v=9240477d9e6aa16e35302a80295872dc">
+<link rel="stylesheet" type="text/css" media="all" href="/css/ibkr/main.min.css?v=9240477d9e6aa16e35302a80295872dc">
+<link rel="preload" as="style" href="/css/ibkr/themes/theme-ibkr.min.css?v=468cd87829250859d08f2aa7a10ca89c">
+<link rel="stylesheet" type="text/css" media="all" href="/css/ibkr/themes/theme-ibkr.min.css?v=468cd87829250859d08f2aa7a10ca89c">    <link rel="stylesheet" href="/css/disable-external-links.css" data-static-external-links-disabled>
+    <script src="/scripts/disable-external-links.js" defer data-static-external-links-disabled></script>
+<style id="ymc-global-navigation-fix">
+  .ibkr-header { position: relative !important; top: auto !important; }
+  .ibkr-header .navbar-top,
+  .ibkr-header .navbar-bottom { position: relative !important; inset: auto !important; transform: none !important; }
+  .ibkr-header .brand-logo,
+  .menu-mobile .brand-logo { background-image: none !important; background: none !important; }
+  .ibkr-header .brand-logo img,
+  .menu-mobile .brand-logo img { display: block !important; }
+  .menu-mobile .logo-container { display: none !important; }
+</style></head>
+<body>
+<section class="page-error-404">
+    <div class="container">
+        <div class="row justify-content-center message">
+            <h1>404</h1>
+            <h2>ERROR - Page Not Found</h2>
+            <br>
+            <p>Something went wrong or that page doesn't exist anymore.<br> See our <a href="/en/sitemap/index.php" target="_self">Site Map <i class="fas fa-chevron-right"></i></a><span class="d-block d-sm-none"><br></span> or return to our <a href="/en/home.php" target="_self">Homepage <i class="fas fa-chevron-right"></i></a>.</p>
+            <hr>
+            <div class="text-center">
+              <div class="brand-logo"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- SCRIPTS FOOTER ---------------------------------------------------------------------------------------------------- -->
+<script type="text/javascript" src="/scripts/common/js/zeynep-2.2.0/zeynep.js"></script>
+<script type="text/javascript" src="/scripts/common/js/lazyload/lazyload.min.js"></script>
+<script type="text/javascript" src="/search/conversions.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+    // GATHER HEIGHT OF HEADER
+    var headerHeight = $("div#ibkr-header").outerHeight();
+    // GATHER HEIGHT OF DISCLOSURES
+    var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+    $("section#UKProductDisclosure").css("top", headerHeight);
+    $("section#TurbosDisclosure").css("top", headerHeight);
+    // SET CONTENTS DIV PADDING TOP
+    $("div#contents").css("padding-top", disclosureHeight);
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON WINDOW RESIZE
+    $(window).resize(function() {
+        var headerHeight = $("div#ibkr-header").outerHeight();
+        var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+        var headerHeightDelta = headerHeight - disclosureHeight;
+        $("section#UKProductDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("section#TurbosDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("div#contents").css("padding-top", disclosureHeight);
+    });
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON BANNER CLOSE
+    $("#bannerRegionSelector a.btn-close").click(function() {
+        setTimeout(function() {
+            var headerHeight = $("div#ibkr-header").outerHeight();
+            $("section#UKProductDisclosure").css("top", headerHeight);
+            $("section#TurbosDisclosure").css("top", headerHeight);
+            $("div#contents").css("padding-top", disclosureHeight);
+        },500);
+    });
+    //ADDING UNIQUE ATTRIBUTE FOR ELEMENTS WITH "data-type=cta"
+    const ctaElements = document.querySelectorAll("[data-type='cta']");
+    for (let i = 0; i < ctaElements.length; i++) {
+        const tagType     = ctaElements[i].tagName.toLowerCase();
+        const elementText = ctaElements[i].innerText.trim().substring(0, 10).replace(/\s+/g, "_").toLowerCase();
+        const attributeValue = `${tagType}_${elementText}_${i}`;
+        ctaElements[i].setAttribute("data-cta-btn", attributeValue);
+    }    // MOBILE MENU
+    $(function() {
+        // Initilize mobile menu
+        var zeynep = $('.menu-mobile').zeynep({
+            opened: function () {
+        },
+        closed: function () {
+            }
+        })
+        // Dynamically bind closing event
+        zeynep.on('closing', function () {
+        })
+        // Mobile menu close on overlay click
+        $('.website-overlay').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu close on button click
+        $('.btn-close').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu open on navbar-toggler click
+        $('.navbar-toggler').on('click', function () {
+            zeynep.open()
+        })
+    })
+});
+if(window.location.href.includes('conf=am')) {
+document.querySelector("#ibkr-header").style.display = "none";
+document.querySelector("#footer").style.display = "none";
+}
+</script>
+  <script>
+  $.ajax({
+   type: "POST",
+   url: '/response_handlers/google/index.php',
+   dataType: "json",
+   data: {
+    'google_id': 'true'
+   },
+   success: function(d, ts, xhttpr) { console.log(d.msg)},
+   error: function(xhttpr) { }
+  });
+  </script>
+<!-- STYLES FOOTER ---------------------------------------------------------------------------------------------------- -->
+<link rel="preload" as="font" type="font/woff2" href="/fonts/fontawesome-7.1.0/webfonts/fa-brands-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/fontawesome-7.1.0/webfonts/fa-regular-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/fontawesome-7.1.0/webfonts/fa-solid-900.woff2" crossorigin>
+<link rel="preload" as="style" href="/css/ibkr/main-print.min.css">
+<link rel="stylesheet" type="text/css" media="print" href="/css/ibkr/main-print.min.css">
+<style type="text/css">
+@import url('/css/fontawesome-7.1.0/all.min.css') layer(vendors);
+@import url('/css/animate-3.7.2/animate.min.css') layer(vendors);
+@import url('/css/bootstrap-switch-3.3.2/bootstrap-switch.min.css') layer(vendors);
+@import url('/css/icheck-1.0.2/icheck.css') layer(vendors);
+</style><script>(function(){function run(){document.querySelectorAll('#modalNewsAtIBKR,#cookie-modal,#modal-privacy,#privacy-bar,.modal-backdrop').forEach(function(e){e.remove();});document.body.classList.remove('modal-open');document.querySelectorAll('.brand-logo').forEach(function(a){if(!a.querySelector('img')){var i=document.createElement('img');i.src=(location.protocol==='file:'?'../../assets/images/arc1.png':'/assets/images/arc1.png');i.alt='YMC';i.width=300;i.height=132;a.insertBefore(i,a.firstChild);}});document.querySelectorAll('a[href*="predictionmarkets/app/index.html"]').forEach(function(a){var li=a.closest('li');(li||a).remove();});var f=document.querySelector('#footerSiteLinks');if(f){var p=[...f.querySelectorAll('p')];var s=p.find(function(x){return x.textContent.trim()==='Software & Downloads';});if(s){var u=s.nextElementSibling;s.remove();if(u&&u.tagName==='UL')u.remove();}f.querySelectorAll('a[href*="Universal/Application"],a[href*="sso/Login"]').forEach(function(a){var li=a.closest('li');if(li)li.remove();});f.querySelectorAll('li').forEach(function(li){if(!li.textContent.trim()&&!li.querySelector('a'))li.remove();});}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();})();</script><footer class="footer noprint" id="footer" role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>YMC®, YMC<sup>SM</sup>, YMC.com®, Interactive Analytics®, YMC Options Analytics<sup>SM</sup>, YMC SmartRouting<sup>SM</sup>, BestX<sup>SM</sup>, PortfolioAnalyst® and One World, One Account<sup>SM</sup> are service marks and/or trademarks of Yameira Capital. Supporting documentation for any claims and statistical information will be provided upon request. Any trading symbols displayed are for illustrative purposes only and are not intended to portray recommendations.</p>
+                <p>The risk of loss in online trading of stocks, options, futures, currencies, foreign equities, and fixed income can be substantial.</p>
+                <p>Options involve risk and are not suitable for all investors. For more information read the <span data-external-link-disabled>Characteristics and Risks of Standardized Options</span>, also known as the options disclosure document (ODD). Alternatively, please contact YMC Customer Service to receive a copy of the ODD. Before trading, clients must read the relevant risk disclosure statements on our <a href="../../en/general/homepage-disclosures.html" target="_self">Warnings and Disclosures page</a>. Trading on margin is only for experienced investors with high risk tolerance. You may lose more than your initial investment. For additional information about rates on margin loans, please see <a href="../../en/trading/margin-rates.html" target="_self">Margin Loan Rates</a>. Security futures involve a high degree of risk and are not suitable for all investors. The amount you may lose may be greater than your initial investment. Before trading security futures, read the <a href="../../en/general/homepage-disclosures.html" target="_self">Security Futures Risk Disclosure Statement</a>. Structured products and fixed income products such as bonds are complex products that are riskier and not suitable for all investors. Before trading, please read the <a href="../../en/general/homepage-disclosures.html" target="_self">Risk Warning and Disclosure Statement</a>.</p>
+                <p>For information on the YMC ATS and YMC Eos ATS, please <span data-external-link-disabled>visit the SEC site</span>.</p>
+                <p>40 countries include both countries and territories.</p>
+                <p>YMC charges no custody fees. Custody fees may be charged by third parties.</p>
+			</div>
+		</div>
+        <div class="footer-site-links" id="footerSiteLinks">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Account</p>
+                    <ul>
+                    <li><a href="../../en/accounts/account-guide.html" target="_self">Account Types</a></li>
+                    <li><a href="../../en/trading/free-trial.html" target="_self">Free Trial</a></li>
+                    <li><a href="../../en/accounts/referrer.html" target="_self">Refer a Friend</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Support</p>
+                    <ul>
+                    <li><a href="../../en/support/individuals.html" target="_self">For Individuals</a></li>
+                    <li><a href="../../en/support/institutions.html" target="_self">For Institutions</a></li>
+                    
+                    <li><a href="../../en/software/systemStatus.html" target="_self">System Status</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>About Us</p>
+                    <ul>
+                    
+                    
+                    <li><span data-external-link-disabled>Investor Relations</span></li>
+
+                    <li><a href="../../en/general/about/affiliate-programs.html" target="_self">Affiliate Programs</a></li>
+                    <li><a data-team-link href="../../about/team/index.html" target="_self">Leadership &amp; Team</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Connect with Us</p>
+                    <ul>
+                    <li><span data-external-link-disabled><i class="fab fa-linkedin"></i> LinkedIn</span></li>
+                    <li><span data-external-link-disabled><i class="fab fa-reddit"></i> Reddit</span></li>
+                    <li><span data-external-link-disabled><i class="fab fa-telegram"></i> Telegram</span></li>
+                    <li><span data-external-link-disabled><i class="fab fa-whatsapp"></i> WhatsApp</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-disclosure-links" id="footerDisclosureLinks">
+            <div class="row">
+                <div class="col">
+                    <ul>
+                    <li><a href="../../en/accounts/legalDocuments/accessibility-policy.html" target="_self">Accessibility Policy</a></li>
+                    <li><a href="../../en/accounts/legalDocuments/anti-fraud-notice.html" target="_self">Anti-Fraud Notice</a></li>
+                    <li><a href="../../en/accounts/legalDocuments/custIdentificationNotice.html" target="_self">Customer Identification Program Notice</a></li>
+                    <li><span data-external-link-disabled>Customer Relationship Summary</span></li>
+                    <li><a href="../../en/general/warnings-on-frauds-and-scams.html" target="_self">Warning on Frauds and Scams</a></li>
+                    <li><a href="../../en/accounts/forms-and-disclosures-client-agreements.html" target="_self">Forms and Disclosures</a></li>
+                    <li><a href="../../en/accounts/legalDocuments/privacy.html" target="_self">Privacy</a></li>
+                    <li><a href="../../en/sitemap/index.html" target="_self">Site Map</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-entities" id="footerEntities">
+            <div class="row">
+                <div class="col">
+                    <div class="footer-entity">
+                        <!-- Yameira Capital -->
+                        <p class="entity-name"><a href="../../index.html" target="_self">Yameira Capital</a></p>
+                        <p>Is a member <span data-external-link-disabled>NYSE</span> - <span data-external-link-disabled>FINRA</span> - <span data-external-link-disabled>SIPC</span> and regulated by the US Securities and Exchange Commission and the Commodity Futures Trading Commission.<br> <strong>Headquarters:</strong> Dallas, TX USA<br> <strong>Data &amp; Technology Center:</strong> Reno, NV USA<br> <strong>Website:</strong> <a href="https://www.yameiracapital.com/index.html" target="_self">yameiracapital.com</a></p>
+                    </div>
+                    <div class="footer-entities-list collapse" id="collapseEntities">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <!-- YMC CA -->
+                                <p class="entity-name"><span data-external-link-disabled>Yameira Capital Inc.</span></p>
+                                <p>Is a member of the                                 <span data-external-link-disabled>Canadian Investment Regulatory Organization (CIRO)</span> 
+                                 
+                                and Member - <span data-external-link-disabled>Canadian Investor Protection Fund.</span><br> <strong>Registered Office:</strong> 1800 McGill College Avenue, Suite 2106, Montreal, Quebec, H3A 3J6, Canada.<br> <strong>Website:</strong> <span data-external-link-disabled>www.ymc.ca</span></p>
+                                <!-- YMC UK -->
+                                <p class="entity-name"><span data-external-link-disabled>YMC (U.K.) Limited </span></p>
+                                <p>Is authorised and regulated by the <span data-external-link-disabled>Financial Conduct Authority</span>. FCA register entry number 208159. Incorporated in England & Wales under company number 03958476. <span data-external-link-disabled>[https://www.fca.org.uk/firms/financial-services-register]</span><br> <strong>Registered Office:</strong> 20 Fenchurch Street, Floor 12, London EC3M 3BY.<br> <strong>Website:</strong> <span data-external-link-disabled>www.ymc.co.uk</span></p>
+                                <!-- YMC IE -->
+                                <p class="entity-name"><span data-external-link-disabled>Yameira Capital Limited</span></p>
+                                <p>Is regulated by the <span data-external-link-disabled>Central Bank of Ireland</span> (CBI, reference number C423427), registered with the Companies Registration Office (CRO, registration number 657406), and is a member of the Irish Investor Compensation Scheme (ICS).<br> <strong>Registered Office:</strong> North Dock One, 91/92 North Wall Quay, Dublin 1 D01 H7V7, Ireland.<br> <strong>Website:</strong> <span data-external-link-disabled>www.ymc.ie</span></p>
+                                <!-- YMC AUS -->
+                                <p class="entity-name"><span data-external-link-disabled>Yameira Capital Pty. Ltd.</span></p>
+                                <p>ABN 98 166 929 568 is licensed and regulated by the <span data-external-link-disabled>Australian Securities and Investments Commission</span> (AFSL: 453554) and is a participant of <span data-external-link-disabled>ASX</span>, <span data-external-link-disabled>ASX 24</span> and <span data-external-link-disabled>Cboe Australia</span>.<br> <strong>Registered Office:</strong> Level 11, 175 Pitt Street, Sydney, New South Wales 2000, Australia.<br> <strong>Website:</strong> <span data-external-link-disabled>yameiracapital.com.au</span></p>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <!-- YMC HK -->
+                                <p class="entity-name"><span data-external-link-disabled>YMC Hong Kong Limited</span></p>
+                                <p>Is regulated by the Hong Kong Securities and Futures Commission, and is a member of the <span data-external-link-disabled>SEHK</span> and the <span data-external-link-disabled>HKFE</span>.<br> <strong>Registered Office:</strong> Suite 1512, Two Pacific Place, 88 Queensway, Admiralty, Hong Kong SAR.<br> <strong>Website:</strong> <span data-external-link-disabled>yameiracapital.com.hk</span></p>
+                                <!-- YMC IN -->
+                                <p class="entity-name"><span data-external-link-disabled>Yameira Capital Pvt. Ltd.</span></p>
+                                <p>Is a trading member of <span data-external-link-disabled>NSE</span>, <span data-external-link-disabled>BSE</span>, and depository participant of <span data-external-link-disabled>NSDL</span>. <span data-external-link-disabled>SEBI</span> Registration No. INZ000217730; NSDL: IN-DP-602-2021. CIN-U67120MH2007FTC170004.<br> <strong>Registered Office:</strong> 401-404, 4th Floor, Waterstones, Off International Airport Road, Andheri East, Mumbai 400059, Maharashtra, India.<br> <strong>Phone:</strong> +91-22-61289888 <span class="pipe">|</span> <strong>Fax:</strong> +91-22-61289898.<br> <strong>Website:</strong> <span data-external-link-disabled>www.ymc.co.in</span></p>
+                                <!-- YMC JP -->
+                                <p class="entity-name"><span data-external-link-disabled>YMC Securities Japan Inc.</span></p>
+                                <p>Is regulated by Kanto Local Finance Bureau (Registration No.187) and is a member of <span data-external-link-disabled>Japan Securities Dealers Association</span> and <span data-external-link-disabled>The Commodity Futures Association of Japan</span>.<br> <strong>Registered Office:</strong> Kasumigaseki Building 25F, 2-5 Kasumigaseki 3-chome, Chiyoda-ku, Tokyo, 100-6025 Japan.<br> <strong>Phone:</strong> +81 03-4590-0711 <em>(On business days from 8:30-17:30 JST)</em>.<br> <strong>Website:</strong>  <span data-external-link-disabled>www.ymc.co.jp</span></p>
+<!-- YMC SG -->
+<p class="entity-name"><span data-external-link-disabled>Yameira Capital Pte. Ltd.</span></p>
+<p>Is licensed and regulated by the Monetary Authority of Singapore (Licence No. CMS100917).<br> <strong>Registered Office:</strong> 
+1 Harbourfront Place #12-01/03, Harbourfront Tower 1, Singapore 098633.
+<br> <strong>Website:</strong>  <span data-external-link-disabled>yameiracapital.com.sg</span></p>                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

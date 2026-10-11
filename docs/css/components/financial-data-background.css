@@ -1,0 +1,193 @@
+.hero.financial-data-region {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #080b10;
+}
+
+.hero.financial-data-region > :not(.financial-data-background) {
+  position: relative;
+  z-index: 1;
+}
+
+.hero.financial-data-region .hero-bg {
+  display: none;
+}
+
+.financial-data-background {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: #080b10;
+}
+
+.ymc-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+  align-items: end;
+  gap: 72px;
+  padding: 24px 0 86px;
+  text-align: left;
+}
+
+.ymc-hero-title {
+  position: relative;
+  padding-left: 24px;
+}
+
+.ymc-hero-title::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  bottom: 4px;
+  left: 0;
+  width: 3px;
+  background: linear-gradient(#d71920 0 28%, rgba(92, 159, 214, 0.55) 28% 100%);
+}
+
+.ymc-brand-mark,
+.ymc-market-label,
+.ymc-offer-index {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.ymc-brand-mark {
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.ymc-brand-mark span {
+  display: inline-block;
+  margin-right: 12px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+#contents .ymc-hero-layout .hero-headline {
+  margin: 24px 0 22px;
+  color: #fff;
+  font-family: ProximaNova, Arial, sans-serif;
+  font-size: 72px !important;
+  font-weight: 800;
+  line-height: 0.94;
+  letter-spacing: 0;
+  text-transform: uppercase !important;
+}
+
+#contents .ymc-hero-layout .hero-headline span {
+  display: block;
+  white-space: nowrap !important;
+}
+
+.ymc-market-label {
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ymc-hero-offer {
+  position: relative;
+  padding: 30px 0 4px 34px;
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+  background: linear-gradient(90deg, rgba(8, 11, 16, 0.76), rgba(8, 11, 16, 0.12));
+}
+
+.ymc-offer-index {
+  margin-bottom: 18px;
+  color: #c9a86a;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ymc-hero-layout .hero-subhead {
+  max-width: 560px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 21px;
+  line-height: 1.48;
+}
+
+.ymc-hero-layout .hero-subhead strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.ymc-hero-action {
+  margin: 28px 0 0;
+}
+
+.ymc-hero-action .btn {
+  min-width: 188px;
+  padding: 13px 28px;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.ymc-disclosure {
+  margin: 18px 0 0;
+}
+
+@media (max-width: 991.98px) {
+  .ymc-hero-layout {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    padding-bottom: 68px;
+  }
+
+  #contents .ymc-hero-layout .hero-headline {
+    font-size: 58px !important;
+  }
+
+  .ymc-hero-offer {
+    max-width: 620px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .ymc-hero-layout {
+    gap: 34px;
+    padding: 18px 0 56px;
+  }
+
+  .ymc-hero-title {
+    padding-left: 17px;
+  }
+
+  #contents .ymc-hero-layout .hero-headline {
+    margin: 20px 0 18px;
+    font-size: 44px !important;
+    line-height: 0.96;
+  }
+
+  .ymc-market-label {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .ymc-hero-offer {
+    padding: 24px 0 0 18px;
+  }
+
+  .ymc-hero-layout .hero-subhead {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .ymc-hero-action .btn {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .financial-data-background {
+    opacity: 0.88;
+  }
+}

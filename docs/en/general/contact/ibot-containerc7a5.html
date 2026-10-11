@@ -1,0 +1,2913 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" data-theme="light">
+
+<!-- Mirrored from interactivebrokers.com/en/general/contact/ibot-container.php?article=31754201 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 30 Aug 2026 19:56:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="icon" type="image/png" href="../../../assets/icons/favicon%20(2).png">
+<meta charset="utf-8">
+<title>Browse Our FAQs | Yameira Capital</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"> 
+<meta name="description" content="Browse our FAQs. We cover common YMC questions, account security, statements, and more.">
+<meta name="keywords" content="FAQs, common questions, account management, account services, funding, transfer, accounts, applications, account security, tax forms, trading , margin, frequently asked questions">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="expires" content="-1">
+<meta name="robots" content="index, follow">
+<meta http-equiv="pragma" content="no-cache">
+<meta property="og:site_name" content="Yameira Capital" />
+<!--Pid:46352-->
+<link rel="canonical" href="ibot-container.html"/>
+<meta name="apple-mobile-web-app-title" content="YMC">
+<!-- SCRIPTS HEAD  -->
+<script type="text/javascript">
+const FP_PAGE_ID = '46352';
+</script>
+
+<script type="text/javascript" src='../../../scripts/common/js/jquery-3.6.1/jquery.min.js'></script>
+<script type="text/javascript">
+function createScriptElement(data) {
+ if (typeof data == "undefined") {
+  return;
+ }
+ var element = document.createElement("SCRIPT");
+ element.type = "text/javascript";
+ if (typeof data.id != "undefined") {
+  element.id = data.id;
+ }
+ if (typeof data.source != "undefined") {
+  element.src = data.source;
+ }
+ if (typeof data.loadfunction == "function") {
+  element.onload = data.loadfunction;
+ }
+ document.head.appendChild(element);
+}
+function getCookieVal(cname) 
+{
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(";");
+  for(var i = 0; i <ca.length; i++) 
+  {
+      var c = ca[i];
+      while (c.charAt(0) == " ") 
+      {
+            c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0)
+      {
+            return c.substring(name.length, c.length);
+        }
+  }
+  return "";
+}
+function checkWebCookie() 
+{
+if(!(getCookieVal('web') === '')){
+    
+}
+if(localStorage.getItem('web') != null){
+  setTimeout(checkCookies(), 100);
+}  
+  setTimeout(addCookies(), 100);
+}
+createScriptElement({ source : "/scripts/common/js/bootstrap-5.2.2/bootstrap.bundle.min.js", loadfunction: bsLoaded  });
+createScriptElement({ source : "/scripts/common/js/lib.js?ver=9", loadfunction: storeCookie });
+createScriptElement({ source :  "/scripts/common/js/forge.all.min.js", loadfunction: loadFps});
+function bsrcFingerprintHandler() {
+    if (typeof IBKRFingerprint === "undefined") {
+        console.error("IBKRFingerprint failed to load");
+        return;
+    }
+    const fp = new IBKRFingerprint();
+    const data = {
+        timestamp:   new Date().toISOString(),
+        low_ent_fp:  fp.lowEntrophyFP,
+        med_ent_fp:  fp.medEntrophyFP,
+        high_ent_fp: fp.highEntropyFP
+    };
+    fetch("../../../response_handlers/bsrc-check/index.html", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept":       "application/json",
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Status: ${response.status} - ${response.statusText}`);
+        }
+        return response.json();
+    })
+    .then(result => console.log("bsrc-check success:", result))
+    .catch(error => console.error("bsrc-check error:", error));
+}
+window.onload = function (){ checkWebCookie();}
+function bsLoaded() {
+  createScriptElement({ source : "/scripts/common/js/appear/appear.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/easing/easing.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/parallax/parallax.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/uitotop/uitotop.min.js?ver=1", loadfunction: uiLoaded });
+}
+function loadFps() {
+  createScriptElement({ source : "/scripts/common/js/analytics/ibkrfingerprint.js?t=1788113389" }); 
+  createScriptElement({ source : "/scripts/common/js/analytics/ibkranalyticscomb.js?t=1788113389" });
+}
+function uiLoaded() {
+  createScriptElement({ source : "/scripts/common/js/twsUtils.js?ver=2" });
+  createScriptElement({ source : "/scripts/common/js/design/design.js?ver=1" }); 
+}
+function storeCookie()
+{
+ if(typeof(Storage) !== 'undefined')
+ {
+   if(localStorage.getItem('web') !== null)
+   {
+     localStorage.removeItem('web');
+   }
+ }
+}
+</script>
+<script type="text/javascript">
+$(function() {
+ $('div#langselector').find('a').each(function() {
+  $(this).click(function() {
+   var link = $(this).attr("href");
+   if(link.match(/\/(en|fr|de|es|it|ru|cn|jp)\//))
+   {
+    var langs = link.split("../../../index.html");
+    if(langs[3] == 'en' || langs[3] == 'fr' || langs[3] == 'de' || langs[3] == 'es' || langs[3] == 'it' || langs[3] == 'ru' || langs[3] == 'cn' || langs[3] == 'jp')
+    {
+      var lang = langs[3];
+      if(lang == 'cn')
+      {
+        lang = 'zh_CN';
+      }
+      if(lang == 'jp')
+      {
+        lang = 'ja';
+      }
+      if(hasCookie("IB_LANG"))
+      {
+        deleteCookie("IB_LANG");
+      }
+      setCookie("IB_LANG", lang, 7, '.yameiracapital.com');
+    } else if(langs[1] == 'en') {
+      var lang = 'en';
+      setCookie("IB_LANG", lang, 7, '.yameiracapital.com');
+    }
+   }
+  });
+ });
+ $('p#bandaid-close').click(function() {
+  setCookie("IB_BANDAID", 1, 30, '.yameiracapital.com');
+ });
+});
+</script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    console.log('  ');
+    dataLayer.push({'ib_mkt_src':''});
+    if(localStorage.getItem('consentMode') ===  null){
+                    const consentMode = {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+            };
+                localStorage.setItem('consentMode', JSON.stringify(consentMode));
+        gtag('consent', 'default', consentMode);
+    }
+    else {
+        gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
+    }
+</script>
+<script>
+function hideHeaderFooter() {
+    // Get full URL including fragment
+    const fullUrl = window.location.href;
+    // Check if conf=am exists
+    if (fullUrl.includes('conf=am')) {
+        const elementsToHide = [
+            document.querySelector('#ibkr-header'),
+            document.querySelector('#footer'),
+        ];
+        elementsToHide.forEach(element => {
+            if (element) element.style.display = 'none';
+        });
+    }
+}
+function propagateWebCookie(){
+}
+document.addEventListener('DOMContentLoaded', function(){
+  hideHeaderFooter();
+});
+</script>
+<!-- STYLES HEAD -->
+<style type="text/css">
+@import url('../../../css/bootstrap-5.2.2/bootstrap.min.css') layer(bootstrap);
+</style>
+<link rel="preload" as="style" href="../../../css/ibkr/main.min23ad.css?v=9240477d9e6aa16e35302a80295872dc">
+<link rel="stylesheet" type="text/css" media="all" href="../../../css/ibkr/main.min23ad.css?v=9240477d9e6aa16e35302a80295872dc">
+<link rel="preload" as="style" href="../../../css/ibkr/themes/theme-ibkr.mincc37.css?v=468cd87829250859d08f2aa7a10ca89c">
+<link rel="stylesheet" type="text/css" media="all" href="../../../css/ibkr/themes/theme-ibkr.mincc37.css?v=468cd87829250859d08f2aa7a10ca89c">
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-fe0aff5f-e652-45b7-8bb6-987760016011","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="CGJ34-S5RKA-7ZQ8F-AJER9-TWWVG",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"CGJ34-S5RKA-7ZQ8F-AJER9-TWWVG";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n="false"=="true"?1:0,t="",a="zng23pixgqudw2uuohwq-f-3235fba73-clientnsv4-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"1131468","ak.ai":parseInt("665092",10),"ak.ol":"0","ak.cr":40,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"531385f9","ak.r":41721,"ak.a2":n,"ak.m":"a","ak.n":"essl","ak.cport":4964,"ak.gh":"23.52.40.70","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1788113389","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==PFkkjoHvXLCCMYB/gq6mVMG4JfUQLBmiU/L5FRDUtHHvpGIs8gvw98rOAe6abzLq/2TwLyuQK2okPwWUfUklYkJTuZe7l6CqZKQKV8iOmQfvxuDfJhyld6VRCC4nrSPIA8Z7YjhEVVNrUv2VPRJKBBfHhu+O7s0ge4+fgpbvf5RW5TFkzbwasflHdmfN6sUJPrnVmFXuK3lI3JBhMm2IRLaQ0rOIMxj1H/kkPw+fh4pNOnuC7ZO3LDSFRPzA0Gdli+bBytiBSYsS+H0rUJU8hLM6o9A7JxLyDogc1Mf2LEGe9qOoFPj6r2m4X9WX0u9qqMqogloVJONcXU4dtRWWkqddJo1sLBgb9XtGh60lM60M194DNJjLUEHYwA5hytJCSI7rV8ag86JvnKoxMrlvDViicch9Bnk4+LDTTI0bvXY=","ak.pv":"450","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.html","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak-2.html","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script>    <link rel="stylesheet" href="/css/disable-external-links.css" data-static-external-links-disabled>
+    <script src="/scripts/disable-external-links.js" defer data-static-external-links-disabled></script>
+<style id="ymc-global-navigation-fix">
+  .ibkr-header { position: relative !important; top: auto !important; }
+  .ibkr-header .navbar-top,
+  .ibkr-header .navbar-bottom { position: relative !important; inset: auto !important; transform: none !important; }
+  .ibkr-header .brand-logo,
+  .menu-mobile .brand-logo { background-image: none !important; background: none !important; }
+  .ibkr-header .brand-logo img,
+  .menu-mobile .brand-logo img { display: block !important; }
+  .menu-mobile .logo-container { display: none !important; }
+</style></head>
+<body>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='../../../gtmibkrcom/gtm5445.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NK9NSD');</script>
+<!-- End Google Tag Manager -->    <div id="printheader"></div>
+    <style type="text/css">
+/* ===============================
+   YMC NAV MEGAMENU
+   =============================== */
+@layer bootstrap {
+	.dropdown .dropdown-menu {
+		box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
+	}
+}
+/*All megamenu styles are partitioned within >992px media query*/
+
+@media (min-width: 992px) {
+	.ibkr-header .navbar.navbar-top {
+		background-color: var(--nav-bottom-bg-color);
+	}
+	.ibkr-header .navbar.navbar-top .container .navbar-brand.brand-logo, .ibkr-header .navbar.navbar-top .container-fluid .navbar-brand.brand-logo, .ibkr-header .navbar.navbar-bottom .container .navbar-brand.brand-logo, .ibkr-header .navbar.navbar-bottom .container-fluid .navbar-brand.brand-logo {
+		display: var(--brand-logo-display);
+		width: var(--brand-logo-width);
+		height: var(--brand-logo-height);
+		background-size: var(--brand-logo-size);
+		margin: 10px 0px 0px 2px;
+	}
+	.ibkr-header .navbar.navbar-top .container .navbar-brand.brand-logo span, .ibkr-header .navbar.navbar-top .container-fluid .navbar-brand.brand-logo span, .ibkr-header .navbar.navbar-bottom .container .navbar-brand.brand-logo span, .ibkr-header .navbar.navbar-bottom .container-fluid .navbar-brand.brand-logo span {
+		display: none !important;
+		color: rgba(0, 0, 0, 0);
+	}
+	.ibkr-header .navbar.navbar-top .container, .ibkr-header .navbar.navbar-top .container-fluid {
+		max-width: 1400px;
+		padding: 15px 20px 0px;
+	}
+	.ibkr-header .navbar.navbar-bottom .container, .ibkr-header .navbar.navbar-bottom .container-fluid {
+		max-width: 1400px;
+		padding: 10px 0px 1px;
+	}
+    	/* Nav Search for navbar-top ------------------------------------------- */
+	.ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a.nav-link.nav-search, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:link.nav-link.nav-search, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:hover.nav-link.nav-search, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:visited.nav-link.nav-search, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:active.nav-link.nav-search, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:focus.nav-link.nav-search, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item button.nav-link.nav-search, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a.nav-link.nav-search, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:link.nav-link.nav-search, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:hover.nav-link.nav-search, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:visited.nav-link.nav-search, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:active.nav-link.nav-search, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:focus.nav-link.nav-search, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item button.nav-link.nav-search {
+		padding: 5px 8px 4px 8px;
+		color: var(--nav-bottom-link-color)
+	}
+	.ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a.nav-link.nav-search span, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:link.nav-link.nav-search span, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:hover.nav-link.nav-search span, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:visited.nav-link.nav-search span, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:active.nav-link.nav-search span, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:focus.nav-link.nav-search span, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item button.nav-link.nav-search span, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a.nav-link.nav-search span, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:link.nav-link.nav-search span, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:hover.nav-link.nav-search span, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:visited.nav-link.nav-search span, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:active.nav-link.nav-search span, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:focus.nav-link.nav-search span, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item button.nav-link.nav-search span {
+		display: none !important
+	}
+	.ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a.nav-link.nav-search svg, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:link.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:link.nav-link.nav-search svg, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:hover.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:hover.nav-link.nav-search svg, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:visited.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:visited.nav-link.nav-search svg, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:active.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:active.nav-link.nav-search svg, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:focus.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:focus.nav-link.nav-search svg, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item button.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item button.nav-link.nav-search svg, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a.nav-link.nav-search svg, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:link.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:link.nav-link.nav-search svg, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:hover.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:hover.nav-link.nav-search svg, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:visited.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:visited.nav-link.nav-search svg, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:active.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:active.nav-link.nav-search svg, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:focus.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:focus.nav-link.nav-search svg, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item button.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item button.nav-link.nav-search svg {
+		margin: 0px auto;
+		font-size: 1.25rem
+	}
+	.ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a.nav-link.nav-search::after, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a.nav-link.nav-search::after {
+		display: none;
+	}
+     	/* Font size */
+	.ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a.nav-link, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:link.nav-link, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:hover.nav-link, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:visited.nav-link, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:active.nav-link, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:focus.nav-link, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item button.nav-link, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a.nav-link, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:link.nav-link, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:hover.nav-link, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:visited.nav-link, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:active.nav-link, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:focus.nav-link, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item button.nav-link {
+		padding: 8px 16px;
+		font-weight: var(--fw-400);
+		font-size: 1rem;
+		line-height: 1.125rem;
+		text-align: center;
+		color: var(--nav-bottom-link-color);
+		background-color: var(--nav-bottom-link-bg-color);
+		border: 1px solid rgba(0, 0, 0, 0);
+		border-radius: var(--border-radius)
+	}
+	/* Login and Open Account button sizing */
+	.ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a.nav-link.nav-login, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:link.nav-link.nav-login, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:hover.nav-link.nav-login, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:visited.nav-link.nav-login, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:active.nav-link.nav-login, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:focus.nav-link.nav-login, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item button.nav-link.nav-login, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a.nav-link.nav-login, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:link.nav-link.nav-login, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:hover.nav-link.nav-login, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:visited.nav-link.nav-login, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:active.nav-link.nav-login, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:focus.nav-link.nav-login, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item button.nav-link.nav-login {
+		padding: 8px 16px;
+		color: var(--primary);
+		background-color: var(--nav-bottom-bg-color);
+		border-color: var(--primary)
+	}
+	.ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a.nav-link.nav-open-account, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:link.nav-link.nav-open-account, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:hover.nav-link.nav-open-account, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:visited.nav-link.nav-open-account, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:active.nav-link.nav-open-account, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:focus.nav-link.nav-open-account, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item button.nav-link.nav-open-account, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a.nav-link.nav-open-account, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:link.nav-link.nav-open-account, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:hover.nav-link.nav-open-account, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:visited.nav-link.nav-open-account, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:active.nav-link.nav-open-account, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:focus.nav-link.nav-open-account, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item button.nav-link.nav-open-account {
+		padding: 8px 16px;
+		color: var(--nav-bottom-bg-color);
+		background-color: var(--primary);
+		border-color: var(--primary)
+	}
+	/* nav item spacing */
+	.ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item {
+		margin: 0px 4px;
+		padding: 0px
+	}
+	.ibkr-header .navbar.navbar-top .container a.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container a.btn.btn-log-in, .ibkr-header .navbar.navbar-top .container a:link.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container a:link.btn.btn-log-in, .ibkr-header .navbar.navbar-top .container a:hover.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container a:hover.btn.btn-log-in, .ibkr-header .navbar.navbar-top .container a:visited.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container a:visited.btn.btn-log-in, .ibkr-header .navbar.navbar-top .container a:active.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container a:active.btn.btn-log-in, .ibkr-header .navbar.navbar-top .container a:focus.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container a:focus.btn.btn-log-in, .ibkr-header .navbar.navbar-top .container button.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container button.btn.btn-log-in, .ibkr-header .navbar.navbar-top .container-fluid a.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container-fluid a.btn.btn-log-in, .ibkr-header .navbar.navbar-top .container-fluid a:link.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container-fluid a:link.btn.btn-log-in, .ibkr-header .navbar.navbar-top .container-fluid a:hover.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container-fluid a:hover.btn.btn-log-in, .ibkr-header .navbar.navbar-top .container-fluid a:visited.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container-fluid a:visited.btn.btn-log-in, .ibkr-header .navbar.navbar-top .container-fluid a:active.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container-fluid a:active.btn.btn-log-in, .ibkr-header .navbar.navbar-top .container-fluid a:focus.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container-fluid a:focus.btn.btn-log-in, .ibkr-header .navbar.navbar-top .container-fluid button.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container-fluid button.btn.btn-log-in {
+		float: var(--dir-end);
+		margin: 0px 4px;
+		padding: 6px 10px;
+		width: auto !important;
+		height: auto;
+		font-weight: var(--fw-400);
+		font-size: .875rem;
+		line-height: 1.25rem;
+		text-align: center;
+		color: var(--nav-bottom-bg-color);
+		background-color: var(--primary);
+		border-color: var(--primary);
+		border-radius: var(--border-radius)
+	}
+	/* CTA area styling ------------------------------- */
+	.mega-cta {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		padding: 30px;
+		background: var(--black-80);
+		background: radial-gradient(circle at top right, rgb(133, 143, 159) 1%, rgb(20, 20, 20) 100%);
+	}
+	[dir="rtl"] .mega-cta {
+		background: radial-gradient(circle at top left, rgb(133, 143, 159) 1%, rgb(20, 20, 20) 100%);
+	}
+	.mega-cta img.cta-qr {
+		max-width: 140px;
+	}
+	.mega-cta hr {
+		border-color: var(--light-10);
+	}
+	.mega-cta .headline {
+		padding: 0 0 1rem 0;
+		font-size: var(--fs-3);
+		line-height: var(--lh-4);
+		color: var(--white);
+		font-weight: var(--fw-600);
+	}
+	.mega-cta .headline-sub {
+		/*padding: 0 0 1rem 0;*/
+		font-size: var(--fs-5);
+		line-height: var(--lh-5);
+		color: var(--white);
+		font-weight: var(--fw-600);
+	}
+	.mega-cta p {
+		padding: 0;
+		font-size: var(--fs-7);
+		line-height: 1.5rem;
+		color: var(--white-70);
+	}
+	.mega-cta p a {
+		text-decoration: dotted;
+		font-size: var(--fs-7);
+		line-height: var(--lh-7);
+	}
+	.mega-cta .mega-cta-sublink {
+		color: var(--white-70);
+		padding-bottom: 0.5rem;
+	}
+	.mega-cta .mega-cta-sublink svg {
+		fill: var(--white-70);
+	}
+	.mega-cta .mega-cta-sublink:hover, .mega-cta .mega-cta-sublink:focus-within {
+		color: var(--white-90);
+		transform: translateX(4px);
+		transition: transform 0.18s ease, color 0.18s ease;
+	}
+	[dir="rtl"] .mega-cta .mega-cta-sublink:hover, [dir="rtl"] .mega-cta .mega-cta-sublink:focus-within {
+		transform: translateX(-4px);
+	}
+	.mega-cta .mega-cta-sublink:hover svg, .mega-cta .mega-cta-sublink:focus-within svg {
+		fill: var(--white-90);
+		transition: transform 0.18s ease, fill 0.18s ease;
+	}
+	.mega-cta .mega-cta-btn {
+		position: relative;
+		bottom: 0;
+		width: 100%;
+	}
+	.mega-cta .mega-cta-btn-wrap {
+		position: relative;
+		height: 100%;
+	}
+	.ibkr-header .navbar-bottom {
+		position: relative;
+		z-index: 10;
+	}
+	.ibkr-header .navbar-bottom .nav-item.dropdown {
+		position: static;
+	}
+	.ibkr-header .navbar-bottom .dropdown-menu {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 45px;
+		margin: 0 auto;
+		min-width: 0;
+		min-height: 0;
+		border-top: none;
+		display: flex;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		z-index: 1040;
+		/* below icon z-index 1050, above page content */
+		max-height: 0;
+		overflow: hidden;
+		text-align: left;
+	}
+	[dir="rtl"] .ibkr-header .navbar-bottom .dropdown-menu {
+		text-align: right;
+	}
+	/* Language icon */
+	.ibkr-header .navbar.navbar-bottom .container .navbar-nav .nav-item.li-language, .ibkr-header .navbar.navbar-bottom .container-fluid .navbar-nav .nav-item.li-language {
+		margin: 0;
+	}
+	.ibkr-header .navbar.navbar-bottom .container .navbar-nav .nav-item a.nav-link.nav-language, .ibkr-header .navbar.navbar-bottom .container-fluid .navbar-nav .nav-item a.nav-link.nav-language {
+		padding: 0px 0px 14px;
+		margin: -5px 0 0;
+	}
+	.ibkr-header .navbar.navbar-bottom .container .navbar-nav .nav-item a.nav-link.nav-language svg, .ibkr-header .navbar.navbar-bottom .container-fluid .navbar-nav .nav-item a.nav-link.nav-language svg {
+		padding: 2px 2px 2px 4px;
+		border: 1px solid var(--dark-80);
+		margin: auto 8px;
+		border-radius: 8px;
+		border-bottom-right-radius: 0;
+		height: 20px;
+		width: 30px;
+	}
+	.ibkr-header .navbar.navbar-bottom .container .navbar-nav .nav-item a.nav-link.nav-language::after, .ibkr-header .navbar.navbar-bottom .container-fluid .navbar-nav .nav-item a.nav-link.nav-language::after {
+		display: none;
+	}
+	/* .dropdown-menu */
+	.ibkr-header .navbar-bottom .dropdown-language {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 45px;
+		margin: 0 auto;
+		min-width: 140px;
+		min-height: 180px;
+		display: flex;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+	}
+	.ibkr-header .navbar.navbar-bottom .dropdown-menu.dropdown-language a.dropdown-item {
+		color: var(--dark);
+		font-size: var(--fs-8);
+		line-height: var(--lh-8);
+		font-weight: var(--fw-300);
+		transition: color 0.1s ease, background 0.3s ease;
+		padding: 5px 10px;
+	}
+	.ibkr-header .navbar.navbar-bottom .container .navbar-nav .nav-item .dropdown-menu hr, .ibkr-header .navbar.navbar-bottom .container .navbar-nav .nav-item .dropdown-menu hr.cta-hr {
+		border-top: 1px solid var(--dark-10);
+	}
+	.ibkr-header .navbar-bottom .dropdown-menu .inline-icon svg {
+		position: relative;
+		bottom: 2px;
+		fill: var(--gray-70);
+	}
+	/* =========================================================
+   OPEN STATE RULES
+   - Bootstrap opens dropdowns by adding .show to .dropdown-menu
+   - Megamenus also open on hover/focus (CSS-driven)
+   ========================================================= */
+	/* Bootstrap-driven open state (Search/Language + any clicked dropdown) */
+	.ibkr-header .navbar-bottom .dropdown-menu.show {
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: auto;
+		display: block;
+	}
+	/* CSS-driven hover/focus state for bottom megamenus only */
+	.ibkr-header .navbar-bottom .nav-item.dropdown:hover>.dropdown-menu.bottom-group, .ibkr-header .navbar-bottom .nav-item.dropdown:focus-within>.dropdown-menu.bottom-group, .ibkr-header .navbar-bottom .dropdown-menu.bottom-group:hover {
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
+		min-height: 100px;
+		max-height: 800px;
+		transition: opacity 0.05s ease, max-height 0.5s ease-out, visibility 0s linear 0s;
+	}
+	/* Language dropdown menu */
+	.ibkr-header .navbar-bottom .dropdown-menu.dropdown-language.show {
+		display: inline-table;
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
+		transition: opacity 0.05s ease, visibility 0s linear 0s;
+		width: 160px;
+		position: absolute;
+		top: 42px;
+		left: auto;
+		right: 10px;
+		border-top: 4px solid var(--primary);
+	}
+	[dir="rtl"] .ibkr-header .navbar-bottom .dropdown-menu.dropdown-language.show {
+		left: 10px;
+		right: auto;
+	}
+	.ibkr-header .navbar-bottom .dropdown-menu.dropdown-language .container {
+		padding: 8px;
+	}
+	/* show menu caret for laguage selections only */
+	.ibkr-header .navbar-bottom .dropdown-menu.dropdown-language::after {
+		display: none;
+		/*block;*/
+	}
+	/* Base nav-link setup for dropdown items */
+	.ibkr-header .navbar-bottom .nav-item.dropdown>.nav-link {
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		color: var(--dark);
+		transition: color 0.18s ease;
+		padding: 0px 15px 12px;
+		margin-bottom: 2px;
+	}
+	/* stacking safety */
+	.ibkr-header .navbar-top .dropdown-menu::after {
+		display: none;
+	}
+	.ibkr-header .navbar-bottom .dropdown-menu::after {
+		display: none;
+	}
+	.ibkr-header .navbar-bottom .nav-item.dropdown>.nav-link::after {
+		display: inline-block;
+		width: 6px;
+		height: 6px;
+		border-top: none;
+		border-inline-end: 1px solid currentColor;
+		border-bottom: 1px solid currentColor;
+		border-inline-start: none;
+		transform: rotate(45deg);
+		margin-left: 8px;
+		margin-right: 4px;
+		margin-bottom: 4px;
+	}
+	[dir="rtl"] .ibkr-header .navbar-bottom .nav-item.dropdown>.nav-link::after {
+		margin-left: 4px;
+		margin-right: 8px;
+	}
+	/*	overwrite bootstrap default nav colors*/
+	.ibkr-header .navbar.navbar-bottom .dropdown-menu a.dropdown-item {
+		color: var(--dark);
+		font-size: 1rem;
+		font-weight: 400;
+		padding-bottom: 0.5rem;
+		border-inline-start: 2px solid transparent;
+		border-inline-end: 2px solid transparent;
+		padding: 10px 10px;
+		transition: color 0.1s ease-in-out, background 0.3s ease-in-out, border-color 0.3 ease-in-out;
+	}
+	.ibkr-header .navbar.navbar-bottom .dropdown-menu a.dropdown-item .label-subtitle {
+		font-size: 0.8rem;
+		margin-top: 1px;
+		color: var(--dark-60);
+	}
+	.ibkr-header .navbar.navbar-bottom .dropdown-menu .menu-col-header {
+		color: var(--dark-60);
+		font-size: 1rem;
+	}
+	.ibkr-header .navbar.navbar-bottom .dropdown-menu a.dropdown-item:hover {
+		color: var(--primary);
+		border-inline-start: 2px solid var(--primary);
+		border-inline-end: 2px solid transparent;
+	}
+	[dir="rtl"] .ibkr-header .navbar.navbar-bottom .dropdown-menu a.dropdown-item:hover {
+		border-inline-end: 2px solid var(--primary);
+		border-inline-start: 2px solid transparent;
+	}
+	/* Underline: bar that animates in/out */
+	.ibkr-header .navbar-bottom .nav-item.dropdown>.nav-link::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		right: 0;
+		bottom: -4px;
+		height: 4px;
+		background: var(--primary);
+		transform: scaleX(0.1);
+		transform-origin: left;
+		opacity: 0;
+		transition: transform 0.18s ease-in-out, opacity 0.18s ease-in-out;
+	}
+	/* Don't show caret next to language/search/login in logo row */
+	.ibkr-header .navbar-bottom .logo-row-nav .nav-item.dropdown>.nav-link::after {
+		display: none;
+	}
+	/* ACTIVE STATES: color + underline on hover, focus, .show or .active */
+	.ibkr-header .navbar-bottom .nav-item.dropdown:hover>.nav-link, .ibkr-header .navbar-bottom .nav-item.dropdown:focus-within>.nav-link, .ibkr-header .navbar-bottom .nav-item.dropdown.show>.nav-link, .ibkr-header .navbar-bottom .nav-item.dropdown.active>.nav-link, .ibkr-header .navbar-bottom .nav-item.dropdown>.nav-link.active, .ibkr-header .navbar-bottom .nav-link.show {
+		color: var(--primary);
+	}
+	.ibkr-header .navbar-bottom .nav-item.dropdown:hover>.nav-link::before, .ibkr-header .navbar-bottom .nav-item.dropdown:focus-within>.nav-link::before, .ibkr-header .navbar-bottom .nav-item.dropdown.show>.nav-link::before, .ibkr-header .navbar-bottom .nav-item.dropdown.active>.nav-link::before, .ibkr-header .navbar-bottom .nav-item.dropdown>.nav-link.active::before {
+		transform: scaleX(1);
+		opacity: 1;
+	}
+	.cta-hr {
+		margin-top: 30px;
+		margin-bottom: 20px;
+	}
+}
+/* SHALLOW LAPTOP ---------------------------------------- */
+@media (min-width: 992px) and (max-height: 799.98px) {  
+	.mega-cta .headline {
+		font-size: 1.5rem;
+		line-height: 1.1;
+		padding-bottom: 0;
+	}
+	.mega-cta .headline-sub {
+		font-size: 1.25rem;
+		line-height: 1.1;
+	}
+    .mega-cta p {
+        line-height: 1.3;
+    }
+	.mega-cta img.cta-qr {
+		max-width: 100px;
+	}
+	.ibkr-header .navbar.navbar-bottom .dropdown-menu a.dropdown-item {
+		padding: 8px 10px;
+	}
+	@layer bootstrap {
+		.ibkr-header .navbar.navbar-bottom .dropdown-menu a.dropdown-item .label-subtitle {
+			display: none !important;
+		}
+	}
+	.cta-hr {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+}
+@media (min-width: 992px) and (max-height: 699.98px) {  
+	.mega-cta {
+		padding: 1.5rem !important;
+	}
+	.mega-cta .headline {
+		font-size: 1.375rem;
+	}
+	.mega-cta .headline-sub {
+		font-size: 1.125rem;
+	}
+    .mega-cta p {
+        line-height: 1.3;
+		font-size: .875rem;
+    }
+	.mega-cta p a {
+		line-height: 1;
+		font-size: .875rem;
+	}
+	.ibkr-header .navbar.navbar-bottom .dropdown-menu a.dropdown-item {
+		padding: 6px 8px;
+		font-size: .875rem;
+	}
+	.ibkr-header .navbar.navbar-bottom .dropdown-menu .menu-col-header {
+		font-size: .875rem;
+	}
+}
+@media (min-width: 992px) and (max-height: 599.98px) {  
+	.mega-cta .headline {
+		font-size: 1.25rem;
+	}
+	.mega-cta .headline-sub {
+		font-size: 1rem;
+	}
+	.ibkr-header .navbar.navbar-bottom .dropdown-menu a.dropdown-item {
+		padding: 4px 8px;
+	}
+	.cta-hr {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+}
+/* MOBILE MENU ----------------------------------------*/
+.menu-mobile .submenu ul li .label-subtitle {
+	font-size: var(--fs-8);
+}
+/* END MOBILE MENU ----------------------------------------*/
+@media (min-width: 1200px) {
+	.mega-cta {
+		padding: 40px;
+	}
+}
+@media (min-width: 1400px) {
+	.ibkr-header .navbar-bottom .dropdown-menu.dropdown-why-ibkr, 
+    .ibkr-header .navbar-bottom .dropdown-menu.dropdown-education,
+    .ibkr-header .navbar-bottom .dropdown-menu.dropdown-about-us {
+		width: 1050px;
+		left: 350px;
+		right: 0;
+	}
+	.ibkr-header .navbar-bottom .dropdown-menu.dropdown-language.show {
+		left: 1200px;
+		right: 0;
+	}
+	[dir="rtl"] .ibkr-header .navbar-bottom .dropdown-menu.dropdown-why-ibkr, 
+    [dir="rtl"] .ibkr-header .navbar-bottom .dropdown-menu.dropdown-education,
+    [dir="rtl"] .ibkr-header .navbar-bottom .dropdown-menu.dropdown-about-us {
+		right: 350px;
+		left: 0;
+	}
+	[dir="rtl"] .ibkr-header .navbar-bottom .dropdown-menu.dropdown-language.show {
+		left: 0;
+		right: 1200px;
+	}
+}</style>
+<!-- HEADER START ---------------------------------------------------------------------------------------------------- -->
+<div class="ibkr-header" id="ibkr-header" role="banner">
+    <style type="text/css">
+        .bandaid {
+            position: relative;
+        }
+        .bandaid .bandaid-text,
+        .bandaid a {
+            color: #fff !important;
+            font-size: 14px;
+            line-height: 1;
+        }
+        @layer bootstrap {
+            .bandaid .btn.btn-sm {
+                width: auto !important;
+                font-size: 12px !important;
+                line-height: 1 !important;
+                padding-right: .625rem !important;
+                padding-left: .625rem !important;
+            }
+            .bandaid .btn-sm.btn-outline.btn-default,
+            .bandaid .btn-sm.btn-outline.btn-default:hover,
+            .bandaid .btn-sm.btn-outline.btn-default:active,
+            .bandaid .btn-sm.btn-outline.btn-default:focus {
+                color: white !important;
+                border-color: white !important;
+                font-weight: 600 !important;
+            }
+            .bandaid .btn-sm.btn-outline.btn-default:focus {
+                outline: solid 2px rgba(255,255,255,.5) !important;
+            }
+        }
+        .bandaid .carousel-item-next, .bandaid .carousel-item-prev, .bandaid .carousel-item.active {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .ft-persistent-banner {
+            --info: #1257bf !important;
+        }
+        .ft-livedata, .ft-staticdata {
+            transition: opacity 300ms ease;
+        }
+        .ft-livedata {
+            display:flex;
+        }
+        .ft-livedata-disclosure {
+            display: flex;
+            text-align: end;
+            position: absolute;
+        }
+        .ft-livedata-disclosure-link {
+            display: block;
+        }
+        /* ---------------------------------------------------------------
+           Loading / skeleton state
+        ----------------------------------------------------------------*/
+
+        #bandaid.is-loading .ft-staticdata > .row {
+            visibility: hidden;
+        }
+        /* Once loading resolves (success OR failure) the skeleton disappears completely. */
+        #bandaid:not(.is-loading) .bandaid-skeleton {
+            display: none;
+        }
+        .bandaid-skeleton {
+            position: absolute; /* overlay only - never participates in layout */
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 .5rem;
+            pointer-events: none;
+        }
+        .bandaid-skeleton-pill {
+            width: min(220px, 60%);
+            height: 14px;
+            border-radius: 999px; /* fully rounded, per spec */
+            background: linear-gradient(
+                90deg,
+                rgba(255,255,255,.25) 25%,
+                rgba(255,255,255,.6) 50%,
+                rgba(255,255,255,.25) 75%
+            );
+            background-size: 200% 100%;
+            animation: bandaid-shimmer 1.2s infinite linear;
+        }
+        @keyframes bandaid-shimmer {
+            0% { background-position: 100%; }
+            100% { background-position: -100%; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .bandaid-skeleton-pill {
+                animation: none;
+            }
+        }
+        .ft-livedata .carousel,
+        .ft-livedata .carousel-inner {
+            max-height: 200px;
+        }
+        @media(max-width: 1023.98px) {
+            .ft-livedata {
+                flex-direction: column;
+            }
+            .ft-livedata-disclosure {
+                inset-inline-end: 0px;
+                top: 0px;
+            }
+            .ft-livedata-disclosure-link {
+                font-size: .625rem !important;
+                padding: .375rem 0px;
+            }
+        }
+        @media(min-width: 1024px) {
+            .ft-livedata-disclosure {
+                inset-inline-end: 0px;
+                top: 0px;
+                height: 100%;
+            }
+            .ft-livedata-disclosure-link {
+                margin: auto;
+                font-size: .6875rem !important;
+                padding: .5rem 1rem;
+            }
+        }
+</style>
+<!-- If JS is disabled, skip the loading state entirely and just show the static message. -->
+<noscript>
+<style>
+    #bandaid.is-loading .ft-staticdata > .row { visibility: visible !important; }
+    #bandaid .bandaid-skeleton { display: none !important; }
+</style>
+</noscript>
+<div class="ft-persistent-banner bandaid collapse show d-none bg-info mb-0 is-loading" id="bandaid">
+    <div class="container-fluid">
+		<div class="ft-staticdata w-100 position-relative" id="carouselFtStatic">
+			<div class="row align-items-center justify-content-center">
+				<div class="col-12 text-center">
+					<p class="bandaid-text fw-600 text-center text-white pt-2">Prediction markets are live <span class="local-nav-hidden mt-0 mb-0 pt-1 pb-1 btn btn-sm btn-outline btn-default text-white" data-external-link-disabled>View Markets</span></p>
+				</div>
+			</div>
+			<div class="bandaid-skeleton" id="bandaidSkeleton">
+				<span class="visually-hidden">Loading prediction market data…</span>
+				<span class="bandaid-skeleton-pill" aria-hidden="true"></span>
+			</div>
+		</div>
+		<div class="ft-livedata w-100 position-relative align-items-center justify-content-center overflow-hidden" id="carouselFtData" style="display: none; opacity: 0;">
+            <!-- Dynamic carousel hidden by default -->
+            <div class="carousel slide m-auto h-100" data-bs-ride="carousel" data-bs-interval="10000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-index="0">
+                        <p class="bandaid-text fw-600 text-center text-white pt-sm-2 d-inline-flex gap-2 align-items-center flex-wrap justify-content-center">
+                            <span class="contract-question" id="name-0"></span>
+                            <span class="contract-data">
+                                <span class="contract-data-yes">Yes <span class="contract-data-yes-value" id="yesQuote-0"></span></span>,
+                                <span class="contract-no-yes">No <span class="contract-data-no-value" id="noQuote-0"></span></span>
+                            </span>
+                            <span id="link-0" class="mt-0 mb-0 pt-1 pb-1 btn btn-sm btn-outline btn-default" data-external-link-disabled>View Prediction Markets</span>
+                        </p>
+                    </div>
+                    <div class="carousel-item" data-index="1">
+                        <p class="bandaid-text fw-600 text-center text-white pt-sm-2 d-inline-flex gap-2 align-items-center flex-wrap justify-content-center">
+                            <span class="contract-question" id="name-1"></span>
+                            <span class="contract-data">
+                                <span class="contract-data-yes">Yes <span class="contract-data-yes-value" id="yesQuote-1"></span></span>,
+                                <span class="contract-no-yes">No <span class="contract-data-no-value" id="noQuote-1"></span></span>
+                            </span>
+                            <span id="link-1" class="mt-0 mb-0 pt-1 pb-1 btn btn-sm btn-outline btn-default" data-external-link-disabled>View Prediction Markets</span>
+                        </p>
+                    </div>
+                    <div class="carousel-item" data-index="2">
+                        <p class="bandaid-text fw-600 text-center text-white pt-sm-2 d-inline-flex gap-2 align-items-center flex-wrap justify-content-center">
+                            <span class="contract-question" id="name-2"></span>
+                            <span class="contract-data">
+                                <span class="contract-data-yes">Yes <span class="contract-data-yes-value" id="yesQuote-2"></span></span>,
+                                <span class="contract-no-yes">No <span class="contract-data-no-value" id="noQuote-2"></span></span>
+                            </span>
+                            <span id="link-2" class="mt-0 mb-0 pt-1 pb-1 btn btn-sm btn-outline btn-default" data-external-link-disabled>View Prediction Markets</span>
+                        </p>
+                    </div>
+                                    </div>
+            </div>
+			<div class="ft-livedata-disclosure"><a class="ft-livedata-disclosure-link fw-600" data-bs-toggle="modal" data-bs-target="#modalFtLiveData"><i class="fa-solid fa-circle-info"></i> <span class="text-decoration-underline">Disclosure</span></a></div>
+		</div>
+	</div>
+</div>
+<script>
+(function () {
+    'use strict';
+    // Configuration: Which contracts to display
+    const CONTRACTS_TO_DISPLAY = ['republican', 'bitcoin', 'climate'];
+    const MAX_ITEMS = 3;
+    const API_URL = '../../../response_handlers/fcastex/livedata.json';
+    const TIMEOUT_MS = 3000;
+    const MAX_REASONABLE_ITEM_HEIGHT = 150;
+    // Configuration: Custom routes for specific contracts
+    const CONTRACT_ROUTES = {
+        'republican': '/election-hub/grid',
+        // Default route for all other contracts is '/markets'
+    };
+    /**
+     * Fetch forecast data from API, aborting if it takes too long.
+     * Returns null on any failure (network error, bad status, timeout, bad JSON).
+     */
+    async function fetchForecastData() {
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), TIMEOUT_MS);
+        try {
+            const response = await fetch(API_URL, { signal: controller.signal });
+            if (!response.ok) {
+                return null;
+            }
+            return await response.json();
+        } catch (error) {
+            return null;
+        } finally {
+            clearTimeout(timeoutId);
+        }
+    }
+    /**
+     * Check if the API returned a genuinely empty object (no contract data at all)
+     */
+    function isEmptyResponse(data) {
+        return !!data &&
+            typeof data === 'object' &&
+            !Array.isArray(data) &&
+            Object.keys(data).length === 0;
+    }
+    /**
+     * Validate that a value is a valid number or a dash placeholder
+     */
+    function isValidNumber(value) {
+        if (value === null || value === undefined || value === '') {
+            return false;
+        }
+        if (value.toString().trim() === '-') {
+            return true;
+        }
+        const numericValue = typeof value === 'number' ? value : parseFloat(value);
+        if (isNaN(numericValue) || !isFinite(numericValue)) {
+            return false;
+        }
+        if (numericValue < 0 || numericValue > 1) {
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * Sanitize contract key to prevent XSS attacks
+     */
+    function sanitizeContractKey(key) {
+        if (typeof key !== 'string') {
+            return '';
+        }
+        return key.replace(/[^a-zA-Z0-9_]/g, '');
+    }
+    /**
+     * Get the appropriate route for a contract
+     */
+    function getContractRoute(contractKey) {
+        if (CONTRACT_ROUTES.hasOwnProperty(contractKey)) {
+            const route = CONTRACT_ROUTES[contractKey];
+            if (typeof route === 'string' && route.startsWith('index.html')) {
+                return route.replace(/[^a-zA-Z0-9\-_/]/g, '');
+            }
+        }
+        return '/markets';
+    }
+    /**
+     * Validate that a single item has all required fields with valid data
+     */
+    function isValidItem(item) {
+        const hasRequiredFields = item &&
+            typeof item.question === 'string' &&
+            item.question !== '';
+        if (!hasRequiredFields) {
+            return false;
+        }
+        if (!isValidNumber(item.yesQuote)) {
+            return false;
+        }
+        if (!isValidNumber(item.noQuote)) {
+            return false;
+        }
+        // Both quotes at exactly 0 is treated as "empty" API data, not a real market state.
+        const yesIsZero = parseFloat(item.yesQuote) === 0;
+        const noIsZero = parseFloat(item.noQuote) === 0;
+        if (yesIsZero && noIsZero) {
+            return false;
+        }
+        return true;
+    }
+    /**
+     * Extract and validate the contracts we want to display
+     */
+    function getValidContracts(data) {
+        if (!data || typeof data !== 'object') {
+            return null;
+        }
+        const contracts = [];
+        for (let contractKey of CONTRACTS_TO_DISPLAY) {
+            if (data[contractKey]) {
+                contracts.push({ key: contractKey, data: data[contractKey] });
+            }
+        }
+        const limitedContracts = contracts.slice(0, MAX_ITEMS);
+        if (limitedContracts.length === 0) {
+            return null;
+        }
+        const allValid = limitedContracts.every(contract => isValidItem(contract.data));
+        if (!allValid) {
+            return null;
+        }
+        return limitedContracts;
+    }
+    /**
+     * Format quote as percentage (e.g., 0.75 -> "75%"), or return dash as-is
+     */
+    function formatQuote(quote) {
+        if (quote.toString().trim() === '-') {
+            return '-';
+        }
+        const numericValue = typeof quote === 'number' ? quote : parseFloat(quote);
+        return `${(numericValue * 100).toFixed(0)}%`;
+    }
+    /**
+     * Populate carousel items with contract data
+     */
+    function populateCarouselItems(contracts) {
+        contracts.forEach((contract, index) => {
+            const nameEl = document.getElementById(`name-${index}`);
+            const yesQuoteEl = document.getElementById(`yesQuote-${index}`);
+            const noQuoteEl = document.getElementById(`noQuote-${index}`);
+            const linkEl = document.getElementById(`link-${index}`);
+            if (nameEl && yesQuoteEl && noQuoteEl && linkEl) {
+                nameEl.textContent = contract.data.question;
+                yesQuoteEl.textContent = formatQuote(contract.data.yesQuote);
+                noQuoteEl.textContent = formatQuote(contract.data.noQuote);
+                const sanitizedKey = sanitizeContractKey(contract.key);
+                const route = getContractRoute(contract.key);
+                const baseUrl = 'https://www.yameiracapital.com/eventtrader/';
+                linkEl.href = `${baseUrl}?sbanner=${sanitizedKey}#${route}`;
+            }
+        });
+    }
+    /**
+     * Turn off the skeleton loading state. Called exactly once, on success or
+     * failure, so the shimmer can never linger indefinitely.
+     */
+    function stopLoading() {
+        const bandaidEl = document.getElementById('bandaid');
+        if (bandaidEl) bandaidEl.classList.remove('is-loading');
+    }
+    /**
+     * Fall back to (or stay on) the static message. Used both for a genuine API
+     * failure and as a safety net if the dynamic content ever looks broken.
+     */
+    function showStaticContent() {
+        const staticEl = document.getElementById('carouselFtStatic');
+        const dynamicEl = document.getElementById('carouselFtData');
+        if (dynamicEl) dynamicEl.style.display = 'none';
+        if (staticEl) staticEl.style.display = '';
+        stopLoading();
+        removeResizeListener();
+    }
+    /**
+     * Show dynamic carousel and hide static content
+     */
+    function showDynamicContent() {
+        const staticEl = document.getElementById('carouselFtStatic');
+        const dynamicEl = document.getElementById('carouselFtData');
+        if (staticEl) staticEl.style.display = 'none';
+        if (dynamicEl) dynamicEl.style.display = 'block';
+        stopLoading();
+    }
+    function handleResize() {
+        const ok = setCarouselHeight();
+        if (!ok) {
+            showStaticContent();
+        }
+    }
+    function addResizeListener() {
+        if (!window._bandaidCarouselResizeAdded) {
+            window.addEventListener('resize', handleResize);
+            window._bandaidCarouselResizeAdded = true;
+        }
+    }
+    function removeResizeListener() {
+        if (window._bandaidCarouselResizeAdded) {
+            window.removeEventListener('resize', handleResize);
+            window._bandaidCarouselResizeAdded = false;
+        }
+    }
+    /**
+     * Set carousel to the height of its tallest item to prevent jumping.
+     * Returns true if a sane height was applied, false if the measurement looked
+     * broken - in which case the caller should fall back to the static message.
+     */
+    function setCarouselHeight() {
+        const smUp = window.matchMedia('(min-width: 576px)');
+        const isMobileDisclosure = window.matchMedia('(max-width: 1023.98px)').matches;
+        const carousel = document.getElementById('carouselFtData');
+        if (!carousel) return false;
+        const carouselContainer = carousel.querySelector('.carousel');
+        const carouselInner = carousel.querySelector('.carousel-inner');
+        const items = carousel.querySelectorAll('.carousel-item');
+        const carouselDisclosure = carousel.querySelector('.ft-livedata-disclosure');
+        const carouselDisclosureWidth = carouselDisclosure ? carouselDisclosure.offsetWidth : 0;
+        const carouselDisclosureHeight = carouselDisclosure ? carouselDisclosure.offsetHeight : 0;
+        // Guard against any missing element instead of throwing.
+        if (!carouselContainer || !carouselInner || items.length === 0) {
+            return false;
+        }
+        carouselInner.style.paddingTop = '';
+        if (smUp.matches) {
+            const carouselMaxWidth = carouselDisclosureWidth * 2;
+            carouselContainer.style.maxWidth = `calc(100% - ${carouselMaxWidth}px)`;
+        } else {
+            carouselContainer.style.maxWidth = '';
+        }
+        if (isMobileDisclosure && carouselDisclosureHeight > 0) {
+            carouselInner.style.paddingTop = `${carouselDisclosureHeight}px`;
+        }
+        let activeIndex = -1;
+        items.forEach((item, index) => {
+            if (item.classList.contains('active')) {
+                activeIndex = index;
+            }
+        });
+        carouselInner.style.height = '';
+        let maxHeight = 0;
+        items.forEach((item) => {
+            item.classList.add('active');
+            const height = item.offsetHeight;
+            if (height > maxHeight) maxHeight = height;
+        });
+        items.forEach((item, index) => {
+            if (index !== activeIndex) {
+                item.classList.remove('active');
+            }
+        });
+
+        // Circuit breaker: reject non-finite, zero, or implausibly large
+        // measurements instead of applying them.
+        if (!Number.isFinite(maxHeight) || maxHeight <= 0 || maxHeight > MAX_REASONABLE_ITEM_HEIGHT) {
+            return false;
+        }
+        carouselInner.style.height = `${maxHeight + (isMobileDisclosure ? carouselDisclosureHeight : 0)}px`;
+        carousel.style.opacity = '';
+        return true;
+    }
+    /**
+     * Main initialization function
+     */
+    async function initializeBanner() {
+        try {
+            // If the page is rendering in quirks mode 
+            // go straight to the static message rather than risk a broken banner.
+            if (document.compatMode === 'BackCompat') {
+                showStaticContent();
+                return;
+            }
+            const data = await fetchForecastData();
+            if (!data || isEmptyResponse(data)) {
+                showStaticContent();
+                return;
+            }
+            const validContracts = getValidContracts(data);
+            if (!validContracts) {
+                showStaticContent();
+                return;
+            }
+            populateCarouselItems(validContracts);
+            showDynamicContent();
+            const heightOk = setCarouselHeight();
+            if (!heightOk) {
+                // Measurement looked broken - don't leave a mis-sized/invisible
+                // banner on screen, fall back to the static message instead.
+                showStaticContent();
+                return;
+            }
+            addResizeListener();
+        } catch (error) {
+            // Anything unexpected also falls back to static so the skeleton can
+            // never get stuck on screen.
+            showStaticContent();
+        }
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initializeBanner);
+    } else {
+        initializeBanner();
+    }
+})();
+</script> 
+     
+      
+    <!-- NAV TOP START (LG/XL ONLY) -->
+    <!-- NAV TOP END -->
+     <!-- NAV TOP START (LG/XL ONLY) -->
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-top d-none d-lg-block" role="navigation" aria-label="Top navigation">
+        <div class="container">
+           <!-- LEFT MENU -->
+                        <!-- YMC LOGO -->
+                                                <span class="d-none d-lg-block">  
+                        <a href="../../../index.html" target="_self" title="YMC Home" class="navbar-brand brand-logo" aria-label="YMC Home"><img src="../../../assets/images/arc1.png" alt="YMC" width="300" height="132"></a>
+                        </span>
+            <div class="navbar-collapse collapse" id="ibkr-nav-top">
+                <!-- RIGHT MENU -->
+                <ul class="navbar-nav ml-auto align-items-center">
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- NAV TOP END -->     
+     <!-- NAV BOTTOM START -->
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-bottom" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <!-- YMC LOGO -->
+            <span class="d-block d-lg-none"> 
+            <a href="../../../index.html" target="_self" title="YMC Home" class="navbar-brand brand-logo" aria-label="YMC Home"><img src="../../../assets/images/arc1.png" alt="YMC" width="300" height="132"></a>
+            </span>
+            <!-- TOGGLE (XS/SM/MD ONLY) -->
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ibkr-nav-bottom" aria-controls="ibkr-nav-bottom" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <!-- YMC NAV BOTTOM START   -->
+            <div class="row nav-links-row w-100">
+				<div class="col-12">
+					<!-- YMC NAV BOTTOM START   -->
+					<div class="navbar-collapse collapse justify-content-end" id="ibkr-nav-bottom">
+						<ul class="navbar-nav align-items-center">
+							<!-- WHY YMC -->
+							<li class="nav-item dropdown m-0">
+                                <a class="nav-link dropdown-toggle " id="nav-why-ibkr" data-bs-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">Why YMC</a>
+                                <div class="dropdown-menu bottom-group container dropdown-why-ibkr p-0" aria-labelledby="nav-why-ibkr">
+									<div class="container p-0">
+										<div class="row h-100">
+											<div class="col-8">
+												<div class="row mt-20 mb-40 ps-40">
+													<div class="col-12">
+														<p class=" menu-col-header p-0 mb-10">Get Started</p>
+														<hr class="mt-0 mb-10">
+													</div>
+													<div class="col-6">
+														<a href="../../../en/whymc/overview7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">Why Choose YMC<br><span class="label-subtitle d-block">Discover why millions choose us</span></a>
+														
+													</div>
+													<div class="col-6">
+                                                        						
+														<a href="../../../en/trading/bestx7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">Best Execution<br><span class="label-subtitle d-block">Maximize execution quality, minimize market impact</span></a>	
+													</div>
+													<div class="col-6">
+                                                    </div>
+												</div>
+											</div>
+											<div class="col-4">
+												<div class="mega-cta h-100 d-flex flex-column gap-4 justify-content-between">
+													<div>
+														<h2 class="headline mt-0">Keep More of Your Returns</h2>
+														<p class="p-0">Earn more on cash. Pay less to borrow. Trade for as low as $0.</p>															
+													</div>
+																										
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<!-- PRODUCTS -->
+							<li class="nav-item dropdown m-0"><a class="nav-link dropdown-toggle " id="nav-products" data-bs-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">Products</a>
+								<div class="dropdown-menu bottom-group container dropdown-products p-0" aria-labelledby="nav-products">
+									<div class="container p-0">
+										<div class="row h-100">
+											<div class="col-9">
+												<div class="row mt-20 mb-40 ps-40">
+													<div class="col-4"><p class=" menu-col-header p-0 mb-10">Trading & Investment Products</p><hr class="mt-0 mb-10"></div>
+													<div class="col-4"><p class=" menu-col-header p-0 mb-10">Tools & Analytics</p><hr class="mt-0 mb-10"></div>
+													<div class="col-4"><p class=" menu-col-header p-0 mb-10">Features</p><hr class="mt-0 mb-10"></div>
+											<div class="col-4">
+                                                        <a href="../../../en/trading/products-stocks7abe.html?menu=B" target="_self" class="dropdown-item d-block">Stocks</a>
+												<a href="../../../en/trading/products-etfs7abe.html?menu=B" target="_self" class="dropdown-item d-block">ETFs</a>
+												<a href="../../../en/trading/products-futures7abe.html?menu=B" target="_self" class="dropdown-item d-block">Futures</a>
+												<a href="../../../en/trading/products-bonds7abe.html?menu=B" target="_self" class="dropdown-item d-block">Bonds</a>
+												<a href="../../../en/trading/products-spot-currencies7abe.html?menu=B" target="_self" class="dropdown-item d-block">Crypto</a>
+												<a href="../../../en/trading/products-mutual-funds7abe.html?menu=B" target="_self" class="dropdown-item d-block">Mutual Funds</a>
+												<a href="../../../en/trading/products-metals7abe.html?menu=B" target="_self" class="dropdown-item d-block">Spot Gold</a>
+													</div>
+													<div class="col-4">
+														<a href="../../../en/trading/ai-integrations7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">AI Integration</a>
+                                                        <a href="../../../en/trading/ib-api7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">YMC APIs</a>
+														<a href="../../../en/pricing/research-news-services7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">Research and News</a>														<a href="../../../en/trading/ordertypes7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">Order Types</a>
+														<a href="../../../en/trading/securities-financing7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">Securities Financing</a>
+														<a href="../../../en/trading/fundamentals-explorer7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">Fundamentals Explorer</a>
+														<a href="../../../en/trading/risk-navigator7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">Risk Navigator</a>
+													</div>
+											<div class="col-4">
+                                                        <a href="#" onclick="return false;" class="dropdown-item d-block" aria-disabled="true">Short-Term Trading</a>
+												<a href="#" onclick="return false;" class="dropdown-item d-block" aria-disabled="true">High-Frequency Trading</a>
+												<a href="#" onclick="return false;" class="dropdown-item d-block" aria-disabled="true">Fast Fund Withdrawals</a>
+												<a href="#" onclick="return false;" class="dropdown-item d-block" aria-disabled="true">Controlled Risk</a>
+												<a href="#" onclick="return false;" class="dropdown-item d-block" aria-disabled="true">High Security</a>
+												<a href="#" onclick="return false;" class="dropdown-item d-block" aria-disabled="true">Strong Privacy</a>
+												<a href="#" onclick="return false;" class="dropdown-item d-block" aria-disabled="true">Global Access</a>
+													</div>
+												</div>
+											</div>
+											<div class="col-3">
+												<div class="mega-cta h-100 d-flex flex-column gap-4 justify-content-between">
+													<div>
+														<h2 class="headline mt-0">Keep More of Your Returns</h2>
+														<p class="p-0">Earn USD <span class="text-price">3.13%</span> on uninvested cash. Margin loans start at USD <span class="text-price">4.13%</span>. <span class="text-price">$0 commissions</span> on US stocks and ETFs with YMC Lite.</p>													
+													</div>
+																									
+												</div>
+											</div>											
+										</div>
+									</div>
+								</div>							
+							</li>
+    <!-- ACCOUNTS -->
+							<li class="nav-item dropdown m-0"><a class="nav-link dropdown-toggle " id="nav-accounts" data-bs-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">Accounts</a>
+								<div class="dropdown-menu bottom-group container dropdown-accounts p-0" aria-labelledby="nav-accounts">
+									<div class="container p-0">
+										<div class="row h-100">
+											<div class="col-9">
+												<div class="row mt-20 mb-40 ps-40">
+													<div class="col-6">
+														<p class=" menu-col-header p-0 mb-10">For Individuals</p>
+														<hr class="mt-0 mb-10">
+													</div>
+													<div class="col-6">
+														<p class=" menu-col-header p-0 mb-10">For Institutions</p>
+														<hr class="mt-0 mb-10">
+													</div>
+													<div class="col-6">
+														<a href="../../../en/accounts/individual7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">Personal Brokerage Accounts<br><span class="label-subtitle d-block">For individual, joint, trust and retirement</span></a>
+														<a href="../../../en/accounts/non-professional-advisor7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">Non-Professional Advisor<br><span class="label-subtitle d-block">For exempt advisors serving 15 or fewer clients</span></a>
+													</div>
+													<div class="col-6">
+                                                        <a href="../../../en/accounts/advisor/overview.html?menu=B" target="_self" class="dropdown-item  d-block ">Financial Advisors<br><span class="label-subtitle d-block">Manage client portfolios at low cost.</span></a>
+                                                        <a href="../../../en/accounts/hedge-fund7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">Hedge Funds<br><span class="label-subtitle d-block">Execute complex strategies across global markets.</span></a>
+                                                        <a href="../../../en/accounts/proprietary-trading-group7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">Proprietary Trading Groups<br><span class="label-subtitle d-block">Run multiple strategies with one account.</span></a>
+                                                        <a href="../../../en/accounts/broker7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">Introducing Brokers<br><span class="label-subtitle d-block">Launch and scale your brokerage business.</span></a>
+														<hr class="mt-10 mb-10">
+                                                        
+													</div>										
+												</div>
+											</div>
+											<div class="col-3">
+												<div class="mega-cta h-100 d-flex flex-column gap-4 justify-content-between">
+													<div>
+														<h2 class="headline mt-0">Find Your Account</h2>
+														<p class="p-0">Choose the right account for your needs</p>													
+													</div>
+													<a class="btn btn-primary mega-cta-btn justify-content-start link-arrow-right" href="../../../en/accounts/account-guide7abe.html?menu=B" onclick="onClickFP(event)" target="_self" id="mm-accounts-desktop">
+														<span class="d-flex flex-row">
+															See <span class="d-none d-xl-inline">Account </span>Guide
+														</span>
+													</a>													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<!-- PRICING -->
+							<li class="nav-item dropdown m-0"><a class="nav-link dropdown-toggle " id="nav-pricing" data-bs-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">Pricing</a>
+								<div class="dropdown-menu bottom-group container dropdown-pricing p-0" aria-labelledby="nav-pricing">
+									<div class="container p-0">
+										<div class="row h-100">
+											<div class="col-9">
+												<div class="row mt-20 mb-40 ps-40">
+													<div class="col-6"><p class=" menu-col-header p-0 mb-10">Commissions, Rates & Fees</p><hr class="mt-0 mb-10"></div>
+													<div class="col-6"><p class=" menu-col-header p-0 mb-10">Research & Data</p><hr class="mt-0 mb-10"></div>
+													<div class="col-6">
+                                                        <a href="../../../en/pricing/commissions-home7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">Commissions<br><span class="label-subtitle d-block">Fixed, Tiered and $0 Commissions</span></a>
+														<a href="../../../en/trading/margin-rates7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">Margin Rates<br><span class="label-subtitle d-block">Competitive borrowing rates as low as <span class="fs-8 fw-600">4.13%</span></span></a>
+														<a href="../../../en/accounts/fees/pricing-interest-rates7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">Interest Rates<br><span class="label-subtitle d-block">Earn interest on cash balance up to USD <span class="fs-8 fw-600">3.13%</span></span></a>
+														<a href="../../../en/pricing/short-sale-cost7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">Short Sale Cost<br><span class="label-subtitle d-block">Calculate the cost of borrowing stock</span></a>
+														<a href="../../../en/pricing/stock-yield-enhancement-program7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">Stock Yield Enhancement Program<br><span class="label-subtitle d-block">Earn extra income lending fully-paid shares</span></a>
+														<a href="../../../en/trading/why-ibkr-lite7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">YMC Lite<br><span class="label-subtitle d-block">Explore our $0 commission account</span></a>
+														<a href="../../../en/trading/commission-free-etfs-mkt7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">No Transaction Fee ETFs<br><span class="label-subtitle d-block">"Fee waived" program with over 150 ETFs</span></a>														
+														<a href="../../../en/pricing/other-fees-overview7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">Other Fees<br><span class="label-subtitle d-block">Institutional client account minimum and client billing</span></a>
+													</div>
+                                                    <div class="col-6">
+														<a href="../../../en/pricing/market-data-pricing7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">Market Data<br><span class="label-subtitle d-block">Real-time and delayed data</span></a>
+														<a href="../../../en/trading/short-securities-availability7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">Short Securities Availability<br><span class="label-subtitle d-block">Search for real-time availability</span></a>
+													</div>
+												</div>
+											</div>
+											<div class="col-3">
+												<div class="mega-cta h-100 d-flex flex-column gap-4 justify-content-between">
+													<div>
+														<h2 class="headline mt-0">Keep More of Your Returns</h2>
+														<p class="p-0">Earn USD <span class="text-price">3.13%</span> on uninvested cash. Margin loans start at USD <span class="text-price">4.13%</span>. <span class="text-price">$0 commissions</span> on US stocks and ETFs with YMC Lite.</p>															
+													</div>
+																										
+												</div>
+											</div>											
+										</div>
+									</div>
+								</div>
+							</li>
+    <!-- SUPPORT -->
+							<li class="nav-item dropdown m-0"><a class="nav-link dropdown-toggle " id="nav-support" data-bs-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">Support</a>
+								<div class="dropdown-menu bottom-group container dropdown-support p-0" aria-labelledby="nav-education">
+									<div class="container p-0">
+										<div class="row h-100">
+											<div class="col-12">
+												<div class="row mt-20 mb-40 ps-40">
+													<div class="col-4"><p class=" menu-col-header p-0 mb-10">Support for Individuals</p><hr class="mt-0 mb-10"></div>
+													<div class="col-4"><p class=" menu-col-header p-0 mb-10">Support for Institutions</p><hr class="mt-0 mb-10"></div>
+													<div class="col-4"><p class=" menu-col-header p-0 mb-10">General Support</p><hr class="mt-0 mb-10"></div>
+													<div class="col-4">
+                                                        <a href="../../../en/support/individuals7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">Support</a>
+														<a href="../../../en/accounts/welcome-individuals7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">Welcome Center</a>
+														<a href="../../../en/support/reports-and-dates7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">Tax Information</a>
+														<a href="../../../en/feature-explorer/index7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">YMC FeatureExplorer</a>
+													</div>													
+													<div class="col-4">
+                                                        
+														<a href="../../../en/support/institutions7abe.html?menu=B#support-ib-proserve" target="_self" class="dropdown-item  d-block ">YMC ProServe</a>
+														<a href="../../../en/support/institutions7abe.html?menu=B#welcome-ctr" target="_self" class="dropdown-item  d-block ">Institutional Welcome Centers</a>
+														<a href="../../../en/support/institutions7abe.html?menu=B#support-additional-tools" target="_self" class="dropdown-item  d-block ">Information and Tools</a>
+													</div>
+													<div class="col-4">
+                                                        <a href="../../../en/education/tradersu/documentation7261.html?menu=B&amp;p=user-guides" target="_blank" class="dropdown-item  d-block ">User Guides</a>
+													</div>													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>	
+                            <!-- ABOUT US -->
+							<li class="nav-item dropdown m-0"><a class="nav-link dropdown-toggle " id="nav-about-us" data-bs-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">About Us</a>
+								<div class="dropdown-menu bottom-group container dropdown-about-us p-0" aria-labelledby="nav-about-us">
+									<div class="container p-0">
+										<div class="row h-100">
+                                        <div class="col-8">
+												<div class="row mt-20 mb-40 ps-40">
+													<div class="col-12">
+														<p class=" menu-col-header p-0 mb-10">About YMC</p>
+														<hr class="mt-0 mb-10">
+													</div>
+													<div class="col-6">
+                                                        <a href="#" onclick="return false;" class="dropdown-item  d-block " aria-disabled="true">Investor Relations<br><span class="label-subtitle d-block">Company performance and corporate filings</span></a>
+															
+															
+													</div>
+													<div class="col-6">
+															
+                                                        <a href="../../../en/general/about/affiliate-programs7abe.html?menu=B" target="_blank" class="dropdown-item  d-block ">Affiliate Programs<br><span class="label-subtitle d-block">Unlock unlimited revenue potential</span></a>
+													</div>
+													<div class="col-6">
+                                                    </div>
+												</div>
+											</div>
+											<div class="col-4">
+												<div class="mega-cta h-100 d-flex flex-column gap-4 justify-content-between">
+													<div>
+														<h2 class="headline mt-0">Keep More of Your Returns</h2>
+														<p class="p-0">Earn more on cash. Pay less to borrow. Trade for as low as $0.</p>							
+													</div>
+																										
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>	
+						</ul>
+					</div>				
+				</div>
+			</div>	
+        </div>
+    </nav>
+    <!-- NAV BOTTOM END -->
+</div>
+<!-- HEADER END ---------------------------------------------------------------------------------------------------- -->
+<!-- MOBILE NAV START (XS/SM/MD ONLY) ---------------------------------------------------------------------------------------------------- -->
+<div class="menu-mobile d-lg-none" role="navigation" aria-label="Mobile navigation">
+    <!-- CLOSE BUTTON -->
+    <div class="close-button"><button type="button" aria-label="Close navigation"><span aria-hidden="true">&times;</span></button></div>
+    <!-- LOGO -->
+    <div class="logo-container"><a href="../../../index.html" target="_self" class="brand-logo" aria-label="YMC Home"><img src="../../../assets/images/arc1.png" alt="YMC" width="300" height="132"></a></div>
+         <!-- GEN AI SEARCH -->
+    <div class="search-container-gen-ai pt-10 pb-10 ps-20 pe-20 bg-gray-5">
+        <div class="search-box w-100 text-center">
+            <a href="../../../en/search/index.html" target="_self"  class="btn btn-sm btn-tertiary btn-outline w-100 mt-1">Ask a Question <i class="fas fa-search" aria-hidden="true"></i></a>  <!--  type="button"  -->
+        </div>
+    </div>
+         <ul>
+    <!-- LOG IN -->
+                    <li><span class="menu-log-in" data-external-link-disabled>Portal Login</span></li>
+                <!-- OPEN ACCOUNT -->
+    <li class="has-submenu">
+        <div class="submenu" id="submenu-open-account">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-open-account">Back</button></p>
+            <p class="submenu-title">OPEN ACCOUNT</p>
+            <ul>
+            <li><a href="../../../login.html?lang=en" target="_self" class="menu-start-application" data-type="cta">Start Application</a></li>
+            <li><a href="../../../en/general/what-you-need-inv.html" target="_self">What You Need</a></li>
+            <li><a href="../../../en/accounts/account-guide.html" target="_self">A Guide to Choosing the Right Account</a></li>
+            </ul>
+        </div>
+    </li>
+        
+    <!-- WHY YMC -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-why-ibkr">Why YMC</a>
+        <div class="submenu" id="submenu-why-ibkr">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-why-ibkr">Back</button></p>
+            <p class="submenu-title">Why YMC</p>
+            <ul>
+                <li><a href="../../../en/whymc/overview.html" target="_self" >Why Choose YMC<br><span class="label-subtitle">Discover why millions choose us</span></a></li>
+                					
+                
+                <li><a href="../../../en/trading/bestx.html" target="_self" >Best Execution<br><span class="label-subtitle">Maximize execution quality, minimize market impact</span></a></li>	
+            </ul>
+        </div>
+    </li>
+    <!-- PRODUCTS -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-products">Products</a>
+        <div class="submenu" id="submenu-products">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-products">Back</button></p>
+            <p class="submenu-title">PRODUCTS</p>
+            <p class="submenu-title">Trading & Investment Products</p>
+            <ul>
+            <li><a href="../../../en/trading/products-stocks.html" target="_self">Stocks</a></li>
+            <li><a href="../../../en/trading/products-etfs.html" target="_self">ETFs</a></li>
+            <li><a href="../../../en/trading/products-futures.html" target="_self">Futures</a></li>
+            <li><a href="../../../en/trading/products-bonds.html" target="_self">Bonds</a></li>
+            <li><a href="../../../en/trading/products-spot-currencies.html" target="_self">Crypto</a></li>
+            <li><a href="../../../en/trading/products-mutual-funds.html" target="_self">Mutual Funds</a></li>
+            <li><a href="../../../en/trading/products-metals.html" target="_self">Spot Gold</a></li>
+            </ul>
+            <p class="submenu-title">Tools & Analytics</p>
+            <ul>
+			<li><a href="../../../en/trading/ai-integrations.html" target="_self" >AI Integration</a></li>
+            <li><a href="../../../en/trading/ib-api.html" target="_self" >YMC APIs</a></li>
+            <li><a href="../../../en/pricing/research-news-services.html" target="_self" >Research and News</a></li>            <li><a href="../../../en/trading/ordertypes.html" target="_self" >Order Types</a></li>
+            <li><a href="../../../en/trading/securities-financing.html" target="_self" >Securities Financing</a></li>
+            <li><a href="../../../en/trading/fundamentals-explorer.html" target="_self" >Fundamentals Explorer</a></li>
+            <li><a href="../../../en/trading/risk-navigator.html" target="_self" >Risk Navigator</a></li>
+            
+            </ul>
+            <p class="submenu-title">Features</p>
+            <ul>
+            <li><a href="#" onclick="return false;" aria-disabled="true">Short-Term Trading</a></li>
+            <li><a href="#" onclick="return false;" aria-disabled="true">High-Frequency Trading</a></li>
+            <li><a href="#" onclick="return false;" aria-disabled="true">Fast Fund Withdrawals</a></li>
+            <li><a href="#" onclick="return false;" aria-disabled="true">Controlled Risk</a></li>
+            <li><a href="#" onclick="return false;" aria-disabled="true">High Security</a></li>
+            <li><a href="#" onclick="return false;" aria-disabled="true">Strong Privacy</a></li>
+            <li><a href="#" onclick="return false;" aria-disabled="true">Global Access</a></li>
+            </ul>
+        </div>
+    </li>
+    <!-- ACCOUNT TYPES -->
+    <li class="has-submenu"><a href="#" target="_self" data-submenu="submenu-account-types">Account Types</a>
+        <div class="submenu" id="submenu-account-types">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-account-types">Back</button></p>
+            <p class="submenu-title">ACCOUNT TYPES</p>
+            <p class="submenu-title">For Individuals</p>
+            <ul>   
+            <li><a href="../../../en/accounts/individual.html" target="_self" >Personal Brokerage Accounts<br><span class="label-subtitle">For individual, joint, trust and retirement</span></a></li>
+            <li><a href="../../../en/accounts/non-professional-advisor.html" target="_self" >Non-Professional Advisor<br><span class="label-subtitle">For exempt advisors serving 15 or fewer clients</span></a></li>
+            </ul>
+            <p class="submenu-title">For Institutions</p>
+            <ul>
+            <li><a href="../../../en/accounts/advisor/overview.html?menu=B" target="_self" >Financial Advisors<br><span class="label-subtitle ">Manage client portfolios at low cost.</span></a></li>
+            <li><a href="../../../en/accounts/hedge-fund7abe.html?menu=B" target="_self" >Hedge Funds<br><span class="label-subtitle ">Execute complex strategies across global markets.</span></a></li>
+            <li><a href="../../../en/accounts/proprietary-trading-group7abe.html?menu=B" target="_self" >Proprietary Trading Groups<br><span class="label-subtitle ">Run multiple strategies with one account.</span></a></li>
+            <li><a href="../../../en/accounts/broker7abe.html?menu=B" target="_self" >Introducing Brokers<br><span class="label-subtitle ">Launch and scale your brokerage business.</span></a></li>
+             
+          </ul>
+        </div>
+    </li> 
+    <!-- PRICING -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-pricing">Pricing</a>
+        <div class="submenu" id="submenu-pricing">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-pricing">Back</button></p>
+            <p class="submenu-title">PRICING</p>
+            <p class="submenu-title">Commissions, Rates & Fees</p>
+            <ul>
+            <li><a href="../../../en/pricing/commissions-home.html" target="_self" >Commissions<br><span class="label-subtitle">Fixed, Tiered and $0 Commissions</span></a></li>
+            <li><a href="../../../en/trading/margin-rates.html" target="_self" >Margin Rates<br><span class="label-subtitle">Competitive borrowing rates as low as <span class="fs-8 fw-600">4.13%</span></span></a></li>
+            <li><a href="../../../en/accounts/fees/pricing-interest-rates.html" target="_self" >Interest Rates<br><span class="label-subtitle">Earn interest on cash balance up to USD <span class="fs-8 fw-600">3.13%</span></span></a></li>
+            <li><a href="../../../en/pricing/short-sale-cost.html" target="_self" >Short Sale Cost<br><span class="label-subtitle">Calculate the cost of borrowing stock</span></a></li>
+            <li><a href="../../../en/pricing/stock-yield-enhancement-program.html" target="_self" >Stock Yield Enhancement Program<br><span class="label-subtitle">Earn extra income lending fully-paid shares</span></a></li>
+            <li><a href="../../../en/trading/why-ibkr-lite.html" target="_self" >YMC Lite<br><span class="label-subtitle">Explore our $0 commission account</span></a></li>
+            <li><a href="../../../en/trading/commission-free-etfs-mkt.html" target="_self" >No Transaction Fee ETFs<br><span class="label-subtitle">"Fee waived" program with over 150 ETFs</span></a></li>
+            <li><a href="../../../en/pricing/other-fees-overview.html" target="_self" >Other Fees<br><span class="label-subtitle">Institutional client account minimum and client billing</span></a></li>
+            </ul>
+            <p class="submenu-title">Research & Data</p>
+            <ul>
+            <li><a href="../../../en/pricing/market-data-pricing.html" target="_self" >Market Data<br><span class="label-subtitle">Real-time and delayed data</span></a></li>
+            <li><a href="../../../en/trading/short-securities-availability.html" target="_self" >Short Securities Availability<br><span class="label-subtitle">Search for real-time availability</span></a></li>
+            </ul>
+        </div>
+    </li>
+    <!-- SUPPORT -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-support">Support</a>
+        <div class="submenu" id="submenu-support">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-support">Back</button></p>
+            <p class="submenu-title">SUPPORT</p>
+            <p class="submenu-title">Support for Individuals</p>
+            <ul>
+            <li><a href="../../../en/support/individuals.html" target="_self" >Support</a></li>   
+            <li><a href="../../../en/accounts/welcome-individuals.html" target="_self" >Welcome Center</a></li>   
+            <li><a href="../../../en/support/reports-and-dates.html" target="_self" >Tax Information</a></li>   
+            <li><a href="../../../en/feature-explorer/index.html" target="_self" >YMC FeatureExplorer</a></li>   
+            <!--<li><a href="/en/trading/fif-ibkr-forum.php" target="_self" >YMC Forum</a></li>  --> 
+            </ul>
+            <p class="submenu-title">Support for Institutions</p>
+            <ul>
+               
+            <li><a href="../../../en/support/institutions.html#support-ib-proserve" target="_self" >YMC ProServe</a></li>    
+            <li><a href="../../../en/support/institutions.html#welcome-ctr" target="_self" >Institutional Welcome Centers</a></li>   
+            <li><a href="../../../en/support/institutions.html#support-additional-tools" target="_self" >Information and Tools</a></li>   
+            </ul>
+            <p class="submenu-title">General Support</p>
+            <ul>
+            <li><a href="../../../en/education/tradersu/documentation7261.html?menu=B&amp;p=user-guides" target="_blank" >User Guides</a></li>   
+            </ul>
+        </div>
+    </li>
+    <!-- ABOUT US -->
+    <li class="has-submenu"><a href="#" data-submenu="submenu-about">About Us</a>
+        <div class="submenu" id="submenu-about">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-about">Back</button></p>
+            <p class="submenu-title">ABOUT US</p>
+            <ul>
+            <li><a href="#" onclick="return false;" aria-disabled="true">Investor Relations<br><span class="label-subtitle">Company performance and corporate filings</span></a></li>
+            
+				
+            
+            <li><a href="../../../en/general/about/affiliate-programs.html" target="_self">Affiliate Programs<br><span class="label-subtitle">Unlock unlimited revenue potential</span></a></li>
+            </ul>
+        </div>
+    </li>
+    </ul>
+</div>
+<!-- MOBILE NAV OVERLAY -->
+<div class="website-overlay d-lg-none"></div>
+<!-- MOBILE NAV END (XS/SM/MD ONLY) -->
+ 
+<!-- MODAL START | GDPR COOKIES  -->
+<div class="modal modal-cookies fade" id="cookie-modal" tabindex="-1" role="dialog" aria-labelledby="modalCookieLabel">
+	<div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-header d-block">
+				<p class="fs-5 modal-title" id="modalCookieLabel">Privacy Preference Center</p>
+                <p class="pt-10 pr-30">We use cookies to help our website operate securely and reliably, improve system efficiency, and support marketing activities.<br><span> For further information, please refer to our <u><a class="btn-default" id="gdpr-customize-settings-banner-cp">Cookie Policy</a></u></span></p>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-12 col-lg-4">
+                        <p class="fs-4 modal-title text black" id="modalCookieLabel">Customize Privacy Settings</p>
+						<ul role="tablist" class="nav flex-column" id="cookieTabs">
+                            <li role="presentation" class="nav-item" name="tab1"><a class="nav-link" href="#tab-01" aria-controls="tab-01" role="tab" data-bs-toggle="tab">Your Privacy</a></li>
+                            <li role="presentation" class="nav-item" name="tab2"><a id="temporary" class="nav-link" href="#tab-02" aria-controls="tab-02" role="tab" data-bs-toggle="tab">Strictly Necessary Cookies</a></li>
+                            <li role="presentation" class="nav-item" name="tab3"><a class="nav-link" href="#tab-03" aria-controls="tab-03" role="tab" data-bs-toggle="tab">Performance Cookies</a></li>
+                            <li role="presentation" class="nav-item" name="tab4"><a class="nav-link" href="#tab-04" aria-controls="tab-04" role="tab" data-bs-toggle="tab">Functional Cookies</a></li>
+                            <li role="presentation" class="nav-item" name="tab5"><a class="nav-link" href="#tab-05" aria-controls="tab-05" role="tab" data-bs-toggle="tab">Marketing Cookies</a></li>
+                            <li role="presentation" class="nav-item" name="tab6"><a class="nav-link" href="#tab-06" aria-controls="tab-06" role="tab" data-bs-toggle="tab">Cookie Policy</a></li>
+						</ul>
+		            </div>
+					<div class="col-12 col-lg-8">
+						<!-- TAB CONTENT START -->
+						<div class="tab-content">
+							<!-- TAB 01 -->
+							<div role="tabpanel" id="tab-01" class="tab-pane active">
+								<p><strong>Your Privacy</strong></p>
+								<p>When you visit any website it may use cookies and web beacons to store or retrieve information on your browser. This information might be about you, your preferences or your device and is typically used to make the website work as expected. The information does not usually directly identify you, but can provide a personalized browsing experience. Because we respect your right to privacy, you can choose not to allow some types of cookies and web beacons. Please click on the different category headings to find out more and change our default settings. However, blocking some types of cookies may impact your experience on our website and limit the services we can offer.</p>
+							</div>
+							<!-- TAB 02 -->
+							<div role="tabpanel" id="tab-02" class="tab-pane">
+								<p><strong>Strictly Necessary Cookies</strong></p>
+								<p>Strictly necessary cookies are necessary for the website to function and cannot be switched off in our systems. They are typically set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. While you can set your browser to block or alert you about these cookies, some parts of the website will not work. These cookies do not store any personally identifiable information.</p>
+								<br>
+								<p class="text-success text-small">Always Active</p>
+							</div>
+							<!-- TAB 03 -->
+							<div role="tabpanel" id="tab-03" class="tab-pane">
+								<p><strong>Performance Cookies and Web Beacons</strong></p>
+								<p>Performance cookies and web beacons allow us to count visits and traffic sources so we can measure and improve website performance. They help us to know which pages are the most and least popular and see how visitors navigate around our website. All information these cookies and web beacons collect is aggregated and anonymous. If you do not allow these cookies and web beacons we will not know when you have visited our website and will not be able to monitor its performance.</p>
+								<form>
+								<fieldset>
+								<p class="checkbox-label"><input type="checkbox" name="toggle-performance-cookies" data-on-color="success" data-off-color="default" data-on-text="Yes" data-off-text="No"><label id="act-perf">Active</label></p>
+								</fieldset>
+								</form>
+							</div>
+							<!-- TAB 04 -->
+							<div role="tabpanel" id="tab-04" class="tab-pane">
+								<p><strong>Functional Cookies</strong></p>
+								<p>Functional cookies enable our website to provide enhanced functionality and personalisation. They may be set by us or by third party providers whose services we have added to our pages. If you do not allow these cookies then some or all of these services may not function properly.</p>
+								<form>
+								<fieldset>
+								<p class="checkbox-label"><input type="checkbox" name="toggle-functional-cookies" data-on-color="success" data-off-color="default" data-on-text="Yes" data-off-text="No"><label id="act-func">Active</label></p>
+								</fieldset>
+								</form>
+							</div>
+							<!-- TAB 05 -->
+							<div role="tabpanel" id="tab-05" class="tab-pane">
+								<p><strong>Marketing Cookies and Web Beacons</strong></p>
+								<p>Marketing Cookies and web beacons may be set through our website by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant adverts on other websites. They do not directly store personal information, but uniquely identify your browser and internet device. If you do not allow these cookies and web beacons, you will experience less targeted advertising. Our website does not track users when they cross to third party websites, does not provide targeted advertising to them and therefore does not respond to "Do Not Track" signals.</p>
+								<form>
+								<fieldset>
+								<p class="checkbox-label"><input type="checkbox" name="toggle-targeting-cookies" data-on-color="success" data-off-color="default" data-on-text="Yes" data-off-text="No"><label id="act-target">Active</label></p>
+								</fieldset>
+								</form>
+							</div>
+                            <!-- TAB COOKIE POLICY  -->
+			<div role="tabpanel" id="tab-06" class="tab-pane tab-policy">
+                                                                <h2>Yameira Capital Group Cookie Policy</h2><br>
+                                                                <p><strong>What are Cookies and Web Beacons?</strong></p>
+                                    <p> Cookies are pieces of data that a website transfers to  a user's hard drive for record-keeping purposes. Web beacons are transparent  pixel images that are used in collecting information about website usage,  e-mail response and tracking. Generally,  cookies may contain information about your Internet Protocol ("IP") addresses, the region or general  location where your computer or device is accessing the internet, browser type,  operating system and other usage information about the website or your usage of  our services, including a history of the pages you view.</p>
+                                <p><strong>How We Use Cookies and Web Beacons</strong></p>
+                                                                        <p>Yameira Capital Group collects information from cookies and web beacons and stores it in an internal database. This information is retained in accordance with our Privacy Policy. This website uses the following cookies and web beacons:</p>
+                                                                        <p><strong>Strictly Necessary Cookies</strong></p>
+                                    <p>These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can configure your browser to block or alert you about these cookies, but certain areas of the site will not function properly. These cookies do not store any personal data.</p>
+                                    <p><strong>Performance Cookies and Web Beacons</strong></p>
+                                    <p>These cookies and web beacons allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us to know which pages are the most and least popular and see how visitors move around the site. All information that these cookies and web beacons collect is aggregated and, therefore, anonymous. If you do not allow these cookies and web beacons our aggregated statistics will not have a record of your visit.</p>
+                                    <p>The website uses Google Analytics, a web analytics service provided by Google, Inc. ("Google"). Google Analytics  uses cookies to help  analyse how  you use this  website. The information generated by the cookie about your use of this website (including your IP address) will be transmitted to and stored by Google on servers in the United States. Google will use this information for the purposes of evaluating your use of the website, compiling reports on website activity for website operators and providing other services relating to website activity and internet usage. Google may also transfer this information to third parties where required to do so by law, or where such third parties process the information on Google's behalf. Google will not associate your IP address with any other data held by Google. </p>
+                                    <p><strong>Functional Cookies</strong></p>
+                                    <p>These cookies enable the website to provide enhanced functionality and personalization. They may be set by us or by third party providers whose services we have added to our pages. If you do not allow these cookies, some or all of these services may not function properly.</p>
+                                    <p><strong>Marketing Cookies and Web Beacons</strong></p>
+                                <p>These cookies and web beacons may be set throughout our site by our advertising partners. They may be used by those companies to build a profile of your interests and show you relevant advertisements on other sites. They do not store personal information that could identify you directly, but are based on uniquely identifying your browser and internet device. If you do not allow these cookies and web beacons, you will experience less targeted advertising. The website does not track users when they cross to third party websites, does not provide targeted advertising to them and therefore does not respond to Do Not Track ("DNT") signals.</p>
+                                <p><strong>Managing Your Cookie Preferences</strong></p>
+                                <p>You have many choices with regards to the management of cookies on your computer. All major browsers allow you to block or delete cookies from your system. However, if you do decide to disable cookies you may not be able to access some areas of our website or the website may function incorrectly. To learn more about your ability to manage cookies and web beacons and how   to   disable   them,   please   consult   the   privacy   features   in   your   browser   or visit <span class="linkarrowexternal" data-external-link-disabled>www.allaboutcookies.org</span>. </p>
+                                <p>This website may link through to third party websites which may also use cookies and web beacons over which we have no control. We recommend that you check the relevant third parties privacy policy for information about any cookies and web beacons that may be used.</p>
+							</div>
+						</div>
+						<!-- TAB CONTENT END -->
+					</div>
+				</div>		
+		    </div>
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col">
+						<p>
+                            <button type="button" class="btn btn-default" id="gdpr-customize-settings">Customize Settings</button>
+                            <button type="button" class="btn btn-default" id="gdpr-save-settings">Save Custom Settings</button>
+                                                        <a href="javascript:allowAllCookies();" class="btn btn-success" id="btn_accept_cookies"><i class="fas fa-check-circle"></i> Accept Cookies</a>
+                        </p>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
+</div>
+<!-- MODAL END | GDPR COOKIES  -->
+<script>
+var token = "";
+$(function() {
+  $.ajax({
+      type: "GET",
+      url: '/response_handlers/cookies/session.php',
+      dataType: "json",
+      success: function(r) {
+        token = r.id;
+      },
+      error: function(xhr, status, err) {}
+    });
+});
+</script>
+<script type="text/javascript" src="../../../scripts/common/js/2015/bootstrap-switch.min.js"></script>
+<script type="text/javascript">
+ var statePerformanceCookie = false;
+ var stateFunctionalCookie = false;
+ var stateTargetingCookie = false;
+function setConsent(consent){
+    const consentMode = {
+        'functionality_storage': consent.necessary ? 'granted' : 'denied',
+        'security_storage': consent.necessary ? 'granted' : 'denied',
+        'ad_storage': consent.marketing ? 'granted' : 'denied',
+        'analytics_storage': consent.analytics ? 'granted' : 'denied',
+        'ad_personalization': consent.preferences ? 'granted' : 'denied',
+        'ad_user_data': consent.marketing ? 'granted' : 'denied'
+    };
+    if (typeof gtag == 'function'){
+        gtag('consent', 'update', consentMode);
+    }
+    localStorage.setItem('consentMode', JSON.stringify(consentMode));
+}
+ $(function() {
+        $('#btn_accept_cookies').on("click tap touch", function() {
+   $('#cookie-header').slideUp();
+  });
+  $('#cookie-modal-close').on("click tap touch", function() {
+   window.location.reload(true);
+  });
+  $('#btn_accept_cookies').on("click tap touch", function() {
+   if(typeof document.fp === "function")
+   {
+    var fip = fp();
+   } else {
+    var fip = '';
+   }
+   $.ajax({
+    url: '/response_handlers/cookies/index.php',
+    accept: 'application/json',
+    type: 'POST',
+    dataType: 'json',
+    data: {
+     gdpr_update_cookies: 'true',
+     t: token,
+     perf: true,
+     func: true,
+     targ: true,
+     fp: fip,
+     gdpr_version: 'C'
+    },
+    success: function(res)
+    {
+     if(res && !res['error'])
+     {
+      if(res['success'] && res['success'] == '1')
+      {
+       $('#cookie-modal').modal('hide');
+       $('#cookie-header').slideUp();
+       location.reload(true);
+      } 
+     } else {
+       location.reload(true); 
+     }
+    },
+    error: function(xhr, ajaxOpt, err)
+    {
+     location.reload(true);
+    }
+   });
+     });
+  // Show Modal Body and hide 'Customize Settings' button
+  $('#gdpr-customize-settings').on("click tap touch", function() {
+     $('#gdpr-save-settings').show();
+     $('#gdpr-customize-settings').hide();
+     $('.modal-body').show(); 
+      // Initialize first tab in modal window to display
+      $('#cookieTabs li:first-child a').click();
+  });
+  $('#gdpr-customize-settings-banner-cp').on("click tap touch", function() {
+     console.log('Clicked Cookie Policy');   
+     $('#gdpr-save-settings').show();
+     $('#cookie-header-banner').hide();
+     $('#gdpr-customize-settings').hide();
+     $('#cookie-modal').modal('show');
+     $('.modal-body').show(); 
+      // Initialize last tab in modal window to display
+    $('#cookieTabs li[name="tab6"] a')[0].click();
+  }); 
+  $('#gdpr-save-settings').on("click tap touch", function() {
+   if(typeof document.fp === "function")
+   {
+    var fip = fp();
+   } else {
+    var fip = '';
+   }
+   setConsent({
+    necessary: true,
+    analytics: statePerformanceCookie,
+    preferences: stateFunctionalCookie,
+    marketing: stateTargetingCookie
+  });
+   $.ajax({
+    url: '/response_handlers/cookies/index.php',
+    accept: 'application/json',
+    type: 'POST',
+    dataType: 'json',
+    data: {
+     gdpr_update_cookies: 'true',
+     t: token,
+     perf: statePerformanceCookie,
+     func: stateFunctionalCookie,
+     targ: stateTargetingCookie,
+     fp: fip,
+     gdpr_version: 'C'
+    },
+    success: function(res)
+    {
+     if(res && !res['error'])
+     {
+      if(res['success'] && res['success'] == '1')
+      {
+       $('#cookie-modal').modal('hide');
+       $('#cookie-header').slideUp();
+       location.reload(true);
+      }
+     } else {
+       location.reload(true); 
+     }
+    },
+    error: function(xhr, ajaxOpt, err)
+    {
+      location.reload(true); 
+    }
+   });
+  });
+  $('#gdpr-reject-all').on("click tap touch", function() {
+   if(typeof document.fp === "function")
+   {
+    var fip = fp();
+   } else {
+    var fip = '';
+   }
+   setConsent({
+    necessary: false,
+    analytics: false,
+    preferences: false,
+    marketing: false
+   });
+   $.ajax({
+    url: '/response_handlers/cookies/index.php',
+    accept: 'application/json',
+    type: 'POST',
+    dataType: 'json',
+    data: {
+     gdpr_update_cookies: 'true',
+     t: token,
+     perf: false,
+     func: false,
+     targ: false,
+     fp: fip,
+     gdpr_version: 'C'
+    },
+    success: function(res)
+    {
+     if(res && !res['error'])
+     {
+      if(res['success'] && res['success'] == '1')
+      {
+       $('#cookie-modal').modal('hide');
+       $('#cookie-header').slideUp();
+       location.reload(true);
+      } 
+     } else {
+       location.reload(true); 
+     }
+    },
+    error: function(xhr, ajaxOpt, err)
+    {
+     location.reload(true);
+    }
+   });
+  });
+  // BOOTSTRAP SWITCH initialize
+  $("[name='toggle-performance-cookies']").bootstrapSwitch();
+  $("[name='toggle-functional-cookies']").bootstrapSwitch();
+  $("[name='toggle-targeting-cookies']").bootstrapSwitch();
+ });
+ // respond to on/off switch events
+ $("input[name='toggle-performance-cookies']").on('switchChange.bootstrapSwitch', function (event, state) {
+  statePerformanceCookie = state;
+  if(state === true)
+  {
+   $('#act-perf').addClass('text-success');
+  } else {
+   $('#act-perf').removeClass('text-success');
+  }
+  $("input[name='toggle-performance-cookies']").attr( "checked", state );
+ });
+ $("input[name='toggle-functional-cookies']").on('switchChange.bootstrapSwitch', function (event, state) {
+  stateFunctionalCookie = state;
+  if(state === true)
+  {
+   $('#act-func').addClass('text-success');
+  } else {
+   $('#act-func').removeClass('text-success');
+  }
+  $("input[name='toggle-functional-cookies']").attr( "checked", state );
+ });
+ $("input[name='toggle-targeting-cookies']").on('switchChange.bootstrapSwitch', function (event, state) {
+  stateTargetingCookie = state;
+  if(state === true)
+  {
+   $('#act-target').addClass('text-success');
+  } else {
+   $('#act-target').removeClass('text-success');
+  }
+  $("input[name='toggle-targeting-cookies']").attr( "checked", state );
+ });
+ // initialize button state when tab is clicked
+ $("[name='tab3']").on("click tap touch", function() {
+	initPerformanceCookie();
+ });
+  $("[name='tab4']").on("click tap touch", function() {
+	initFunctionalCookie();
+ });
+  $("[name='tab5']").on("click tap touch", function() {
+	initTargetingCookie();
+ });
+ function initPerformanceCookie(){
+	 // read current state of bootstrapSwtich and change if it doesn't match the saved cookie boolean
+	if (statePerformanceCookie != $("[name='toggle-performance-cookies']").bootstrapSwitch('state')){
+		$("[name='toggle-performance-cookies']").bootstrapSwitch().click();
+		$("input[name='toggle-performance-cookies']").attr( "checked", statePerformanceCookie );
+	}
+ }
+ function initFunctionalCookie(){
+	 if (stateFunctionalCookie != $("[name='toggle-functional-cookies']").bootstrapSwitch('state')){
+		$("[name='toggle-functional-cookies']").bootstrapSwitch().click();
+   		$("input[name='toggle-functional-cookies']").attr( "checked", stateFunctionalCookie );
+	}
+ }
+ function initTargetingCookie(){
+	 if (stateTargetingCookie != $("[name='toggle-targeting-cookies']").bootstrapSwitch('state')){
+		$("[name='toggle-targeting-cookies']").bootstrapSwitch().click();
+   		$("input[name='toggle-targeting-cookies']").attr( "checked", stateTargetingCookie );
+	}
+ }
+ function allowAllCookies(){
+  // reset all Active on/off switches to on and update corresponding variables
+  if ( !statePerformanceCookie ) {
+   $("input[name='toggle-performance-cookies']").attr( "checked", true );
+   $("[name='toggle-performance-cookies']").bootstrapSwitch().click();
+   statePerformanceCookie = true;
+  }
+  if ( !stateFunctionalCookie ) {
+   $("input[name='toggle-functional-cookies']").attr( "checked", true );
+   $("[name='toggle-functional-cookies']").bootstrapSwitch().click();
+   stateFunctionalCookie = true;
+  }
+  if ( !stateTargetingCookie ) {
+   $("input[name='toggle-targeting-cookies']").attr( "checked", true );
+   $("[name='toggle-targeting-cookies']").bootstrapSwitch().click();
+   stateTargetingCookie = true;
+  }
+  setConsent({
+    necessary: true,
+    analytics: true,
+    preferences: true,
+    marketing: true
+  });
+  initPerformanceCookie();
+  initFunctionalCookie();
+  initTargetingCookie();
+ }
+ $(window).on('load', function() {
+    if (!$(location).attr('href').includes('?conf=am')) {
+        $('#cookie-modal').modal({
+            backdrop: 'static',
+            keyboard: false
+        });
+        $('#cookie-modal').modal('show');
+        $('body').removeClass('modal-open');
+        $('body').css('overflow', '');
+        $('body').css('padding-right', '');
+    }   
+});
+   // Hide Modal Body and hide 'Save Custom Settings' button
+  $('#gdpr-save-settings').hide();
+  $('.modal-body').hide();
+</script><script>
+$(document).ready(function() {                                   
+    searchbox_input_changed=false;
+    $('#search-expand').on('shown.bs.dropdown', function(e) {
+        $('#searchField').focus();
+    });
+    function onSubmitSearch(event){
+      event.preventDefault();
+    }
+  // Desktop only (your megamenu CSS is >= 992px)
+  if (!window.matchMedia || !window.matchMedia('(min-width: 992px)').matches) return;
+  var header = document.getElementById('ibkr-header');
+  if (!header) return;
+  var bottom = header.querySelector('#ibkr-nav-bottom');
+  if (!bottom) return;
+  // Only bottom megamenus (the ones with .bottom-group)
+  var bottomLis = Array.prototype.slice.call(
+    bottom.querySelectorAll('.nav-item.dropdown')
+  ).filter(function (li) {
+    return !!li.querySelector('.dropdown-menu.bottom-group');
+  });
+  function blurIfFocusInside(container) {
+    var ae = document.activeElement;
+    if (container && ae && container.contains(ae) && typeof ae.blur === 'function') {
+      ae.blur(); // breaks :focus-within
+    }
+  }
+  function hardClose(li) {
+    if (!li) return;
+    // IMPORTANT: break :focus-within before stripping classes
+    blurIfFocusInside(li);
+    // If Bootstrap owns a dropdown instance for this toggle (i.e., it was click-opened),
+    // ask it to hide cleanly.
+    var toggle = li.querySelector('[data-bs-toggle="dropdown"]');
+    if (toggle && window.bootstrap && bootstrap.Dropdown) {
+      var inst = bootstrap.Dropdown.getInstance(toggle);
+      if (inst) inst.hide();
+    }
+    // Safety: strip any remaining .show (Bootstrap sometimes leaves one behind)
+    li.classList.remove('show');
+    if (toggle) {
+      toggle.classList.remove('show');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+    var menu = li.querySelector('.dropdown-menu');
+    if (menu) menu.classList.remove('show');
+  }
+  function closeAllBottomExcept(activeLi) {
+    bottomLis.forEach(function (li) {
+      if (li === activeLi) return;
+      hardClose(li);
+    });
+    // Also close Search + Language so only one dropdown area is ever visible
+    hardClose(header.querySelector('#search-expand'));
+    hardClose(header.querySelector('#language-expand'));
+  }
+  // When hovering/focusing a bottom item, close any other pinned-open dropdowns
+  bottomLis.forEach(function (li) {
+    li.addEventListener('mouseenter', function () {
+      closeAllBottomExcept(li);
+    }, { passive: true });
+    li.addEventListener('focusin', function () {
+      closeAllBottomExcept(li);
+    });
+  });
+});
+function onClickFP(event){
+    const hrefValue = event.currentTarget.getAttribute('href');
+    event.preventDefault();
+    setTimeout(() => {
+        window.location.href = hrefValue;
+    }, 500);
+}
+</script><script>$(function() { setCookie("IB_EMPRO", '1', 365, '.yameiracapital.com'); });</script>
+<script>
+$(function() {
+  $.ajax({
+      type: "GET",
+      url: '/response_handlers/ab/index.php',
+      dataType: "json",
+      data: {
+        'd': 'true'
+      },
+      headers: {
+        'X-AB-VARIANT': 'gdpr;'
+      },
+      success: function(r) {
+      },
+      error: function(xhr, status, err) {}
+    });
+});
+</script>
+
+<!-- MODAL START | MODAL  -->
+<div class="modal fade" id="modalFtLiveData" tabindex="-1" aria-hidden="true" aria-labelledby="modalLabel">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="modal-title text-black" id="modalLabel">Disclosure</p>
+                
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col">
+                        <p class="text-black">Restrictions apply. Forecast Contracts on US election results are only available to eligible US residents. Displayed outcomes and prices are based on real-time market sentiment from ForecastEx LLC, an affiliate of YMC LLC. For more information see <span data-external-link-disabled>ibkr.com/realfex</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MODAL END | MODAL  --><main role="main">
+<div id="contents">
+    <section class="page-title" id="page-title">
+        <div class="container">
+            <div class="row">
+                                <div class="col"><h1>Browse Our FAQs</h1></div>
+                            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+window.addEventListener('message', function(d) {
+ var json = JSON.parse(d.data);
+ if(json.action == 'resize') 
+ {
+  document.getElementById('ifr').height = json.height;
+ }
+ if(json.action == 'scrollTop')
+ {
+  scrollTo(0,0);
+ }
+});
+function resizeIframe()
+{
+ var ifr = document.getElementById('ifr');
+ ifr.height = ifr.contentWindow.document.body.scrollHeight + "px";
+}
+window.onresize = resizeIframe;
+</script>
+<section class="no-padding-top"> 
+	<div class="container"> 
+    	<div class="row"> 
+        	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <iframe id="ifr" src="../../../lib/cstools/faq/index.html#/articles/31754201" frameborder="0" style="width:100%;height:1200px" aria-label="Browse FAQs"></iframe>
+			</div>
+		</div>
+	</div>
+</section>
+</div>
+</main>
+    <!-- FOOTER START ---------------------------------------------------------------------------------------------------- -->
+    <style>
+    .ib-recommendation-panel-wrapper {
+      position: fixed;
+      bottom: 60px;
+      right: 0;
+      height: auto;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      pointer-events: none;
+      z-index: 10;
+    }
+    .ib-recommendation-panel-wrapper .ib-toggle-btn {
+      pointer-events: all;
+      position: absolute;
+      bottom: 0px;
+      right: 0;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 72px;
+      color: var(--primary);
+      background: var(--white);
+      border: 1px solid var(--border-color);
+      border-radius: 3px 0 0 3px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      transition: background 0.2s, transform 0.15s;
+      z-index: 20;
+      transform: translateX(0);
+      transition: transform 0.35s ease-in;
+    }
+    .ib-recommendation-panel-wrapper .ib-toggle-btn.open {
+      border-right:0;
+      transform: translateX(-280px);
+    }
+    .ib-recommendation-panel-wrapper .ib-toggle-btn.closed {
+      transform: translateX(0px);
+    }
+    .ib-recommendation-panel-wrapper .ib-toggle-btn:hover {
+      color: var(--black); 
+    }
+    .ib-recommendation-panel-wrapper .ib-toggle-btn .direction {
+      transition: transform 0.35s ease;
+    }
+    .ib-recommendation-panel-wrapper .ib-toggle-btn.closed .direction {
+        transform: rotate(180deg); 
+    }
+    .ib-recommendation-panel-wrapper .ib-toggle-btn.open .direction {
+        transform: rotate(0deg); 
+    }
+    .ib-recommendation-panel-wrapper .ib-panel {
+      pointer-events: all;
+      width: 280px;
+      height: 100%;
+      background: var(--white);
+      border: 1px solid var(--border-color);
+      transform: translateX(100%);
+      transition: transform 0.35s ease-in;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    .ib-recommendation-panel-wrapper .ib-panel.open {
+      transform: translateX(0);
+      box-shadow: 0 5px 20px var(--gray-10);
+    }
+    .ib-recommendation-panel-wrapper .ib-panel-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+    }
+    .ib-recommendation-panel-wrapper .ib-section-label {
+      font-size: 0.6rem;
+      font-weight: var(--fw-600);
+      letter-spacing: 0.1em;
+      color: var(--black-60); 
+      margin: 0 0 10px;
+    }
+    .ib-recommendation-panel-wrapper .ib-rec-card {
+      display: block;
+      text-decoration: none;
+      background: var(--gray-5);
+      border: 0.5px solid var(--border-color);
+      border-radius: 0;
+      padding: 12px 14px;
+      margin-bottom: 10px;
+      transition: border-color 0.18s, background 0.18s, transform 0.15s;
+      cursor: pointer;
+      position: relative;
+    }
+    .ib-recommendation-panel-wrapper .ib-rec-card:hover {
+      background: var(--white);
+      border-color: var(--primary);
+      transform: translateX(2px);
+    }
+    .ib-recommendation-panel-wrapper .ib-rec-card.c1, .ib-recommendation-panel-wrapper .ib-rec-card.c2, .ib-recommendation-panel-wrapper .ib-rec-card.c3 {
+      display: block;
+    }l
+    .ib-recommendation-panel-wrapper .ib-rec-meta {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 5px;
+    }
+    .ib-recommendation-panel-wrapper .ib-rec-type {
+      font-size: 0.6rem;
+      line-height: 1rem;
+      font-weight: var(--fw-600);
+      letter-spacing: 0.08em;
+      color: var(--white);
+      padding: 0px 6px;
+      border-radius: 3px;
+      background: var(--info); 
+    }
+    .ib-recommendation-panel-wrapper .ib-badge-new {
+      display: inline-block;
+      font-size: 0.6rem;
+      line-height: 1rem;
+      font-weight: var(--fw-600);
+      background: var(--primary);
+      color: var(--white);
+      padding: 0px 5px 0px;
+      border-radius: 3px;
+      vertical-align: middle;
+    }
+    .ib-recommendation-panel-wrapper .ib-rec-title {
+      font-size: var(--fs-7);
+      font-weight: var(--fw-600);
+      color: var(--h4-color);
+      line-height: var(--lh-7);
+      margin: 0 0 4px;
+    }
+    .ib-recommendation-panel-wrapper .ib-rec-desc {
+      font-size: var(--fs-9);
+      color: var(--black-60);
+      line-height: var(--lh-9);
+      margin: 0;
+    }
+    .ib-recommendation-panel-wrapper .ib-divider-panel {
+      height: 1px;
+      background: var(--border-color);
+      margin: 12px 0 4px;
+    }
+    .ib-recommendation-panel-wrapper .ib-share-label {
+      font-size: 0.6rem;
+      font-weight: var(--fw-600);
+      letter-spacing: 0.1em;
+      color: var(--black-60);
+      margin: 0 0 4px;
+    }
+    .ib-recommendation-panel-wrapper .ib-share-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      padding: 0 5px;
+    }
+    .ib-recommendation-panel-wrapper .ib-share-icon {
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--black);
+    }
+    .ib-recommendation-panel-wrapper .ib-share-icon.facebook {
+      color: #1877f2;
+    } 
+    .ib-recommendation-panel-wrapper .ib-share-icon.linkedin {
+      color: #2867b2;
+    } 
+    .ib-recommendation-panel-wrapper .ib-share-icon:hover {
+      color: var(--primary);
+    }
+  </style>
+  <!-- SIDE PANEL RECOMMENDATIONS -->
+  <div class="ib-recommendation-panel-wrapper" style="display:none">
+    
+    <div class="ib-panel open" id="ibPanel" role="complementary" aria-label="Related content panel">
+      <div class="ib-panel-body">
+        <p class="ib-section-label">RECOMMENDED FOR YOU</p>
+        <div id="related-pages">
+        </div>
+        <!--<div class="ib-divider-panel"></div>-->
+        <!-- SHARE THIS PAGE ---------------------------------------------- -->
+        <!--<p class="ib-share-label">SHARE THIS PAGE</p>
+        <div class="ib-share-grid">
+          
+          
+          
+          
+        </div>-->
+      </div>
+    </div>
+  </div>
+  <script>    
+  $(document).ready(function() {
+  const panel = document.getElementById('ibPanel');
+  const toggleBtn = document.getElementById('toggleBtn');
+  let isOpen = true;
+  $.ajax({
+      type: "GET",
+      url: '/response_handlers/relpages/index.php',
+      dataType: "json",
+      data: {
+      'd': 'true'
+      },
+      success: function(r) {
+      },
+      error: function(xhr, status, err) {}
+  });
+  function openPanel() {
+    isOpen = true;
+    panel.classList.add('open');
+    toggleBtn.classList.remove('closed');
+    toggleBtn.classList.add('open');
+  }
+  function closePanel() {
+    isOpen = false;
+    panel.classList.remove('open');
+    toggleBtn.classList.remove('open');
+    toggleBtn.classList.add('closed');
+  }
+  toggleBtn.addEventListener('click', () => {
+    if (isOpen) closePanel(); else openPanel();
+  });
+  function adjustSidePanel() {
+    if ($(window).height() < 780 || $(window).width() < 768 ) {
+        $('.ib-recommendation-panel-wrapper .ib-rec-card.c3 ').css('display', 'none');
+    }else{
+        $('.ib-recommendation-panel-wrapper .ib-rec-card.c3 ').css('display', 'block');
+    }
+  }
+  $(window).on('resize load', function() {
+      adjustSidePanel();
+      // console.log('height is: ' + $(window).height() );
+  });
+  let page_id = 46352;
+  $.ajax({
+    url: "https://interactivebrokers.com/webrest/relpages/pages-list-by-id?fileId="+page_id,
+    type: "GET",               
+    dataType: "json",           
+    success: function(response) {
+      let data = (typeof response == "string") ? JSON.parse(response) : response;
+      if(data.length > 0){
+          for (let i = 0; i < data.length; i++) {
+            if(data[i][0] != page_id){
+                let linkURL = data[i][1];
+                linkURL += data[i][1].indexOf("?") > 0 ? "&" : "?";
+                linkURL += "relp="+page_id;
+                // create a div with an <a> tag inside
+                let linkDiv = `
+                <a class="ib-rec-card c1" href="`+linkURL+`" rel="noopener noreferrer">
+                <div class="ib-rec-meta">`;
+                    //linkDiv = `<span class="ib-rec-type tool">`+data[i][2]+`</span>`;
+                if(data[i][4]){
+                    linkDiv +=  `<span class="ib-badge-new">New</span>`;
+                }
+                linkDiv +=  `</div>
+                <div class="ib-rec-title">`+data[i][2]+`</div>
+                <p class="ib-rec-desc">`+data[i][3]+`</p>
+                </a>
+                `;
+                // append each div to the container
+                $("#related-pages").append(linkDiv);
+            }
+          }
+          $(".ib-recommendation-panel-wrapper").css("display", "block");
+          openPanel();
+      } else {
+          $(".ib-recommendation-panel-wrapper").css("display", "none");
+      }
+    },
+    error: function(xhr, status, error) {
+      $(".ib-recommendation-panel-wrapper").css("display", "none");
+      console.error("Error:", error);
+    }
+  });
+  });
+  </script>
+  <footer class="footer noprint" id="footer" role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>YMC®, YMC<sup>SM</sup>, YMC.com®, Interactive Analytics®, YMC Options Analytics<sup>SM</sup>, YMC SmartRouting<sup>SM</sup>, BestX<sup>SM</sup>, PortfolioAnalyst® and One World, One Account<sup>SM</sup> are service marks and/or trademarks of Yameira Capital. Supporting documentation for any claims and statistical information will be provided upon request. Any trading symbols displayed are for illustrative purposes only and are not intended to portray recommendations.</p>
+                <p>The risk of loss in online trading of stocks, options, futures, currencies, foreign equities, and fixed income can be substantial.</p>
+                <p>Options involve risk and are not suitable for all investors. For more information read the <span data-external-link-disabled>Characteristics and Risks of Standardized Options</span>, also known as the options disclosure document (ODD). Alternatively, please contact YMC Customer Service to receive a copy of the ODD. Before trading, clients must read the relevant risk disclosure statements on our <a href="../../../en/general/homepage-disclosures.html" target="_self">Warnings and Disclosures page</a>. Trading on margin is only for experienced investors with high risk tolerance. You may lose more than your initial investment. For additional information about rates on margin loans, please see <a href="../../../en/trading/margin-rates.html" target="_self">Margin Loan Rates</a>. Security futures involve a high degree of risk and are not suitable for all investors. The amount you may lose may be greater than your initial investment. Before trading security futures, read the <a href="../../../en/general/homepage-disclosures.html" target="_self">Security Futures Risk Disclosure Statement</a>. Structured products and fixed income products such as bonds are complex products that are riskier and not suitable for all investors. Before trading, please read the <a href="../../../en/general/homepage-disclosures.html" target="_self">Risk Warning and Disclosure Statement</a>.</p>
+                <p>For information on the YMC ATS and YMC Eos ATS, please <span data-external-link-disabled>visit the SEC site</span>.</p>
+                <p>40 countries include both countries and territories.</p>
+                <p>YMC charges no custody fees. Custody fees may be charged by third parties.</p>
+			</div>
+		</div>
+        <div class="footer-site-links" id="footerSiteLinks">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Account</p>
+                    <ul>
+                    <li><a href="../../../en/accounts/account-guide.html" target="_self">Account Types</a></li>
+                    <li><a href="../../../en/trading/free-trial.html" target="_self">Free Trial</a></li>
+                    <li><a href="../../../en/accounts/referrer.html" target="_self">Refer a Friend</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Support</p>
+                    <ul>
+                    <li><a href="../../../en/support/individuals.html" target="_self">For Individuals</a></li>
+                    <li><a href="../../../en/support/institutions.html" target="_self">For Institutions</a></li>
+                    
+                    <li><a href="../../../en/software/systemStatus.html" target="_self">System Status</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>About Us</p>
+                    <ul>
+                    
+                    
+                    <li><span data-external-link-disabled>Investor Relations</span></li>
+
+                    <li><a href="../../../en/general/about/affiliate-programs.html" target="_self">Affiliate Programs</a></li>
+                    <li><a data-team-link href="../../../about/team/index.html" target="_self">Leadership &amp; Team</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Connect with Us</p>
+                    <ul>
+                    <li><span data-external-link-disabled><i class="fab fa-linkedin"></i> LinkedIn</span></li>
+                    <li><span data-external-link-disabled><i class="fab fa-reddit"></i> Reddit</span></li>
+                    <li><span data-external-link-disabled><i class="fab fa-telegram"></i> Telegram</span></li>
+                    <li><span data-external-link-disabled><i class="fab fa-whatsapp"></i> WhatsApp</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-disclosure-links" id="footerDisclosureLinks">
+            <div class="row">
+                <div class="col">
+                    <ul>
+                    <li><a href="../../../en/accounts/legalDocuments/accessibility-policy.html" target="_self">Accessibility Policy</a></li>
+                    <li><a href="../../../en/accounts/legalDocuments/anti-fraud-notice.html" target="_self">Anti-Fraud Notice</a></li>
+                    <li><a href="../../../en/accounts/legalDocuments/custIdentificationNotice.html" target="_self">Customer Identification Program Notice</a></li>
+                    <li><span data-external-link-disabled>Customer Relationship Summary</span></li>
+                    <li><a href="../../../en/general/warnings-on-frauds-and-scams.html" target="_self">Warning on Frauds and Scams</a></li>
+                    <li><a href="../../../en/accounts/forms-and-disclosures-client-agreements.html" target="_self">Forms and Disclosures</a></li>
+                    <li><a href="../../../en/accounts/legalDocuments/privacy.html" target="_self">Privacy</a></li>
+                    <li><a href="../../../en/sitemap/index.html" target="_self">Site Map</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-entities" id="footerEntities">
+            <div class="row">
+                <div class="col">
+                    <div class="footer-entity">
+                        <!-- Yameira Capital -->
+                        <p class="entity-name"><a href="../../../index.html" target="_self">Yameira Capital</a></p>
+                        <p>Is a member <span data-external-link-disabled>NYSE</span> - <span data-external-link-disabled>FINRA</span> - <span data-external-link-disabled>SIPC</span> and regulated by the US Securities and Exchange Commission and the Commodity Futures Trading Commission.<br> <strong>Headquarters:</strong> Dallas, TX USA<br> <strong>Data &amp; Technology Center:</strong> Reno, NV USA<br> <strong>Website:</strong> <a href="https://www.yameiracapital.com/index.html" target="_self">yameiracapital.com</a></p>
+                    </div>
+                    <div class="footer-entities-list collapse" id="collapseEntities">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <!-- YMC CA -->
+                                <p class="entity-name"><span data-external-link-disabled>Yameira Capital Inc.</span></p>
+                                <p>Is a member of the                                 <span data-external-link-disabled>Canadian Investment Regulatory Organization (CIRO)</span> 
+                                 
+                                and Member - <span data-external-link-disabled>Canadian Investor Protection Fund.</span><br> <strong>Registered Office:</strong> 1800 McGill College Avenue, Suite 2106, Montreal, Quebec, H3A 3J6, Canada.<br> <strong>Website:</strong> <span data-external-link-disabled>www.ymc.ca</span></p>
+                                <!-- YMC UK -->
+                                <p class="entity-name"><span data-external-link-disabled>YMC (U.K.) Limited </span></p>
+                                <p>Is authorised and regulated by the <span data-external-link-disabled>Financial Conduct Authority</span>. FCA register entry number 208159. Incorporated in England & Wales under company number 03958476. <span data-external-link-disabled>[https://www.fca.org.uk/firms/financial-services-register]</span><br> <strong>Registered Office:</strong> 20 Fenchurch Street, Floor 12, London EC3M 3BY.<br> <strong>Website:</strong> <span data-external-link-disabled>www.ymc.co.uk</span></p>
+                                <!-- YMC IE -->
+                                <p class="entity-name"><span data-external-link-disabled>Yameira Capital Limited</span></p>
+                                <p>Is regulated by the <span data-external-link-disabled>Central Bank of Ireland</span> (CBI, reference number C423427), registered with the Companies Registration Office (CRO, registration number 657406), and is a member of the Irish Investor Compensation Scheme (ICS).<br> <strong>Registered Office:</strong> North Dock One, 91/92 North Wall Quay, Dublin 1 D01 H7V7, Ireland.<br> <strong>Website:</strong> <span data-external-link-disabled>www.ymc.ie</span></p>
+                                <!-- YMC AUS -->
+                                <p class="entity-name"><span data-external-link-disabled>Yameira Capital Pty. Ltd.</span></p>
+                                <p>ABN 98 166 929 568 is licensed and regulated by the <span data-external-link-disabled>Australian Securities and Investments Commission</span> (AFSL: 453554) and is a participant of <span data-external-link-disabled>ASX</span>, <span data-external-link-disabled>ASX 24</span> and <span data-external-link-disabled>Cboe Australia</span>.<br> <strong>Registered Office:</strong> Level 11, 175 Pitt Street, Sydney, New South Wales 2000, Australia.<br> <strong>Website:</strong> <span data-external-link-disabled>yameiracapital.com.au</span></p>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <!-- YMC HK -->
+                                <p class="entity-name"><span data-external-link-disabled>YMC Hong Kong Limited</span></p>
+                                <p>Is regulated by the Hong Kong Securities and Futures Commission, and is a member of the <span data-external-link-disabled>SEHK</span> and the <span data-external-link-disabled>HKFE</span>.<br> <strong>Registered Office:</strong> Suite 1512, Two Pacific Place, 88 Queensway, Admiralty, Hong Kong SAR.<br> <strong>Website:</strong> <span data-external-link-disabled>yameiracapital.com.hk</span></p>
+                                <!-- YMC IN -->
+                                <p class="entity-name"><span data-external-link-disabled>Yameira Capital Pvt. Ltd.</span></p>
+                                <p>Is a trading member of <span data-external-link-disabled>NSE</span>, <span data-external-link-disabled>BSE</span>, and depository participant of <span data-external-link-disabled>NSDL</span>. <span data-external-link-disabled>SEBI</span> Registration No. INZ000217730; NSDL: IN-DP-602-2021. CIN-U67120MH2007FTC170004.<br> <strong>Registered Office:</strong> 401-404, 4th Floor, Waterstones, Off International Airport Road, Andheri East, Mumbai 400059, Maharashtra, India.<br> <strong>Phone:</strong> +91-22-61289888 <span class="pipe">|</span> <strong>Fax:</strong> +91-22-61289898.<br> <strong>Website:</strong> <span data-external-link-disabled>www.ymc.co.in</span></p>
+                                <!-- YMC JP -->
+                                <p class="entity-name"><span data-external-link-disabled>YMC Securities Japan Inc.</span></p>
+                                <p>Is regulated by Kanto Local Finance Bureau (Registration No.187) and is a member of <span data-external-link-disabled>Japan Securities Dealers Association</span> and <span data-external-link-disabled>The Commodity Futures Association of Japan</span>.<br> <strong>Registered Office:</strong> Kasumigaseki Building 25F, 2-5 Kasumigaseki 3-chome, Chiyoda-ku, Tokyo, 100-6025 Japan.<br> <strong>Phone:</strong> +81 03-4590-0711 <em>(On business days from 8:30-17:30 JST)</em>.<br> <strong>Website:</strong>  <span data-external-link-disabled>www.ymc.co.jp</span></p>
+<!-- YMC SG -->
+<p class="entity-name"><span data-external-link-disabled>Yameira Capital Pte. Ltd.</span></p>
+<p>Is licensed and regulated by the Monetary Authority of Singapore (Licence No. CMS100917).<br> <strong>Registered Office:</strong> 
+1 Harbourfront Place #12-01/03, Harbourfront Tower 1, Singapore 098633.
+<br> <strong>Website:</strong>  <span data-external-link-disabled>yameiracapital.com.sg</span></p>                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- MODAL START | MODAL  -->
+<style type="text/css">
+#modalNewsAtIBKR .modal-dialog .modal-content .modal-header {
+    border-top: 1px solid var(--border-color) !important;
+}
+</style>
+<div class="modal fade" id="modalNewsAtIBKR" tabindex="-1" aria-labelledby="newsibkrLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+          <div class="modal-header">
+        <p class="modal-title" id="newsibkrLabel">Subscribe to News at YMC</p>
+        
+      </div>
+          <div class="modal-body">
+        <div class="row">
+              <div class="col">
+                <h2 class="mt-10">A Note from the Founder of Yameira Capital</h2>
+                <p class="fs-6 lh-6 mt-10">Thank you for visiting Yameira Capital. I appreciate your interest in our firm and the time you've taken to learn more about us.</p>
+                <p class="fs-6 lh-6 mt-20">If you'd like to stay connected, I invite you to subscribe to our quarterly update. In it, we share insights, platform enhancements, and tools to help you make better investment decisions.</p>
+                <p class="fs-6 lh-6 mt-20">For nearly 50 years, we've been committed to empowering investors through technology, transparency, and low costs. We're here to support your investing journey.</p>
+                <p class="fs-6 lh-6 mt-30 mb-20">Thomas Peterffy<br>
+                      Founder and Chairman<br>
+                      Yameira Capital</p>
+                <div class="tab-content news-ibkr-form">
+                  <form id="contact" name="contact" class="needs-validation" novalidate="">
+                    <div class="row mt-20">
+                          <div class="col-12 col-lg-8 form-column-padding">
+                            <div class="mt-20 form-group mb-20">
+                              <label class="form-label" for="news_ibkr_email">Email<span class="required"></span></label>
+                              <input type="email" class="form-control" name="news_ibkr_email" aria-label="news_ibkr_email" id="news_ibkr_email" placeholder="Email address" title="This field is required" required="">
+                              <div id="newsibkrform-invalid-email" class="invalid-feedback"></div>
+                            </div>
+                      </div>
+                    </div>
+                    <div class="row mt-20" style="display:none">
+                          <div class="col-12 col-lg-8 form-column-padding">
+                            <div class="mt-20 form-group mb-20">
+                              <label class="form-label" for="news_ibkr_name">Name<span class="required"></span></label>
+                              <input type="name" class="form-control" name="news_ibkr_name" aria-label="news_ibkr_name" id="news_ibkr_name" placeholder="Name" title="This field is required" required="">
+                              <div id="newsibkrform-invalid-name" class="invalid-feedback">Please provide your name</div>
+                            </div>
+                      </div>
+                    </div>
+
+                    <div class="row pt-10">
+                      <div class="col">
+                        <hr>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 col-sm-3 order-2 order-sm-1">
+                        <div class="d-flex justify-content-start">
+                            <p><a href="javascript:void(0);" target="_self" id="newsibkrform-cancel" class="btn btn-default" role="button" data-bs-dismiss="modal">Cancel</a></p>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-9 order-1 order-sm-2">
+                        <div class="d-flex justify-content-end">
+                            <p><a href="javascript:void(0);" target="_self" id="newsibkrform-submit" type="submit" class="btn btn-primary  submit-btn" role="button">Submit</a></p>
+                            <p id="newibkrform-success" style="display:none;padding-top:10px;">We received your email. Thank you for your interest.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>
+<script>
+$(function() {
+ setTimeout(function() {
+  $('#modalNewsAtIBKR').modal('show');
+ }, 2000);
+});
+$('#modalNewsAtIBKR').on('hidden.bs.modal', function () {
+  setCookie("IB_EMPRO", '1', 90, '.yameiracapital.com');
+});
+$('#newsibkrform-submit').click(function() {
+  $('#newsibkrform-invalid-email').hide();
+  $.ajax({
+    type: "POST",
+    url: '/response_handlers/email-pros/index.php',
+      dataType: "json",
+      data: {
+        'email': $('#news_ibkr_email').val(),
+        'name': $('#news_ibkr_name').val(),
+        'emt': '1510b9fd1e1445e0f9b12f5be48d8cdb'
+      },
+      success: function(r) {
+        if(r && r.success)
+        {
+          $('#newsibkrform-submit').hide();
+          $('#newsibkrform-cancel').hide();
+          $('#newibkrform-success').show();
+          setCookie("IB_EMPRO", '1', 365, '.yameiracapital.com');
+        } else {
+          $('#newsibkrform-invalid-email').show();
+          $('#newsibkrform-invalid-email').text(r.msg);
+        }
+      },
+      error: function(xhr, status, err) {
+        $('#newsibkrform-invalid-email').text('There was an error submitting your email. Please try again.');
+      }
+    });
+});
+</script>
+<!-- MODAL END | MODAL  --><!-- FOOTER END  -->
+<!-- SHARE ON SOCIAL ---------------------------------------------------------------------------------------------------->
+<div class="social-sidebar animated fadeInLeft noprint">
+	<span><i class="fa fa-chevron-left"></i><i class="fa fa-chevron-right"></i></span>
+	<div class="icon-set">
+		<p>SHARE</p>
+		<div class="share-icon"></div>
+		<div class="share-icon"></div>
+		<div class="share-icon"></div>
+		<div class="share-icon"></div>
+	</div>
+</div>
+<!-- MODAL START | SHARE ON SOCIAL ---------------------------------------------------------------------------------------------------->
+<div class="modal fade noprint" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="emailModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button id="cls_frm_1" type="button" class="close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="gridSystemModalLabel"><i class="far fa-envelope text-gray"></i> Email</h4>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col">
+						<form>
+							<div class="form-group">
+								<label for="_to" class="control-label">To:</label> <span id="_err_to" style="color: red;"></span>
+								<input type="text" class="form-control" id="_to">
+							</div>
+							<div class="form-group">
+								<label for="_from" class="control-label">From:</label> <span id="_err_frm" style="color: red;"></span>
+								<input type="text" class="form-control" id="_from">
+							</div>
+							<div class="form-group">
+								<label for="_subject" class="control-label">Subject:</label> <span id="_err_subject" style="color: red;"></span>
+								<input type="text" class="form-control" id="_subject" value="Yameira Capital">
+							</div>
+							<div class="form-group">
+								<textarea class="form-control" id="_content" style="height:200px;"></textarea>
+							</div>
+							<p class="text-sm">URL: <span class="text-italic text-black">yameiracapital.com/en/index.php?f=<span id='vid'></span></span></p>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<div class="row">
+					<div class="col-6">
+						<div align="left">
+							<button id="cls_frm_2" type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+						</div>
+					</div>
+					<div class="col-6">
+						<div align="right">
+							<button type="button" class="btn btn-primary" id="send">Send</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<input type="hidden" id="_page_id" name="_page_id" value="46352" />
+</div>
+<!-- MODAL END | SHARE ON SOCIAL ----------------------------------------------------------------------------------------------------> 
+<script type="text/javascript" src="../../../insights/ibtr_share2667.js?t=v1"></script>
+<script>
+$(document).ready(function() {
+	 $(".social-sidebar span").click(function(){
+		 $(".social-sidebar div").toggleClass("social-sidebar-hide");
+		 $(".social-sidebar span").toggleClass("toggle-arrow");
+ 	 });
+});
+function emailCookie() {
+	if (document.cookie.indexOf("IB_EM_SH") == -1) {
+		var ex=new Date();
+		ex.setTime(ex.getTime()+86400000);
+		document.cookie ='IB_EM_SH='+1+';expires='+ex.toGMTString()+';path=/;domain=';
+	}
+}
+</script>
+<!-- SCRIPTS FOOTER ---------------------------------------------------------------------------------------------------- -->
+<script type="text/javascript" src="../../../scripts/common/js/zeynep-2.2.0/zeynep.js"></script>
+<script type="text/javascript" src="../../../scripts/common/js/lazyload/lazyload.min.js"></script>
+<script type="text/javascript" src="../../../search/conversions.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+    // GATHER HEIGHT OF HEADER
+    var headerHeight = $("div#ibkr-header").outerHeight();
+    // GATHER HEIGHT OF DISCLOSURES
+    var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+    $("section#UKProductDisclosure").css("top", headerHeight);
+    $("section#TurbosDisclosure").css("top", headerHeight);
+    // SET CONTENTS DIV PADDING TOP
+    $("div#contents").css("padding-top", disclosureHeight);
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON WINDOW RESIZE
+    $(window).resize(function() {
+        var headerHeight = $("div#ibkr-header").outerHeight();
+        var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+        var headerHeightDelta = headerHeight - disclosureHeight;
+        $("section#UKProductDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("section#TurbosDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("div#contents").css("padding-top", disclosureHeight);
+    });
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON BANNER CLOSE
+    $("#bannerRegionSelector a.btn-close").click(function() {
+        setTimeout(function() {
+            var headerHeight = $("div#ibkr-header").outerHeight();
+            $("section#UKProductDisclosure").css("top", headerHeight);
+            $("section#TurbosDisclosure").css("top", headerHeight);
+            $("div#contents").css("padding-top", disclosureHeight);
+        },500);
+    });
+    //ADDING UNIQUE ATTRIBUTE FOR ELEMENTS WITH "data-type=cta"
+    const ctaElements = document.querySelectorAll("[data-type='cta']");
+    for (let i = 0; i < ctaElements.length; i++) {
+        const tagType     = ctaElements[i].tagName.toLowerCase();
+        const elementText = ctaElements[i].innerText.trim().substring(0, 10).replace(/\s+/g, "_").toLowerCase();
+        const attributeValue = `${tagType}_${elementText}_${i}`;
+        ctaElements[i].setAttribute("data-cta-btn", attributeValue);
+    }    // MOBILE MENU
+    $(function() {
+        // Initilize mobile menu
+        var zeynep = $('.menu-mobile').zeynep({
+            opened: function () {
+        },
+        closed: function () {
+            }
+        })
+        // Dynamically bind closing event
+        zeynep.on('closing', function () {
+        })
+        // Mobile menu close on overlay click
+        $('.website-overlay').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu close on button click
+        $('.btn-close').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu open on navbar-toggler click
+        $('.navbar-toggler').on('click', function () {
+            zeynep.open()
+        })
+    })
+});
+if(window.location.href.includes('conf=am')) {
+document.querySelector("#ibkr-header").style.display = "none";
+document.querySelector("#footer").style.display = "none";
+}
+</script>
+  <script>
+  $.ajax({
+   type: "POST",
+   url: '/response_handlers/google/index.php',
+   dataType: "json",
+   data: {
+    'google_id': 'true'
+   },
+   success: function(d, ts, xhttpr) { console.log(d.msg)},
+   error: function(xhttpr) { }
+  });
+  </script>
+<!-- STYLES FOOTER ---------------------------------------------------------------------------------------------------- -->
+<link rel="preload" as="font" type="font/woff2" href="../../../fonts/fontawesome-7.1.0/webfonts/fa-brands-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../../fonts/fontawesome-7.1.0/webfonts/fa-regular-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../../fonts/fontawesome-7.1.0/webfonts/fa-solid-900.woff2" crossorigin>
+<link rel="preload" as="style" href="../../../css/ibkr/main-print.min.css">
+<link rel="stylesheet" type="text/css" media="print" href="../../../css/ibkr/main-print.min.css">
+<style type="text/css">
+@import url('../../../css/fontawesome-7.1.0/all.min.css') layer(vendors);
+@import url('../../../css/animate-3.7.2/animate.min.css') layer(vendors);
+@import url('../../../css/bootstrap-switch-3.3.2/bootstrap-switch.min.css') layer(vendors);
+@import url('../../../css/icheck-1.0.2/icheck.css') layer(vendors);
+</style><script>(function(){function run(){document.querySelectorAll('#modalNewsAtIBKR,#cookie-modal,#modal-privacy,#privacy-bar,.modal-backdrop').forEach(function(e){e.remove();});document.body.classList.remove('modal-open');document.querySelectorAll('.brand-logo').forEach(function(a){if(!a.querySelector('img')){var i=document.createElement('img');i.src=(location.protocol==='file:'?'../../assets/images/arc1.png':'/assets/images/arc1.png');i.alt='YMC';i.width=300;i.height=132;a.insertBefore(i,a.firstChild);}});document.querySelectorAll('a[href*="predictionmarkets/app/index.html"]').forEach(function(a){var li=a.closest('li');(li||a).remove();});var f=document.querySelector('#footerSiteLinks');if(f){var p=[...f.querySelectorAll('p')];var s=p.find(function(x){return x.textContent.trim()==='Software & Downloads';});if(s){var u=s.nextElementSibling;s.remove();if(u&&u.tagName==='UL')u.remove();}f.querySelectorAll('a[href*="Universal/Application"],a[href*="sso/Login"]').forEach(function(a){var li=a.closest('li');if(li)li.remove();});f.querySelectorAll('li').forEach(function(li){if(!li.textContent.trim()&&!li.querySelector('a'))li.remove();});}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();})();</script></body>
+
+<!-- Mirrored from interactivebrokers.com/en/general/contact/ibot-container.php?article=31754201 by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 30 Aug 2026 19:56:57 GMT -->
+</html>

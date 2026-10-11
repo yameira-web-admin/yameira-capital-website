@@ -1,0 +1,34 @@
+[data-external-link-disabled] {
+    color: inherit !important;
+    cursor: default !important;
+    pointer-events: none !important;
+    text-decoration: none !important;
+}
+
+[data-external-link-disabled]::before,
+[data-external-link-disabled]::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* Share affordances are intentionally absent throughout the static mirror. */
+.share-heading,
+.share-icon,
+.social-sidebar,
+.ib-share-grid,
+.ib-share-label,
+[class~="social-icons"]:has(.share-heading),
+a[href*="facebook.com/sharer"],
+a[href*="linkedin.com/sharing"],
+a[href*="twitter.com/intent/tweet"],
+a[href*="x.com/intent/post"] {
+    display: none !important;
+}
+
+/* The static showcase does not collect newsletter signups or cookie choices. */
+#modalNewsAtIBKR,
+#cookie-modal,
+#modal-privacy,
+#privacy-bar {
+    display: none !important;
+}
