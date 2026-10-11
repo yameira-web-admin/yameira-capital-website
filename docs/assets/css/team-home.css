@@ -1,0 +1,48 @@
+.ymc-team-page{background:#080b10;color:#f4f5f6;font-family:ProximaNova,Arial,sans-serif}.ymc-team-page *{letter-spacing:0}.ymc-team-hero{position:relative;isolation:isolate;overflow:hidden;min-height:570px;display:flex;align-items:flex-end;padding:110px 0 90px;background:#080b10}.ymc-team-hero:after{content:"";position:absolute;z-index:0;inset:0;background:linear-gradient(90deg,rgba(8,11,16,.88),rgba(8,11,16,.22)),linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:auto,72px 72px,72px 72px;pointer-events:none}.ymc-team-hero>.container{position:relative;z-index:2}.ymc-team-hero__copy{max-width:820px;padding-left:28px;border-left:3px solid #d71920}.ymc-team-crumb{margin:0 0 45px;color:rgba(255,255,255,.58);font-size:14px}.ymc-team-kicker{margin:0;color:#d71920;font-size:13px;font-weight:800;text-transform:uppercase}.ymc-team-hero h1{margin:14px 0 24px;color:#fff;font-size:68px;font-weight:800;line-height:.96}.ymc-team-lead{max-width:720px;margin:0;color:rgba(255,255,255,.76);font-size:21px;line-height:1.5}.ymc-team-section{padding:92px 0;background:#0f1217}.ymc-team-section--board{background:#171a1f;border-top:1px solid #31363d}.ymc-team-heading{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end;margin-bottom:44px}.ymc-team-heading h2{margin:8px 0 0;color:#fff;font-size:42px;font-weight:800;line-height:1.08}.ymc-team-heading>p{margin:0;color:#aeb4bc;font-size:18px;line-height:1.55}.ymc-featured{display:grid;grid-template-columns:minmax(330px,.82fr) minmax(0,1.18fr);min-height:560px;margin-bottom:26px;background:#171b20;border:1px solid #343941}.ymc-team-image{position:relative;overflow:hidden;background:#252a30}.ymc-team-image img{width:100%;height:100%;object-fit:cover;transition:transform 350ms ease,filter 350ms ease}.ymc-team-image:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(8,11,16,.52));pointer-events:none}.ymc-featured__body{display:flex;flex-direction:column;justify-content:center;padding:64px}.ymc-team-role{margin:0 0 10px;color:#c9a86a;font-size:12px;font-weight:800;text-transform:uppercase}.ymc-featured h3{margin:0 0 22px;color:#fff;font-size:44px;font-weight:800;line-height:1.05}.ymc-team-bio{margin:0;color:#b6bbc2;font-size:18px;line-height:1.58}.ymc-team-focus{display:flex;flex-wrap:wrap;gap:9px;margin:34px 0 0;padding:25px 0 0;border-top:1px solid rgba(255,255,255,.14);list-style:none}.ymc-team-focus li{color:#989fa8;font-size:12px;font-weight:600;text-transform:uppercase}.ymc-team-focus li+li:before{content:"/";margin-right:9px;color:#d71920}.ymc-executive-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.ymc-team-card{position:relative;overflow:hidden;background:#171b20;border:1px solid #343941;transition:transform 280ms ease,border-color 280ms ease,box-shadow 280ms ease}.ymc-team-card:after{content:"";position:absolute;right:100%;bottom:0;left:0;height:3px;background:#d71920;transition:right 280ms ease}.ymc-team-card:hover{transform:translateY(-3px);border-color:#626974;box-shadow:0 14px 34px rgba(0,0,0,.28)}.ymc-team-card:hover:after{right:0}.ymc-team-card:hover .ymc-team-image img{transform:scale(1.025);filter:contrast(1.04)}.ymc-team-card .ymc-team-image{aspect-ratio:4/4.7}.ymc-team-card__body{min-height:270px;padding:28px}.ymc-team-card h3,.ymc-board-card h3{margin:0 0 15px;color:#fff;font-size:25px;font-weight:800}.ymc-team-card .ymc-team-bio{font-size:15px}.ymc-team-card .ymc-team-focus{margin-top:24px;padding-top:18px}.ymc-board-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}.ymc-board-card{overflow:hidden;background:#20242a;border-top:2px solid #d71920}.ymc-board-card .ymc-team-image{aspect-ratio:4/3.8}.ymc-board-card__body{padding:25px}.ymc-board-card__body>p:last-child{margin:0;color:#aeb4bc;font-size:15px;line-height:1.52}.ymc-team-close{padding:75px 0;background:#080b10;border-top:1px solid #292e35}.ymc-team-close p{max-width:940px;margin:0;color:#fff;font-size:38px;font-weight:600;line-height:1.18}.ymc-team-close span{display:block;color:#c9a86a}
+@media(max-width:991.98px){.ymc-team-hero h1{font-size:54px}.ymc-featured{grid-template-columns:1fr 1fr}.ymc-featured__body{padding:42px}.ymc-executive-grid,.ymc-board-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:575.98px){.ymc-team-hero{min-height:470px;padding:68px 0 58px}.ymc-team-hero__copy{padding-left:18px}.ymc-team-crumb{margin-bottom:30px}.ymc-team-hero h1{font-size:42px}.ymc-team-lead{font-size:18px}.ymc-team-section{padding:60px 0}.ymc-team-heading{grid-template-columns:1fr;gap:15px;margin-bottom:31px}.ymc-team-heading h2{font-size:33px}.ymc-featured{grid-template-columns:1fr;min-height:0}.ymc-featured .ymc-team-image{aspect-ratio:4/4.3}.ymc-featured__body{padding:33px 25px}.ymc-featured h3{font-size:34px}.ymc-executive-grid,.ymc-board-grid{grid-template-columns:1fr}.ymc-team-card__body{min-height:0}.ymc-team-close{padding:54px 0}.ymc-team-close p{font-size:29px}}
+@media(prefers-reduced-motion:reduce){.ymc-team-card,.ymc-team-card:after,.ymc-team-image img{transition:none}}
+
+/* Four equal profiles sit beneath the featured team lead. */
+@media(min-width:1200px){.ymc-executive-grid{grid-template-columns:repeat(4,1fr)}}
+.ymc-featured--team{max-width:980px;margin:0 auto 36px;}
+.ymc-team-image{background:#fff;}
+.ymc-team-image img{object-fit:contain;object-position:center;}
+.ymc-featured--team .ymc-team-image{aspect-ratio:1112/1414;}
+.ymc-featured--team .ymc-team-image img{object-fit:cover;}
+
+/* Match the homepage financial-stage palette and title treatment exactly. */
+.ymc-team-page{background:#090e15;color:#fff;font-family:ProximaNova,"Proxima Nova",Arial,Verdana,sans-serif}
+.ymc-team-hero__copy{position:relative;border-left:0}
+.ymc-team-hero__copy:before{content:"";position:absolute;top:0;bottom:0;left:0;width:3px;background:linear-gradient(#d71920 0 28%,rgba(92,159,214,.58) 28% 100%)}
+.ymc-team-section{background:#090e15}
+.ymc-team-section--board{background:#0b1017;border-top-color:rgba(126,184,222,.16)}
+.ymc-team-close{background:#0a0f16;border-top-color:rgba(126,184,222,.16)}
+
+/* Use the same interior-page hierarchy as the Awards section. */
+.ymc-team-page{background:#fff;color:#454545}
+.ymc-team-title{margin:0;padding:28px 0;background:#fff;border-bottom:1px solid #e0e0e0}
+.ymc-team-title h1{margin:0;color:#454545;font-family:"Proxima Nova",ProximaNova,Arial,Verdana,sans-serif;font-size:40px;font-weight:400;line-height:1.15}
+.ymc-team-hero{min-height:360px;padding:66px 0;background:#162333 url('../images/about-hero.jpg') center/cover no-repeat}
+.ymc-team-hero:before{content:"";position:absolute;z-index:0;inset:0;background:linear-gradient(90deg,rgba(15,28,43,.94),rgba(15,28,43,.48))}
+.ymc-team-hero:after,.ymc-team-hero .financial-data-background{display:none}
+.ymc-team-hero__copy{max-width:710px;padding-left:0}
+.ymc-team-hero__copy:before{display:none}
+.ymc-team-crumb{margin-bottom:28px;color:rgba(255,255,255,.72)}
+.ymc-team-hero h1{font-size:48px;line-height:1.02}
+.ymc-team-section{background:#fff;color:#454545}
+.ymc-team-section--board{background:#f5f5f5;border-top:1px solid #ddd}
+.ymc-team-heading h2{color:#454545;font-size:38px;font-weight:600}
+.ymc-team-heading>p{color:#666}
+.ymc-featured{background:#fff;color:#454545;border-color:#d8dadd;box-shadow:0 5px 18px rgba(15,28,43,.08)}
+.ymc-featured h3,.ymc-team-card h3,.ymc-board-card h3{color:#252525}
+.ymc-team-bio,.ymc-board-card__body>p:last-child{color:#62676d}
+.ymc-team-focus{border-top-color:#d8dadd}
+.ymc-team-focus li{color:#62676d}
+.ymc-team-card{background:#fff;color:#454545;border-color:#d8dadd}
+.ymc-team-card:hover{border-color:#aaa;box-shadow:0 10px 26px rgba(15,28,43,.12)}
+.ymc-board-card{background:#fff;color:#454545;border:1px solid #d8dadd;border-top:3px solid #d71920}
+.ymc-team-close{background:#fff;color:#454545;border-top:1px solid #ddd}
+.ymc-team-close p{color:#454545}
+.ymc-team-close span{color:#d71920}
+@media(max-width:575.98px){.ymc-team-title{padding:21px 0}.ymc-team-title h1{font-size:31px}.ymc-team-hero{min-height:330px;padding:50px 0}.ymc-team-hero h1{font-size:38px}}
