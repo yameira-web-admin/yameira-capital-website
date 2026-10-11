@@ -23,13 +23,8 @@
 "description":"Financial Services Company",
 "disambiguatingDescription":"Financial Services Company",
 "url": "index.html",
-"logo": "https://www.yameiracapital.com/images/web/logos/ib-logo-text-white.png",  
-"sameAs": [
-"http://www.facebook.com/interactivebrokers",
-"http://www.twitter.com/ibkr",
-"http://www.linkedin.com/company/interactive-brokers",
-"http://www.youtube.com/interactivebrokers"
-]
+"logo": "https://www.yameiracapital.com/assets/images/arc1.png",  
+"sameAs": []
 }
 </script>
 <meta name="apple-mobile-web-app-title" content="YMC">
@@ -3283,47 +3278,9 @@ $(function() {
       adjustSidePanel();
       // console.log('height is: ' + $(window).height() );
   });
-  let page_id = 0;
-  $.ajax({
-    url: "https://interactivebrokers.com/webrest/relpages/pages-list-by-id?fileId="+page_id,
-    type: "GET",               
-    dataType: "json",           
-    success: function(response) {
-      let data = (typeof response == "string") ? JSON.parse(response) : response;
-      if(data.length > 0){
-          for (let i = 0; i < data.length; i++) {
-            if(data[i][0] != page_id){
-                let linkURL = data[i][1];
-                linkURL += data[i][1].indexOf("?") > 0 ? "&" : "?";
-                linkURL += "relp="+page_id;
-                // create a div with an <a> tag inside
-                let linkDiv = `
-                <a class="ib-rec-card c1" href="`+linkURL+`" rel="noopener noreferrer">
-                <div class="ib-rec-meta">`;
-                    //linkDiv = `<span class="ib-rec-type tool">`+data[i][2]+`</span>`;
-                if(data[i][4]){
-                    linkDiv +=  `<span class="ib-badge-new">New</span>`;
-                }
-                linkDiv +=  `</div>
-                <div class="ib-rec-title">`+data[i][2]+`</div>
-                <p class="ib-rec-desc">`+data[i][3]+`</p>
-                </a>
-                `;
-                // append each div to the container
-                $("#related-pages").append(linkDiv);
-            }
-          }
-          $(".ib-recommendation-panel-wrapper").css("display", "block");
-          openPanel();
-      } else {
-          $(".ib-recommendation-panel-wrapper").css("display", "none");
-      }
-    },
-    error: function(xhr, status, error) {
-      $(".ib-recommendation-panel-wrapper").css("display", "none");
-      // Recommendations are a remote-only enhancement in the source site.
-    }
-  });
+  // External recommendations disabled: source service belongs to Interactive Brokers.
+  // Preserve the panel markup but do not request or display unrelated recommendations.
+  $(".ib-recommendation-panel-wrapper").css("display", "none");
   });
   </script>
   
@@ -3503,7 +3460,7 @@ portal.addEventListener("click", function() { setCookie("IB_LGN", "T", 365); });
     <div class="container">
         <div class="row">
             <div class="col">
-                <p>YMC®, YMC<sup>SM</sup>, YMC.com®, Interactive Analytics®, YMC Options Analytics<sup>SM</sup>, YMC SmartRouting<sup>SM</sup>, BestX<sup>SM</sup>, PortfolioAnalyst® and One World, One Account<sup>SM</sup> are service marks and/or trademarks of Yameira Capital. Supporting documentation for any claims and statistical information will be provided upon request. Any trading symbols displayed are for illustrative purposes only and are not intended to portray recommendations.</p>
+                <p>Supporting documentation for any claims and statistical information will be provided upon request. Any trading symbols displayed are for illustrative purposes only and are not intended to portray recommendations.</p>
                 <p>The risk of loss in online trading of stocks, options, futures, currencies, foreign equities, and fixed income can be substantial.</p>
                 <p>Options involve risk and are not suitable for all investors. For more information read the <span data-external-link-disabled>Characteristics and Risks of Standardized Options</span>, also known as the options disclosure document (ODD). Alternatively, please contact YMC Customer Service to receive a copy of the ODD. Before trading, clients must read the relevant risk disclosure statements on our <a href="en/general/homepage-disclosures.html" target="_self">Warnings and Disclosures page</a>. Trading on margin is only for experienced investors with high risk tolerance. You may lose more than your initial investment. For additional information about rates on margin loans, please see <a href="en/trading/margin-rates.html" target="_self">Margin Loan Rates</a>. Security futures involve a high degree of risk and are not suitable for all investors. The amount you may lose may be greater than your initial investment. Before trading security futures, read the <a href="en/general/homepage-disclosures.html" target="_self">Security Futures Risk Disclosure Statement</a>. Structured products and fixed income products such as bonds are complex products that are riskier and not suitable for all investors. Before trading, please read the <a href="en/general/homepage-disclosures.html" target="_self">Risk Warning and Disclosure Statement</a>.</p>
                 <p>For information on the YMC ATS and YMC Eos ATS, please <span data-external-link-disabled>visit the SEC site</span>.</p>
