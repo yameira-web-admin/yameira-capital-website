@@ -15,7 +15,7 @@ from PIL import Image
 
 
 ORIGINS = (
-    "https://www.interactivebrokers.com/",
+    "#/",
     "https://interactivebrokers.com/",
     "https://www.ibkrcampus.com/",
     "https://ibkrcampus.com/",
