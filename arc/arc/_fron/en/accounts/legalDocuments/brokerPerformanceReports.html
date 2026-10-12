@@ -2551,47 +2551,8 @@ $(function() {
       adjustSidePanel();
       // console.log('height is: ' + $(window).height() );
   });
-  let page_id = 289;
-  $.ajax({
-    url: "https://interactivebrokers.com/webrest/relpages/pages-list-by-id?fileId="+page_id,
-    type: "GET",               
-    dataType: "json",           
-    success: function(response) {
-      let data = (typeof response == "string") ? JSON.parse(response) : response;
-      if(data.length > 0){
-          for (let i = 0; i < data.length; i++) {
-            if(data[i][0] != page_id){
-                let linkURL = data[i][1];
-                linkURL += data[i][1].indexOf("?") > 0 ? "&" : "?";
-                linkURL += "relp="+page_id;
-                // create a div with an <a> tag inside
-                let linkDiv = `
-                <a class="ib-rec-card c1" href="`+linkURL+`" rel="noopener noreferrer">
-                <div class="ib-rec-meta">`;
-                    //linkDiv = `<span class="ib-rec-type tool">`+data[i][2]+`</span>`;
-                if(data[i][4]){
-                    linkDiv +=  `<span class="ib-badge-new">New</span>`;
-                }
-                linkDiv +=  `</div>
-                <div class="ib-rec-title">`+data[i][2]+`</div>
-                <p class="ib-rec-desc">`+data[i][3]+`</p>
-                </a>
-                `;
-                // append each div to the container
-                $("#related-pages").append(linkDiv);
-            }
-          }
-          $(".ib-recommendation-panel-wrapper").css("display", "block");
-          openPanel();
-      } else {
-          $(".ib-recommendation-panel-wrapper").css("display", "none");
-      }
-    },
-    error: function(xhr, status, error) {
-      $(".ib-recommendation-panel-wrapper").css("display", "none");
-      console.error("Error:", error);
-    }
-  });
+  // Third-party recommendations disabled; do not load external brokerage content.
+  $(".ib-recommendation-panel-wrapper").css("display", "none");
   });
   </script>
   <footer class="footer noprint" id="footer" role="contentinfo">
@@ -2727,6 +2688,7 @@ $(function() {
           <div class="modal-body">
         <div class="row">
               <div class="col">
+
                 
                 <div class="tab-content news-ibkr-form">
                   <form id="contact" name="contact" class="needs-validation" novalidate="">
