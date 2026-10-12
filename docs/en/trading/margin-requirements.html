@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en" data-theme="light">
 
-<!-- Mirrored from interactivebrokers.com/en/trading/margin-requirements.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 30 Aug 2026 19:55:51 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <link rel="icon" type="image/png" href="../../assets/icons/favicon%20(2).png">
 <meta charset="utf-8">
 <title>Margin Requirements | Yameira Capital</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"> 
 <meta name="description" content="Use the YMC Margin Requirements Wizard to see what requirements apply to you. Also view info on the exposure fees for high risk accounts.">
-<meta name="keywords" content="ibkr margin requirements, country requirements margin, high risk fees, exposure fees margin, yameira capital margin requirements">
+<meta name="keywords" content="ymc margin requirements, country requirements margin, high risk fees, exposure fees margin, yameira capital margin requirements">
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta http-equiv="expires" content="-1">
 <meta name="robots" content="index, follow">
@@ -75,12 +73,7 @@ createScriptElement({ source : "/scripts/common/js/bootstrap-5.2.2/bootstrap.bun
 createScriptElement({ source : "/scripts/common/js/lib.js?ver=9", loadfunction: storeCookie });
 createScriptElement({ source :  "/scripts/common/js/forge.all.min.js", loadfunction: loadFps});
 function bsrcFingerprintHandler() {
-    if (typeof IBKRFingerprint === "undefined") {
-        console.error("IBKRFingerprint failed to load");
-        return;
-    }
-    const fp = new IBKRFingerprint();
-    const data = {
+            const data = {
         timestamp:   new Date().toISOString(),
         low_ent_fp:  fp.lowEntrophyFP,
         med_ent_fp:  fp.medEntrophyFP,
@@ -111,9 +104,7 @@ function bsLoaded() {
   createScriptElement({ source : "/scripts/common/js/uitotop/uitotop.min.js?ver=1", loadfunction: uiLoaded });
 }
 function loadFps() {
-  createScriptElement({ source : "/scripts/common/js/analytics/ibkrfingerprint.js?t=1788113373" }); 
-  createScriptElement({ source : "/scripts/common/js/analytics/ibkranalyticscomb.js?t=1788113373" });
-}
+  }
 function uiLoaded() {
   createScriptElement({ source : "/scripts/common/js/twsUtils.js?ver=2" });
   createScriptElement({ source : "/scripts/common/js/design/design.js?ver=1" }); 
@@ -148,20 +139,20 @@ $(function() {
       {
         lang = 'ja';
       }
-      if(hasCookie("IB_LANG"))
+      if(hasCookie("YMC_LANG"))
       {
-        deleteCookie("IB_LANG");
+        deleteCookie("YMC_LANG");
       }
-      setCookie("IB_LANG", lang, 7, '.yameiracapital.com');
+      setCookie("YMC_LANG", lang, 7, '.yameiracapital.com');
     } else if(langs[1] == 'en') {
       var lang = 'en';
-      setCookie("IB_LANG", lang, 7, '.yameiracapital.com');
+      setCookie("YMC_LANG", lang, 7, '.yameiracapital.com');
     }
    }
   });
  });
  $('p#bandaid-close').click(function() {
-  setCookie("IB_BANDAID", 1, 30, '.yameiracapital.com');
+  setCookie("YMC_BANDAID", 1, 30, '.yameiracapital.com');
  });
 });
 </script>
@@ -169,7 +160,7 @@ $(function() {
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     console.log('  ');
-    dataLayer.push({'ib_mkt_src':''});
+    dataLayer.push({'ymc_mkt_src':''});
     if(localStorage.getItem('consentMode') ===  null){
                     const consentMode = {
                 'ad_storage': 'denied',
@@ -191,7 +182,7 @@ function hideHeaderFooter() {
     // Check if conf=am exists
     if (fullUrl.includes('conf=am')) {
         const elementsToHide = [
-            document.querySelector('#ibkr-header'),
+            document.querySelector('#ymc-header'),
             document.querySelector('#footer'),
         ];
         elementsToHide.forEach(element => {
@@ -209,10 +200,10 @@ document.addEventListener('DOMContentLoaded', function(){
 <style type="text/css">
 @import url('../../css/bootstrap-5.2.2/bootstrap.min.css') layer(bootstrap);
 </style>
-<link rel="preload" as="style" href="../../css/ibkr/main.min23ad.css?v=9240477d9e6aa16e35302a80295872dc">
-<link rel="stylesheet" type="text/css" media="all" href="../../css/ibkr/main.min23ad.css?v=9240477d9e6aa16e35302a80295872dc">
-<link rel="preload" as="style" href="../../css/ibkr/themes/theme-ibkr.mincc37.css?v=468cd87829250859d08f2aa7a10ca89c">
-<link rel="stylesheet" type="text/css" media="all" href="../../css/ibkr/themes/theme-ibkr.mincc37.css?v=468cd87829250859d08f2aa7a10ca89c"><link rel="stylesheet" type="text/css" media="all" href="../../css/web/margins-v2.css" />
+<link rel="preload" as="style" href="../../css/ymc/main.min23ad.css?v=9240477d9e6aa16e35302a80295872dc">
+<link rel="stylesheet" type="text/css" media="all" href="../../css/ymc/main.min23ad.css?v=9240477d9e6aa16e35302a80295872dc">
+<link rel="preload" as="style" href="../../css/ymc/themes/theme-ymc.mincc37.css?v=468cd87829250859d08f2aa7a10ca89c">
+<link rel="stylesheet" type="text/css" media="all" href="../../css/ymc/themes/theme-ymc.mincc37.css?v=468cd87829250859d08f2aa7a10ca89c"><link rel="stylesheet" type="text/css" media="all" href="../../css/web/margins-v2.css" />
 <script type="text/javascript">
 	$(document).ready(function() {
 				setTimeout(function() {
@@ -1638,19 +1629,19 @@ var res_hk=[
                                 <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="CGJ34-S5RKA-7ZQ8F-AJER9-TWWVG",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"CGJ34-S5RKA-7ZQ8F-AJER9-TWWVG";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n="false"=="true"?1:0,t="",a="zng23pixgqudw2uuohoq-f-23da846d1-clientnsv4-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"1131468","ak.ai":parseInt("665092",10),"ak.ol":"0","ak.cr":61,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"53128b1e","ak.r":41721,"ak.a2":n,"ak.m":"a","ak.n":"essl","ak.cport":7888,"ak.gh":"23.52.40.70","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1788113373","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==+f+GZ20sRCIAWjKssIjHnbaT7D1+mUoUWH6pzXeUmtgXvvRlQV3Xc2ZmQAUKCEQnLOkKfqRT8Cx1Ts9jzyeG3Ngud9rYFYECqeR5kiZ2lC3EKK2ADqQErGg1rjBD132KmeZNYnmZ9dASXRhH0Jn5zB/wqgEcpT8GNpwJv1NDx2MRvUwnfed08A0/ThCjqR5gjQN/K+UyQxzQmKsTuSSsjgVChnMBDlyZ2rs/rJ+zBGvsGfxwoq62PE9WkZOZCpHBKIcPyILLp8TKyMMMKjJixnSYt5Ru5u5+jjMak59S4wY8Soyk8xa9+UKOU4FKGuGeitugTcxMzehRRBtOnkTTYJEgXO0EOygFgV1uPC89dWtUq3zRpHQ37EN+o/YsJB5vy0gT1uP9QTbVVdZ2lgMFxX7GDZhhOqUmNHgAbi99/oA=","ak.pv":"450","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.html","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak-2.html","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script>    <link rel="stylesheet" href="/css/disable-external-links.css" data-static-external-links-disabled>
     <script src="/scripts/disable-external-links.js" defer data-static-external-links-disabled></script>
 <style id="ymc-global-navigation-fix">
-  .ibkr-header { position: relative !important; top: auto !important; }
-  .ibkr-header .navbar-top,
-  .ibkr-header .navbar-bottom { position: relative !important; inset: auto !important; transform: none !important; }
-  .ibkr-header .brand-logo,
+  .ymc-header { position: relative !important; top: auto !important; }
+  .ymc-header .navbar-top,
+  .ymc-header .navbar-bottom { position: relative !important; inset: auto !important; transform: none !important; }
+  .ymc-header .brand-logo,
   .menu-mobile .brand-logo { background-image: none !important; background: none !important; }
-  .ibkr-header .brand-logo img,
+  .ymc-header .brand-logo img,
   .menu-mobile .brand-logo img { display: block !important; }
   .menu-mobile .logo-container { display: none !important; }
 </style></head>
 <body>
 
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='../../gtmibkrcom/gtm5445.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NK9NSD');</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='../../gtmymccom/gtm5445.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NK9NSD');</script>
 <!-- End Google Tag Manager --><style type="text/css">
 /* PAGE TITLE -------------------------------------------------------------- */
 #page-title {
@@ -1929,45 +1920,45 @@ a:hover {
 /*All megamenu styles are partitioned within >992px media query*/
 
 @media (min-width: 992px) {
-	.ibkr-header .navbar.navbar-top {
+	.ymc-header .navbar.navbar-top {
 		background-color: var(--nav-bottom-bg-color);
 	}
-	.ibkr-header .navbar.navbar-top .container .navbar-brand.brand-logo, .ibkr-header .navbar.navbar-top .container-fluid .navbar-brand.brand-logo, .ibkr-header .navbar.navbar-bottom .container .navbar-brand.brand-logo, .ibkr-header .navbar.navbar-bottom .container-fluid .navbar-brand.brand-logo {
+	.ymc-header .navbar.navbar-top .container .navbar-brand.brand-logo, .ymc-header .navbar.navbar-top .container-fluid .navbar-brand.brand-logo, .ymc-header .navbar.navbar-bottom .container .navbar-brand.brand-logo, .ymc-header .navbar.navbar-bottom .container-fluid .navbar-brand.brand-logo {
 		display: var(--brand-logo-display);
 		width: var(--brand-logo-width);
 		height: var(--brand-logo-height);
 		background-size: var(--brand-logo-size);
 		margin: 10px 0px 0px 2px;
 	}
-	.ibkr-header .navbar.navbar-top .container .navbar-brand.brand-logo span, .ibkr-header .navbar.navbar-top .container-fluid .navbar-brand.brand-logo span, .ibkr-header .navbar.navbar-bottom .container .navbar-brand.brand-logo span, .ibkr-header .navbar.navbar-bottom .container-fluid .navbar-brand.brand-logo span {
+	.ymc-header .navbar.navbar-top .container .navbar-brand.brand-logo span, .ymc-header .navbar.navbar-top .container-fluid .navbar-brand.brand-logo span, .ymc-header .navbar.navbar-bottom .container .navbar-brand.brand-logo span, .ymc-header .navbar.navbar-bottom .container-fluid .navbar-brand.brand-logo span {
 		display: none !important;
 		color: rgba(0, 0, 0, 0);
 	}
-	.ibkr-header .navbar.navbar-top .container, .ibkr-header .navbar.navbar-top .container-fluid {
+	.ymc-header .navbar.navbar-top .container, .ymc-header .navbar.navbar-top .container-fluid {
 		max-width: 1400px;
 		padding: 15px 20px 0px;
 	}
-	.ibkr-header .navbar.navbar-bottom .container, .ibkr-header .navbar.navbar-bottom .container-fluid {
+	.ymc-header .navbar.navbar-bottom .container, .ymc-header .navbar.navbar-bottom .container-fluid {
 		max-width: 1400px;
 		padding: 10px 0px 1px;
 	}
     	/* Nav Search for navbar-top ------------------------------------------- */
-	.ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a.nav-link.nav-search, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:link.nav-link.nav-search, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:hover.nav-link.nav-search, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:visited.nav-link.nav-search, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:active.nav-link.nav-search, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:focus.nav-link.nav-search, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item button.nav-link.nav-search, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a.nav-link.nav-search, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:link.nav-link.nav-search, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:hover.nav-link.nav-search, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:visited.nav-link.nav-search, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:active.nav-link.nav-search, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:focus.nav-link.nav-search, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item button.nav-link.nav-search {
+	.ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a.nav-link.nav-search, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:link.nav-link.nav-search, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:hover.nav-link.nav-search, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:visited.nav-link.nav-search, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:active.nav-link.nav-search, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:focus.nav-link.nav-search, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item button.nav-link.nav-search, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a.nav-link.nav-search, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:link.nav-link.nav-search, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:hover.nav-link.nav-search, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:visited.nav-link.nav-search, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:active.nav-link.nav-search, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:focus.nav-link.nav-search, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item button.nav-link.nav-search {
 		padding: 5px 8px 4px 8px;
 		color: var(--nav-bottom-link-color)
 	}
-	.ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a.nav-link.nav-search span, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:link.nav-link.nav-search span, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:hover.nav-link.nav-search span, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:visited.nav-link.nav-search span, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:active.nav-link.nav-search span, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:focus.nav-link.nav-search span, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item button.nav-link.nav-search span, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a.nav-link.nav-search span, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:link.nav-link.nav-search span, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:hover.nav-link.nav-search span, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:visited.nav-link.nav-search span, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:active.nav-link.nav-search span, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:focus.nav-link.nav-search span, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item button.nav-link.nav-search span {
+	.ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a.nav-link.nav-search span, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:link.nav-link.nav-search span, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:hover.nav-link.nav-search span, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:visited.nav-link.nav-search span, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:active.nav-link.nav-search span, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:focus.nav-link.nav-search span, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item button.nav-link.nav-search span, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a.nav-link.nav-search span, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:link.nav-link.nav-search span, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:hover.nav-link.nav-search span, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:visited.nav-link.nav-search span, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:active.nav-link.nav-search span, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:focus.nav-link.nav-search span, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item button.nav-link.nav-search span {
 		display: none !important
 	}
-	.ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a.nav-link.nav-search svg, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:link.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:link.nav-link.nav-search svg, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:hover.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:hover.nav-link.nav-search svg, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:visited.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:visited.nav-link.nav-search svg, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:active.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:active.nav-link.nav-search svg, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:focus.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:focus.nav-link.nav-search svg, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item button.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item button.nav-link.nav-search svg, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a.nav-link.nav-search svg, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:link.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:link.nav-link.nav-search svg, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:hover.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:hover.nav-link.nav-search svg, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:visited.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:visited.nav-link.nav-search svg, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:active.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:active.nav-link.nav-search svg, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:focus.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:focus.nav-link.nav-search svg, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item button.nav-link.nav-search i, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item button.nav-link.nav-search svg {
+	.ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a.nav-link.nav-search i, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a.nav-link.nav-search svg, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:link.nav-link.nav-search i, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:link.nav-link.nav-search svg, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:hover.nav-link.nav-search i, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:hover.nav-link.nav-search svg, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:visited.nav-link.nav-search i, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:visited.nav-link.nav-search svg, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:active.nav-link.nav-search i, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:active.nav-link.nav-search svg, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:focus.nav-link.nav-search i, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:focus.nav-link.nav-search svg, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item button.nav-link.nav-search i, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item button.nav-link.nav-search svg, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a.nav-link.nav-search i, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a.nav-link.nav-search svg, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:link.nav-link.nav-search i, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:link.nav-link.nav-search svg, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:hover.nav-link.nav-search i, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:hover.nav-link.nav-search svg, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:visited.nav-link.nav-search i, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:visited.nav-link.nav-search svg, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:active.nav-link.nav-search i, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:active.nav-link.nav-search svg, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:focus.nav-link.nav-search i, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:focus.nav-link.nav-search svg, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item button.nav-link.nav-search i, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item button.nav-link.nav-search svg {
 		margin: 0px auto;
 		font-size: 1.25rem
 	}
-	.ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a.nav-link.nav-search::after, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a.nav-link.nav-search::after {
+	.ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a.nav-link.nav-search::after, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a.nav-link.nav-search::after {
 		display: none;
 	}
      	/* Font size */
-	.ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a.nav-link, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:link.nav-link, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:hover.nav-link, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:visited.nav-link, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:active.nav-link, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:focus.nav-link, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item button.nav-link, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a.nav-link, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:link.nav-link, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:hover.nav-link, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:visited.nav-link, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:active.nav-link, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:focus.nav-link, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item button.nav-link {
+	.ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a.nav-link, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:link.nav-link, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:hover.nav-link, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:visited.nav-link, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:active.nav-link, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:focus.nav-link, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item button.nav-link, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a.nav-link, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:link.nav-link, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:hover.nav-link, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:visited.nav-link, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:active.nav-link, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:focus.nav-link, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item button.nav-link {
 		padding: 8px 16px;
 		font-weight: var(--fw-400);
 		font-size: 1rem;
@@ -1979,24 +1970,24 @@ a:hover {
 		border-radius: var(--border-radius)
 	}
 	/* Login and Open Account button sizing */
-	.ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a.nav-link.nav-login, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:link.nav-link.nav-login, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:hover.nav-link.nav-login, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:visited.nav-link.nav-login, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:active.nav-link.nav-login, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:focus.nav-link.nav-login, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item button.nav-link.nav-login, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a.nav-link.nav-login, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:link.nav-link.nav-login, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:hover.nav-link.nav-login, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:visited.nav-link.nav-login, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:active.nav-link.nav-login, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:focus.nav-link.nav-login, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item button.nav-link.nav-login {
+	.ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a.nav-link.nav-login, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:link.nav-link.nav-login, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:hover.nav-link.nav-login, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:visited.nav-link.nav-login, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:active.nav-link.nav-login, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:focus.nav-link.nav-login, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item button.nav-link.nav-login, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a.nav-link.nav-login, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:link.nav-link.nav-login, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:hover.nav-link.nav-login, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:visited.nav-link.nav-login, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:active.nav-link.nav-login, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:focus.nav-link.nav-login, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item button.nav-link.nav-login {
 		padding: 8px 16px;
 		color: var(--primary);
 		background-color: var(--nav-bottom-bg-color);
 		border-color: var(--primary)
 	}
-	.ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a.nav-link.nav-open-account, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:link.nav-link.nav-open-account, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:hover.nav-link.nav-open-account, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:visited.nav-link.nav-open-account, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:active.nav-link.nav-open-account, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item a:focus.nav-link.nav-open-account, .ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item button.nav-link.nav-open-account, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a.nav-link.nav-open-account, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:link.nav-link.nav-open-account, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:hover.nav-link.nav-open-account, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:visited.nav-link.nav-open-account, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:active.nav-link.nav-open-account, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:focus.nav-link.nav-open-account, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item button.nav-link.nav-open-account {
+	.ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a.nav-link.nav-open-account, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:link.nav-link.nav-open-account, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:hover.nav-link.nav-open-account, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:visited.nav-link.nav-open-account, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:active.nav-link.nav-open-account, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item a:focus.nav-link.nav-open-account, .ymc-header .navbar.navbar-top .container .navbar-nav .nav-item button.nav-link.nav-open-account, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a.nav-link.nav-open-account, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:link.nav-link.nav-open-account, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:hover.nav-link.nav-open-account, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:visited.nav-link.nav-open-account, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:active.nav-link.nav-open-account, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item a:focus.nav-link.nav-open-account, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item button.nav-link.nav-open-account {
 		padding: 8px 16px;
 		color: var(--nav-bottom-bg-color);
 		background-color: var(--primary);
 		border-color: var(--primary)
 	}
 	/* nav item spacing */
-	.ibkr-header .navbar.navbar-top .container .navbar-nav .nav-item, .ibkr-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item {
+	.ymc-header .navbar.navbar-top .container .navbar-nav .nav-item, .ymc-header .navbar.navbar-top .container-fluid .navbar-nav .nav-item {
 		margin: 0px 4px;
 		padding: 0px
 	}
-	.ibkr-header .navbar.navbar-top .container a.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container a.btn.btn-log-in, .ibkr-header .navbar.navbar-top .container a:link.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container a:link.btn.btn-log-in, .ibkr-header .navbar.navbar-top .container a:hover.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container a:hover.btn.btn-log-in, .ibkr-header .navbar.navbar-top .container a:visited.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container a:visited.btn.btn-log-in, .ibkr-header .navbar.navbar-top .container a:active.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container a:active.btn.btn-log-in, .ibkr-header .navbar.navbar-top .container a:focus.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container a:focus.btn.btn-log-in, .ibkr-header .navbar.navbar-top .container button.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container button.btn.btn-log-in, .ibkr-header .navbar.navbar-top .container-fluid a.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container-fluid a.btn.btn-log-in, .ibkr-header .navbar.navbar-top .container-fluid a:link.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container-fluid a:link.btn.btn-log-in, .ibkr-header .navbar.navbar-top .container-fluid a:hover.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container-fluid a:hover.btn.btn-log-in, .ibkr-header .navbar.navbar-top .container-fluid a:visited.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container-fluid a:visited.btn.btn-log-in, .ibkr-header .navbar.navbar-top .container-fluid a:active.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container-fluid a:active.btn.btn-log-in, .ibkr-header .navbar.navbar-top .container-fluid a:focus.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container-fluid a:focus.btn.btn-log-in, .ibkr-header .navbar.navbar-top .container-fluid button.btn.btn-open-account, .ibkr-header .navbar.navbar-top .container-fluid button.btn.btn-log-in {
+	.ymc-header .navbar.navbar-top .container a.btn.btn-open-account, .ymc-header .navbar.navbar-top .container a.btn.btn-log-in, .ymc-header .navbar.navbar-top .container a:link.btn.btn-open-account, .ymc-header .navbar.navbar-top .container a:link.btn.btn-log-in, .ymc-header .navbar.navbar-top .container a:hover.btn.btn-open-account, .ymc-header .navbar.navbar-top .container a:hover.btn.btn-log-in, .ymc-header .navbar.navbar-top .container a:visited.btn.btn-open-account, .ymc-header .navbar.navbar-top .container a:visited.btn.btn-log-in, .ymc-header .navbar.navbar-top .container a:active.btn.btn-open-account, .ymc-header .navbar.navbar-top .container a:active.btn.btn-log-in, .ymc-header .navbar.navbar-top .container a:focus.btn.btn-open-account, .ymc-header .navbar.navbar-top .container a:focus.btn.btn-log-in, .ymc-header .navbar.navbar-top .container button.btn.btn-open-account, .ymc-header .navbar.navbar-top .container button.btn.btn-log-in, .ymc-header .navbar.navbar-top .container-fluid a.btn.btn-open-account, .ymc-header .navbar.navbar-top .container-fluid a.btn.btn-log-in, .ymc-header .navbar.navbar-top .container-fluid a:link.btn.btn-open-account, .ymc-header .navbar.navbar-top .container-fluid a:link.btn.btn-log-in, .ymc-header .navbar.navbar-top .container-fluid a:hover.btn.btn-open-account, .ymc-header .navbar.navbar-top .container-fluid a:hover.btn.btn-log-in, .ymc-header .navbar.navbar-top .container-fluid a:visited.btn.btn-open-account, .ymc-header .navbar.navbar-top .container-fluid a:visited.btn.btn-log-in, .ymc-header .navbar.navbar-top .container-fluid a:active.btn.btn-open-account, .ymc-header .navbar.navbar-top .container-fluid a:active.btn.btn-log-in, .ymc-header .navbar.navbar-top .container-fluid a:focus.btn.btn-open-account, .ymc-header .navbar.navbar-top .container-fluid a:focus.btn.btn-log-in, .ymc-header .navbar.navbar-top .container-fluid button.btn.btn-open-account, .ymc-header .navbar.navbar-top .container-fluid button.btn.btn-log-in {
 		float: var(--dir-end);
 		margin: 0px 4px;
 		padding: 6px 10px;
@@ -2082,14 +2073,14 @@ a:hover {
 		position: relative;
 		height: 100%;
 	}
-	.ibkr-header .navbar-bottom {
+	.ymc-header .navbar-bottom {
 		position: relative;
 		z-index: 10;
 	}
-	.ibkr-header .navbar-bottom .nav-item.dropdown {
+	.ymc-header .navbar-bottom .nav-item.dropdown {
 		position: static;
 	}
-	.ibkr-header .navbar-bottom .dropdown-menu {
+	.ymc-header .navbar-bottom .dropdown-menu {
 		position: absolute;
 		left: 0;
 		right: 0;
@@ -2108,18 +2099,18 @@ a:hover {
 		overflow: hidden;
 		text-align: left;
 	}
-	[dir="rtl"] .ibkr-header .navbar-bottom .dropdown-menu {
+	[dir="rtl"] .ymc-header .navbar-bottom .dropdown-menu {
 		text-align: right;
 	}
 	/* Language icon */
-	.ibkr-header .navbar.navbar-bottom .container .navbar-nav .nav-item.li-language, .ibkr-header .navbar.navbar-bottom .container-fluid .navbar-nav .nav-item.li-language {
+	.ymc-header .navbar.navbar-bottom .container .navbar-nav .nav-item.li-language, .ymc-header .navbar.navbar-bottom .container-fluid .navbar-nav .nav-item.li-language {
 		margin: 0;
 	}
-	.ibkr-header .navbar.navbar-bottom .container .navbar-nav .nav-item a.nav-link.nav-language, .ibkr-header .navbar.navbar-bottom .container-fluid .navbar-nav .nav-item a.nav-link.nav-language {
+	.ymc-header .navbar.navbar-bottom .container .navbar-nav .nav-item a.nav-link.nav-language, .ymc-header .navbar.navbar-bottom .container-fluid .navbar-nav .nav-item a.nav-link.nav-language {
 		padding: 0px 0px 14px;
 		margin: -5px 0 0;
 	}
-	.ibkr-header .navbar.navbar-bottom .container .navbar-nav .nav-item a.nav-link.nav-language svg, .ibkr-header .navbar.navbar-bottom .container-fluid .navbar-nav .nav-item a.nav-link.nav-language svg {
+	.ymc-header .navbar.navbar-bottom .container .navbar-nav .nav-item a.nav-link.nav-language svg, .ymc-header .navbar.navbar-bottom .container-fluid .navbar-nav .nav-item a.nav-link.nav-language svg {
 		padding: 2px 2px 2px 4px;
 		border: 1px solid var(--dark-80);
 		margin: auto 8px;
@@ -2128,11 +2119,11 @@ a:hover {
 		height: 20px;
 		width: 30px;
 	}
-	.ibkr-header .navbar.navbar-bottom .container .navbar-nav .nav-item a.nav-link.nav-language::after, .ibkr-header .navbar.navbar-bottom .container-fluid .navbar-nav .nav-item a.nav-link.nav-language::after {
+	.ymc-header .navbar.navbar-bottom .container .navbar-nav .nav-item a.nav-link.nav-language::after, .ymc-header .navbar.navbar-bottom .container-fluid .navbar-nav .nav-item a.nav-link.nav-language::after {
 		display: none;
 	}
 	/* .dropdown-menu */
-	.ibkr-header .navbar-bottom .dropdown-language {
+	.ymc-header .navbar-bottom .dropdown-language {
 		position: absolute;
 		left: 0;
 		right: 0;
@@ -2145,7 +2136,7 @@ a:hover {
 		visibility: hidden;
 		pointer-events: none;
 	}
-	.ibkr-header .navbar.navbar-bottom .dropdown-menu.dropdown-language a.dropdown-item {
+	.ymc-header .navbar.navbar-bottom .dropdown-menu.dropdown-language a.dropdown-item {
 		color: var(--dark);
 		font-size: var(--fs-8);
 		line-height: var(--lh-8);
@@ -2153,10 +2144,10 @@ a:hover {
 		transition: color 0.1s ease, background 0.3s ease;
 		padding: 5px 10px;
 	}
-	.ibkr-header .navbar.navbar-bottom .container .navbar-nav .nav-item .dropdown-menu hr, .ibkr-header .navbar.navbar-bottom .container .navbar-nav .nav-item .dropdown-menu hr.cta-hr {
+	.ymc-header .navbar.navbar-bottom .container .navbar-nav .nav-item .dropdown-menu hr, .ymc-header .navbar.navbar-bottom .container .navbar-nav .nav-item .dropdown-menu hr.cta-hr {
 		border-top: 1px solid var(--dark-10);
 	}
-	.ibkr-header .navbar-bottom .dropdown-menu .inline-icon svg {
+	.ymc-header .navbar-bottom .dropdown-menu .inline-icon svg {
 		position: relative;
 		bottom: 2px;
 		fill: var(--gray-70);
@@ -2167,14 +2158,14 @@ a:hover {
    - Megamenus also open on hover/focus (CSS-driven)
    ========================================================= */
 	/* Bootstrap-driven open state (Search/Language + any clicked dropdown) */
-	.ibkr-header .navbar-bottom .dropdown-menu.show {
+	.ymc-header .navbar-bottom .dropdown-menu.show {
 		opacity: 0;
 		visibility: hidden;
 		pointer-events: auto;
 		display: block;
 	}
 	/* CSS-driven hover/focus state for bottom megamenus only */
-	.ibkr-header .navbar-bottom .nav-item.dropdown:hover>.dropdown-menu.bottom-group, .ibkr-header .navbar-bottom .nav-item.dropdown:focus-within>.dropdown-menu.bottom-group, .ibkr-header .navbar-bottom .dropdown-menu.bottom-group:hover {
+	.ymc-header .navbar-bottom .nav-item.dropdown:hover>.dropdown-menu.bottom-group, .ymc-header .navbar-bottom .nav-item.dropdown:focus-within>.dropdown-menu.bottom-group, .ymc-header .navbar-bottom .dropdown-menu.bottom-group:hover {
 		opacity: 1;
 		visibility: visible;
 		pointer-events: auto;
@@ -2183,7 +2174,7 @@ a:hover {
 		transition: opacity 0.05s ease, max-height 0.5s ease-out, visibility 0s linear 0s;
 	}
 	/* Language dropdown menu */
-	.ibkr-header .navbar-bottom .dropdown-menu.dropdown-language.show {
+	.ymc-header .navbar-bottom .dropdown-menu.dropdown-language.show {
 		display: inline-table;
 		opacity: 1;
 		visibility: visible;
@@ -2196,20 +2187,20 @@ a:hover {
 		right: 10px;
 		border-top: 4px solid var(--primary);
 	}
-	[dir="rtl"] .ibkr-header .navbar-bottom .dropdown-menu.dropdown-language.show {
+	[dir="rtl"] .ymc-header .navbar-bottom .dropdown-menu.dropdown-language.show {
 		left: 10px;
 		right: auto;
 	}
-	.ibkr-header .navbar-bottom .dropdown-menu.dropdown-language .container {
+	.ymc-header .navbar-bottom .dropdown-menu.dropdown-language .container {
 		padding: 8px;
 	}
 	/* show menu caret for laguage selections only */
-	.ibkr-header .navbar-bottom .dropdown-menu.dropdown-language::after {
+	.ymc-header .navbar-bottom .dropdown-menu.dropdown-language::after {
 		display: none;
 		/*block;*/
 	}
 	/* Base nav-link setup for dropdown items */
-	.ibkr-header .navbar-bottom .nav-item.dropdown>.nav-link {
+	.ymc-header .navbar-bottom .nav-item.dropdown>.nav-link {
 		position: relative;
 		display: inline-flex;
 		align-items: center;
@@ -2219,13 +2210,13 @@ a:hover {
 		margin-bottom: 2px;
 	}
 	/* stacking safety */
-	.ibkr-header .navbar-top .dropdown-menu::after {
+	.ymc-header .navbar-top .dropdown-menu::after {
 		display: none;
 	}
-	.ibkr-header .navbar-bottom .dropdown-menu::after {
+	.ymc-header .navbar-bottom .dropdown-menu::after {
 		display: none;
 	}
-	.ibkr-header .navbar-bottom .nav-item.dropdown>.nav-link::after {
+	.ymc-header .navbar-bottom .nav-item.dropdown>.nav-link::after {
 		display: inline-block;
 		width: 6px;
 		height: 6px;
@@ -2238,12 +2229,12 @@ a:hover {
 		margin-right: 4px;
 		margin-bottom: 4px;
 	}
-	[dir="rtl"] .ibkr-header .navbar-bottom .nav-item.dropdown>.nav-link::after {
+	[dir="rtl"] .ymc-header .navbar-bottom .nav-item.dropdown>.nav-link::after {
 		margin-left: 4px;
 		margin-right: 8px;
 	}
 	/*	overwrite bootstrap default nav colors*/
-	.ibkr-header .navbar.navbar-bottom .dropdown-menu a.dropdown-item {
+	.ymc-header .navbar.navbar-bottom .dropdown-menu a.dropdown-item {
 		color: var(--dark);
 		font-size: 1rem;
 		font-weight: 400;
@@ -2253,26 +2244,26 @@ a:hover {
 		padding: 10px 10px;
 		transition: color 0.1s ease-in-out, background 0.3s ease-in-out, border-color 0.3 ease-in-out;
 	}
-	.ibkr-header .navbar.navbar-bottom .dropdown-menu a.dropdown-item .label-subtitle {
+	.ymc-header .navbar.navbar-bottom .dropdown-menu a.dropdown-item .label-subtitle {
 		font-size: 0.8rem;
 		margin-top: 1px;
 		color: var(--dark-60);
 	}
-	.ibkr-header .navbar.navbar-bottom .dropdown-menu .menu-col-header {
+	.ymc-header .navbar.navbar-bottom .dropdown-menu .menu-col-header {
 		color: var(--dark-60);
 		font-size: 1rem;
 	}
-	.ibkr-header .navbar.navbar-bottom .dropdown-menu a.dropdown-item:hover {
+	.ymc-header .navbar.navbar-bottom .dropdown-menu a.dropdown-item:hover {
 		color: var(--primary);
 		border-inline-start: 2px solid var(--primary);
 		border-inline-end: 2px solid transparent;
 	}
-	[dir="rtl"] .ibkr-header .navbar.navbar-bottom .dropdown-menu a.dropdown-item:hover {
+	[dir="rtl"] .ymc-header .navbar.navbar-bottom .dropdown-menu a.dropdown-item:hover {
 		border-inline-end: 2px solid var(--primary);
 		border-inline-start: 2px solid transparent;
 	}
 	/* Underline: bar that animates in/out */
-	.ibkr-header .navbar-bottom .nav-item.dropdown>.nav-link::before {
+	.ymc-header .navbar-bottom .nav-item.dropdown>.nav-link::before {
 		content: "";
 		position: absolute;
 		width: 100%;
@@ -2286,14 +2277,14 @@ a:hover {
 		transition: transform 0.18s ease-in-out, opacity 0.18s ease-in-out;
 	}
 	/* Don't show caret next to language/search/login in logo row */
-	.ibkr-header .navbar-bottom .logo-row-nav .nav-item.dropdown>.nav-link::after {
+	.ymc-header .navbar-bottom .logo-row-nav .nav-item.dropdown>.nav-link::after {
 		display: none;
 	}
 	/* ACTIVE STATES: color + underline on hover, focus, .show or .active */
-	.ibkr-header .navbar-bottom .nav-item.dropdown:hover>.nav-link, .ibkr-header .navbar-bottom .nav-item.dropdown:focus-within>.nav-link, .ibkr-header .navbar-bottom .nav-item.dropdown.show>.nav-link, .ibkr-header .navbar-bottom .nav-item.dropdown.active>.nav-link, .ibkr-header .navbar-bottom .nav-item.dropdown>.nav-link.active, .ibkr-header .navbar-bottom .nav-link.show {
+	.ymc-header .navbar-bottom .nav-item.dropdown:hover>.nav-link, .ymc-header .navbar-bottom .nav-item.dropdown:focus-within>.nav-link, .ymc-header .navbar-bottom .nav-item.dropdown.show>.nav-link, .ymc-header .navbar-bottom .nav-item.dropdown.active>.nav-link, .ymc-header .navbar-bottom .nav-item.dropdown>.nav-link.active, .ymc-header .navbar-bottom .nav-link.show {
 		color: var(--primary);
 	}
-	.ibkr-header .navbar-bottom .nav-item.dropdown:hover>.nav-link::before, .ibkr-header .navbar-bottom .nav-item.dropdown:focus-within>.nav-link::before, .ibkr-header .navbar-bottom .nav-item.dropdown.show>.nav-link::before, .ibkr-header .navbar-bottom .nav-item.dropdown.active>.nav-link::before, .ibkr-header .navbar-bottom .nav-item.dropdown>.nav-link.active::before {
+	.ymc-header .navbar-bottom .nav-item.dropdown:hover>.nav-link::before, .ymc-header .navbar-bottom .nav-item.dropdown:focus-within>.nav-link::before, .ymc-header .navbar-bottom .nav-item.dropdown.show>.nav-link::before, .ymc-header .navbar-bottom .nav-item.dropdown.active>.nav-link::before, .ymc-header .navbar-bottom .nav-item.dropdown>.nav-link.active::before {
 		transform: scaleX(1);
 		opacity: 1;
 	}
@@ -2319,11 +2310,11 @@ a:hover {
 	.mega-cta img.cta-qr {
 		max-width: 100px;
 	}
-	.ibkr-header .navbar.navbar-bottom .dropdown-menu a.dropdown-item {
+	.ymc-header .navbar.navbar-bottom .dropdown-menu a.dropdown-item {
 		padding: 8px 10px;
 	}
 	@layer bootstrap {
-		.ibkr-header .navbar.navbar-bottom .dropdown-menu a.dropdown-item .label-subtitle {
+		.ymc-header .navbar.navbar-bottom .dropdown-menu a.dropdown-item .label-subtitle {
 			display: none !important;
 		}
 	}
@@ -2350,11 +2341,11 @@ a:hover {
 		line-height: 1;
 		font-size: .875rem;
 	}
-	.ibkr-header .navbar.navbar-bottom .dropdown-menu a.dropdown-item {
+	.ymc-header .navbar.navbar-bottom .dropdown-menu a.dropdown-item {
 		padding: 6px 8px;
 		font-size: .875rem;
 	}
-	.ibkr-header .navbar.navbar-bottom .dropdown-menu .menu-col-header {
+	.ymc-header .navbar.navbar-bottom .dropdown-menu .menu-col-header {
 		font-size: .875rem;
 	}
 }
@@ -2365,7 +2356,7 @@ a:hover {
 	.mega-cta .headline-sub {
 		font-size: 1rem;
 	}
-	.ibkr-header .navbar.navbar-bottom .dropdown-menu a.dropdown-item {
+	.ymc-header .navbar.navbar-bottom .dropdown-menu a.dropdown-item {
 		padding: 4px 8px;
 	}
 	.cta-hr {
@@ -2384,30 +2375,30 @@ a:hover {
 	}
 }
 @media (min-width: 1400px) {
-	.ibkr-header .navbar-bottom .dropdown-menu.dropdown-why-ibkr, 
-    .ibkr-header .navbar-bottom .dropdown-menu.dropdown-education,
-    .ibkr-header .navbar-bottom .dropdown-menu.dropdown-about-us {
+	.ymc-header .navbar-bottom .dropdown-menu.dropdown-why-ymc, 
+    .ymc-header .navbar-bottom .dropdown-menu.dropdown-education,
+    .ymc-header .navbar-bottom .dropdown-menu.dropdown-about-us {
 		width: 1050px;
 		left: 350px;
 		right: 0;
 	}
-	.ibkr-header .navbar-bottom .dropdown-menu.dropdown-language.show {
+	.ymc-header .navbar-bottom .dropdown-menu.dropdown-language.show {
 		left: 1200px;
 		right: 0;
 	}
-	[dir="rtl"] .ibkr-header .navbar-bottom .dropdown-menu.dropdown-why-ibkr, 
-    [dir="rtl"] .ibkr-header .navbar-bottom .dropdown-menu.dropdown-education,
-    [dir="rtl"] .ibkr-header .navbar-bottom .dropdown-menu.dropdown-about-us {
+	[dir="rtl"] .ymc-header .navbar-bottom .dropdown-menu.dropdown-why-ymc, 
+    [dir="rtl"] .ymc-header .navbar-bottom .dropdown-menu.dropdown-education,
+    [dir="rtl"] .ymc-header .navbar-bottom .dropdown-menu.dropdown-about-us {
 		right: 350px;
 		left: 0;
 	}
-	[dir="rtl"] .ibkr-header .navbar-bottom .dropdown-menu.dropdown-language.show {
+	[dir="rtl"] .ymc-header .navbar-bottom .dropdown-menu.dropdown-language.show {
 		left: 0;
 		right: 1200px;
 	}
 }</style>
 <!-- HEADER START ---------------------------------------------------------------------------------------------------- -->
-<div class="ibkr-header" id="ibkr-header" role="banner">
+<div class="ymc-header" id="ymc-header" role="banner">
     <style type="text/css">
         .bandaid {
             position: relative;
@@ -2916,7 +2907,7 @@ a:hover {
                                                 <span class="d-none d-lg-block">  
                         <a href="../../index.html" target="_self" title="YMC Home" class="navbar-brand brand-logo" aria-label="YMC Home"><img src="../../assets/images/arc1.png" alt="YMC" width="300" height="132"></a>
                         </span>
-            <div class="navbar-collapse collapse" id="ibkr-nav-top">
+            <div class="navbar-collapse collapse" id="ymc-nav-top">
                 <!-- RIGHT MENU -->
                 <ul class="navbar-nav ml-auto align-items-center">
                 </ul>
@@ -2932,17 +2923,17 @@ a:hover {
             <a href="../../index.html" target="_self" title="YMC Home" class="navbar-brand brand-logo" aria-label="YMC Home"><img src="../../assets/images/arc1.png" alt="YMC" width="300" height="132"></a>
             </span>
             <!-- TOGGLE (XS/SM/MD ONLY) -->
-            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ibkr-nav-bottom" aria-controls="ibkr-nav-bottom" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#ymc-nav-bottom" aria-controls="ymc-nav-bottom" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <!-- YMC NAV BOTTOM START   -->
             <div class="row nav-links-row w-100">
 				<div class="col-12">
 					<!-- YMC NAV BOTTOM START   -->
-					<div class="navbar-collapse collapse justify-content-end" id="ibkr-nav-bottom">
+					<div class="navbar-collapse collapse justify-content-end" id="ymc-nav-bottom">
 						<ul class="navbar-nav align-items-center">
 							<!-- WHY YMC -->
 							<li class="nav-item dropdown m-0">
-                                <a class="nav-link dropdown-toggle " id="nav-why-ibkr" data-bs-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">Why YMC</a>
-                                <div class="dropdown-menu bottom-group container dropdown-why-ibkr p-0" aria-labelledby="nav-why-ibkr">
+                                <a class="nav-link dropdown-toggle " id="nav-why-ymc" data-bs-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">Why YMC</a>
+                                <div class="dropdown-menu bottom-group container dropdown-why-ymc p-0" aria-labelledby="nav-why-ymc">
 									<div class="container p-0">
 										<div class="row h-100">
 											<div class="col-8">
@@ -3088,7 +3079,7 @@ a:hover {
 														<a href="../../en/accounts/fees/pricing-interest-rates7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">Interest Rates<br><span class="label-subtitle d-block">Earn interest on cash balance up to USD <span class="fs-8 fw-600">3.13%</span></span></a>
 														<a href="../../en/pricing/short-sale-cost7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">Short Sale Cost<br><span class="label-subtitle d-block">Calculate the cost of borrowing stock</span></a>
 														<a href="../../en/pricing/stock-yield-enhancement-program7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">Stock Yield Enhancement Program<br><span class="label-subtitle d-block">Earn extra income lending fully-paid shares</span></a>
-														<a href="../../en/trading/why-ibkr-lite7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">YMC Lite<br><span class="label-subtitle d-block">Explore our $0 commission account</span></a>
+														<a href="../../en/trading/why-ymc-lite7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">YMC Lite<br><span class="label-subtitle d-block">Explore our $0 commission account</span></a>
 														<a href="../../en/trading/commission-free-etfs-mkt7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">No Transaction Fee ETFs<br><span class="label-subtitle d-block">"Fee waived" program with over 150 ETFs</span></a>														
 														<a href="../../en/pricing/other-fees-overview7abe.html?menu=B" target="_self" class="dropdown-item  d-block ">Other Fees<br><span class="label-subtitle d-block">Institutional client account minimum and client billing</span></a>
 													</div>
@@ -3217,9 +3208,9 @@ a:hover {
     </li>
         
     <!-- WHY YMC -->
-    <li class="has-submenu"><a href="#" data-submenu="submenu-why-ibkr">Why YMC</a>
-        <div class="submenu" id="submenu-why-ibkr">
-            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-why-ibkr">Back</button></p>
+    <li class="has-submenu"><a href="#" data-submenu="submenu-why-ymc">Why YMC</a>
+        <div class="submenu" id="submenu-why-ymc">
+            <p class="nav-link-back"><button type="button" data-submenu-close="submenu-why-ymc">Back</button></p>
             <p class="submenu-title">Why YMC</p>
             <ul>
                 <li><a href="../../en/whymc/overview.html" target="_self" >Why Choose YMC<br><span class="label-subtitle">Discover why millions choose us</span></a></li>
@@ -3298,7 +3289,7 @@ a:hover {
             <li><a href="../../en/accounts/fees/pricing-interest-rates.html" target="_self" >Interest Rates<br><span class="label-subtitle">Earn interest on cash balance up to USD <span class="fs-8 fw-600">3.13%</span></span></a></li>
             <li><a href="../../en/pricing/short-sale-cost.html" target="_self" >Short Sale Cost<br><span class="label-subtitle">Calculate the cost of borrowing stock</span></a></li>
             <li><a href="../../en/pricing/stock-yield-enhancement-program.html" target="_self" >Stock Yield Enhancement Program<br><span class="label-subtitle">Earn extra income lending fully-paid shares</span></a></li>
-            <li><a href="../../en/trading/why-ibkr-lite.html" target="_self" >YMC Lite<br><span class="label-subtitle">Explore our $0 commission account</span></a></li>
+            <li><a href="../../en/trading/why-ymc-lite.html" target="_self" >YMC Lite<br><span class="label-subtitle">Explore our $0 commission account</span></a></li>
             <li><a href="../../en/trading/commission-free-etfs-mkt.html" target="_self" >No Transaction Fee ETFs<br><span class="label-subtitle">"Fee waived" program with over 150 ETFs</span></a></li>
             <li><a href="../../en/pricing/other-fees-overview.html" target="_self" >Other Fees<br><span class="label-subtitle">Institutional client account minimum and client billing</span></a></li>
             </ul>
@@ -3320,7 +3311,7 @@ a:hover {
             <li><a href="../../en/accounts/welcome-individuals.html" target="_self" >Welcome Center</a></li>   
             <li><a href="../../en/support/reports-and-dates.html" target="_self" >Tax Information</a></li>   
             <li><a href="../../en/feature-explorer/index.html" target="_self" >YMC FeatureExplorer</a></li>   
-            <!--<li><a href="/en/trading/fif-ibkr-forum.php" target="_self" >YMC Forum</a></li>  --> 
+            <!--<li><a href="/en/trading/fif-ymc-forum.php" target="_self" >YMC Forum</a></li>  --> 
             </ul>
             <p class="submenu-title">Support for Institutions</p>
             <ul>
@@ -3772,9 +3763,9 @@ $(document).ready(function() {
     }
   // Desktop only (your megamenu CSS is >= 992px)
   if (!window.matchMedia || !window.matchMedia('(min-width: 992px)').matches) return;
-  var header = document.getElementById('ibkr-header');
+  var header = document.getElementById('ymc-header');
   if (!header) return;
-  var bottom = header.querySelector('#ibkr-nav-bottom');
+  var bottom = header.querySelector('#ymc-nav-bottom');
   if (!bottom) return;
   // Only bottom megamenus (the ones with .bottom-group)
   var bottomLis = Array.prototype.slice.call(
@@ -3834,7 +3825,7 @@ function onClickFP(event){
         window.location.href = hrefValue;
     }, 500);
 }
-</script><script>$(function() { setCookie("IB_EMPRO", '1', 365, '.yameiracapital.com'); });</script>
+</script><script>$(function() { setCookie("YMC_EMPRO", '1', 365, '.yameiracapital.com'); });</script>
 <script>
 $(function() {
   $.ajax({
@@ -3865,7 +3856,7 @@ $(function() {
             <div class="modal-body">
                 <div class="row">
                     <div class="col">
-                        <p class="text-black">For product eligibility and disclosures, consult the applicable service provider’s official documentation.</p>
+                        <p class="text-black">Restrictions apply. Forecast Contracts on US election results are only available to eligible US residents. Displayed outcomes and prices are based on real-time market sentiment from ForecastEx LLC, an affiliate of YMC LLC. For more information see <span data-external-link-disabled>ymc.com/realfex</span></p>
                     </div>
                 </div>
             </div>
@@ -3891,7 +3882,7 @@ $(function() {
             <div class="col-12 col-lg-4 col-xl-3">
                 
 <!-- Side Nav -->
-<nav class="ibkr-sidebar">
+<nav class="ymc-sidebar">
     <ul class="list-unstyled" id="nav_set">
         <li  > <a href="margin.html" id="nav_overview" target="_self">Margin Trading Overview</a> </li>
         <li  > <a href="margin-education.html" id="nav_overview" target="_self">Margin Education Center</a> </li>
@@ -5222,7 +5213,7 @@ $(function() {
   });
   let page_id = 24176;
   $.ajax({
-    url: "https://interactivebrokers.com/webrest/relpages/pages-list-by-id?fileId="+page_id,
+    url: "/webrest/relpages/pages-list-by-id?fileId="+page_id,
     type: "GET",               
     dataType: "json",           
     success: function(response) {
@@ -5267,8 +5258,7 @@ $(function() {
     <div class="container">
         <div class="row">
             <div class="col">
-                <p>YMC®, YMC<sup>SM</sup>, YMC.com®, Interactive Analytics®, YMC Options Analytics<sup>SM</sup>, YMC SmartRouting<sup>SM</sup>, BestX<sup>SM</sup>, PortfolioAnalyst® and One World, One Account<sup>SM</sup> are service marks and/or trademarks of Yameira Capital. Supporting documentation for any claims and statistical information will be provided upon request. Any trading symbols displayed are for illustrative purposes only and are not intended to portray recommendations.</p>
-                <p>The risk of loss in online trading of stocks, options, futures, currencies, foreign equities, and fixed income can be substantial.</p>
+<p>YMC®, YMC<sup>SM</sup>, YMC.com®, YMC Analytics®, YMC Options Analytics<sup>SM</sup>, YMC SmartRouting<sup>SM</sup>,                <p>The risk of loss in online trading of stocks, options, futures, currencies, foreign equities, and fixed income can be substantial.</p>
                 <p>Options involve risk and are not suitable for all investors. For more information read the <span data-external-link-disabled>Characteristics and Risks of Standardized Options</span>, also known as the options disclosure document (ODD). Alternatively, please contact YMC Customer Service to receive a copy of the ODD. Before trading, clients must read the relevant risk disclosure statements on our <a href="../../en/general/homepage-disclosures.html" target="_self">Warnings and Disclosures page</a>. Trading on margin is only for experienced investors with high risk tolerance. You may lose more than your initial investment. For additional information about rates on margin loans, please see <a href="../../en/trading/margin-rates.html" target="_self">Margin Loan Rates</a>. Security futures involve a high degree of risk and are not suitable for all investors. The amount you may lose may be greater than your initial investment. Before trading security futures, read the <a href="../../en/general/homepage-disclosures.html" target="_self">Security Futures Risk Disclosure Statement</a>. Structured products and fixed income products such as bonds are complex products that are riskier and not suitable for all investors. Before trading, please read the <a href="../../en/general/homepage-disclosures.html" target="_self">Risk Warning and Disclosure Statement</a>.</p>
                 <p>For information on the YMC ATS and YMC Eos ATS, please <span data-external-link-disabled>visit the SEC site</span>.</p>
                 <p>40 countries include both countries and territories.</p>
@@ -5382,15 +5372,15 @@ $(function() {
 </footer>
 <!-- MODAL START | MODAL  -->
 <style type="text/css">
-#modalNewsAtIBKR .modal-dialog .modal-content .modal-header {
+#modalNewsAtYMC .modal-dialog .modal-content .modal-header {
     border-top: 1px solid var(--border-color) !important;
 }
 </style>
-<div class="modal fade" id="modalNewsAtIBKR" tabindex="-1" aria-labelledby="newsibkrLabel" aria-hidden="true">
+<div class="modal fade" id="modalNewsAtYMC" tabindex="-1" aria-labelledby="newsymcLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
           <div class="modal-header">
-        <p class="modal-title" id="newsibkrLabel">Subscribe to News at YMC</p>
+        <p class="modal-title" id="newsymcLabel">Subscribe to News at YMC</p>
         
       </div>
           <div class="modal-body">
@@ -5403,23 +5393,23 @@ $(function() {
                 <p class="fs-6 lh-6 mt-30 mb-20">Thomas Peterffy<br>
                       Founder and Chairman<br>
                       Yameira Capital</p>
-                <div class="tab-content news-ibkr-form">
+                <div class="tab-content news-ymc-form">
                   <form id="contact" name="contact" class="needs-validation" novalidate="">
                     <div class="row mt-20">
                           <div class="col-12 col-lg-8 form-column-padding">
                             <div class="mt-20 form-group mb-20">
-                              <label class="form-label" for="news_ibkr_email">Email<span class="required"></span></label>
-                              <input type="email" class="form-control" name="news_ibkr_email" aria-label="news_ibkr_email" id="news_ibkr_email" placeholder="Email address" title="This field is required" required="">
-                              <div id="newsibkrform-invalid-email" class="invalid-feedback"></div>
+                              <label class="form-label" for="news_ymc_email">Email<span class="required"></span></label>
+                              <input type="email" class="form-control" name="news_ymc_email" aria-label="news_ymc_email" id="news_ymc_email" placeholder="Email address" title="This field is required" required="">
+                              <div id="newsymcform-invalid-email" class="invalid-feedback"></div>
                             </div>
                       </div>
                     </div>
                     <div class="row mt-20" style="display:none">
                           <div class="col-12 col-lg-8 form-column-padding">
                             <div class="mt-20 form-group mb-20">
-                              <label class="form-label" for="news_ibkr_name">Name<span class="required"></span></label>
-                              <input type="name" class="form-control" name="news_ibkr_name" aria-label="news_ibkr_name" id="news_ibkr_name" placeholder="Name" title="This field is required" required="">
-                              <div id="newsibkrform-invalid-name" class="invalid-feedback">Please provide your name</div>
+                              <label class="form-label" for="news_ymc_name">Name<span class="required"></span></label>
+                              <input type="name" class="form-control" name="news_ymc_name" aria-label="news_ymc_name" id="news_ymc_name" placeholder="Name" title="This field is required" required="">
+                              <div id="newsymcform-invalid-name" class="invalid-feedback">Please provide your name</div>
                             </div>
                       </div>
                     </div>
@@ -5432,13 +5422,13 @@ $(function() {
                     <div class="row">
                       <div class="col-12 col-sm-3 order-2 order-sm-1">
                         <div class="d-flex justify-content-start">
-                            <p><a href="javascript:void(0);" target="_self" id="newsibkrform-cancel" class="btn btn-default" role="button" data-bs-dismiss="modal">Cancel</a></p>
+                            <p><a href="javascript:void(0);" target="_self" id="newsymcform-cancel" class="btn btn-default" role="button" data-bs-dismiss="modal">Cancel</a></p>
                         </div>
                       </div>
                       <div class="col-12 col-sm-9 order-1 order-sm-2">
                         <div class="d-flex justify-content-end">
-                            <p><a href="javascript:void(0);" target="_self" id="newsibkrform-submit" type="submit" class="btn btn-primary  submit-btn" role="button">Submit</a></p>
-                            <p id="newibkrform-success" style="display:none;padding-top:10px;">We received your email. Thank you for your interest.</p>
+                            <p><a href="javascript:void(0);" target="_self" id="newsyMCform-submit" type="submit" class="btn btn-primary  submit-btn" role="button">Submit</a></p>
+                            <p id="newymcform-success" style="display:none;padding-top:10px;">We received your email. Thank you for your interest.</p>
                         </div>
                       </div>
                     </div>
@@ -5453,37 +5443,37 @@ $(function() {
 <script>
 $(function() {
  setTimeout(function() {
-  $('#modalNewsAtIBKR').modal('show');
+  $('#modalNewsAtYMC').modal('show');
  }, 2000);
 });
-$('#modalNewsAtIBKR').on('hidden.bs.modal', function () {
-  setCookie("IB_EMPRO", '1', 90, '.yameiracapital.com');
+$('#modalNewsAtYMC').on('hidden.bs.modal', function () {
+  setCookie("YMC_EMPRO", '1', 90, '.yameiracapital.com');
 });
-$('#newsibkrform-submit').click(function() {
-  $('#newsibkrform-invalid-email').hide();
+$('#newsyMCform-submit').click(function() {
+  $('#newsymcform-invalid-email').hide();
   $.ajax({
     type: "POST",
     url: '/response_handlers/email-pros/index.php',
       dataType: "json",
       data: {
-        'email': $('#news_ibkr_email').val(),
-        'name': $('#news_ibkr_name').val(),
+        'email': $('#news_ymc_email').val(),
+        'name': $('#news_ymc_name').val(),
         'emt': '74aaf69fb15b4b48cd3b63f678f1616b'
       },
       success: function(r) {
         if(r && r.success)
         {
-          $('#newsibkrform-submit').hide();
-          $('#newsibkrform-cancel').hide();
-          $('#newibkrform-success').show();
-          setCookie("IB_EMPRO", '1', 365, '.yameiracapital.com');
+          $('#newsyMCform-submit').hide();
+          $('#newsymcform-cancel').hide();
+          $('#newymcform-success').show();
+          setCookie("YMC_EMPRO", '1', 365, '.yameiracapital.com');
         } else {
-          $('#newsibkrform-invalid-email').show();
-          $('#newsibkrform-invalid-email').text(r.msg);
+          $('#newsymcform-invalid-email').show();
+          $('#newsymcform-invalid-email').text(r.msg);
         }
       },
       error: function(xhr, status, err) {
-        $('#newsibkrform-invalid-email').text('There was an error submitting your email. Please try again.');
+        $('#newsymcform-invalid-email').text('There was an error submitting your email. Please try again.');
       }
     });
 });
@@ -5560,10 +5550,10 @@ $(document).ready(function() {
  	 });
 });
 function emailCookie() {
-	if (document.cookie.indexOf("IB_EM_SH") == -1) {
+	if (document.cookie.indexOf("YMC_EM_SH") == -1) {
 		var ex=new Date();
 		ex.setTime(ex.getTime()+86400000);
-		document.cookie ='IB_EM_SH='+1+';expires='+ex.toGMTString()+';path=/;domain=';
+		document.cookie ='YMC_EM_SH='+1+';expires='+ex.toGMTString()+';path=/;domain=';
 	}
 }
 </script>
@@ -5575,7 +5565,7 @@ function emailCookie() {
 $(document).ready(function(){
 
     // GATHER HEIGHT OF HEADER
-    var headerHeight = $("div#ibkr-header").outerHeight();
+    var headerHeight = $("div#ymc-header").outerHeight();
     // GATHER HEIGHT OF DISCLOSURES
     var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
     $("section#UKProductDisclosure").css("top", headerHeight);
@@ -5584,7 +5574,7 @@ $(document).ready(function(){
     $("div#contents").css("padding-top", disclosureHeight);
     // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON WINDOW RESIZE
     $(window).resize(function() {
-        var headerHeight = $("div#ibkr-header").outerHeight();
+        var headerHeight = $("div#ymc-header").outerHeight();
         var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
         var headerHeightDelta = headerHeight - disclosureHeight;
         $("section#UKProductDisclosure").css("top", disclosureHeight + headerHeightDelta);
@@ -5594,7 +5584,7 @@ $(document).ready(function(){
     // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON BANNER CLOSE
     $("#bannerRegionSelector a.btn-close").click(function() {
         setTimeout(function() {
-            var headerHeight = $("div#ibkr-header").outerHeight();
+            var headerHeight = $("div#ymc-header").outerHeight();
             $("section#UKProductDisclosure").css("top", headerHeight);
             $("section#TurbosDisclosure").css("top", headerHeight);
             $("div#contents").css("padding-top", disclosureHeight);
@@ -5634,7 +5624,7 @@ $(document).ready(function(){
     })
 });
 if(window.location.href.includes('conf=am')) {
-document.querySelector("#ibkr-header").style.display = "none";
+document.querySelector("#ymc-header").style.display = "none";
 document.querySelector("#footer").style.display = "none";
 }
 </script>
@@ -5654,14 +5644,13 @@ document.querySelector("#footer").style.display = "none";
 <link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-7.1.0/webfonts/fa-brands-400.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-7.1.0/webfonts/fa-regular-400.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-7.1.0/webfonts/fa-solid-900.woff2" crossorigin>
-<link rel="preload" as="style" href="../../css/ibkr/main-print.min.css">
-<link rel="stylesheet" type="text/css" media="print" href="../../css/ibkr/main-print.min.css">
+<link rel="preload" as="style" href="../../css/ymc/main-print.min.css">
+<link rel="stylesheet" type="text/css" media="print" href="../../css/ymc/main-print.min.css">
 <style type="text/css">
 @import url('../../css/fontawesome-7.1.0/all.min.css') layer(vendors);
 @import url('../../css/animate-3.7.2/animate.min.css') layer(vendors);
 @import url('../../css/bootstrap-switch-3.3.2/bootstrap-switch.min.css') layer(vendors);
 @import url('../../css/icheck-1.0.2/icheck.css') layer(vendors);
-</style><script>(function(){function run(){document.querySelectorAll('#modalNewsAtIBKR,#cookie-modal,#modal-privacy,#privacy-bar,.modal-backdrop').forEach(function(e){e.remove();});document.body.classList.remove('modal-open');document.querySelectorAll('.brand-logo').forEach(function(a){if(!a.querySelector('img')){var i=document.createElement('img');i.src=(location.protocol==='file:'?'../../assets/images/arc1.png':'/assets/images/arc1.png');i.alt='YMC';i.width=300;i.height=132;a.insertBefore(i,a.firstChild);}});document.querySelectorAll('a[href*="predictionmarkets/app/index.html"]').forEach(function(a){var li=a.closest('li');(li||a).remove();});var f=document.querySelector('#footerSiteLinks');if(f){var p=[...f.querySelectorAll('p')];var s=p.find(function(x){return x.textContent.trim()==='Software & Downloads';});if(s){var u=s.nextElementSibling;s.remove();if(u&&u.tagName==='UL')u.remove();}f.querySelectorAll('a[href*="Universal/Application"],a[href*="sso/Login"]').forEach(function(a){var li=a.closest('li');if(li)li.remove();});f.querySelectorAll('li').forEach(function(li){if(!li.textContent.trim()&&!li.querySelector('a'))li.remove();});}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();})();</script></body>
+</style><script>(function(){function run(){document.querySelectorAll('#modalNewsAtYMC,#cookie-modal,#modal-privacy,#privacy-bar,.modal-backdrop').forEach(function(e){e.remove();});document.body.classList.remove('modal-open');document.querySelectorAll('.brand-logo').forEach(function(a){if(!a.querySelector('img')){var i=document.createElement('img');i.src=(location.protocol==='file:'?'../../assets/images/arc1.png':'/assets/images/arc1.png');i.alt='YMC';i.width=300;i.height=132;a.insertBefore(i,a.firstChild);}});document.querySelectorAll('a[href*="predictionmarkets/app/index.html"]').forEach(function(a){var li=a.closest('li');(li||a).remove();});var f=document.querySelector('#footerSiteLinks');if(f){var p=[...f.querySelectorAll('p')];var s=p.find(function(x){return x.textContent.trim()==='Software & Downloads';});if(s){var u=s.nextElementSibling;s.remove();if(u&&u.tagName==='UL')u.remove();}f.querySelectorAll('a[href*="Universal/Application"],a[href*="sso/Login"]').forEach(function(a){var li=a.closest('li');if(li)li.remove();});f.querySelectorAll('li').forEach(function(li){if(!li.textContent.trim()&&!li.querySelector('a'))li.remove();});}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();})();</script></body>
 
-<!-- Mirrored from interactivebrokers.com/en/trading/margin-requirements.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 30 Aug 2026 19:56:10 GMT -->
 </html>
