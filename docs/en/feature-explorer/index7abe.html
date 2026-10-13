@@ -667,7 +667,7 @@ div.loader {
     }
     function replaceInObject(obj) {
         if (typeof obj === 'string') {
-            return obj.replace(/�/g, "-").replace(//g, "'").replace(/  /g, " - ")
+            return obj.replace(/�?g, "-").replace(//g, "'").replace(/  /g, " - ")
         } else if (Array.isArray(obj)) {
             return obj.map(item => replaceInObject(item));
         } else if (typeof obj === 'object' && obj !== null) {
@@ -1442,13 +1442,13 @@ const response = await fetch(`https://www.yameiracapital.com/en/feature-explorer
             case 'Magyar':
                 dataLang = 'hu_HU';
                 break;
-            case '简体中文':
+            case '简体中�?:
                 dataLang = 'zh_CN';
                 break;
             case '繁體中文':
                 dataLang = 'zh_TW';
                 break;
-            case '日本語':
+            case '日本�?:
                 dataLang = 'ja_JP';
                 break;
             case 'العربية':
@@ -1466,7 +1466,7 @@ const response = await fetch(`https://www.yameiracapital.com/en/feature-explorer
     function AddMoreListItems() {
         let extras = {
             'Color Mode': ['Light Mode', 'Dark Mode'],
-            'Language': ['English', 'Français', 'Deutsch', 'Español', 'Italiano', 'Русский', 'Magyar', '简体中文', '繁體中文', '日本語', 'العربية', 'עִברִית']
+            'Language': ['English', 'Français', 'Deutsch', 'Español', 'Italiano', 'Русский', 'Magyar', '简体中�?, '繁體中文', '日本�?, 'العربية', 'עִברִית']
         }
         let list = document.querySelector('.menu-mobile ul');
         for (let key in extras) {
