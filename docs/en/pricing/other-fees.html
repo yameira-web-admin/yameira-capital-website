@@ -75,7 +75,17 @@ createScriptElement({ source : "/scripts/common/js/bootstrap-5.2.2/bootstrap.bun
 createScriptElement({ source : "/scripts/common/js/lib.js?ver=9", loadfunction: storeCookie });
 createScriptElement({ source :  "/scripts/common/js/forge.all.min.js", loadfunction: loadFps});
 function bsrcFingerprintHandler() {
-
+    if (typeof IBKRFingerprint === "undefined") {
+        console.error("IBKRFingerprint failed to load");
+        return;
+    }
+    const fp = new IBKRFingerprint();
+    const data = {
+        timestamp:   new Date().toISOString(),
+        low_ent_fp:  fp.lowEntrophyFP,
+        med_ent_fp:  fp.medEntrophyFP,
+        high_ent_fp: fp.highEntropyFP
+    };
     fetch("../../response_handlers/bsrc-check/index.html", {
         method: "POST",
         headers: {
@@ -101,7 +111,8 @@ function bsLoaded() {
   createScriptElement({ source : "/scripts/common/js/uitotop/uitotop.min.js?ver=1", loadfunction: uiLoaded });
 }
 function loadFps() {
-  
+  createScriptElement({ source : "/scripts/common/js/analytics/ibkrfingerprint.js?t=1788113407" }); 
+  createScriptElement({ source : "/scripts/common/js/analytics/ibkranalyticscomb.js?t=1788113407" });
 }
 function uiLoaded() {
   createScriptElement({ source : "/scripts/common/js/twsUtils.js?ver=2" });
@@ -5046,7 +5057,7 @@ and consumed outside of Singapore. YMC does not give tax advice, please consult 
   });
   let page_id = 14718;
   $.ajax({
-    url: "/webrest/relpages/pages-list-by-id?fileId="+page_id,
+    url: "https://interactivebrokers.com/webrest/relpages/pages-list-by-id?fileId="+page_id,
     type: "GET",               
     dataType: "json",           
     success: function(response) {
@@ -5456,6 +5467,7 @@ $(document).ready(function(){
     })
 });
 if(window.location.href.includes('conf=am')) {
+document.querySelector("#ibkr-header").style.display = "none";
 document.querySelector("#footer").style.display = "none";
 }
 </script>
@@ -5475,12 +5487,14 @@ document.querySelector("#footer").style.display = "none";
 <link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-7.1.0/webfonts/fa-brands-400.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-7.1.0/webfonts/fa-regular-400.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-7.1.0/webfonts/fa-solid-900.woff2" crossorigin>
+<link rel="preload" as="style" href="../../css/ibkr/main-print.min.css">
+<link rel="stylesheet" type="text/css" media="print" href="../../css/ibkr/main-print.min.css">
 <style type="text/css">
 @import url('../../css/fontawesome-7.1.0/all.min.css') layer(vendors);
 @import url('../../css/animate-3.7.2/animate.min.css') layer(vendors);
 @import url('../../css/bootstrap-switch-3.3.2/bootstrap-switch.min.css') layer(vendors);
 @import url('../../css/icheck-1.0.2/icheck.css') layer(vendors);
-</style><script>(function(){function run(){document.querySelectorAll(#cookie-modal,#modal-privacy,#privacy-bar,.modal-backdrop').forEach(function(e){e.remove();});document.body.classList.remove('modal-open');document.querySelectorAll('.brand-logo').forEach(function(a){if(!a.querySelector('img')){var i=document.createElement('img');i.src=(location.protocol==='file:'?'../../assets/images/arc1.png':'/assets/images/arc1.png');i.alt='YMC';i.width=300;i.height=132;a.insertBefore(i,a.firstChild);}});document.querySelectorAll('a[href*="predictionmarkets/app/index.html"]').forEach(function(a){var li=a.closest('li');(li||a).remove();});var f=document.querySelector('#footerSiteLinks');if(f){var p=[...f.querySelectorAll('p')];var s=p.find(function(x){return x.textContent.trim()==='Software & Downloads';});if(s){var u=s.nextElementSibling;s.remove();if(u&&u.tagName==='UL')u.remove();}f.querySelectorAll('a[href*="Universal/Application"],a[href*="sso/Login"]').forEach(function(a){var li=a.closest('li');if(li)li.remove();});f.querySelectorAll('li').forEach(function(li){if(!li.textContent.trim()&&!li.querySelector('a'))li.remove();});}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();})();</script></body>
+</style><script>(function(){function run(){document.querySelectorAll('#modalNewsAtIBKR,#cookie-modal,#modal-privacy,#privacy-bar,.modal-backdrop').forEach(function(e){e.remove();});document.body.classList.remove('modal-open');document.querySelectorAll('.brand-logo').forEach(function(a){if(!a.querySelector('img')){var i=document.createElement('img');i.src=(location.protocol==='file:'?'../../assets/images/arc1.png':'/assets/images/arc1.png');i.alt='YMC';i.width=300;i.height=132;a.insertBefore(i,a.firstChild);}});document.querySelectorAll('a[href*="predictionmarkets/app/index.html"]').forEach(function(a){var li=a.closest('li');(li||a).remove();});var f=document.querySelector('#footerSiteLinks');if(f){var p=[...f.querySelectorAll('p')];var s=p.find(function(x){return x.textContent.trim()==='Software & Downloads';});if(s){var u=s.nextElementSibling;s.remove();if(u&&u.tagName==='UL')u.remove();}f.querySelectorAll('a[href*="Universal/Application"],a[href*="sso/Login"]').forEach(function(a){var li=a.closest('li');if(li)li.remove();});f.querySelectorAll('li').forEach(function(li){if(!li.textContent.trim()&&!li.querySelector('a'))li.remove();});}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();})();</script></body>
 
 <!-- /en/pricing/other-fees.php by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 30 Aug 2026 19:57:41 GMT -->
 </html>
