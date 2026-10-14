@@ -36,7 +36,7 @@
 | Lite 佣金 $0 | `_fron/index.html:2631`、`:2751`；披露 `:3009` | `_fron/en/pricing/commissions-home.html` | `:2500`、`:2522`、`:2664`、`:2965–2972`、`:3120` 均说明 zero/$0 commissions | **基本一致** | 修改时同时改首页两处、佣金页卡片、FAQ、披露及适用条件 |
 | Pro 佣金 $0.005/share | `_fron/index.html:2762`；披露 `:3010` | `_fron/en/pricing/commissions-home.html` | 首页跳转到总览页，但对应费率需继续在产品佣金表中核对 | **需补直接标注** | 佣金首页计划对比应直接显示相同 `$0.005/share`，并链接具体费率表 |
 | 180+ global markets | `_fron/index.html:2631`、`:2679` | `_fron/en/trading/products-stocks.html`（`:2685`、`:2695` 链接） | `products-stocks.html:11` 和 `:2425` 写 **90+ market centers** | **冲突** | 若是同一口径则统一；若 markets 与 market centers 不同，首页及落地页必须明确单位差异 |
-| 4.8 Million 账户 | `_fron/index.html:2921–2922` | `_fron/en/general/financial-strength.html`（`:2960`） | 财务页未找到 4.8 Million 对应标注 | **缺少对应标注** | 财务页增加相同账户指标、统计日期和口径，或从首页移除 |
+| a growing global investor community 账户 | `_fron/index.html:2921–2922` | `_fron/en/general/financial-strength.html`（`:2960`） | 财务页未找到 a growing global investor community 对应标注 | **缺少对应标注** | 财务页增加相同账户指标、统计日期和口径，或从首页移除 |
 | 3.6 Million 日订单 | `_fron/index.html:2925–2927` | `_fron/en/general/financial-strength.html` | 财务页未找到 3.6 Million 对应标注 | **缺少对应标注** | 财务页增加相同指标、统计日期和“日均/某日”口径 |
 | 42 Regions | `_fron/index.html:2934–2935` | `_fron/en/general/financial-strength.html` | 财务页未找到 42 Regions 对应标注 | **缺少对应标注** | 财务页增加相同区域数量并定义 region 的统计口径 |
 | $847 Billion capital activity | `_fron/index.html:2939–2941` | `_fron/en/general/financial-strength.html` | 财务页未找到 $847 Billion 对应标注 | **缺少对应标注** | 财务页增加同名指标、周期、币种与日期；不能用其他资产指标替代 |

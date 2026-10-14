@@ -1,0 +1,2703 @@
+
+<!DOCTYPE html>
+<html dir="ltr" lang="en" data-theme="light">
+
+<!-- /en/feature-explorer/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 30 Aug 2026 18:54:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<link rel="icon" type="image/png" href="../../assets/icons/favicon%20(2).png">
+<title>YMC FeatureExplorer | Yameira Capital</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta name="description" content="Use the YMC FeatureExplorer to quickly find brief descriptions and useful links for over 500 of YMC's most interesting features.">
+<meta name="keywords" content="feature explorer, user guides, documentation">
+<meta name="author" content="Yameira Capital">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="index.html" />
+<link rel="alternate" hreflang="en" href="index.html" />
+<meta name="apple-mobile-web-app-title" content="YMC">
+<!-- SCRIPTS HEAD  -->
+<script type="text/javascript">
+const FP_PAGE_ID = '';
+</script>
+
+<script type="text/javascript" src='../../scripts/common/js/jquery-3.6.1/jquery.min.js'></script>
+<script type="text/javascript">
+function createScriptElement(data) {
+ if (typeof data == "undefined") {
+  return;
+ }
+ var element = document.createElement("SCRIPT");
+ element.type = "text/javascript";
+ if (typeof data.id != "undefined") {
+  element.id = data.id;
+ }
+ if (typeof data.source != "undefined") {
+  element.src = data.source;
+ }
+ if (typeof data.loadfunction == "function") {
+  element.onload = data.loadfunction;
+ }
+ document.head.appendChild(element);
+}
+function getCookieVal(cname) 
+{
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(";");
+  for(var i = 0; i <ca.length; i++) 
+  {
+      var c = ca[i];
+      while (c.charAt(0) == " ") 
+      {
+            c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0)
+      {
+            return c.substring(name.length, c.length);
+        }
+  }
+  return "";
+}
+function checkWebCookie() 
+{
+if(!(getCookieVal('web') === '')){
+    
+}
+if(localStorage.getItem('web') != null){
+  setTimeout(checkCookies(), 100);
+}  
+  setTimeout(addCookies(), 100);
+}
+createScriptElement({ source : "/scripts/common/js/bootstrap-5.2.2/bootstrap.bundle.min.js", loadfunction: bsLoaded  });
+createScriptElement({ source : "/scripts/common/js/lib.js?ver=9", loadfunction: storeCookie });
+createScriptElement({ source :  "/scripts/common/js/forge.all.min.js", loadfunction: loadFps});
+function bsrcFingerprintHandler() {
+    if (typeof IBKRFingerprint === "undefined") {
+        console.error("IBKRFingerprint failed to load");
+        return;
+    }
+    const fp = new IBKRFingerprint();
+    const data = {
+        timestamp:   new Date().toISOString(),
+        low_ent_fp:  fp.lowEntrophyFP,
+        med_ent_fp:  fp.medEntrophyFP,
+        high_ent_fp: fp.highEntropyFP
+    };
+    fetch("../../response_handlers/bsrc-check/index.html", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept":       "application/json",
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Status: ${response.status} - ${response.statusText}`);
+        }
+        return response.json();
+    })
+    .then(result => console.log("bsrc-check success:", result))
+    .catch(error => console.error("bsrc-check error:", error));
+}
+window.onload = function (){ checkWebCookie();}
+function bsLoaded() {
+  createScriptElement({ source : "/scripts/common/js/appear/appear.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/easing/easing.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/parallax/parallax.min.js?ver=1" });
+  createScriptElement({ source : "/scripts/common/js/uitotop/uitotop.min.js?ver=1", loadfunction: uiLoaded });
+}
+function loadFps() {
+  createScriptElement({ source : "/scripts/common/js/analytics/ibkrfingerprint.js?t=1788112653" }); 
+  createScriptElement({ source : "/scripts/common/js/analytics/ibkranalyticscomb.js?t=1788112653" });
+}
+function uiLoaded() {
+  createScriptElement({ source : "/scripts/common/js/twsUtils.js?ver=2" });
+  createScriptElement({ source : "/scripts/common/js/design/design.js?ver=1" }); 
+}
+function storeCookie()
+{
+ if(typeof(Storage) !== 'undefined')
+ {
+   if(localStorage.getItem('web') !== null)
+   {
+     localStorage.removeItem('web');
+   }
+ }
+}
+</script>
+<script type="text/javascript">
+$(function() {
+ $('div#langselector').find('a').each(function() {
+  $(this).click(function() {
+   var link = $(this).attr("href");
+   if(link.match(/\/(en|fr|de|es|it|ru|cn|jp)\//))
+   {
+    var langs = link.split("../../index.html");
+    if(langs[3] == 'en' || langs[3] == 'fr' || langs[3] == 'de' || langs[3] == 'es' || langs[3] == 'it' || langs[3] == 'ru' || langs[3] == 'cn' || langs[3] == 'jp')
+    {
+      var lang = langs[3];
+      if(lang == 'cn')
+      {
+        lang = 'zh_CN';
+      }
+      if(lang == 'jp')
+      {
+        lang = 'ja';
+      }
+      if(hasCookie("IB_LANG"))
+      {
+        deleteCookie("IB_LANG");
+      }
+      setCookie("IB_LANG", lang, 7, '.yameiracapital.com');
+    } else if(langs[1] == 'en') {
+      var lang = 'en';
+      setCookie("IB_LANG", lang, 7, '.yameiracapital.com');
+    }
+   }
+  });
+ });
+ $('p#bandaid-close').click(function() {
+  setCookie("IB_BANDAID", 1, 30, '.yameiracapital.com');
+ });
+});
+</script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    console.log('  ');
+    dataLayer.push({'ib_mkt_src':''});
+    if(localStorage.getItem('consentMode') ===  null){
+                    const consentMode = {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+            };
+                localStorage.setItem('consentMode', JSON.stringify(consentMode));
+        gtag('consent', 'default', consentMode);
+    }
+    else {
+        gtag('consent', 'default', JSON.parse(localStorage.getItem('consentMode')));
+    }
+</script>
+<script>
+function hideHeaderFooter() {
+    // Get full URL including fragment
+    const fullUrl = window.location.href;
+    // Check if conf=am exists
+    if (fullUrl.includes('conf=am')) {
+        const elementsToHide = [
+            document.querySelector('#ibkr-header'),
+            document.querySelector('#footer'),
+        ];
+        elementsToHide.forEach(element => {
+            if (element) element.style.display = 'none';
+        });
+    }
+}
+function propagateWebCookie(){
+}
+document.addEventListener('DOMContentLoaded', function(){
+  hideHeaderFooter();
+});
+</script>
+<!-- STYLES HEAD ---------------------------------------------------------------------------------------------------- -->
+<style type="text/css" id="css-bootstrap">
+@import url('../../css/bootstrap-5.2.2/bootstrap.min.css') layer(bootstrap);
+</style>
+<link rel="preload" as="style" href="../../css/feature-explorer/main.min.css">
+<link rel="stylesheet" type="text/css" media="all" href="../../css/feature-explorer/main.min.css" id="css-feature-explorer">
+<link rel="preload" as="style" href="../../css/ibkr/themes/theme-ibkr.min.css">
+<link rel="stylesheet" type="text/css" media="all" href="../../css/ibkr/themes/theme-ibkr.min.css" id="css-theme">
+<style type="text/css">
+/* LOCAL STYLESHEET OVERRIDES ---------------------------------------------------------------------------------------------------- */
+:root {
+    /* COMMON 
+    --bg-body:hsla(0, 0%, 95%, 1.0);
+    --bg-body-light:hsla(0, 0%, 100%, 1.0);
+    --bg-body-dark:hsla(0, 0%, 0%, 1.0);*/
+    /* BRAND LOGO */
+    --brand-logo-width:220px;
+    --brand-logo-height:32px;
+    --brand-logo-image:url(../../images/common/logos/ibkr-feature-explorer/ibkr-feature-explorer.svg);
+    --brand-logo-image-inverse:url(../../images/common/logos/ibkr-feature-explorer/ibkr-feature-explorer-inverse.svg);
+    --brand-logo-mobile-width:200px;
+    --brand-logo-mobile-height:28px;
+    --brand-logo-mobile-image:url(../../images/common/logos/ibkr-feature-explorer/ibkr-feature-explorer.svg);
+    --brand-logo-mobile-image-inverse:url(../../images/common/logos/ibkr-feature-explorer/ibkr-feature-explorer-inverse.svg);
+}
+/* THEME | DARK ---------------------------------------------------------------------------------------------------- */
+[data-theme="dark"] {
+    /* COMMON 
+    --bg-body:hsla(240, 17%, 5%, 1.0);
+    --bg-body-light:hsla(221, 22%, 17%, 1.0);
+    --bg-body-dark:hsla(240, 17%, 10%, 1.0);*/
+    /* BRAND LOGO */
+    --brand-logo-image:url(../../images/common/logos/ibkr-feature-explorer/ibkr-feature-explorer-inverse.svg);
+    --brand-logo-image-inverse:url(../../images/common/logos/ibkr-feature-explorer/ibkr-feature-explorer.svg);
+    --brand-logo-mobile-image:url(../../images/common/logos/ibkr-feature-explorer/ibkr-feature-explorer-inverse.svg);
+    --brand-logo-mobile-image-inverse:url(../../images/common/logos/ibkr-feature-explorer/ibkr-feature-explorer.svg);
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA SMALL (0PX-576PX) ---------------------------------------------------------------------------------------------------- */
+@media (max-width:575.98px) {
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | SMALL (576PX-767.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:576px) and (max-width:767.98px) {
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | MEDIUM (768PX-991.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:768px) and (max-width:991.98px) {
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | LARGE (992PX-1199.98PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:992px) and (max-width:1199.98px) {
+}
+/* BOOTSTRAP 4 | MEDIA QUERY | EXTRA LARGE (>1200PX) ---------------------------------------------------------------------------------------------------- */
+@media (min-width:1200px) {
+}
+#nav-language { display: none; }
+#language-mode-selector { display: none; }
+</style>
+
+<script>(window.BOOMR_mq=window.BOOMR_mq||[]).push(["addVar",{"rua.upush":"false","rua.cpush":"false","rua.upre":"false","rua.cpre":"false","rua.uprl":"false","rua.cprl":"false","rua.cprf":"false","rua.trans":"SJ-fe0aff5f-e652-45b7-8bb6-987760016011","rua.cook":"false","rua.ims":"false","rua.ufprl":"false","rua.cfprl":"false","rua.isuxp":"false","rua.texp":"norulematch","rua.ceh":"false","rua.ueh":"false","rua.ieh.st":"0"}]);</script>
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="CGJ34-S5RKA-7ZQ8F-AJER9-TWWVG",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"CGJ34-S5RKA-7ZQ8F-AJER9-TWWVG";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n="false"=="true"?1:0,t="",a="zng23pixgqudw2uun4gq-f-9c49ce20d-clientnsv4-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"1131468","ak.ai":parseInt("665092",10),"ak.ol":"0","ak.cr":54,"ak.ipv":4,"ak.proto":"http/1.1","ak.rid":"52e38aae","ak.r":41721,"ak.a2":n,"ak.m":"a","ak.n":"essl","ak.cport":13660,"ak.gh":"23.52.40.70","ak.quicv":"","ak.tlsv":"tls1.2","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1788112653","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==I7lbuBv8kjGrw5MFD9+BucutqIKEw0Ail6nxCuyfIBHD5zcoIAqXAv+a5pKbpuZDdj/ZLXQFNEE3aUkDVrdKXnx9J541EgL25Sf7yjI82ebPLDLzX1DG6RMmgnJUsQ1qYiW++wkeXgfqJZP4IOsf0+89UXj7b1s5qGrKGaNU4asiTBN9yd4WgRiDDJzpJIjvDsXGNDe0me5WZXYQpIY/6DAuLSnMJuKAVdCMB08cz/N9e60dnsAG8TFg1INXDwmSN40csv5BkIH1zukZtiEUpgM98VL0yAkL/pPJCRnNnKaAqxt+Tz18AzWbZmEjCx9zh0Sr73vHkAjEcol0aFw4sBbLrx5n/GjwjWxwjacSHGAZxXcN+cYb3ovD8ZEefDp1q+vymAemjgbzr7aD4+hy7n34bN0lxu4h59l/Zv1bnJk=","ak.pv":"450","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.html","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak-2.html","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script>    <link rel="stylesheet" href="/css/disable-external-links.css" data-static-external-links-disabled>
+    <script src="/scripts/disable-external-links.js" defer data-static-external-links-disabled></script>
+<style id="ymc-global-navigation-fix">
+  .ibkr-header { position: relative !important; top: auto !important; }
+  .ibkr-header .navbar-top,
+  .ibkr-header .navbar-bottom { position: relative !important; inset: auto !important; transform: none !important; }
+  .ibkr-header .brand-logo,
+  .menu-mobile .brand-logo { background-image: none !important; background: none !important; }
+  .ibkr-header .brand-logo img,
+  .menu-mobile .brand-logo img { display: block !important; }
+  .menu-mobile .logo-container { display: none !important; }
+</style></head>
+<body>
+<!-- GOOGLE ---------------------------------------------------------------------------------------------------- -->
+<!-- MENU ---------------------------------------------------------------------------------------------------- -->
+<!-- HEADER START ---------------------------------------------------------------------------------------------------- -->
+<div class="feature-explorer-header" id="feature-explorer-header">
+    <!-- NAVBAR-BOTTOM START (XS/SM/MD/LG/XL - MOBILE STARTS ON MD SIZE) -->
+    <nav class="navbar navbar-inverse navbar-expand-lg navbar-bottom">
+        <div class="container">
+            <!-- LOGO (LG/XL ONLY) -->
+            <a href="index.html" target="_self" class="navbar-brand brand-logo" aria-label="YMC FeatureExplorer Home"><span>YMC FeatureExplorer Home</span></a>
+            <!-- TOGGLE (XS/SM/MD ONLY) -->
+            
+            <!-- NAV BOTTOM (LG/XL ONLY) -->
+            <div class="navbar-collapse collapse" id="forecasttrader-nav-bottom">
+                <ul class="navbar-nav ml-auto align-items-center">
+                    <!-- SEARCH -->
+                    <li class="nav-item dropdown d-none d-lg-block"><a href="#" class="nav-link nav-search dropdown-toggle" id="nav-search" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Search" title="Search"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><span class="visually-hidden">Search</span></a>
+                        <div class="dropdown-menu dropdown-search" aria-labelledby="nav-search">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="search_box">
+                                        <script type="text/javascript" language="javascript">searchbox_input_changed=false;</script>
+                                        <form action="https://interactivebrokers.com/en/search/search.php" method="get" class="search_form" id="search_form_id">
+                                            <input type="text" aria-label="Search Box" placeholder="Search YMC FeatureExplorer" name="q" maxlength="64" autocomplete="off" id="searchField" class="form-control s swap_value searchinput" aria-label="Search YMC FeatureExplorer">
+                                            
+                                        </form>
+                                        <div id="search-results-desktop"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- THEME -->
+                    <li class="nav-item dropdown"><a href="#" class="nav-link nav-theme dropdown-toggle" id="nav-theme" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Toggle theme" title="Toggle theme"><i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i><span class="visually-hidden">Toggle theme</span></a>
+                        <div class="dropdown-menu dropdown-theme" aria-labelledby="nav-theme">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="javascript:void(0);" target="_self" class="dropdown-item switch-data-theme data-theme-light"><i class="fa-solid fa-sun"></i> Light Mode</a>
+                                    <a href="javascript:void(0);" target="_self" class="dropdown-item switch-data-theme data-theme-dark"><i class="fa-solid fa-moon"></i> Dark Mode</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+    </ul>
+</div>
+<!-- MOBILE NAV OVERLAY -->
+<div class="website-overlay d-lg-none"></div>
+<!-- MOBILE NAV END ---------------------------------------------------------------------------------------------------- --><!-- CONTENTS START ---------------------------------------------------------------------------------------------------- -->
+<div id="contents" class="fe-contents">
+    <section class="m-0 p-0" id="">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="feature-explorer">
+                        <!-- NAVIGATION TREE -->
+                        <div class="nav-tree d-none d-lg-flex" id="d3-container" tabindex="0" role="region" aria-label="Navigation tree"></div>
+                        <!-- USERGUIDE CONTENT -->
+                        <div class="userguide-content">
+                            <!-- INTRO -->
+                            <div class="fe-intro" id="featureExplorerIntro">
+                                <h1 class="text-center">Welcome to the<br /> <span class="fw-bold text-primary">YMC FeatureExplorer</span></h1>
+                                <br />
+                               <p class="text-center">Yameira Capital has clients in over 200 countries and territories that trade stocks, ETFs, futures, bonds, crypto, mutual funds and spot gold on 160 global markets from a single unified platform. Use the Feature Explorer to quickly review the products, markets and tools available to our clients.</p>
+                                <div class="d-block">
+                                    <p class="text-center"><strong>Please note:</strong> When using the Feature Explorer you may be brought to Yameira Capital affiliate websites. In addition, the Feature Explorer may contain information about products, functions, and services not available in your location. </p> 
+                                </div>
+                                <div class="d-none d-lg-block">
+                                    <p class="text-center"><strong>To get started, select a menu option from the list on the left or enter a search term in the upper right corner.</strong></p> 
+                                </div>
+                                <hr class="d-block d-lg-none"/>
+                                <div class="d-block d-lg-none">
+                                    <p class="text-center"><a href="javascript:void(0);" target="_self" class="btn btn-primary navbar-toggler">Get Started</a></p>
+                                </div>
+                            </div>
+                            <!-- USERGUIDE DATA -->
+                            <div class="fe-userguide-data" id="response" style="display:none;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="fe-background"><img src="../../images/feature-explorer/fe-background.jpg" alt="Feature Explorer Background" border="0" /></div>
+</div>
+<!-- CONTENTS END ---------------------------------------------------------------------------------------------------- -->
+<!-- FOOTER ---------------------------------------------------------------------------------------------------- -->
+<!-- SCRIPTS FOOTER ---------------------------------------------------------------------------------------------------- -->
+<script type="text/javascript" src="../../scripts/common/js/zeynep-2.2.0/zeynep.js"></script>
+<script type="text/javascript" src="../../scripts/common/js/lazyload/lazyload.min.js"></script>
+<script type="text/javascript" src="../../search/conversions.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+    // GATHER HEIGHT OF HEADER
+    var headerHeight = $("div#ibkr-header").outerHeight();
+    // GATHER HEIGHT OF DISCLOSURES
+    var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+    $("section#UKProductDisclosure").css("top", headerHeight);
+    $("section#TurbosDisclosure").css("top", headerHeight);
+    // SET CONTENTS DIV PADDING TOP
+    $("div#contents").css("padding-top", disclosureHeight);
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON WINDOW RESIZE
+    $(window).resize(function() {
+        var headerHeight = $("div#ibkr-header").outerHeight();
+        var disclosureHeight = $("section#UKProductDisclosure, section#TurbosDisclosure").outerHeight();
+        var headerHeightDelta = headerHeight - disclosureHeight;
+        $("section#UKProductDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("section#TurbosDisclosure").css("top", disclosureHeight + headerHeightDelta);
+        $("div#contents").css("padding-top", disclosureHeight);
+    });
+    // OVERRIDE TOP OF DISCLOSURE AND PADDING-TOP OF CONTENTS ON BANNER CLOSE
+    $("#bannerRegionSelector a.btn-close").click(function() {
+        setTimeout(function() {
+            var headerHeight = $("div#ibkr-header").outerHeight();
+            $("section#UKProductDisclosure").css("top", headerHeight);
+            $("section#TurbosDisclosure").css("top", headerHeight);
+            $("div#contents").css("padding-top", disclosureHeight);
+        },500);
+    });
+    //ADDING UNIQUE ATTRIBUTE FOR ELEMENTS WITH "data-type=cta"
+    const ctaElements = document.querySelectorAll("[data-type='cta']");
+    for (let i = 0; i < ctaElements.length; i++) {
+        const tagType     = ctaElements[i].tagName.toLowerCase();
+        const elementText = ctaElements[i].innerText.trim().substring(0, 10).replace(/\s+/g, "_").toLowerCase();
+        const attributeValue = `${tagType}_${elementText}_${i}`;
+        ctaElements[i].setAttribute("data-cta-btn", attributeValue);
+    }    // MOBILE MENU
+    $(function() {
+        // Initilize mobile menu
+        var zeynep = $('.menu-mobile').zeynep({
+            opened: function () {
+        },
+        closed: function () {
+            }
+        })
+        // Dynamically bind closing event
+        zeynep.on('closing', function () {
+        })
+        // Mobile menu close on overlay click
+        $('.website-overlay').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu close on button click
+        $('.btn-close').on('click', function () {
+            zeynep.close()
+        })
+        // Mobile menu open on navbar-toggler click
+        $('.navbar-toggler').on('click', function () {
+            zeynep.open()
+        })
+    })
+});
+if(window.location.href.includes('conf=am')) {
+document.querySelector("#ibkr-header").style.display = "none";
+document.querySelector("#footer").style.display = "none";
+}
+</script>
+  <script>
+  $.ajax({
+   type: "POST",
+   url: '/response_handlers/google/index.php',
+   dataType: "json",
+   data: {
+    'google_id': 'true'
+   },
+   success: function(d, ts, xhttpr) { console.log(d.msg)},
+   error: function(xhttpr) { }
+  });
+  </script>
+<!-- STYLES FOOTER ---------------------------------------------------------------------------------------------------- -->
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-7.1.0/webfonts/fa-brands-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-7.1.0/webfonts/fa-regular-400.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="../../fonts/fontawesome-7.1.0/webfonts/fa-solid-900.woff2" crossorigin>
+<link rel="preload" as="style" href="../../css/ibkr/main-print.min.css">
+<link rel="stylesheet" type="text/css" media="print" href="../../css/ibkr/main-print.min.css">
+<style type="text/css">
+@import url('../../css/fontawesome-7.1.0/all.min.css') layer(vendors);
+@import url('../../css/animate-3.7.2/animate.min.css') layer(vendors);
+@import url('../../css/bootstrap-switch-3.3.2/bootstrap-switch.min.css') layer(vendors);
+@import url('../../css/icheck-1.0.2/icheck.css') layer(vendors);
+</style><!-- PAGE SCRIPTS ---------------------------------------------------------------------------------------------------- -->
+<style>
+.MCDropDown_Closed .MCDropDownHotSpot_.MCHotSpotImage {
+background-position: left;
+background-image: url('../../images/external/ibkrguides.com/advisorportal/Skins/Default/Stylesheets/DropDownClosed.gif');
+padding-left: 0px;
+padding-right: 0;
+}
+.MCDropDown_Open .MCDropDownHotSpot_.MCHotSpotImage {
+background-position: left;
+background-image: url('../../images/external/ibkrguides.com/advisorportal/Skins/Default/Stylesheets/DropDownOpen.gif');
+padding-left: 0px;
+padding-right: 0;
+}
+.MCDropDown_Closed .MCDropDownBody {
+display: none;
+}
+.MCDropDownBody {
+margin-left: 18px;
+overflow: hidden;
+}
+.MCDropDownHotSpot {
+background-repeat: no-repeat;
+}
+.feature-explorer .nav-tree svg.nav-tree-svg {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    width: auto;
+    min-width: 100%;
+    height: auto;
+    /* margin: 70px auto; */
+}
+.node {
+    cursor: pointer;
+}
+.node a {
+    text-decoration: none;
+    color: inherit;
+}
+.node a:hover {
+    text-decoration: underline;
+}
+.node circle {
+    fill: hsla(355, 85%, 46%, 1.0);
+    stroke: hsla(355, 85%, 46%, 1.0);
+    stroke-width: 3px;
+}
+.node text {
+    /* font: 14px sans-serif; */
+    font: 14px sans-serif;
+}
+.link {
+    fill: none;
+    /*stroke: #B2CDF4;*/
+    stroke: rgba(0, 0, 0, 0.1);
+    stroke-width: 2px;
+}
+#search-results,
+#search-results-desktop {
+    position: absolute;
+    width: 100%;
+    /*max-height: 200px;*/
+    overflow-y: auto;
+    background-color: var(--nav-bottom-bg-color);
+    border: 1px solid #ddd;
+    display: none;
+    top:38px;
+}
+#search-results-desktop {
+    position: relative;
+    top: 0;
+    max-height: 75vh;
+}
+#search-results {
+    z-index: 1000;
+}
+.search-result-item {
+    padding: 5px 12px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+.search-result-breadcrumb {
+    font-size: 0.8em;
+    color: var(--alert-primary-color);
+    margin-bottom: 3px;
+}
+.search-result-name {
+    font-weight: bold;
+    color: var(--alert-secondary-color);
+}
+.search-result-item:hover {
+    background-color: var(--btn-default-bg-color);
+}
+#response {
+    padding-top:24px;
+    height: 100%;
+    width: 100%;
+}
+#response table {
+    max-width: 100%;
+}
+.close-button.innermenu {
+    top: 8px;
+}
+div.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid var(--btn-primary-bg-color) !important;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 0.6s linear infinite;
+    margin: 40px auto;
+    display: block;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+</style>
+<script type="text/javascript" src="../../scripts/common/js/d3js-7.9.0/d3.v7.min.js"></script>
+<script>
+    const resp = document.querySelector('#response');
+    let selectedNode = null;
+    let initialData = null;
+    let treeData = null;
+    let lastDesktopSelectedNode = null;
+    let cachedMobileMenu = null;
+    let root = null;
+    const margin = { top: 20, right: 200, bottom: 20, left: 310 };
+    const width = 1400 - margin.right - margin.left;
+    const height = 600 - margin.top - margin.bottom;
+    let i = 0, duration = 500;
+    let svg = null;
+    let offset = document.querySelector('.navbar').offsetHeight;
+    let html = document.querySelector('html');
+    let longNodeSet = null;
+    let showInitialMenu = false;
+    function findLongNodes(data) {
+        const longNodes = [];
+        // Create a temporary span element for measuring text width
+        const measureSpan = document.createElement('span');
+        measureSpan.style.visibility = 'hidden';
+        measureSpan.style.position = 'absolute';
+        measureSpan.style.whiteSpace = 'nowrap';
+        document.body.appendChild(measureSpan);
+        function traverse(node) {
+            // Set the text content to the node's name
+            measureSpan.textContent = node.name;
+            // Measure the width
+            const width = measureSpan.offsetWidth;
+            // Check if width exceeds 375px
+            if (width >= 375) {
+                longNodes.push({
+                    node: node,
+                    width: width
+                });
+            }
+            // Recursively check children
+            if (node.children) {
+                node.children.forEach(traverse);
+            }
+        }
+        // Start traversal from the root
+        traverse(data);
+        // Remove the temporary span
+        document.body.removeChild(measureSpan);
+        return longNodes;
+    }
+    function replaceInObject(obj) {
+        if (typeof obj === 'string') {
+            return obj.replace(/�/g, "-").replace(//g, "'").replace(/  /g, " - ")
+        } else if (Array.isArray(obj)) {
+            return obj.map(item => replaceInObject(item));
+        } else if (typeof obj === 'object' && obj !== null) {
+            const newObj = {};
+            for (const [key, value] of Object.entries(obj)) {
+                newObj[key] = replaceInObject(value);
+            }
+            return newObj;
+        }
+        return obj;
+    }
+    async function getInitialData() {
+        try {
+            let lang = getCookie("IB_LANG") || "en";
+            //const response = await fetch(`https://www.yameiracapital.com/fexplorer_output_${lang}_final.json`);
+const response = await fetch(`https://www.yameiracapital.com/en/feature-explorer/fexplorer_output_en_final.json`);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json();
+            initialData = [data];
+            treeData = replaceInObject(initialData);
+            // Initialize D3 visualization
+            initializeD3Visualization(treeData);
+            // Call checkWindowSize and handle its Promise
+            await checkWindowSize();
+        } catch (error) {
+            console.error('Error fetching data:', error);
+            // Show error message to user
+            const errorContainer = document.querySelector('.menu-mobile') || document.body;
+            errorContainer.innerHTML = `
+                    <div class="error-message">
+                        <p>Error loading content. Please try refreshing the page.</p>
+                        <p>Error details: ${error.message}</p>
+                    </div>
+                `;
+        }
+    }
+    function setupContentButtons(url) {
+        const dismiss = document.querySelector('button.closeButton');
+        const newWindow = document.querySelector('button.newWindowButton');
+        dismiss.addEventListener('click', () => {
+            document.querySelector(".userguide-content").style.display = "none";
+            document.querySelector("#d3-container").style.width = "100%";
+            document.querySelector("#d3-container").style.height = `calc(100vh - ${offset}px)`;
+            let mobileMenu = document.querySelector("div.menu-mobile");
+            mobileMenu.classList.add("opened")
+            html.classList.add("zeynep-opened");
+            let submenu = mobileMenu.querySelector(".submenu");
+            if (!showInitialMenu) {
+                submenu.classList.add("opened");
+            }
+        });
+        newWindow.addEventListener('click', () => {
+            window.open(url, "_blank");
+        });
+    }
+    function attachSearchListeners() {
+        const searchFields = [
+            document.querySelector('.menu-mobile .search-container .search-box input.form-control'),
+            document.querySelector('div.search-box input'),
+            document.querySelector('#searchField')
+        ];
+        searchFields.forEach(input => {
+            if (input) {
+                input.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                    }
+                });
+                input.addEventListener('input', function(e) {
+                    const query = e.target.value;
+                    if (query.length > 2) {
+                        const results = searchNodes(query);
+                        displaySearchResults(results);
+                    } else {
+                        document.getElementById('search-results').style.display = 'none';
+                        document.getElementById('search-results-desktop').style.display = 'none';
+                    }
+                });
+            }
+        });
+    }
+    // Helper function to find the parent node based on parent_identifier
+    function findParentNode(parentIdentifier) {
+        function traverseTree(node) {
+            if (node.identifier === parentIdentifier || node.data?.identifier === parentIdentifier) {
+                return node;
+            }
+            if (node.children) {
+                for (let child of node.children) {
+                    const found = traverseTree(child);
+                    if (found) return found;
+                }
+            }
+            if (node._children) {
+                for (let child of node._children) {
+                    const found = traverseTree(child);
+                    if (found) return found;
+                }
+            }
+            return null;
+        }
+        return traverseTree(treeData[0]);
+    }
+    function handleCloseButtonClick(ev) {
+        ev.preventDefault();
+        html.classList.remove('zeynep-opened');
+        document.querySelector('div.menu-mobile').classList.remove('opened');
+    }
+    function updateMobileMenuSelection(node) {
+        const mobileMenu = document.querySelector('.menu-mobile');
+        mobileMenu.innerHTML = ''; 
+        function createMenuItemElement(item) {
+            if (!item) {
+                console.error("Invalid item:", item);
+                return document.createElement('a');
+            }
+            const linkElement = document.createElement('a');
+            linkElement.classList.add('nav-link');
+            linkElement.setAttribute("data-id", item.identifier);
+            // Add active class if this item is the selected node
+            if (item.identifier === selectedNode) {
+                linkElement.classList.add('active');
+            }
+            if (item.children && item.children.length > 0) {
+                document.querySelector('#featureExplorerIntro').style.display = "flex";
+                linkElement.classList.add('has-submenu');
+                linkElement.addEventListener('click', (ev) => {
+                    ev.preventDefault();
+                    linkElement.classList.add('submenu-open');
+                    selectedNode = item.identifier;
+                    updateMobileMenuSelection(item);
+                    // Preserve the color mode
+                    const currentColorMode = document.documentElement.getAttribute('data-theme');
+                    if (currentColorMode === 'light') {
+                        document.querySelectorAll('.menu-mobile a.switch-data-theme.data-theme-light').forEach(el => el.classList.add('active'));
+                        document.querySelectorAll('.menu-mobile a.switch-data-theme.data-theme-dark').forEach(el => el.classList.remove('active'));
+                    } else if (currentColorMode === 'dark') {
+                        document.querySelectorAll('.menu-mobile a.switch-data-theme.data-theme-light').forEach(el => el.classList.remove('active'));
+                        document.querySelectorAll('.menu-mobile a.switch-data-theme.data-theme-dark').forEach(el => el.classList.add('active'));
+                    }
+                });
+            } else if (item.URL) {
+                linkElement.addEventListener('click', (ev) => {
+                    ev.preventDefault();
+                    selectedNode = item.identifier;
+                    // Remove active class from all links
+                    document.querySelectorAll('.menu-mobile a.nav-link').forEach(a => {
+                        a.classList.remove('active');
+                    });
+                    document.querySelector('#featureExplorerIntro').style.display = "none";
+                    resp.style.display = "block";
+                    // Add active class to clicked link
+                    linkElement.classList.add('active');
+                    if (item.URL.includes('ibkrguides.com')) {
+                        //document.querySelector('#featureExplorerIntro').style.display = "none";
+                        // resp.style.display = "block";
+                        getGuides(item.name, item.URL).then(result => {
+                            resp.innerHTML = `<button type="button" class="btn btn-primary closeButton">Dismiss Window</button>
+                            <button type="button" class="btn btn-primary newWindowButton">Launch in a New Tab</button>`;
+                            resp.innerHTML += "<div class='loader'></div>"; // Add loader after buttons
+                            resp.innerHTML += result.content;
+                            setupContentButtons(item.URL);
+                            result.domReady.then(() => {
+                                document.querySelector(".userguide-content").style.display = "flex";
+                                setupDropdowns();
+                                document.querySelector('div.loader').remove();
+                            });
+                        });
+                        let mobileMenu = document.querySelector('div.menu-mobile');
+                        html.classList.remove('zeynep-opened');
+                        mobileMenu.classList.remove('opened')
+                    } else {
+                        //document.querySelector('#featureExplorerIntro').style.display = "flex";
+                        //resp.style.display = "none";
+                        //document.querySelector(".userguide-content").style.display = "none";
+                        //window.open(item.URL, "_blank");
+                        console.log(node, item, item.URL)
+                        resp.innerHTML = `
+            <button type="button" class="btn btn-primary closeButton">Dismiss Window</button>
+            <button type="button" class="btn btn-primary newWindowButton">Launch in a New Tab</button>
+            <div class="loader"></div>`;
+                        const iframe = document.createElement('iframe');
+                        iframe.className = 'h-100 w-100 mt-4';
+                        // iframe.src = `${d.data.URL}?conf=am`;
+                        // iframe.title = d.data.name;
+                        iframe.src = `${item.URL}?conf=am`;
+                        iframe.title = item.name;
+                        iframe.onload = function() {
+                            // Remove loader
+                            const loader = resp.querySelector('.loader');
+                            if (loader) {
+                                loader.remove();
+                            }
+                        };
+                        resp.appendChild(iframe);
+                        setupContentButtons(item.URL);
+                        document.querySelector(".userguide-content").style.display = "flex";
+                        setupDropdowns();
+                        let mobileMenu = document.querySelector('div.menu-mobile');
+                        html.classList.remove('zeynep-opened');
+                        mobileMenu.classList.remove('opened')
+                    }
+                });
+            }
+            linkElement.textContent = item.name || 'Unnamed Item';
+            return linkElement;
+        }
+        function createSubmenuElement(items, currentNode) {
+            if (!Array.isArray(items)) {
+                console.error("Invalid items array:", items);
+                return document.createElement('div');
+            }
+            const submenuElement = document.createElement('div');
+            submenuElement.classList.add('submenu');
+            // Create back button
+            const linkBack = document.createElement('p');
+            linkBack.classList.add('nav-link-back');
+            const backButton = document.createElement('a');
+            backButton.addEventListener('click', (ev) => {
+                ev.preventDefault();
+                ev.stopPropagation(); // Add this if needed
+                document.querySelector("#response").style.display = "none";
+                if (currentNode && currentNode.parent !== 'Top Level') {
+                    // Find parent node in tree
+                    const parentNode = findNodeInTree(currentNode);
+                    if (parentNode) {
+                        const parentChildren = findNodeChildren(parentNode);
+                        if (!mobileMenu) {
+                            mobileMenu = document.querySelector('div.menu-mobile');
+                        } 
+                        mobileMenu.innerHTML = '';
+                        // Create a new submenu element with the parent's children
+                        const parentSubmenu = createSubmenuElement(parentChildren, parentNode);
+                        parentSubmenu.classList.add('opened', 'current');
+                        mobileMenu.appendChild(parentSubmenu);
+                        // Find the parent's nav-link and has-submenu elements
+                        const parentNavLink = document.querySelector(`.menu-mobile a.nav-link[data-id="${currentNode.identifier}"]`);
+                        // Add the active class to the parent's nav-link
+                        if (parentNavLink) {
+                            parentNavLink.classList.add('active');
+                        }
+                    }
+                } else {
+                    // If at root level, show main menu with close button, logo, and search
+                    const rootNode = treeData[0];
+                    // Clear the existing menu
+                    mobileMenu.innerHTML = '';
+                    // Add close button
+                    const closeButton = `
+                        <div class="close-button">
+                            
+                        </div>
+                    `;
+                    mobileMenu.insertAdjacentHTML('beforeend', closeButton);
+                    let closeButtonLink = document.querySelector('a.btn-close');
+                    closeButtonLink.addEventListener('click', handleCloseButtonClick);
+                    // Add logo container
+                    const logoContainer = `
+                        <div class="logo-container">
+                            <a href="index.php" target="_self" class="brand-logo" aria-label="YMC FeatureExplorer Home">
+                                <span>YMC FeatureExplorer Home</span>
+                            </a>
+                        </div>
+                    `;
+                    mobileMenu.insertAdjacentHTML('beforeend', logoContainer);
+                    // Add search container
+                    const searchContainer = `
+                        <div class="search-container">
+                            <div class="search-box">
+                                <input type="text" class="form-control" placeholder="Search YMC FeatureExplorer" name="" id="" aria-label="Search YMC FeatureExplorer">
+                                <div id="search-results" style="display: none;"></div>
+                                
+                            </div>
+                        </div>
+                    `;
+                    mobileMenu.insertAdjacentHTML('beforeend', searchContainer);
+                    // Create the main menu
+                    const rootMenu = createSubmenuElement(rootNode.children, rootNode);
+                    rootMenu.classList.add('opened', 'current');
+                    mobileMenu.appendChild(rootMenu);
+                    // Hide the inner close button for root menu
+                    const innerCloseButton = mobileMenu.querySelector('.close-button.innermenu');
+                    if (innerCloseButton) {
+                        innerCloseButton.style.display = 'none';
+                    }
+                    AddMoreListItems();
+                   // Add this line here after adding the search container
+                    attachSearchListeners();  
+                    document.querySelector('.nav-link-back').style.display = "none";
+                    document.querySelector('.submenu-title').style.display = "none";
+                    document.querySelector('.menu-mobile .submenu.opened').style.position = "static";
+                }
+            });
+            backButton.href = "javascript:void(0)";
+            backButton.target = "_self";
+            backButton.setAttribute("data-submenu-close", submenuElement.id);
+            backButton.innerHTML = "Back";
+            linkBack.append(backButton);
+            submenuElement.appendChild(linkBack);
+            // Create close button as DOM elements instead of string
+            const closeButtonDiv = document.createElement('div');
+            closeButtonDiv.className = 'close-button innermenu';
+            const closeButtonLink = document.createElement('a');
+            closeButtonLink.href = 'javascript:void(0);';
+            closeButtonLink.target = '_self';
+            closeButtonLink.className = 'btn-close';
+            closeButtonLink.setAttribute('aria-label', 'Close Menu');
+            const icon = document.createElement('i');
+            icon.className = 'fa-solid fa-times';
+            closeButtonLink.appendChild(icon);
+            closeButtonDiv.appendChild(closeButtonLink);
+            submenuElement.appendChild(closeButtonDiv);
+            // Add event listener directly to the close button
+            closeButtonLink.addEventListener('click', (ev) => {
+                ev.preventDefault();
+                html.classList.remove('zeynep-opened');
+                document.querySelector('div.menu-mobile').classList.remove('opened');
+                showInitialMenu = true;
+                document.querySelector('.userguide-content').style.display = "flex";
+                document.querySelector('#featureExplorerIntro').style.display = "flex";
+                resp.style.display = "none";
+                // Reset the menu to root state after the menu is closed
+                setTimeout(() => {
+                    const mobileMenu = document.querySelector('.menu-mobile');
+                    if (mobileMenu) {
+                        // Clear the menu
+                        mobileMenu.innerHTML = '';
+                        // Add close button
+                        // const closeButton = `
+                        //     <div class="close-button">
+                        //         <a href="javascript:void(0);" target="_self" class="btn-close" aria-label="Close Menu">
+                        //             <i class="fa-solid fa-times"></i>
+                        //         </a>
+                        //     </div>
+                        // `;
+                        // mobileMenu.insertAdjacentHTML('beforeend', closeButton);
+                        // Add close button
+                        const closeButton = document.createElement('div');
+                        closeButton.className = 'close-button';
+                        const closeButtonLink = document.createElement('a');
+                        closeButtonLink.href = 'javascript:void(0);';
+                        closeButtonLink.target = '_self';
+                        closeButtonLink.className = 'btn-close';
+                        closeButtonLink.setAttribute('aria-label', 'Close Menu');
+                        const icon = document.createElement('i');
+                        icon.className = 'fa-solid fa-times';
+                        closeButtonLink.appendChild(icon);
+                        closeButton.appendChild(closeButtonLink);
+                        mobileMenu.appendChild(closeButton);
+                        // Attach event listener to the close button
+                        closeButtonLink.addEventListener('click', handleCloseButtonClick);
+                        // Add logo container
+                        const logoContainer = `
+                            <div class="logo-container">
+                                <a href="index.php" target="_self" class="brand-logo" aria-label="YMC FeatureExplorer Home">
+                                    <span>YMC FeatureExplorer Home</span>
+                                </a>
+                            </div>
+                        `;
+                        mobileMenu.insertAdjacentHTML('beforeend', logoContainer);
+                        // Add search container
+                        const searchContainer = `
+                            <div class="search-container">
+                                <div class="search-box">
+                                    <input type="text" class="form-control" placeholder="Search YMC FeatureExplorer" name="" id="" aria-label="Search YMC FeatureExplorer">
+                                    <div id="search-results" style="display: none;"></div>
+                                    
+                                </div>
+                            </div>
+                        `;
+                        mobileMenu.insertAdjacentHTML('beforeend', searchContainer);
+                        // Add the root menu back
+                        if (initialData && initialData[0]) {
+                            const rootNode = initialData[0];
+                            const mobileMenu = createMenuFromTree(rootNode.children, '', 0);
+                            mobileMenu.then(menu => {
+                                document.querySelector('.menu-mobile').appendChild(menu);
+                                //document.querySelector('.close-button.innermenu').style.display = "none";
+                                AddMoreListItems();
+                                attachSearchListeners();
+                            });
+                        }
+                    }
+                }, 300);
+            });
+            const title = document.createElement('p');
+            title.classList.add('submenu-title');
+            title.innerHTML = items[0].parent;
+            submenuElement.appendChild(title);
+            const newlist = document.createElement('ul');
+            submenuElement.appendChild(newlist);
+            items.forEach((item) => {
+                const listItem = document.createElement('li');
+                if (item.children && item.children.length > 0) {
+                    listItem.classList.add('has-submenu');
+                } else {
+                    listItem.classList.remove('has-submenu');
+                }
+                listItem.appendChild(createMenuItemElement(item));
+                newlist.appendChild(listItem);
+            });
+            return submenuElement;
+        }
+        // Helper function to find node's children in the tree
+        function findNodeChildren(node) {
+            if (!node) return [];
+            return node.children || [];
+        }
+        // Helper function to find node by identifier in the tree
+        function findNodeInTree(identifier, tree = treeData[0]) {
+            // Basic validation
+            if (!identifier || !identifier.parent_identifier) {
+                //console.log('Invalid identifier or missing parent_identifier');
+                return null;
+            }
+            // Check for match
+            if (tree.identifier === identifier.parent_identifier) {
+                //console.log('Found matching node:', tree);
+                return tree;
+            }
+            // Search children
+            if (tree.children) {
+                for (let child of tree.children) {
+                    const found = findNodeInTree(identifier, child);
+                    if (found) return found;
+                }
+            }
+            return null;
+        }
+        if (node.children && node.children.length > 0) {
+            const rootMenu = createSubmenuElement(node.children, node);
+            rootMenu.classList.add('opened', 'current');
+            mobileMenu.appendChild(rootMenu);
+            let closeButtonLink = document.querySelector('a.btn-close');
+            closeButtonLink.addEventListener('click', (ev) => {
+                ev.preventDefault();
+                html.classList.remove('zeynep-opened');
+                document.querySelector('div.menu-mobile').classList.remove('opened');
+            })
+            if (node['URL'].includes('ibkrguides.com')) {
+                document.querySelector('#featureExplorerIntro').style.display = "none";
+                rootMenu.classList.remove('opened');
+                mobileMenu.classList.remove('opened');
+                html.classList.remove('zeynep-opened');
+                resp.style.display = "block";
+                let navbarToggler = document.querySelector(".navbar-toggler");
+                let prevSubMenu = document.querySelector(".menu-mobile .submenu");
+                navbarToggler.addEventListener("click", () => {
+                    prevSubMenu.classList.add("opened");
+                })
+                getGuides(node.name, node['URL']).then(result => {
+                    resp.innerHTML = '<button  type="button" class="btn btn-primary closeButton">Dismiss Window</button><button type="button" class="btn btn-primary newWindowButton">Launch in a New Tab</button>';
+                    resp.innerHTML += result.content;
+                    const dismiss = document.querySelector('button.closeButton');
+                    const newWindow = document.querySelector('button.newWindowButton');
+                    dismiss.addEventListener('click', () => {
+                        document.querySelector(".userguide-content").style.display = "none";
+                        document.querySelector("#d3-container").style.width = "100%";
+                        document.querySelector("#d3-container").style.height = `calc(100vh - ${offset}px)`;
+                        html.classList.add("zeynep-opened");
+                        mobileMenu.classList.add("opened");
+                        let submenu = mobileMenu.querySelector(".submenu");
+                        if (!showInitialMenu) {
+                            submenu.classList.add("opened");
+                        }
+                        if(submenu.querySelector("p.nav-link-back")) {
+                            submenu.classList.add("opened");
+                        }
+                    });
+                    newWindow.addEventListener('click', () => {
+                        window.open(node['URL'], "_blank");
+                    })
+                    result.domReady.then(() => {
+                        document.querySelector(".userguide-content").style.display = "flex";
+                        setupDropdowns();
+                    });
+                });
+            }     
+        } else if (node.data?.children && node.data.children.length > 0) {
+            const secMenu = createSubmenuElement(node.data.children, node.data);
+            secMenu.classList.add('opened', 'current');
+            mobileMenu.appendChild(secMenu);
+        } else {
+            let resizeNode = null;
+            if (Number.isFinite(node)) {
+                resizeNode = findNodeById(root, node);
+            }
+            let parentalIdentifier = node.data ?  node.data.parent_identifier : resizeNode.data.parent_identifier;
+            // Find the parent node based on node.parent_identifier
+            const parentNode = findParentNode(parentalIdentifier);
+            if (parentNode) {
+                const searchMenu = createSubmenuElement(parentNode.children, parentNode);
+                searchMenu.classList.add('opened', 'current');
+                mobileMenu.appendChild(searchMenu);
+                //console.log(node)
+                if (resp.style.display === "block") {
+                    document.querySelector('#featureExplorerIntro').style.display = "none";
+                }
+            }
+        }
+    }
+    function updateD3TreeSelection(d) {
+        selectedNode = d.identifier ? d.identifier : (d.data ? d.data.identifier : d);
+        const identifiedNode = findNodeById(root, selectedNode);
+        if (identifiedNode) {
+            let identity = identifiedNode.data.identifier;
+            let matchingNode = svg.selectAll("g.node").data()
+                .find(d => d.data.identifier === identity);
+            let matchingNodeId = matchingNode ? matchingNode.id : null;
+            let nodeElement = document.getElementById(`node-${matchingNodeId}`);
+            if (nodeElement) {
+                let newWidth = width + (matchingNode.depth - 1) * 400;
+                d3.select("#d3-container svg")
+                    .attr("width", newWidth)
+                    .attr("height", 600)
+                if (nodeElement && identifiedNode.data.children.length === 0) {
+                    nodeElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center',
+                        inline: 'center'
+                    });
+                } else {
+                    nodeElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center',
+                        inline: 'start'
+                    });
+                }
+            }
+            // Update the visual representation of selected nodes
+            svg.selectAll("g.node")
+                .select("text")
+                .style("font-weight", node => node.selected ? "bold" : "normal");
+            // Ensure the path to the selected node is expanded
+            let currentNode = identifiedNode;
+            while (currentNode.parent) {
+                currentNode = currentNode.parent;
+                if (currentNode._children) {
+                    currentNode.children = currentNode._children;
+                    currentNode._children = null;
+                }
+            }
+            // Update the tree
+            update(root);
+        }
+        // Update lastDesktopSelectedNode
+        lastDesktopSelectedNode = selectedNode;
+    }
+    function resetTreeState() {
+        root.descendants().forEach(d => {
+            if (d !== root) {
+                d._children = d.children || d._children;
+                d.children = null;
+                // Don't reset the selected state here
+            }
+        });
+        update(root);
+    }
+    async function createMenuFromTree(data, parentId = '', delay = 0) {
+        const list = document.createElement('ul');
+        const chunkSize = 10; // Number of items to process at once
+        const chunks = [];
+        // Split data into chunks
+        for (let i = 0; i < data.length; i += chunkSize) {
+            chunks.push(data.slice(i, i + chunkSize));
+        }
+        // Process chunks with delay
+        for (let i = 0; i < chunks.length; i++) {
+            await new Promise(resolve => setTimeout(resolve, delay));
+            const chunk = chunks[i];
+            for (const [index, item] of chunk.entries()) {
+                const actualIndex = i * chunkSize + index;
+                const li = document.createElement('li');
+                const link = document.createElement('a');
+                link.href = "#";
+                link.target = "_self";
+                const submenuId = `submenu-${parentId}-${actualIndex}`;
+                link.setAttribute("data-submenu", submenuId);
+                link.setAttribute("data-id", item.identifier);
+                //link.innerHTML = item.name.replace("", "'").replace("  ", " - ");
+                link.innerHTML = item.name.replace("", "'").replace("  ", " - ");
+                // Add click event listener
+                link.addEventListener('click', async function (event) {
+                    event.preventDefault();
+                    selectedNode = item.identifier;
+                    lastDesktopSelectedNode = null;
+                    updateMobileMenuSelection(item);
+                    if (item["URL"] ) {
+                        root.descendants().forEach(node => {
+                            node.selected = false;
+                        });
+                        document.querySelector('#featureExplorerIntro').style.display = "none";
+                        resp.style.display = "block";
+                        if (item['URL'].includes('ibkrguides.com')) {
+                            // document.querySelector('#featureExplorerIntro').style.display = "none";
+                            getGuides(item.name, item['URL']).then(result => {
+                                resp.innerHTML = '<button  type="button" class="btn btn-primary closeButton">Dismiss Window</button><button type="button" class="btn btn-primary newWindowButton">Launch in a New Tab</button>';
+                                resp.innerHTML += "<div class='loader'></div>"; // Add loader after buttons
+                                resp.innerHTML += result.content;
+                                const dismiss = document.querySelector('button.closeButton');
+                                const newWindow = document.querySelector('button.newWindowButton');
+                                dismiss.addEventListener('click', () => {
+                                    document.querySelector(".userguide-content").style.display = "none";
+                                    document.querySelector("#d3-container").style.width = "100%";
+                                    document.querySelector("#d3-container").style.height = `calc(100vh - ${offset}px)`;
+                                    html.classList.add("zeynep-opened");
+                                    let mobileMenu = document.querySelector("div.menu-mobile");
+                                    mobileMenu.classList.add("opened")
+                                    let submenu = mobileMenu.querySelector(".submenu");
+                                    submenu.classList.add("opened");
+                                });
+                                newWindow.addEventListener('click', () => {
+                                    window.open(item['URL'], "_blank");
+                                })
+                                result.domReady.then(() => {
+                                    document.querySelector("#d3-container").style.width = "50%";
+                                    document.querySelector(".userguide-content").style.display = "flex";
+                                    setupDropdowns();
+                                    document.querySelector('div.loader').remove();
+                                });
+                            });
+                        }
+                        if (!item.children && !item._children && !item['URL'].includes('ibkrguides.com')) {
+                            // resp.style.display = "none";
+                            // document.querySelector('#featureExplorerIntro').style.display = "flex";
+                            // document.querySelector("#d3-container").style.width = "100%";
+                            // document.querySelector("#d3-container").style.height = `calc(100vh - ${offset}px)`;
+                            // document.querySelector(".userguide-content").style.display = "none";
+                            // window.open(item.data['URL'], "_blank");
+                            resp.innerHTML = `
+                            <button type="button" class="btn btn-primary closeButton">Dismiss Window</button>
+                            <button type="button" class="btn btn-primary newWindowButton">Launch in a New Tab</button>
+                            <div class="loader"></div>`;
+                            const iframe = document.createElement('iframe');
+                            iframe.className = 'h-100 w-100 mt-4';
+                            iframe.src = `${d.data.URL}?conf=am`;
+                            iframe.title = d.data.name;
+                            iframe.onload = function() {
+                                // Remove loader
+                                const loader = resp.querySelector('.loader');
+                                if (loader) {
+                                    loader.remove();
+                                }
+                            };
+                            resp.appendChild(iframe);
+                            const dismiss = document.querySelector('button.closeButton');
+                            const newWindow = document.querySelector('button.newWindowButton');
+                            dismiss.addEventListener('click', () => {
+                                document.querySelector(".userguide-content").style.display = "none";
+                                document.querySelector("#d3-container").style.width = "100%";
+                                document.querySelector("#d3-container").style.height = `calc(100vh - ${offset}px)`;
+                                html.classList.add("zeynep-opened");
+                                let mobileMenu = document.querySelector("div.menu-mobile");
+                                mobileMenu.classList.add("opened")
+                                let submenu = mobileMenu.querySelector(".submenu");
+                                submenu.classList.add("opened");
+                            });
+                            newWindow.addEventListener('click', () => {
+                                window.open(item['URL'], "_blank");
+                            })
+                            document.querySelector("#d3-container").style.width = "50%";
+                            document.querySelector(".userguide-content").style.display = "flex";
+                            setupDropdowns();  
+                        }
+                        if (!item['URL'].includes('ibkrguides.com')) {
+                            //resp.style.display = "none";
+                        }
+                        item.selected = true;
+                    } else {
+                        // Lazy load submenu content when clicked
+                        const submenu = document.getElementById(submenuId);
+                        if (submenu) {
+                            if (!submenu.hasChildNodes()) {
+                                // Only create submenu content if it hasn't been created yet
+                                const submenuContent = await createSubmenuContent(item, submenuId, link);
+                                submenu.append(...submenuContent);
+                            }
+                            submenu.classList.add('opened', 'current');
+                            link.classList.add('submenu-open');
+                        }
+                    }
+                });
+                li.append(link);
+                if (item.children && item.children.length > 0) {
+                    li.classList.add('has-submenu');
+                    // Create empty submenu container (content will be loaded on click)
+                    let submenu = document.createElement('div');
+                    submenu.classList.add('submenu');
+                    submenu.setAttribute('id', submenuId);
+                    li.append(submenu);
+                }
+                list.append(li);
+            }
+        }
+        return list;
+    }
+    function expandToNode(node) {
+        let current = node;
+        while (current.parent) {
+            if (current.parent._children) {
+                current.parent.children = current.parent._children;
+                current.parent._children = null;
+            }
+            current = current.parent;
+        }
+        update(root);
+    }
+    function findNodeById(node, identifier) {
+        if (node.identifier === identifier || node.data.identifier === identifier) {
+            return node;
+        }
+        if (node._children) {
+            for (let child of node._children) {
+                const result = findNodeById(child, identifier);
+                if (result) {
+                    return result;
+                }
+            }
+        }
+        if (node.children) {
+            for (let child of node.children) {
+                const result = findNodeById(child, identifier);
+                if (result) {
+                    return result;
+                }
+            }
+        }
+        return
+    }
+    function initializeD3Visualization(treeData) {
+        document.querySelector("div.userguide-content").style.maxHeight = `calc(100vh - ${offset}px)`;
+        document.querySelector("div.userguide-content").style.height = `calc(100vh - ${offset}px)`;
+        svg = d3.select("#d3-container")
+            .append("svg")
+            .attr("class", "nav-tree-svg")
+            .attr("width", width)
+            .attr("height", 600)
+            .append("g")
+            .attr("transform", `translate(${margin.left},${margin.top})`);
+        const treemap = d3.tree().size([height, width]);
+        root = d3.hierarchy(treeData[0]);
+        root.x0 = height / 2;
+        root.y0 = 0;
+        root.children.forEach(collapse);
+        let longNodeTitles = findLongNodes(treeData[0]);
+        longNodeSet = new Set(longNodeTitles.map(item => item.node.identifier));
+        update(root);
+    }
+    function setLang(lang) {
+        let dataLang = "en_US";
+        switch (lang) {
+            case 'English':
+                dataLang = 'en_US';
+                break;
+            case 'Français':
+                dataLang = 'fr_FR';
+                break;
+            case 'Deutsch':
+                dataLang = 'de_DE';
+                break;
+            case 'Español':
+                dataLang = 'es_ES';
+                break;
+            case 'Italiano':
+                dataLang = 'it_IT';
+                break;
+            case 'Русский':
+                dataLang = 'ru_RU';
+                break;
+            case 'Magyar':
+                dataLang = 'hu_HU';
+                break;
+            case '简体中文':
+                dataLang = 'zh_CN';
+                break;
+            case '繁體中文':
+                dataLang = 'zh_TW';
+                break;
+            case '日本語':
+                dataLang = 'ja_JP';
+                break;
+            case 'العربية':
+                dataLang = 'ar_AE';
+                break;
+            case 'עִברִית':
+                dataLang = 'hs_IL';
+                break;
+            default:
+                //console.log("Default to English");
+        }
+        // Add code here to actually set the language using the dataLang value
+        return dataLang;
+    }
+    function AddMoreListItems() {
+        let extras = {
+            'Color Mode': ['Light Mode', 'Dark Mode'],
+            'Language': ['English', 'Français', 'Deutsch', 'Español', 'Italiano', 'Русский', 'Magyar', '简体中文', '繁體中文', '日本語', 'العربية', 'עִברִית']
+        }
+        let list = document.querySelector('.menu-mobile ul');
+        for (let key in extras) {
+            let liSet = document.createElement('li');
+            liSet.classList.add('has-submenu');
+            let link = document.createElement('a');
+            link.href = "#";
+            link.target = "_self";
+            if (key === 'Color Mode') {
+                link.setAttribute("data-submenu", "submenu-theme");
+                link.setAttribute("id", "color-mode-selector")
+            } else {
+                link.setAttribute("data-submenu", "submenu-language");
+                link.setAttribute("id", "language-mode-selector")
+            }
+            link.innerHTML = key;
+            link.addEventListener('click', async function (event) {
+                event.preventDefault();
+                // Update visual selection in mobile menu
+                document.querySelectorAll('.menu-mobile a').forEach(a => {
+                    a.classList.remove('active');
+                });
+                let idName = link.getAttribute('id');
+                const selectedItem = document.querySelector(`#${idName}`);
+                if (selectedItem) {
+                    selectedItem.classList.add('active');
+                }
+                // Handle submenu toggle here if needed
+                let subMenuName = link.getAttribute('data-submenu');
+                let smenu = document.getElementById(`${subMenuName}`);
+                if (smenu) {
+                    smenu.classList.add('opened');
+                    link.classList.add('submenu-open');
+                    smenu.classList.add('current');
+                }
+            });
+            liSet.append(link);
+            let submenu = document.createElement('div');
+            submenu.classList.add('submenu');
+            if (key === 'Color Mode') {
+                submenu.setAttribute("id", "submenu-theme");
+            } else {
+                submenu.setAttribute("id", "submenu-language");
+            }
+            let linkBack = document.createElement('p');
+            linkBack.classList.add('nav-link-back');
+            backButton = document.createElement('a');
+            backButton.addEventListener('click', (ev) => {
+                ev.preventDefault()
+                document.getElementById(submenu.getAttribute("id")).classList.remove("opened");
+                document.getElementById(submenu.getAttribute("id")).classList.remove("submenu-open");
+                document.getElementById(submenu.getAttribute("id")).classList.remove("current");
+                document.querySelector("#response").style.display = "none";
+            });
+            backButton.href = "javascript:void(0)";
+            backButton.target = "_self";
+            backButton.setAttribute("data-submenu-close", submenu.getAttribute("id"));
+            backButton.innerHTML = "Back";
+            linkBack.append(backButton);
+            submenu.append(linkBack);
+            let subMenuTitle = document.createElement('p');
+            subMenuTitle.classList.add("submenu-title");
+            subMenuTitle.innerHTML = key;
+            submenu.append(subMenuTitle);
+            let innerList = document.createElement('ul');
+            extras[key].forEach(value => {
+                let innerLi = document.createElement('li');
+                let innerLink = document.createElement('a');
+                innerLink.href = "javascript:void(0)";
+                innerLink.target = "_self";
+                if (value === "Light Mode") {
+                    innerLink.classList = "switch-data-theme data-theme-light";
+                }
+                if (value === "Dark Mode") {
+                    innerLink.classList = "switch-data-theme data-theme-dark";
+                }
+                if (value === "Light Mode" || value === "Dark Mode") {
+                    innerLink.addEventListener('click', function () {
+                        let datatheme = this.classList.contains('data-theme-dark') ? "dark" : "light";
+                        document.documentElement.setAttribute('data-theme', datatheme);
+                        // Use the new helper function instead of directly setting the cookie
+                        setThemeCookie(datatheme);
+                        // Remove 'active' class from all theme switches
+                        document.querySelectorAll('a.switch-data-theme').forEach(el => el.classList.remove('active'));
+                        // Add 'active' class to appropriate elements
+                        if (datatheme === "light") {
+                            document.querySelectorAll('a.data-theme-light').forEach(el => el.classList.add('active'));
+                        } else {
+                            document.querySelectorAll('a.data-theme-dark').forEach(el => el.classList.add('active'));
+                        }
+                        let mobileMenu = document.querySelector('div.menu-mobile.opened')
+                        html.classList.remove('zeynep-opened');
+                        mobileMenu.classList.remove('opened')
+                    });
+                }
+                if (key === "Language") {
+                    innerLink.classList = "switch-lang lang-ltr";
+                    innerLink.setAttribute('data-lang', setLang(value));
+                }
+                innerLink.innerHTML = value;
+                innerLi.append(innerLink);
+                innerList.append(innerLi);
+            });
+            submenu.append(innerList);
+            liSet.append(submenu);
+            list.append(liSet);
+        }
+        initializeTheme();
+    }
+    function expandAndSelectPath(node) {
+        if (!node) return;
+        let currentNode = node;
+        let path = [];
+        // Build the path from the node to the root
+        while (currentNode) {
+            path.unshift(currentNode);
+            currentNode = currentNode.parent;
+        }
+        // Expand and select each node in the path
+        path.forEach((n, index) => {
+            if (n.parent && n.parent._children) {
+                n.parent.children = n.parent._children;
+                n.parent._children = null;
+            }
+            n.selected = true;
+        });
+        update(root);
+    }
+    let mobileMenuInitialized = false; // Add this at the top with your other variables
+    async function checkWindowSize() {
+        const menu = document.querySelector('.menu-mobile');
+        const isMobile = window.innerWidth <= 992;
+        const d3Container = document.querySelector('#d3-container');
+        const userguideContent = document.querySelector("div.userguide-content");
+        // Only initialize theme if needed
+        if (!cachedMobileMenu) {
+            initializeTheme();
+        }
+        if (isMobile) {
+            d3Container.style.display = "none";
+            menu.style.display = "block";
+            // Initialize mobile menu only once
+            if (!mobileMenuInitialized && initialData) {
+                try {
+                    // Show loading indicator
+                    const loadingIndicator = document.createElement('div');
+                    loadingIndicator.className = 'loading-indicator';
+                    loadingIndicator.textContent = 'Loading menu...';
+                    menu.appendChild(loadingIndicator);
+                    // Clear existing content if any
+                    menu.querySelector('ul')?.remove();
+                    // Create menu with delay between chunks
+                    const mobileMenu = await createMenuFromTree(initialData[0].children, '', 100);
+                    // Remove loading indicator
+                    loadingIndicator.remove();
+                    // Append the created menu
+                    menu.appendChild(mobileMenu);
+                    AddMoreListItems();
+                    mobileMenuInitialized = true;
+                    // Cache the menu for future use
+                    cachedMobileMenu = mobileMenu;
+                } catch (error) {
+                    console.error('Error creating mobile menu:', error);
+                    // Show error message to user
+                    menu.innerHTML = '<div class="error-message">Error loading menu. Please try refreshing the page.</div>';
+                }
+            } else if (cachedMobileMenu) {
+                // Use cached menu if available
+                menu.querySelector('ul')?.remove();
+                menu.appendChild(cachedMobileMenu.cloneNode(true));
+            }
+            if (selectedNode) {
+                updateMobileMenuSelection(selectedNode);
+            }
+        } else {
+            d3Container.style.display = "block";
+            menu.style.display = "none";
+            userguideContent.style.maxHeight = `calc(100vh - ${offset}px)`;
+            userguideContent.style.height = `calc(100vh - ${offset}px)`;
+            handleDesktopView();
+        }
+    }
+    // Separate desktop view handling
+    function handleDesktopView() {
+        if (selectedNode) {
+            const node = findNodeById(root, selectedNode);
+            if (node) {
+                root.descendants().forEach(d => {
+                    if (d !== root) {
+                        d._children = d.children || d._children;
+                        d.children = null;
+                    }
+                });
+                expandAndSelectPath(node);
+                update(root);
+                setTimeout(() => {
+                    updateD3TreeSelection(node);
+                }, 500);
+            }
+        } else {
+            resetTreeState();
+        }
+    }
+    function collapse(d) {
+        if (d.children) {
+            d._children = d.children;
+            d._children.forEach(collapse);
+            d.children = null;
+        }
+    }
+    // Creates a curved (diagonal) path from parent to the child nodes
+    function diagonal(s, d) {
+        return `M ${s.y} ${s.x}
+            C ${(s.y + d.y) / 2} ${s.x},
+              ${(s.y + d.y) / 2} ${d.x},
+              ${d.y} ${d.x}`;
+    }
+    function update(source) {
+        const nodes = root.descendants().slice(1);
+        const links = root.links();
+        const levelWidth = {}; // To store the number of nodes at each depth
+        nodes.forEach(d => {
+            if (!levelWidth[d.depth]) levelWidth[d.depth] = 0;
+            levelWidth[d.depth]++;
+        });
+        const nodeSpacing = 30; // Vertical spacing between nodes
+        nodes.forEach(function (d) {
+            d.y = (d.depth - 1) * 425;
+            d.x = (height / (levelWidth[d.depth] + 1)) * d.parent.children.indexOf(d) + nodeSpacing;
+            d.x0 = d.x;
+        });
+        // ****************** Nodes section ***************************
+        const node = svg.selectAll("g.node")
+            .data(nodes, d => d.id || (d.id = ++i));
+        // Enter new nodes at the parent's previous position.
+        const nodeEnter = node.enter().append("g")
+            .attr("class", "node")
+            .attr("id", d => `node-${d.id}`)
+            .attr("transform", d => `translate(${source.y0},${source.x0})`)
+            .on("click", click)
+            .each(function (d) {
+                d.selected = d.selected || false;
+            })
+        nodeEnter.append("rect")
+            .attr("class", "node-rect")
+            .attr("width", 200)
+            .attr("height", 30)
+            .attr("x", -180)
+            .attr("y", -15)
+            .style("fill", "transparent");
+        nodeEnter.append("circle")
+            .attr("class", "node")
+            .attr("r", 1e-6)
+        nodeEnter.append("text")
+            .attr("dy", ".35em")
+            .attr("x", -20)
+            .attr("text-anchor", "end")
+            .style("fill-opacity", 0)
+            .each(function (d) {
+                let text = d3.select(this);
+                let words = d.data.name.split(/\s+/);
+                let lines = [];
+                let line = [];
+                let lineNumber = 0;
+                let lineHeight = 0.9; // ems
+                let maxWidth = 375; // maximum width in pixels
+                let tspan = text.text(null).append("tspan").attr("x", -20).attr("dy", 0);
+                for (let word of words) {
+                    line.push(word);
+                    tspan.text(line.join(" "));
+                    if (tspan.node().getComputedTextLength() >= maxWidth) {
+                        line.pop();
+                        tspan.text(line.join(" "));
+                        lines.push(line.join(" "));
+                        line = [word];
+                        tspan = text.append("tspan").attr("x", -20).attr("dy", lineHeight + "em").text(word);
+                        lineNumber++;
+                    }
+                }
+                lines.push(line.join(" "));
+                if (lines.length > 1) {
+                    text.selectAll("tspan").attr("y", function () {
+                        return -((lines.length - 1) * lineHeight) / 2 + "em";
+                    });
+                }
+            })
+            .transition()
+            .duration(duration)
+            .style("fill-opacity", 1);
+        // Update the nodes...
+        const nodeUpdate = node.merge(nodeEnter);
+        nodeUpdate.transition()
+            .duration(duration)
+            .attr("transform", d => `translate(${d.y},${d.x})`);
+        nodeUpdate.select("circle")
+            .attr("r", 4);
+        nodeUpdate.select("text")
+            .style("fill-opacity", 1)
+            .style("font-weight", d => d.selected ? "bold" : "normal");
+        // Transition exiting nodes to the parent's new position.
+        const nodeExit = node.exit().transition()
+            .duration(duration)
+            .attr("transform", d => `translate(${d.parent.y},${d.parent.x})`)
+            .remove();
+        nodeExit.select("circle")
+            .attr("r", 1e-6);
+        nodeExit.select("text")
+            .style("fill-opacity", 0);
+        // ****************** Links section ***************************
+        const link = svg.selectAll("path.link")
+            .data(links.filter(d => d.source.depth > 0), d => d.target.id)
+            .join(
+                enter => enter.insert("path", "g")
+                    .attr("class", "link")
+                    .attr("d", d => {
+                        const o = { x: source.x0, y: source.y0 };
+                        return diagonal(o, o);
+                    })
+            );
+        // Transition links to their new position.
+        link.transition()
+            .duration(duration)
+            .attr("d", d => diagonal(d.source, d.target));
+        // Transition exiting nodes to the parent's new position.
+        link.exit().transition()
+            .duration(duration)
+            .attr("d", function (d) {
+                const o = { x: d.source.x, y: d.source.y };
+                return diagonal(o, o);
+            })
+            .remove();
+        // Store the old positions for transition.
+        nodes.forEach(function (d) {
+            d.x0 = d.x;
+            d.y0 = d.y;
+        });
+    }
+    function updateSelection(node, selected) {
+        // Deselect all nodes
+        root.descendants().forEach(n => n.selected = false);
+        // Select only the current node and its ancestors
+        while (node) {
+            node.selected = selected;
+            node = node.parent;
+        }
+    }
+    function collapseAll(node) {
+        if (node.children) {
+            node._children = node.children;
+            node.children = null;
+            node._children.forEach(collapseAll);
+        }
+    }
+    function setupDropdowns() {
+        document.querySelectorAll('.MCDropDown.dropDown').forEach(dropdown => {
+            const hotspot = dropdown.querySelector('.MCDropDownHotSpot');
+            const body = dropdown.querySelector('.MCDropDownBody');
+            hotspot.addEventListener('click', function (event) {
+                // Prevent the default anchor behavior
+                event.preventDefault();
+                // Toggle aria-expanded
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !expanded);
+                // Toggle MCDropDown_Closed and MCDropDown_Open classes
+                dropdown.classList.toggle('MCDropDown_Closed');
+                dropdown.classList.toggle('MCDropDown_Open');
+                // Toggle data-mc-state
+                const currentState = dropdown.getAttribute('data-mc-state');
+                dropdown.setAttribute('data-mc-state', currentState === 'closed' ? 'open' : 'closed');
+                // Toggle display of MCDropDownBody
+                body.style.display = expanded ? 'none' : 'block';
+                // Update the image alt and data-mc-alt2 attributes
+                const img = this.querySelector('.MCDropDown_Image_Icon');
+                if (img) {
+                    img.alt = expanded ? 'Closed' : 'Open';
+                    img.setAttribute('data-mc-alt2', expanded ? 'Closed' : 'Open');
+                }
+            });
+        });
+    }
+    async function getExternalPageData(mainPageUrl, contentHtml) {
+        try {
+            // Parse the HTML content
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(contentHtml, 'text/html');
+            // Process images
+            const images = doc.querySelectorAll('#mc-main-content img');
+            const imageUrls = [];
+            images.forEach((img) => {
+                const originalSrc = img.getAttribute('src');
+                let fullImageUrl;
+                if (originalSrc.startsWith('http://') || originalSrc.startsWith('https:///')) {
+                    fullImageUrl = originalSrc;
+                } else {
+                    fullImageUrl = new URL(originalSrc%2c%20mainPageUrl.html).href;
+                }
+                imageUrls.push(fullImageUrl);
+                img.src = fullImageUrl;
+            });
+            // Process links
+            const links = doc.querySelectorAll('#mc-main-content a');
+            links.forEach((link) => {
+                if (link.classList.contains('MCDropDownHotSpot')) {
+                    return;
+                }
+                const originalHref = link.getAttribute('href');
+                if (originalHref && !originalHref.startsWith('http://') && !originalHref.startsWith('https:///')) {
+                    const fullLinkUrl = new URL(originalHref%2c%20mainPageUrl.html).href;
+                    link.href = fullLinkUrl;
+                }
+                // Set target to "_blank" for all non-dropdown links
+                link.setAttribute('target', '_blank');
+            });
+            return {
+                processedContent: doc.body.innerHTML,
+                imageUrls: imageUrls
+            };
+        } catch (error) {
+            console.error('Error processing content:', error);
+            return {
+                processedContent: contentHtml,
+                imageUrls: []
+            };
+        }
+    }
+    // async function getGuides(name, url) {
+	//     try {
+    //         const tocElement = document.querySelector('.MCMiniTocBox_0.miniToc.nocontent')
+    //         const response = await fetch(url);
+    //         const htmlString = await response.text();
+    //         const { processedContent, imageUrls } = await getExternalPageData(url, htmlString);
+    //         const parser = new DOMParser();
+    //         const doc = parser.parseFromString(processedContent, 'text/html');
+    //         const content = doc.querySelector('#mc-main-content');
+    //         if (content) {
+    //             return {
+    //                 content: content.innerHTML,
+    //                 imageUrls: imageUrls,
+    //                 domReady: Promise.resolve()
+    //             };
+    //         } else {
+    //             return {
+    //                 content: '<p class="text-left mt-4">Content not found</p>',
+    //                 imageUrls: [],
+    //                 domReady: Promise.resolve()
+    //             };
+    //         }
+	//     } catch (error) {
+    //         console.error('Error fetching content:', error);
+    //         return {
+    //             content: '<p class="text-left mt-4">Error fetching user guide content. Please try refreshing the page.</p>',
+    //             imageUrls: [],
+    //             domReady: Promise.resolve()
+    //         };
+	//     }
+	// }
+    async function getGuides(name, url) {
+    try {
+        let parser = new DOMParser(); // Define parser here to make it accessible to both if and else blocks
+        // Check for inline XML data
+        const tocElement = document.querySelector('.MCMiniTocBox_0.miniToc.nocontent[data-mc-chunk="Data/Toc.xml"]');
+        if (tocElement) {
+            // Parse the inline XML content
+            const xmlDoc = parser.parseFromString(tocElement.innerHTML, 'text/xml');
+            // Find matching content in the XML
+            const matchingEntry = findMatchingEntry(xmlDoc, name);
+            if (matchingEntry) {
+                return {
+                    content: processXMLEntry(matchingEntry),
+                    imageUrls: [],
+                    domReady: Promise.resolve()
+                };
+            }
+        }
+        // If no matching XML entry, fetch and process the content from the URL
+        const response = await fetch(url);
+        const htmlString = await response.text();
+        const { processedContent, imageUrls } = await getExternalPageData(url, htmlString);
+        const doc = parser.parseFromString(processedContent, 'text/html');
+        const content = doc.querySelector('#mc-main-content');
+        if (content) {
+            return {
+                content: content.innerHTML,
+                imageUrls: imageUrls,
+                domReady: Promise.resolve()
+            };
+        } else {
+            return {
+                content: '<p class="text-left mt-4">Content not found</p>',
+                imageUrls: [],
+                domReady: Promise.resolve()
+            };
+        }
+    } catch (error) {
+        console.error('Error fetching content:', error);
+        return {
+            content: '<p class="text-left mt-4">Error fetching user guide content. Please try refreshing the page.</p>',
+            imageUrls: [],
+            domReady: Promise.resolve()
+        };
+    }
+}
+// Helper function to find matching entry in XML
+function findMatchingEntry(xmlDoc, name) {
+    // Get all elements in the XML document
+    const allElements = xmlDoc.getElementsByTagName('*');
+    // Look through all elements for a matching name/title
+    for (const element of allElements) {
+        if (element.getAttribute('Title') === name || 
+            element.getAttribute('name') === name) {
+            return element;
+        }
+    }
+    return null;
+}
+// Helper function to process XML entry into HTML
+function processXMLEntry(entry) {
+    let html = '<div class="xml-content">';
+    // Add title if it exists
+    if (entry.getAttribute('Title')) {
+        html += `<h1>${entry.getAttribute('Title')}</h1>`;
+    }
+    // Add content if it exists
+    if (entry.textContent) {
+        html += `<div>${entry.textContent}</div>`;
+    }
+    html += '</div>';
+    return html;
+}
+    function expandOneLevel(node) {
+        if (node._children) {
+            node.children = node._children;
+            node._children = null;
+            node.children.forEach(child => {
+                if (child.children) {
+                    child._children = child.children;
+                    child.children = null;
+                }
+            });
+        }
+    }
+    let previousNode = null;
+    async function click(event, d) {
+        event.preventDefault();
+        document.querySelector("#d3-container").style.height = `calc(100vh - ${offset}px)`;
+        const currentNode = d;
+        if (previousNode && currentNode.depth < previousNode.depth) {
+            document.querySelector('#featureExplorerIntro').style.display = "flex";
+            resp.style.display = "none"
+        }
+        // Update the previous node
+        previousNode = currentNode;
+        selectedNode = d.data.identifier;
+        lastDesktopSelectedNode = selectedNode;
+        updateD3TreeSelection(d);
+        // Handle expand/collapse
+        if (d.depth > 0) {
+            if (d.children) {
+                collapseAll(d);
+            } else {
+                // Collapse siblings before expanding
+                if (d.parent) {
+                    d.parent.children.forEach(sibling => {
+                        if (sibling !== d) {
+                            collapseAll(sibling);
+                        }
+                    });
+                }
+                expandOneLevel(d);
+            }
+            updateSelection(d, true);
+        }
+        if ((!d.children && !d._children) || (d.data['URL'] && d.data['URL'].includes('ibkrguides.com'))) {
+            if (d.data["URL"]) {
+                root.descendants().forEach(node => {
+                    node.selected = false;
+                });
+                document.querySelector('#featureExplorerIntro').style.display = "none";
+                if (d.data['URL'].includes('ibkrguides.com')) {
+                    //document.querySelector('#featureExplorerIntro').style.display = "none";
+                    resp.style.display = "block";
+                    getGuides(d.data.name, d.data['URL']).then(result => {
+                        resp.innerHTML = '<button  type="button" class="btn btn-primary closeButton">Dismiss Window</button><button type="button" class="btn btn-primary newWindowButton">Launch in a New Tab</button>';
+                        resp.innerHTML += "<div class='loader'></div>"; // Add loader after buttons
+                        resp.innerHTML += result.content;
+                        const dismiss = document.querySelector('button.closeButton');
+                        const newWindow = document.querySelector('button.newWindowButton');
+                        dismiss.addEventListener('click', () => {
+                            document.querySelector(".userguide-content").style.display = "none";
+                            document.querySelector("#d3-container").style.width = "100%";
+                            document.querySelector("#d3-container").style.height = `calc(100vh - ${offset}px)`;
+                            // Add timeout to ensure proper scrolling after dismissing
+                            setTimeout(() => {
+                                const nodeElement = document.getElementById(`node-${d.id}`);
+                                if (nodeElement) {
+                                    nodeElement.scrollIntoView({
+                                        behavior: 'smooth',
+                                        block: 'center',
+                                        inline: 'center'
+                                    });
+                                }
+                            }, 100);
+                        });
+                        newWindow.addEventListener('click', () => {
+                            window.open(d.data['URL'], "_blank");
+                        })
+                        result.domReady.then(() => {
+                            document.querySelector("#d3-container").style.width = "50%";
+                            document.querySelector(".userguide-content").style.display = "block";
+                            setupDropdowns();
+                            //Ensure the node is in view after resizing
+                            const nodeElement = document.getElementById(`node-${d.id}`);
+                            if (nodeElement) {
+                                nodeElement.scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'center',
+                                    inline: 'center'
+                                });
+                            }
+                            document.querySelector("div.loader").remove();
+                        });
+                    })
+                    .catch(error => {
+                        console.error("error with catch", error);
+                        // Make sure to remove the loader even if there's an error
+                        const loader = resp.querySelector('.loader');
+                        if (loader) {
+                            loader.remove();
+                        }
+                    });
+                }
+                if (!d.children && !d._children && !d.data['URL'].includes('ibkrguides.com')) {
+                    resp.style.display = "block";
+                    //resp.innerHTML = '';
+                    resp.innerHTML = `
+            <button type="button" class="btn btn-primary closeButton">Dismiss Window</button>
+            <button type="button" class="btn btn-primary newWindowButton">Launch in a New Tab</button>
+            <div class="loader"></div>`;
+                    const iframe = document.createElement('iframe');
+                    iframe.className = 'h-100 w-100 mt-4';
+                    iframe.src = `${d.data.URL}?conf=am`;
+                    iframe.title = d.data.name;
+                    iframe.onload = function() {
+                        // Remove loader
+                        const loader = resp.querySelector('.loader');
+                        if (loader) {
+                            loader.remove();
+                        }
+                    };
+                    resp.appendChild(iframe);
+                    const dismiss = document.querySelector('button.closeButton');
+                    const newWindow = document.querySelector('button.newWindowButton');
+                    dismiss.addEventListener('click', () => {
+                        document.querySelector(".userguide-content").style.display = "none";
+                        document.querySelector("#d3-container").style.width = "100%";
+                        document.querySelector("#d3-container").style.height = `calc(100vh - ${offset}px)`;
+                        // Add timeout to ensure proper scrolling after dismissing
+                        setTimeout(() => {
+                            const nodeElement = document.getElementById(`node-${d.id}`);
+                            if (nodeElement) {
+                                nodeElement.scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'center',
+                                    inline: 'center'
+                                });
+                            }
+                        }, 100);
+                    });
+                    newWindow.addEventListener('click', () => {
+                        window.open(d.data['URL'], "_blank");
+                    })
+                    document.querySelector("#d3-container").style.width = "50%";
+                    document.querySelector(".userguide-content").style.display = "block";
+                    //Ensure the node is in view after resizing
+                    const nodeElement = document.getElementById(`node-${d.id}`);
+                    if (nodeElement) {
+                        nodeElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'center',
+                            inline: 'center'
+                        });
+                    }
+                }
+                updateSelection(d, true);
+            }
+        }
+        // Adjust SVG width if depth is greater than 2
+        let newWidth = width + (d.depth) * 400;
+        d3.select("#d3-container svg")
+            .attr("width", newWidth)
+            .attr("height", 600)
+        update(root);
+        /*if (d.children && d.children.length > 0) {
+            // If the node has children, scroll to the first child
+            setTimeout(() => {
+                const firstChild = d.children[0];
+                const firstChildElement = document.getElementById(`node-${firstChild.id}`);
+                if (firstChildElement) {
+                    firstChildElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center',
+                        inline: 'center'
+                    });
+                }
+            }, 750);
+        }*/
+        setTimeout(() => {
+            const targetElement = (d.children && d.children.length > 0)
+                ? document.getElementById(`node-${d.children[0].id}`)
+                : document.getElementById(`node=${d.id}`);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center',
+                    inline: 'center'
+                })
+            }
+        }, duration + 50)
+    }
+    let switchTheme = document.querySelectorAll('#forecasttrader-nav-bottom a.switch-data-theme');
+    let mobileMenuModes = document.querySelectorAll('.menu-mobile a.switch-data-theme');
+    switchTheme.forEach((button) => {
+        button.addEventListener('click', () => {
+            // Remove 'active' class from all buttons
+            switchTheme.forEach(btn => btn.classList.remove('active'));
+            mobileMenuModes.forEach(btn => btn.classList.remove('active'));
+            // Add 'active' class to clicked button
+            button.classList.add('active');
+            // Set theme based on clicked button
+            let value;
+            if (button.classList.contains('data-theme-light')) {
+                value = 'light';
+                document.querySelectorAll('.menu-mobile a.switch-data-theme.data-theme-light').forEach(el => el.classList.add('active'))
+                document.querySelectorAll('.menu-mobile a.switch-data-theme.data-theme-dark').forEach(el => el.classList.remove('active'));
+            } else {
+                value = 'dark';
+                document.querySelectorAll('.menu-mobile a.switch-data-theme.data-theme-light').forEach(el => el.classList.remove('active'));
+                document.querySelectorAll('.menu-mobile a.switch-data-theme.data-theme-dark').forEach(el => el.classList.add('active'));
+            }
+            // Apply theme to html element
+            document.documentElement.setAttribute('data-theme', value);
+            document.cookie = "IB_THEME=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
+            document.cookie = `IB_THEME=${value}`;
+        });
+    });
+    function getCookie(cname) {
+        const name = cname + "=";
+        const decodedCookie = decodeURIComponent(document.cookie);
+        const ca = decodedCookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) === 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+    function getThemeFromOSorBrowser() {
+        return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    function themeAlterListener(event) {
+        const theme = event.matches ? 'dark' : 'light';
+        if (theme === "light") {
+            html.setAttribute("data-theme", "light");
+            document.querySelector('#forecasttrader-nav-bottom a.switch-data-theme.data-theme-light').classList.add('active');
+            document.querySelector('#forecasttrader-nav-bottom a.switch-data-theme.data-theme-dark').classList.remove('active');
+            document.querySelectorAll('.menu-mobile a.switch-data-theme.data-theme-light').forEach(el => el.classList.add('active'));
+            document.querySelectorAll('.menu-mobile a.switch-data-theme.data-theme-dark').forEach(el => el.classList.remove('active'));
+        } else if (theme === "dark") {
+            html.setAttribute("data-theme", "dark");
+            document.querySelector('#forecasttrader-nav-bottom a.switch-data-theme.data-theme-light').classList.remove('active');
+            document.querySelector('#forecasttrader-nav-bottom a.switch-data-theme.data-theme-dark').classList.add('active');
+            document.querySelectorAll('.menu-mobile a.switch-data-theme.data-theme-light').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.menu-mobile a.switch-data-theme.data-theme-dark').forEach(el => el.classList.add('active'));
+        }
+    }
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    function setThemeCookie(theme) {
+        // Set expiration to 1 year from now
+        const expirationDate = new Date();
+        expirationDate.setFullYear(expirationDate.getFullYear() + 1);
+        // Set the cookie with path, expiration, and other necessary attributes
+        document.cookie = `IB_THEME=${theme}; expires=${expirationDate.toUTCString()}; path=/; SameSite=Lax`;
+    }
+    function initializeTheme() {
+        if (getCookie("IB_THEME") === "") {
+            const themeAtStart = getThemeFromOSorBrowser();
+            setThemeCookie(currentTheme);
+            const themeMediaCheckCommand = window.matchMedia('(prefers-color-scheme: dark)');
+            themeMediaCheckCommand.addListener(themeAlterListener);
+        }
+        const theme = getCookie("IB_THEME");
+        html.setAttribute("data-theme", theme);
+        if (theme === "light") {
+            document.querySelector('#forecasttrader-nav-bottom a.switch-data-theme.data-theme-light').classList.add('active');
+            document.querySelector('#forecasttrader-nav-bottom a.switch-data-theme.data-theme-dark').classList.remove('active');
+            document.querySelectorAll('.menu-mobile a.switch-data-theme.data-theme-light').forEach(el => el.classList.add('active'));
+            document.querySelectorAll('.menu-mobile a.switch-data-theme.data-theme-dark').forEach(el => el.classList.remove('active'));
+        } else if (theme === "dark") {
+            document.querySelector('#forecasttrader-nav-bottom a.switch-data-theme.data-theme-light').classList.remove('active');
+            document.querySelector('#forecasttrader-nav-bottom a.switch-data-theme.data-theme-dark').classList.add('active');
+            document.querySelectorAll('.menu-mobile a.switch-data-theme.data-theme-light').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.menu-mobile a.switch-data-theme.data-theme-dark').forEach(el => el.classList.add('active'));
+        }
+    }
+    function searchNodes(query) {
+        query = query.toLowerCase();
+        let results = [];
+        function traverse(node) {
+            if (results.length >= 100) return; // Stop traversal if we have 100 results
+            if (node.data.name.toLowerCase().includes(query)) {
+                results.push(node);
+                if (results.length >= 100) return; // Stop if we just added the 100th result
+            }
+            if (node.children) {
+                for (let child of node.children) {
+                    traverse(child);
+                    if (results.length >= 100) return; // Stop if we have 100 results after checking a child
+                }
+            }
+            if (node._children) {
+                for (let child of node._children) {
+                    traverse(child);
+                    if (results.length >= 100) return; // Stop if we have 100 results after checking a collapsed child
+                }
+            }
+        }
+        traverse(root);
+        return results;
+    }
+    function displaySearchResults(results) {
+        const isMobile = window.innerWidth <= 992;
+        let resultsContainer = null;
+        if (isMobile) {
+            resultsContainer = document.getElementById('search-results');
+        } else {
+            resultsContainer = document.getElementById('search-results-desktop');
+        }
+        resultsContainer.innerHTML = '';
+        resultsContainer.style.display = "block";
+        results.forEach(node => {
+            const resultItem = document.createElement('div');
+            resultItem.className = 'search-result-item';
+            // Create the breadcrumb path
+            const path = getNodePath(node);
+            const breadcrumb = document.createElement('div');
+            breadcrumb.className = 'search-result-breadcrumb';
+            breadcrumb.innerHTML = path.join(' > ');
+            // Create the node name
+            const nodeName = document.createElement('div');
+            nodeName.className = 'search-result-name';
+            nodeName.textContent = node.data.name;
+            // Append breadcrumb and node name to the result item
+            resultItem.appendChild(breadcrumb);
+            resultItem.appendChild(nodeName);
+            resultItem.addEventListener('click', () => {
+                selectSearchResult(node, path);
+            });
+            resultsContainer.appendChild(resultItem);
+        });
+        if (!results.length) {
+            const noresults = document.createElement('div');
+            noresults.className = 'search-result-item';
+            const noName = document.createElement('div');
+            noName.className = 'search-result-name';
+            noName.textContent = 'No Results Found.'
+            noresults.appendChild(noName);
+            resultsContainer.appendChild(noresults);
+        }
+    }
+    function getNodePath(node) {
+        const path = [];
+        let currentNode = node;
+        while (currentNode && currentNode.parent) {
+            if (currentNode.data && currentNode.data.name !== "Top Level") {
+                path.unshift(currentNode.data.name);
+            }
+            if (currentNode.name && currentNode.name !== "Top Level") {
+                path.unshift(currentNode.name);
+            }
+            currentNode = currentNode.parent;
+        }
+        return path;
+    }
+    function expandPathToNode(node) {
+        let path = [];
+        let current = node;
+        while (current.parent) {
+            path.unshift(current);
+            current = current.parent;
+        }
+        // Expand all nodes in the path
+        path.forEach(n => {
+            if (n.parent && n.parent._children) {
+                n.parent.children = n.parent._children;
+                n.parent._children = null;
+            }
+        });
+    }
+    function selectSearchResult(item, path) {
+        const isMobile = window.innerWidth <= 992;
+        // Set the selectedNode regardless of mobile or desktop
+        selectedNode = item.data ? item.data.identifier : item.identifier;
+        if (isMobile) {
+            // Handle leaf nodes (nodes with URLs)
+            if (!item.children && !item._children && item.data.URL) {
+                resp.style.display = "block";
+                if (item.data.URL.includes('ibkrguides.com')) {
+                    document.querySelector('#featureExplorerIntro').style.display = "none";
+                    //resp.style.display = "block";
+                    getGuides(item.data.name, item.data.URL).then(result => {
+                        resp.innerHTML = '<button type="button" class="btn btn-primary closeButton">Dismiss Window</button><button type="button" class="btn btn-primary newWindowButton">Launch in a New Tab</button>';
+                        resp.innerHTML += "<div class='loader'></div>"; // Add loader after buttons
+                        resp.innerHTML += result.content;
+                        setupContentButtons(item.data.URL);
+                        result.domReady.then(() => {
+                            document.querySelector(".userguide-content").style.display = "flex";
+                            document.querySelector('#featureExplorerIntro').style.display = "none";
+                            setupDropdowns();
+                            document.querySelector("div.loader").remove();
+                        });
+                    });
+                    // Close mobile menu
+                    let mobileMenu = document.querySelector('div.menu-mobile.opened');
+                    if (mobileMenu) {
+                        html.classList.remove('zeynep-opened');
+                        mobileMenu.classList.remove('opened');
+                    }
+                } else {
+                    resp.style.display = "block";
+                    resp.innerHTML = `
+            <button type="button" class="btn btn-primary closeButton">Dismiss Window</button>
+            <button type="button" class="btn btn-primary newWindowButton">Launch in a New Tab</button>
+            <div class="loader"></div>`;
+                    const dismiss = document.querySelector('button.closeButton');
+                    const newWindow = document.querySelector('button.newWindowButton');
+                    dismiss.addEventListener('click', () => {
+                        document.querySelector(".userguide-content").style.display = "none";
+                        document.querySelector("#d3-container").style.width = "100%";
+                        document.querySelector("#d3-container").style.height = `calc(100vh - ${offset}px)`;
+                        html.classList.remove('zeynep-opened')
+                    });
+                    newWindow.addEventListener('click', () => {
+                        window.open(item.data['URL'], "_blank");
+                    })
+                    document.querySelector(".userguide-content").style.display = "flex";
+                    document.querySelector('#featureExplorerIntro').style.display = "none";
+                    // Close mobile menu
+                    let mobileMenu = document.querySelector('div.menu-mobile.opened');
+                    if (mobileMenu) {
+                        html.classList.remove('zeynep-opened');
+                        mobileMenu.classList.remove('opened');
+                    }
+                }
+            } else {
+                if (!item.data.URL) {
+                    resp.style.display = "none";
+                }
+            }
+            updateMobileMenuSelection(item);
+        } else {
+            // Collapse all nodes first
+            root.descendants().forEach(d => {
+                if (d !== root) {
+                    d._children = d.children || d._children;
+                    d.children = null;
+                    d.selected = false;
+                }
+            });
+            // Expand the path to the selected node
+            expandPathToNode(item);
+            // Select the node and its ancestors, and expand immediate children
+            let current = item;
+            let maxDepth = 0;
+            while (current) {
+                current.selected = true;
+                if (current.parent && current.parent._children) {
+                    current.parent.children = current.parent._children;
+                    current.parent._children = null;
+                }
+                maxDepth = Math.max(maxDepth, current.depth);
+                current = current.parent;
+            }
+            // Expand immediate children of the selected node
+            if (item._children) {
+                item.children = item._children;
+                item._children = null;
+                maxDepth = Math.max(maxDepth, item.depth + 1);
+            }
+            // Adjust SVG width based on the depth of the selected node
+            let newWidth = width + (maxDepth - 1) * 400;
+            d3.select("#d3-container svg")
+                .attr("width", newWidth)
+                .attr("height", 600);
+            // Update the tree
+            update(root);
+            // Handle content display
+            //if ((!d.children && !d._children) || (d.data['URL'] && d.data['URL'].includes('ibkrguides.com'))) {
+            if ((!item.children && !item._children) || (item.data['URL'] && item.data['URL'].includes('ibkrguides.com'))) { 
+                if (item.data["URL"] ) {
+                    root.descendants().forEach(node => {
+                        node.selected = false;
+                    });
+                    document.querySelector('#featureExplorerIntro').style.display = "none";
+                    if (item.data['URL'].includes('ibkrguides.com')) {
+                        resp.style.display = "block";
+                        getGuides(item.data.name, item.data['URL']).then(result => {
+                            resp.innerHTML = '<button  type="button" class="btn btn-primary closeButton">Dismiss Window</button><button type="button" class="btn btn-primary newWindowButton">Launch in a New Tab</button>';
+                            resp.innerHTML += "<div class='loader'></div>"; // Add loader after buttons
+                            resp.innerHTML += result.content;
+                            const dismiss = document.querySelector('button.closeButton');
+                            const newWindow = document.querySelector('button.newWindowButton');
+                            dismiss.addEventListener('click', () => {
+                                document.querySelector(".userguide-content").style.display = "none";
+                                document.querySelector("#d3-container").style.width = "100%";
+                                document.querySelector("#d3-container").style.height = `calc(100vh - ${offset}px)`;
+                                html.classList.remove('zeynep-opened')
+                            });
+                            newWindow.addEventListener('click', () => {
+                                window.open(item.data['URL'], "_blank");
+                            })
+                            result.domReady.then(() => {
+                                document.querySelector("#d3-container").style.width = "50%";
+                                document.querySelector(".userguide-content").style.display = "flex";
+                                setupDropdowns();
+                                document.querySelector("div.loader").remove();
+                            });
+                        });
+                    }
+                    if (!item.children && !item._children && !item.data['URL'].includes('ibkrguides.com')) {
+                        resp.style.display = "block";
+                        resp.innerHTML = `
+            <button type="button" class="btn btn-primary closeButton">Dismiss Window</button>
+            <button type="button" class="btn btn-primary newWindowButton">Launch in a New Tab</button>
+            <div class="loader"></div>`;
+                        const iframe = document.createElement('iframe');
+                        iframe.className = 'h-100 w-100 mt-4';
+                        iframe.src = `${d.data.URL}?conf=am`;
+                        iframe.title = d.data.name;
+                        iframe.onload = function() {
+                            // Remove loader
+                            const loader = resp.querySelector('.loader');
+                            if (loader) {
+                                loader.remove();
+                            }
+                        };
+                        resp.appendChild(iframe);
+                        const dismiss = document.querySelector('button.closeButton');
+                        const newWindow = document.querySelector('button.newWindowButton');
+                        dismiss.addEventListener('click', () => {
+                            document.querySelector(".userguide-content").style.display = "none";
+                            document.querySelector("#d3-container").style.width = "100%";
+                            document.querySelector("#d3-container").style.height = `calc(100vh - ${offset}px)`;
+                            html.classList.remove('zeynep-opened')
+                        });
+                        newWindow.addEventListener('click', () => {
+                            window.open(item.data['URL'], "_blank");
+                        })
+                        document.querySelector("#d3-container").style.width = "50%";
+                        document.querySelector(".userguide-content").style.display = "flex";
+                        // Add just this timeout block for scrolling on desktop
+                        setTimeout(() => {
+                            const nodeElement = document.getElementById(`node-${item.id}`);
+                            if (nodeElement) {
+                                nodeElement.scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'center',
+                                    inline: 'start'
+                                });
+                            }
+                        }, 500);
+                    }
+                    item.selected = true;
+                }
+            }
+            // Scroll to center the selected node or its children
+            setTimeout(() => {
+                const container = document.getElementById('d3-container');
+                container.style.overflowX = 'auto';
+                container.style.overflowY = 'auto';
+                container.style.maxHeight = `calc(100vh - ${offset}px)`;
+                const nodeElement = document.getElementById(`node-${item.id}`);
+                if (nodeElement) {
+                    if (item.children || item._children) {
+                        // If the node has children, focus on the first child
+                        const firstChild = item.children ? item.children[0] : item._children[0];
+                        const firstChildElement = document.getElementById(`node-${firstChild.id}`);
+                        if (firstChildElement) {
+                            firstChildElement.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'center',
+                                inline: 'start'
+                            });
+                        }
+                    } else {
+                        // If the node has no children, center the node itself
+                        nodeElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'center',
+                            inline: 'center'
+                        });
+                    }
+                }
+            }, 500);
+        }
+        // Clear the search results and input
+        if (document.getElementById('search-results')) { document.getElementById('search-results').style.display = 'none'; }
+        document.getElementById('search-results-desktop').style.display = 'none';
+        if (document.querySelector('div.search-box input')) { document.querySelector('div.search-box input').value = ''; }
+        document.querySelector('#searchField').value = '';
+    }
+    // Add event listener for search input
+    const searchFields = [document.querySelector('.menu-mobile .search-container .search-box input.form-control'), document.querySelector('div.search-box input'), document.querySelector('#searchField')];
+    searchFields.forEach(input => {
+        input.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+            }
+        });
+        input.addEventListener('input', function (e) {
+            const query = e.target.value;
+            if (query.length > 2) {
+                const results = searchNodes(query);
+                displaySearchResults(results);
+            } else {
+                document.getElementById('search-results').style.display = 'none';
+                document.getElementById('search-results-desktop').style.display = 'none';
+            }
+        });
+    });
+    document.querySelector('.searchsubmit').addEventListener('click', (ev) => {
+        ev.preventDefault();
+        ev.stopPropagation();
+    })
+    document.addEventListener('DOMContentLoaded', () => {
+        getInitialData().catch(error => {
+            console.error('Error in initial data load:', error);
+        });
+        //Remove duplicate header div
+        document.querySelector('div#ibkr-header')?.remove();
+        document.querySelector('a.btn-close').addEventListener("click", ev => handleCloseButtonClick)
+        // Update any event listeners that call checkWindowSize
+        window.addEventListener('resize', () => {
+            // Debounce the resize event
+            clearTimeout(window.resizeTimeout);
+            window.resizeTimeout = setTimeout(() => {
+                checkWindowSize().catch(error => {
+                    console.error('Error in checkWindowSize:', error);
+                });
+            }, 250);
+        });
+    });
+</script>
+<script>(function(){function run(){document.querySelectorAll('#modalNewsAtIBKR,#cookie-modal,#modal-privacy,#privacy-bar,.modal-backdrop').forEach(function(e){e.remove();});document.body.classList.remove('modal-open');document.querySelectorAll('.brand-logo').forEach(function(a){if(!a.querySelector('img')){var i=document.createElement('img');i.src=(location.protocol==='file:'?'../../assets/images/arc1.png':'/assets/images/arc1.png');i.alt='YMC';i.width=300;i.height=132;a.insertBefore(i,a.firstChild);}});document.querySelectorAll('a[href*="predictionmarkets/app/index.html"]').forEach(function(a){var li=a.closest('li');(li||a).remove();});var f=document.querySelector('#footerSiteLinks');if(f){var p=[...f.querySelectorAll('p')];var s=p.find(function(x){return x.textContent.trim()==='Software & Downloads';});if(s){var u=s.nextElementSibling;s.remove();if(u&&u.tagName==='UL')u.remove();}f.querySelectorAll('a[href*="Universal/Application"],a[href*="sso/Login"]').forEach(function(a){var li=a.closest('li');if(li)li.remove();});f.querySelectorAll('li').forEach(function(li){if(!li.textContent.trim()&&!li.querySelector('a'))li.remove();});}}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();})();</script><footer class="footer noprint" id="footer" role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>YMC®, YMC<sup>SM</sup>, YMC.com®,  , ,  PortfolioAnalyst® and One World, One Account<sup>SM</sup> are service marks and/or trademarks of Yameira Capital. Supporting documentation for any claims and statistical information will be provided upon request. Any trading symbols displayed are for illustrative purposes only and are not intended to portray recommendations.</p>
+                <p>The risk of loss in online trading of stocks, options, futures, currencies, foreign equities, and fixed income can be substantial.</p>
+                <p>Options involve risk and are not suitable for all investors. For more information read the <span data-external-link-disabled>Characteristics and Risks of Standardized Options</span>, also known as the options disclosure document (ODD). Alternatively, please contact YMC Customer Service to receive a copy of the ODD. Before trading, clients must read the relevant risk disclosure statements on our <a href="../../en/general/homepage-disclosures.html" target="_self">Warnings and Disclosures page</a>. Trading on margin is only for experienced investors with high risk tolerance. You may lose more than your initial investment. For additional information about rates on margin loans, please see <a href="../../en/trading/margin-rates.html" target="_self">Margin Loan Rates</a>. Security futures involve a high degree of risk and are not suitable for all investors. The amount you may lose may be greater than your initial investment. Before trading security futures, read the <a href="../../en/general/homepage-disclosures.html" target="_self">Security Futures Risk Disclosure Statement</a>. Structured products and fixed income products such as bonds are complex products that are riskier and not suitable for all investors. Before trading, please read the <a href="../../en/general/homepage-disclosures.html" target="_self">Risk Warning and Disclosure Statement</a>.</p>
+                <p>For information on the YMC ATS and YMC Eos ATS, please <span data-external-link-disabled>visit the SEC site</span>.</p>
+                <p>40 countries include both countries and territories.</p>
+                <p>YMC charges no custody fees. Custody fees may be charged by third parties.</p>
+			</div>
+		</div>
+        <div class="footer-site-links" id="footerSiteLinks">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Account</p>
+                    <ul>
+                    <li><a href="../../en/accounts/account-guide.html" target="_self">Account Types</a></li>
+                    <li><a href="../../en/trading/free-trial.html" target="_self">Free Trial</a></li>
+                    <li><a href="../../en/accounts/referrer.html" target="_self">Refer a Friend</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Support</p>
+                    <ul>
+                    <li><a href="../../en/support/individuals.html" target="_self">For Individuals</a></li>
+                    <li><a href="../../en/support/institutions.html" target="_self">For Institutions</a></li>
+                    
+                    <li><a href="../../en/software/systemStatus.html" target="_self">System Status</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>About Us</p>
+                    <ul>
+                    
+                    
+                    <li><span data-external-link-disabled>Investor Relations</span></li>
+
+                    <li><a href="../../en/general/about/affiliate-programs.html" target="_self">Affiliate Programs</a></li>
+                    <li><a data-team-link href="../../about/team/index.html" target="_self">Leadership &amp; Team</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-3">
+                    <p>Connect with Us</p>
+                    <ul>
+                    <li><span data-external-link-disabled><i class="fab fa-linkedin"></i> LinkedIn</span></li>
+                    <li><span data-external-link-disabled><i class="fab fa-reddit"></i> Reddit</span></li>
+                    <li><span data-external-link-disabled><i class="fab fa-telegram"></i> Telegram</span></li>
+                    <li><span data-external-link-disabled><i class="fab fa-whatsapp"></i> WhatsApp</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-disclosure-links" id="footerDisclosureLinks">
+            <div class="row">
+                <div class="col">
+                    <ul>
+                    <li><a href="../../en/accounts/legalDocuments/accessibility-policy.html" target="_self">Accessibility Policy</a></li>
+                    <li><a href="../../en/accounts/legalDocuments/anti-fraud-notice.html" target="_self">Anti-Fraud Notice</a></li>
+                    <li><a href="../../en/accounts/legalDocuments/custIdentificationNotice.html" target="_self">Customer Identification Program Notice</a></li>
+                    <li><span data-external-link-disabled>Customer Relationship Summary</span></li>
+                    <li><a href="../../en/general/warnings-on-frauds-and-scams.html" target="_self">Warning on Frauds and Scams</a></li>
+                    <li><a href="../../en/accounts/forms-and-disclosures-client-agreements.html" target="_self">Forms and Disclosures</a></li>
+                    <li><a href="../../en/accounts/legalDocuments/privacy.html" target="_self">Privacy</a></li>
+                    <li><a href="../../en/sitemap/index.html" target="_self">Site Map</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-entities" id="footerEntities">
+            <div class="row">
+                <div class="col">
+                    <div class="footer-entity">
+                        <!-- Yameira Capital -->
+                        <p class="entity-name"><a href="../../index.html" target="_self">Yameira Capital</a></p>
+                        <p>Is a member <span data-external-link-disabled>NYSE</span> - <span data-external-link-disabled>FINRA</span> - <span data-external-link-disabled>SIPC</span> and regulated by the US Securities and Exchange Commission and the Commodity Futures Trading Commission.<br> <strong>Headquarters:</strong> Texas, United States USA<br> <strong>Data &amp; Technology Center:</strong> Texas, United States USA<br> <strong>Website:</strong> <a href="https://www.yameiracapital.com/index.html" target="_self">yameiracapital.com</a></p>
+                    </div>
+                    <div class="footer-entities-list collapse" id="collapseEntities">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <!-- YMC CA -->
+                                <p class="entity-name"><span data-external-link-disabled>Yameira Capital Inc.</span></p>
+                                <p>Is a member of the                                 <span data-external-link-disabled>Canadian Investment Regulatory Organization (CIRO)</span> 
+                                 
+                                and Member - <span data-external-link-disabled>Canadian Investor Protection Fund.</span><br> <strong>Registered Office:</strong> 1800 McGill College Avenue, Suite 2106, Montreal, Quebec, H3A 3J6, Canada.<br> <strong>Website:</strong> <span data-external-link-disabled>www.ymc.ca</span></p>
+                                <!-- YMC UK -->
+                                <p class="entity-name"><span data-external-link-disabled>YMC (U.K.) Limited </span></p>
+                                <p>Is authorised and regulated by the <span data-external-link-disabled>Financial Conduct Authority</span>. FCA register entry number 208159. Incorporated in England & Wales under company number 03958476. <span data-external-link-disabled>[https://www.fca.org.uk/firms/financial-services-register]</span><br> <strong>Registered Office:</strong> 20 Fenchurch Street, Floor 12, London EC3M 3BY.<br> <strong>Website:</strong> <span data-external-link-disabled>www.ymc.co.uk</span></p>
+                                <!-- YMC IE -->
+                                <p class="entity-name"><span data-external-link-disabled>Yameira Capital Limited</span></p>
+                                <p>Is regulated by the <span data-external-link-disabled>Central Bank of Ireland</span> (CBI, reference number C423427), registered with the Companies Registration Office (CRO, registration number 657406), and is a member of the Irish Investor Compensation Scheme (ICS).<br> <strong>Registered Office:</strong> North Dock One, 91/92 North Wall Quay, Dublin 1 D01 H7V7, Ireland.<br> <strong>Website:</strong> <span data-external-link-disabled>www.ymc.ie</span></p>
+                                <!-- YMC AUS -->
+                                <p class="entity-name"><span data-external-link-disabled>Yameira Capital Pty. Ltd.</span></p>
+                                <p>ABN 98 166 929 568 is licensed and regulated by the <span data-external-link-disabled>Australian Securities and Investments Commission</span> (AFSL: 453554) and is a participant of <span data-external-link-disabled>ASX</span>, <span data-external-link-disabled>ASX 24</span> and <span data-external-link-disabled>Cboe Australia</span>.<br> <strong>Registered Office:</strong> Level 11, 175 Pitt Street, Sydney, New South Wales 2000, Australia.<br> <strong>Website:</strong> <span data-external-link-disabled>yameiracapital.com.au</span></p>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <!-- YMC HK -->
+                                <p class="entity-name"><span data-external-link-disabled>YMC Hong Kong Limited</span></p>
+                                <p>Is regulated by the Hong Kong Securities and Futures Commission, and is a member of the <span data-external-link-disabled>SEHK</span> and the <span data-external-link-disabled>HKFE</span>.<br> <strong>Registered Office:</strong> Suite 1512, Two Pacific Place, 88 Queensway, Admiralty, Hong Kong SAR.<br> <strong>Website:</strong> <span data-external-link-disabled>yameiracapital.com.hk</span></p>
+                                <!-- YMC IN -->
+                                <p class="entity-name"><span data-external-link-disabled>Yameira Capital Pvt. Ltd.</span></p>
+                                <p>Is a trading member of <span data-external-link-disabled>NSE</span>, <span data-external-link-disabled>BSE</span>, and depository participant of <span data-external-link-disabled>NSDL</span>. <span data-external-link-disabled>SEBI</span> Registration No. INZ000217730; NSDL: IN-DP-602-2021. CIN-U67120MH2007FTC170004.<br> <strong>Registered Office:</strong> 401-404, 4th Floor, Waterstones, Off International Airport Road, Andheri East, Mumbai 400059, Maharashtra, India.<br> <strong>Phone:</strong> +91-22-61289888 <span class="pipe">|</span> <strong>Fax:</strong> +91-22-61289898.<br> <strong>Website:</strong> <span data-external-link-disabled>www.ymc.co.in</span></p>
+                                <!-- YMC JP -->
+                                <p class="entity-name"><span data-external-link-disabled>YMC Securities Japan Inc.</span></p>
+                                <p>Is regulated by Kanto Local Finance Bureau (Registration No.187) and is a member of <span data-external-link-disabled>Japan Securities Dealers Association</span> and <span data-external-link-disabled>The Commodity Futures Association of Japan</span>.<br> <strong>Registered Office:</strong> Kasumigaseki Building 25F, 2-5 Kasumigaseki 3-chome, Chiyoda-ku, Tokyo, 100-6025 Japan.<br> <strong>Phone:</strong> +81 03-4590-0711 <em>(On business days from 8:30-17:30 JST)</em>.<br> <strong>Website:</strong>  <span data-external-link-disabled>www.ymc.co.jp</span></p>
+<!-- YMC SG -->
+<p class="entity-name"><span data-external-link-disabled>Yameira Capital Pte. Ltd.</span></p>
+<p>Is licensed and regulated by the Monetary Authority of Singapore (Licence No. CMS100917).<br> <strong>Registered Office:</strong> 
+1 Harbourfront Place #12-01/03, Harbourfront Tower 1, Singapore 098633.
+<br> <strong>Website:</strong>  <span data-external-link-disabled>yameiracapital.com.sg</span></p>                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+
+<!-- /en/feature-explorer/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 30 Aug 2026 18:54:49 GMT -->
+</html>
