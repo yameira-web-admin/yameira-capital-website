@@ -3910,7 +3910,7 @@ function debounce(func, delay) {
   });
   let page_id = 65419;
   $.ajax({
-    url: "https://interactivebrokers.com/webrest/relpages/pages-list-by-id?fileId="+page_id,
+    url: "#"+page_id,
     type: "GET",               
     dataType: "json",           
     success: function(response) {

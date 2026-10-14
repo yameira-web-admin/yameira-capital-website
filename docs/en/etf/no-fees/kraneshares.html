@@ -2684,7 +2684,7 @@ In addition to investments in these ETFs, KGRO may invest up to 15% of its net a
   });
   let page_id = 48428;
   $.ajax({
-    url: "https://interactivebrokers.com/webrest/relpages/pages-list-by-id?fileId="+page_id,
+    url: "#"+page_id,
     type: "GET",               
     dataType: "json",           
     success: function(response) {

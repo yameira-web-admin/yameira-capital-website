@@ -864,7 +864,7 @@ document.addEventListener('DOMContentLoaded', function(){
 				</div>
 			</div>
 			<div class="bandaid-skeleton" id="bandaidSkeleton">
-				<span class="visually-hidden">Loading prediction market dataâ€¦</span>
+				<span class="visually-hidden">Loading prediction market dataâ€?/span>
 				<span class="bandaid-skeleton-pill" aria-hidden="true"></span>
 			</div>
 		</div>
@@ -2231,7 +2231,7 @@ $(function() {
     <div class="container">
     	<div class="row">
         	<div class="col">
-						<form action="https://interactivebrokers.com/en/index.php" method="get">
+						<form action="#" method="get">
 			 <h4>Shortable Bonds for Switzerland </h4>
 <div class='row'><div class='col'><p>This list is indicative only and subject to change. All short sale orders are subject to approval by YMC.</p>
 <p>To search for shortable bonds, enter a symbol in the search box or click on an alphabetical range in the table below.</p></div></div><div class='row'><div class='col-xs-12 col-sm-12 col-md-6 col-lg-6'><input type='text' name='key' name='KeySearch' id='KeySearch' placeholder='Key Search'>
@@ -2533,7 +2533,7 @@ $(function() {
   });
   let page_id = 4586;
   $.ajax({
-    url: "https://interactivebrokers.com/webrest/relpages/pages-list-by-id?fileId="+page_id,
+    url: "#"+page_id,
     type: "GET",               
     dataType: "json",           
     success: function(response) {

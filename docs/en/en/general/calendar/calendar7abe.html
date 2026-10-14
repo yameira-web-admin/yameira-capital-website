@@ -1124,7 +1124,7 @@ a.fc-more {
 				</div>
 			</div>
 			<div class="bandaid-skeleton" id="bandaidSkeleton">
-				<span class="visually-hidden">Loading prediction market dataâ€¦</span>
+				<span class="visually-hidden">Loading prediction market dataâ€?/span>
 				<span class="bandaid-skeleton-pill" aria-hidden="true"></span>
 			</div>
 		</div>
@@ -2526,7 +2526,7 @@ $(function() {
                         <div class="col-12 col-md-6 col-lg-5 btn-group">
                             <select id="event-filter" class="form-select" aria-label="event-filter" title="event-filter">
                                 <option value="all">Show All</option>
-                                <option value="" disabled >â€”  Expirations - Equities Futures â€” </option>
+                                <option value="" disabled >â€? Expirations - Equities Futures â€?</option>
                                 <option value="ibc-expiration-1">VIX Futures (CBF)</option>
                                 <option value="ibc-expiration-2">Equity and Index Options Expiration (OCC)</option>
                                 <option value="ibc-expiration-3">AM Settled Index Options Expiration (OCC)</option>
@@ -2541,7 +2541,7 @@ $(function() {
                                 <option value="ibc-expiration-17">DAX Index (EUX)</option>
                                 <option value="ibc-expiration-18">KOSPI Index (KFE)</option>
                                 <option value="ibc-expiration-19">ASX 200 Mini Index (SFE)</option>
-                                <option value="ibc-expiration" disabled >â€” Expirations - Futures â€” </option>
+                                <option value="ibc-expiration" disabled >â€?Expirations - Futures â€?</option>
                                 <option value="ibc-expiration-6">WTI Crude Futures (CME)</option>
                                 <option value="ibc-expiration-23">SONIA (Sterling)</option>
                                 <option value="ibc-expiration-24">SARON (Swiss)</option>
@@ -2551,7 +2551,7 @@ $(function() {
                                 <option value="ibc-expiration-22">Secured Overnight Financing Rate (SOFR)</option>
                                 <option value="ibc-expiration-16">Euro BOBL (EUX)</option>
                                 <option value="ibc-expiration-20">Euro Bund (EUX)</option>
-                                <option value="" disabled >â€” Exchange Holidays â€”</option>
+                                <option value="" disabled >â€?Exchange Holidays â€?/option>
                                 <option value="ibc-region-am">Americas Exchange Holidays</option>
                                 <option value="ibc-region-eu">EMEA Exchange Holidays</option>
                                 <option value="ibc-region-ap">Asia-Pacific Exchange Holidays</option>
@@ -2934,7 +2934,7 @@ $(function() {
   });
   let page_id = 45654;
   $.ajax({
-    url: "https://interactivebrokers.com/webrest/relpages/pages-list-by-id?fileId="+page_id,
+    url: "#"+page_id,
     type: "GET",               
     dataType: "json",           
     success: function(response) {

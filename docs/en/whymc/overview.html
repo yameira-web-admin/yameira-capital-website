@@ -3870,7 +3870,7 @@ font-size: 1.125rem;
   });
   let page_id = 1338;
   $.ajax({
-    url: "https://interactivebrokers.com/webrest/relpages/pages-list-by-id?fileId="+page_id,
+    url: "#"+page_id,
     type: "GET",               
     dataType: "json",           
     success: function(response) {

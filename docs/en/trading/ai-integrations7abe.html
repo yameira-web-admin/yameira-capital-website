@@ -3349,7 +3349,7 @@ box-shadow: 0 4px 14px 0 rgba(0, 174, 255, 0.06), 0 5.96px 28.88px 0 rgba(107, 7
   });
   let page_id = 76662;
   $.ajax({
-    url: "https://interactivebrokers.com/webrest/relpages/pages-list-by-id?fileId="+page_id,
+    url: "#"+page_id,
     type: "GET",               
     dataType: "json",           
     success: function(response) {

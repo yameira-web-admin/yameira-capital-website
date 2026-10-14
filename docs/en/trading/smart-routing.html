@@ -2625,7 +2625,7 @@ h2, h3, h4, h5, h6 {color:#000;}
   });
   let page_id = 1685;
   $.ajax({
-    url: "https://interactivebrokers.com/webrest/relpages/pages-list-by-id?fileId="+page_id,
+    url: "#"+page_id,
     type: "GET",               
     dataType: "json",           
     success: function(response) {

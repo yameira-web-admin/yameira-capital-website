@@ -1129,7 +1129,7 @@ $(document).ready(function() {
 				</div>
 			</div>
 			<div class="bandaid-skeleton" id="bandaidSkeleton">
-				<span class="visually-hidden">Loading prediction market dataâ€¦</span>
+				<span class="visually-hidden">Loading prediction market dataâ€?/span>
 				<span class="bandaid-skeleton-pill" aria-hidden="true"></span>
 			</div>
 		</div>
@@ -2690,20 +2690,20 @@ $(function() {
     sibling.addEventListener('mouseenter', () => {
       // Revert highlighted tile
       defaultHovered.classList.add('reverted');
-      // Change highlighted tile's button: primary â†’ tertiary outlined
+      // Change highlighted tile's button: primary â†?tertiary outlined
       defaultButton.classList.remove('btn-primary');
       defaultButton.classList.add('btn-default', 'btn-outline');
-      // Change hovered tile's button: tertiary outlined â†’ primary
+      // Change hovered tile's button: tertiary outlined â†?primary
       siblingButton.classList.remove('btn-default', 'btn-outline');
       siblingButton.classList.add('btn-primary');
     });
     sibling.addEventListener('mouseleave', () => {
       // Restore highlighted tile
       defaultHovered.classList.remove('reverted');
-      // Restore highlighted tile's button: tertiary outlined â†’ primary
+      // Restore highlighted tile's button: tertiary outlined â†?primary
       defaultButton.classList.add('btn-primary');
       defaultButton.classList.remove('btn-default', 'btn-outline');
-      // Restore hovered tile's button: primary â†’ tertiary outlined
+      // Restore hovered tile's button: primary â†?tertiary outlined
       siblingButton.classList.add('btn-default', 'btn-outline');
       siblingButton.classList.remove('btn-primary');
     });
@@ -2994,7 +2994,7 @@ $(function() {
   });
   let page_id = 58758;
   $.ajax({
-    url: "https://interactivebrokers.com/webrest/relpages/pages-list-by-id?fileId="+page_id,
+    url: "#"+page_id,
     type: "GET",               
     dataType: "json",           
     success: function(response) {

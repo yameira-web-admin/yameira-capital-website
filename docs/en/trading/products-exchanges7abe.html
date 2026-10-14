@@ -2695,7 +2695,7 @@ Funds are not available to residents of the U.S., Canada, Iran, North Korea, Lib
   });
   let page_id = 57700;
   $.ajax({
-    url: "https://interactivebrokers.com/webrest/relpages/pages-list-by-id?fileId="+page_id,
+    url: "#"+page_id,
     type: "GET",               
     dataType: "json",           
     success: function(response) {

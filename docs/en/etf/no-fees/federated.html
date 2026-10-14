@@ -2547,7 +2547,7 @@ Credit ratings pertain only to the securities in the portfolio and do not protec
   });
   let page_id = 57463;
   $.ajax({
-    url: "https://interactivebrokers.com/webrest/relpages/pages-list-by-id?fileId="+page_id,
+    url: "#"+page_id,
     type: "GET",               
     dataType: "json",           
     success: function(response) {

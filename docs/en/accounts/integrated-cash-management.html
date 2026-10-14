@@ -2852,7 +2852,7 @@ c3.297-0.744,8.105-1.136,11.3-1.136c3.194,0,8.002,0.393,11.3,1.137v4.949C31.459,
   });
   let page_id = 57367;
   $.ajax({
-    url: "https://interactivebrokers.com/webrest/relpages/pages-list-by-id?fileId="+page_id,
+    url: "#"+page_id,
     type: "GET",               
     dataType: "json",           
     success: function(response) {

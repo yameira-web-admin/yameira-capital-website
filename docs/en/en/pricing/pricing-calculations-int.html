@@ -869,7 +869,7 @@ document.addEventListener('DOMContentLoaded', function(){
 				</div>
 			</div>
 			<div class="bandaid-skeleton" id="bandaidSkeleton">
-				<span class="visually-hidden">Loading prediction market dataâ€¦</span>
+				<span class="visually-hidden">Loading prediction market dataâ€?/span>
 				<span class="bandaid-skeleton-pill" aria-hidden="true"></span>
 			</div>
 		</div>
@@ -2266,7 +2266,7 @@ $(function() {
         <div class="row">
             <div class="col-12">
                 <!-- PRICING CALCULATIONS BODY -->
-    							<p>Yameira Capital (YMC) follows the steps listed in the Calculations section below to calculate the daily interest payable or receivable on cash balances. Yameira Capital will combine, where possible, the balances held across multiple account segments of the integrated account. However, balances across multiple Yameira Capital accounts will not be consolidated. In the event you hold an account with Yameira Capital Canada or Yameira Capital Securities Japan, the calculation will be EndingSettledCash â€“ ShortStockCollateralValue only, as there is only one account segment.</p>
+    							<p>Yameira Capital (YMC) follows the steps listed in the Calculations section below to calculate the daily interest payable or receivable on cash balances. Yameira Capital will combine, where possible, the balances held across multiple account segments of the integrated account. However, balances across multiple Yameira Capital accounts will not be consolidated. In the event you hold an account with Yameira Capital Canada or Yameira Capital Securities Japan, the calculation will be EndingSettledCash â€?ShortStockCollateralValue only, as there is only one account segment.</p>
                 <br>
                 <br>
                 <!-- BEGIN ACCORDION SET -->
@@ -2291,7 +2291,7 @@ $(function() {
                                         <li>AdjustmentForSecuritiesDeficit</li>
                                         </ul>
                                         <p>The cash balances are reported on the <i>Daily Statement</i> under <i>Ending Settled Cash</i>. The commodity risk margin requirement is the Maintenance Margin Requirement as reported on the daily <i>Margin Report</i> minus the total commodity option value. The AdjustmentForSecuritiesDeficit is calculated as follows:</p>
-                                        <p><em>Minimum(-Minimum(EndingSettledCash_Securities + EndingSettledCash_IBUKL,0), EndingSettledCash_Commodities â€“ CommodityRiskMargin)</em></p>
+                                        <p><em>Minimum(-Minimum(EndingSettledCash_Securities + EndingSettledCash_IBUKL,0), EndingSettledCash_Commodities â€?CommodityRiskMargin)</em></p>
                                         <p>The purpose of the AdjustmentForSecuritiesDeficit is to determine the value of the excess commodities funds which will be used to offset negative  balances in the securities and IBUKL segments.</p>
                                         <p>The collateral balance per short stock is calculated by multiplying the prior day's closing price by an adjustment factor based on the currency, rounding this value up, then multiplying by the number of shares.</p>
                                         <p>For example, the collateral balance on a USD-denominated security would be:</p>
@@ -2302,28 +2302,28 @@ $(function() {
 											<table cellspacing="0" cellpadding="0" border="0" width="100%" class="table table-striped table-bordered">
 											<tbody>
 											<tr>
-											<td align="left" valign="middle"><em>USD-denominated stock â€“ multiply by 102%, round up to nearest 1.00</em></td>
+											<td align="left" valign="middle"><em>USD-denominated stock â€?multiply by 102%, round up to nearest 1.00</em></td>
 											</tr>
 											<tr>
-											<td align="left" valign="middle"><em>CAD-denominated stock â€“ multiply by 102%, round up to nearest 1.00</em></td>
+											<td align="left" valign="middle"><em>CAD-denominated stock â€?multiply by 102%, round up to nearest 1.00</em></td>
 											</tr>
 											<tr>
-											<td align="left" valign="middle"><em>EUR-denominated stock â€“ multiply by 105%, round up to nearest 0.01</em></td>
+											<td align="left" valign="middle"><em>EUR-denominated stock â€?multiply by 105%, round up to nearest 0.01</em></td>
 											</tr>
 											<tr>
-											<td align="left" valign="middle"><em>CHF-denominated stock â€“ multiply by 105%, round up to nearest 0.01</em></td>
+											<td align="left" valign="middle"><em>CHF-denominated stock â€?multiply by 105%, round up to nearest 0.01</em></td>
 											</tr>
 											<tr>
-											<td align="left" valign="middle"><em>GBP-denominated stock â€“ multiply by 105%, round up to nearest 0.01</em></td>
+											<td align="left" valign="middle"><em>GBP-denominated stock â€?multiply by 105%, round up to nearest 0.01</em></td>
 											</tr>
 											<tr>
-											<td align="left" valign="middle"><em>SEK-denominated stock â€“ multiply by 105%, round up to nearest 0.01</em></td>
+											<td align="left" valign="middle"><em>SEK-denominated stock â€?multiply by 105%, round up to nearest 0.01</em></td>
 											</tr>
 											<tr>
-											<td align="left" valign="middle"><em>AUD-denominated stock â€“ multiply by 105%, round up to nearest 0.01</em></td>
+											<td align="left" valign="middle"><em>AUD-denominated stock â€?multiply by 105%, round up to nearest 0.01</em></td>
 											</tr>
 											<tr>
-											<td align="left" valign="middle"><em>HKD-denominated stock â€“ multiply by 105%, round up to nearest 0.01</em></td>
+											<td align="left" valign="middle"><em>HKD-denominated stock â€?multiply by 105%, round up to nearest 0.01</em></td>
 											</tr>
 											</tbody>
 											</table>
@@ -2339,13 +2339,13 @@ $(function() {
                                         <li>Settled Short Cash (370,000) USD </li>
                                         </ul>
                                         <p>Calculate the USD-equivalent of the EUR balance = 370,000 x 1.2 = 444,000</p>
-                                        <p> Calculate the USD NAV = 444,000 â€“ 370,000 = 74,000</p>
+                                        <p> Calculate the USD NAV = 444,000 â€?370,000 = 74,000</p>
                                         <p>As the account would have NAV less than USD 100,000, a proportionate amount of interest would be paid on the long EUR cash balance. Interest would be debited on the short USD cash balance. </p>
                                         <br>
                                         <h4>Step 3</h4>
                                         <p>YMC calculates an Adjusted Cash Balance for the Securities and IBUKL segments as well an Adjusted Cash Balance for the Commodity segment. This is done using the following formula:</p>
-                                        <p><em>AdjustedCashSecurities+IBUKL= EndingSettledCash_Securities + AdjustmentForSecuritiesDeficit + EndingSettledCash_IBUKL â€“ ShortStockCollateralValue </em></p>
-                                        <p><em>AdjustedCashCommodities = EndingSettledCash_Commodities â€“ CommodityRiskMargin - AdjustmentForSecuritiesDeficit</em></p>
+                                        <p><em>AdjustedCashSecurities+IBUKL= EndingSettledCash_Securities + AdjustmentForSecuritiesDeficit + EndingSettledCash_IBUKL â€?ShortStockCollateralValue </em></p>
+                                        <p><em>AdjustedCashCommodities = EndingSettledCash_Commodities â€?CommodityRiskMargin - AdjustmentForSecuritiesDeficit</em></p>
                                         <br>
                                         <h4>Step 4</h4>
                                         <p>YMC will then determine how much of the AdjustedCashSecurities+IBUKL balance should be applied to each rate tier (see <a href="../accounts/fees/pricing-interest-rates.html" target="_self" class="link-generic">tier tables</a>). Finally, we calculate the interest using the applicable rates (also from the <a href="../accounts/fees/pricing-interest-rates.html" target="_self" class="link-generic">tier tables</a>):<sup> 3</sup></p>
@@ -2728,7 +2728,7 @@ $(function() {
   });
   let page_id = 50175;
   $.ajax({
-    url: "https://interactivebrokers.com/webrest/relpages/pages-list-by-id?fileId="+page_id,
+    url: "#"+page_id,
     type: "GET",               
     dataType: "json",           
     success: function(response) {

@@ -870,7 +870,7 @@ document.addEventListener('DOMContentLoaded', function(){
 				</div>
 			</div>
 			<div class="bandaid-skeleton" id="bandaidSkeleton">
-				<span class="visually-hidden">Loading prediction market dataâ€¦</span>
+				<span class="visually-hidden">Loading prediction market dataâ€?/span>
 				<span class="bandaid-skeleton-pill" aria-hidden="true"></span>
 			</div>
 		</div>
@@ -2408,7 +2408,7 @@ p, li, th, td, input, select, textarea {
               </thead>
                 <tbody>
                   <tr>
-                    <td align="left" valign="middle" class="tier-set">â‰¤ 1,000,000,000</td>
+                    <td align="left" valign="middle" class="tier-set">â‰?1,000,000,000</td>
                     <td align="left" valign="middle"><span class="text-price">0.20</span> basis point<sup> 3</sup> * Trade Value <sup> 4</sup></td>
                   </tr>
                   <tr>
@@ -2716,7 +2716,7 @@ and consumed outside of Singapore. YMC does not give tax advice, please consult 
   });
   let page_id = 49654;
   $.ajax({
-    url: "https://interactivebrokers.com/webrest/relpages/pages-list-by-id?fileId="+page_id,
+    url: "#"+page_id,
     type: "GET",               
     dataType: "json",           
     success: function(response) {

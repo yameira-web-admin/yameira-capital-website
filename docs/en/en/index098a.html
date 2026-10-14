@@ -864,7 +864,7 @@ document.addEventListener('DOMContentLoaded', function(){
 				</div>
 			</div>
 			<div class="bandaid-skeleton" id="bandaidSkeleton">
-				<span class="visually-hidden">Loading prediction market dataâ€¦</span>
+				<span class="visually-hidden">Loading prediction market dataâ€?/span>
 				<span class="bandaid-skeleton-pill" aria-hidden="true"></span>
 			</div>
 		</div>
@@ -2237,7 +2237,7 @@ $(function() {
     	<div class="row">
         	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div id="mainBody"></div>
-				<form method="get" action="https://interactivebrokers.com/en/index.php">
+				<form method="get" action="#">
 				 <h4>Shortable Bonds for Mexico </h4>
 <p>No results were found for your search.</p><p>Please visit our <a href='trading/short-securities-availability.html' target='_self'>Short Securities Availability</a> page to try again.</p>				 <!--##################Dynamically created Index#########################-->
 				 <input type="hidden" value="mexico"                    name="cntry" />
@@ -2501,7 +2501,7 @@ $(function() {
   });
   let page_id = 4587;
   $.ajax({
-    url: "https://interactivebrokers.com/webrest/relpages/pages-list-by-id?fileId="+page_id,
+    url: "#"+page_id,
     type: "GET",               
     dataType: "json",           
     success: function(response) {

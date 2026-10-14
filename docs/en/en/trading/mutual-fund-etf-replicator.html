@@ -864,7 +864,7 @@ document.addEventListener('DOMContentLoaded', function(){
 				</div>
 			</div>
 			<div class="bandaid-skeleton" id="bandaidSkeleton">
-				<span class="visually-hidden">Loading prediction market dataâ€¦</span>
+				<span class="visually-hidden">Loading prediction market dataâ€?/span>
 				<span class="bandaid-skeleton-pill" aria-hidden="true"></span>
 			</div>
 		</div>
@@ -2269,8 +2269,8 @@ img.screen {
                 <p class="fw-600">When viewing the ETF, find the following data points:</p>
                 <ul class="paralist">
                     <li>ETF symbol</li>
-                    <li>Share Count â€” Based on the investment amount, this is the number of shares of the Mutual Fund that will be converted to the ETF.</li>
-                    <li>Investment percentage â€” A single ETF will display a 100% distribution while the compound ETF panel will show you how the investment amount is allocated to each ETF.</li>
+                    <li>Share Count â€?Based on the investment amount, this is the number of shares of the Mutual Fund that will be converted to the ETF.</li>
+                    <li>Investment percentage â€?A single ETF will display a 100% distribution while the compound ETF panel will show you how the investment amount is allocated to each ETF.</li>
                     <li>Full fund name (e.g., ISHARES RUSSEL TOP 200 GROW)</li>
                     <li>Fund Size</li>
                     <li>Fund Type (e.g., equity)</li>
@@ -2281,14 +2281,14 @@ img.screen {
                 <div align="center"><img loading="lazy" src="../../images/web/etf-replicator-performance.jpg" class="screen mt-20 mb-20" alt="Performance Analysis close up" border="0" /></div>
                 <p class="fw-600">The following fields are displayed:</p>
                 <ul class="paralist">
-                    <li>VALUE â€” The value of 100 shares of the Mutual Fund and the comparable quantity of the ETF.</li>
-                    <li>1YR PERF â€” The one year performance of both the Mutual Fund and the comparable quantity of the ETF.</li>
-                    <li>YIELD â€” The one year dividend yield of both the Mutual Fund and the comparable quantity of the ETF.</li>
-                    <li>ANNUAL EXPENSE RATIO â€” The estimated annual expenses for both the Mutual Fund and the ETF.</li>
-                    <li>FEE DIFF â€” The estimated management fee difference between the Mutual Fund and the ETF.</li>
-                    <li>CORRELATION â€” How closely the daily return of the comparable ETF correlates to the Mutual Fund.</li>
-                    <li>TRACK ERR â€” Tracking error is computed by comparing the daily return of the Mutual Fund and ETF over the period of the last year.</li>
-                    <li>SHARPE RATIO â€” Measure of excess return (risk premium) per unit of deviation.</li>
+                    <li>VALUE â€?The value of 100 shares of the Mutual Fund and the comparable quantity of the ETF.</li>
+                    <li>1YR PERF â€?The one year performance of both the Mutual Fund and the comparable quantity of the ETF.</li>
+                    <li>YIELD â€?The one year dividend yield of both the Mutual Fund and the comparable quantity of the ETF.</li>
+                    <li>ANNUAL EXPENSE RATIO â€?The estimated annual expenses for both the Mutual Fund and the ETF.</li>
+                    <li>FEE DIFF â€?The estimated management fee difference between the Mutual Fund and the ETF.</li>
+                    <li>CORRELATION â€?How closely the daily return of the comparable ETF correlates to the Mutual Fund.</li>
+                    <li>TRACK ERR â€?Tracking error is computed by comparing the daily return of the Mutual Fund and ETF over the period of the last year.</li>
+                    <li>SHARPE RATIO â€?Measure of excess return (risk premium) per unit of deviation.</li>
                 </ul>
                 <p class="text-small"><strong>Note:</strong> The one year performance and correlation values are calculated before expenses.</p>
                 <span class="id-drop"><span id="understand-compare"></span></span>
@@ -2604,7 +2604,7 @@ img.screen {
   });
   let page_id = 18981;
   $.ajax({
-    url: "https://interactivebrokers.com/webrest/relpages/pages-list-by-id?fileId="+page_id,
+    url: "#"+page_id,
     type: "GET",               
     dataType: "json",           
     success: function(response) {

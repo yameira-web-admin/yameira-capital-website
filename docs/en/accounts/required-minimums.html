@@ -2914,7 +2914,7 @@ S32.861,23.02,31.207,23.02z"/>                </svg>
   });
   let page_id = 56417;
   $.ajax({
-    url: "https://interactivebrokers.com/webrest/relpages/pages-list-by-id?fileId="+page_id,
+    url: "#"+page_id,
     type: "GET",               
     dataType: "json",           
     success: function(response) {

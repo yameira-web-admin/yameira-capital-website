@@ -884,7 +884,7 @@ section#page-title {
 				</div>
 			</div>
 			<div class="bandaid-skeleton" id="bandaidSkeleton">
-				<span class="visually-hidden">Loading prediction market dataâ€¦</span>
+				<span class="visually-hidden">Loading prediction market dataâ€?/span>
 				<span class="bandaid-skeleton-pill" aria-hidden="true"></span>
 			</div>
 		</div>
@@ -2305,7 +2305,7 @@ $(function() {
 			<p>Check 'Use non-base balances when available' to use the cash balance of a non-base currency in the Independent side of the client account when an investment requires that a non-base currency be purchased to acquire an asset for the model. For example, if a client has a GBP balance in their account and the model includes an asset that would be purchased using GBP, the client's existing GBP balance will be used to purchase the asset.</p>
 			<p>Check 'Transfer positions from Independent when available' to use any existing positions in the Independent side of a client account in the model where applicable. For example, if a client already holds Microsoft stock, and the model is slated to have a position in Microsoft, the client's existing position will transfer to the model to avoid creating unnecessary transactions and their associated fees, or inadvertently overweighting the client account. </p> 
 			<p>When done, click 'Create investment orders.'  At this point, the Model is funded with cash, and the account's cash balance has been reduced by the amount of the investment.</p>
-			<p>Because you have already defined your target percentage allocations, the investment amount is automatically allocated across the products you configured, and investment orders are created in the lower panel using the appropriate allocations. If you enabled the 'Transfer positions from Independent â€¦' checkbox described above, any positions transferred in from the Independent portion of your portfolio display 'TRANSFER' in the Action column. Orders with a BUY or SELL action may require a limit price.</p>
+			<p>Because you have already defined your target percentage allocations, the investment amount is automatically allocated across the products you configured, and investment orders are created in the lower panel using the appropriate allocations. If you enabled the 'Transfer positions from Independent â€? checkbox described above, any positions transferred in from the Independent portion of your portfolio display 'TRANSFER' in the Action column. Orders with a BUY or SELL action may require a limit price.</p>
                 <div align="center"><img src="../../images/2015/Models-Step5-fund.gif" class="Fund" alt="Step 5 Example" border="0" /></div> 
                 <br>
 			<p>Click 'Transmit All' or adjust orders and then transmit.  Alternatively, you can click the Save button. Selecting Save will execute any transfers that may exist from the Independent to the model, while new orders remain in the queue in case you would like to adjust the order and transmit at a later time.</p>
@@ -2679,7 +2679,7 @@ in the Independent section. </li>
   });
   let page_id = 20917;
   $.ajax({
-    url: "https://interactivebrokers.com/webrest/relpages/pages-list-by-id?fileId="+page_id,
+    url: "#"+page_id,
     type: "GET",               
     dataType: "json",           
     success: function(response) {

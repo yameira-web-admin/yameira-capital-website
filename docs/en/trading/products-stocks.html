@@ -3456,7 +3456,7 @@ div#compare-plans button.close:hover{
   });
   let page_id = 25371;
   $.ajax({
-    url: "https://interactivebrokers.com/webrest/relpages/pages-list-by-id?fileId="+page_id,
+    url: "#"+page_id,
     type: "GET",               
     dataType: "json",           
     success: function(response) {

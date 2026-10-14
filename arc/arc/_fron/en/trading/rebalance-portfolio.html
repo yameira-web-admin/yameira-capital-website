@@ -881,7 +881,7 @@ section#page-title {
 				</div>
 			</div>
 			<div class="bandaid-skeleton" id="bandaidSkeleton">
-				<span class="visually-hidden">Loading prediction market dataâ€¦</span>
+				<span class="visually-hidden">Loading prediction market dataâ€?/span>
 				<span class="bandaid-skeleton-pill" aria-hidden="true"></span>
 			</div>
 		</div>
@@ -2255,7 +2255,7 @@ $(function() {
                     <li>From Mosaic: Use the New Window dropdown and navigate to <strong>Advanced Trading Tools > More Advanced Tools</strong>, and then select <strong>Rebalance Portfolio</strong>.</li>
                     <li>From Classic TWS: Use the <strong>Trading Tools</strong> menu and from the Multi Contract section select <strong>Rebalance Portfolio</strong>.</li>
                 </ul>
-                <div align="center" class="img-pad"><img src="../../images/web/screen-rebalance-portfolio.jpg" alt="Rebalance Portfolio" border="0" loading="lazy" class="shadow" width="1800â€Š" height="1123"/></div>
+                <div align="center" class="img-pad"><img src="../../images/web/screen-rebalance-portfolio.jpg" alt="Rebalance Portfolio" border="0" loading="lazy" class="shadow" width="1800â€? height="1123"/></div>
             </div>
         </div>
     </div>
@@ -2273,19 +2273,19 @@ $(function() {
                 <h2>Contracts Panel</h2>
                 <p>Use the Contracts panel to change the position weighting of individual positions in your portfolio.</p>
                 <ul class="paralist">
-                    <li><strong>Set Targets From Current</strong> â€“ This button will resets the target percentages to use the actual percentage values.</li>
-                    <li><strong>Clear Targets</strong> â€“ This button clears all values in the target percentages column and saved targets.</li>
+                    <li><strong>Set Targets From Current</strong> â€?This button will resets the target percentages to use the actual percentage values.</li>
+                    <li><strong>Clear Targets</strong> â€?This button clears all values in the target percentages column and saved targets.</li>
                 </ul>
                 <span class="id-drop"><span id="02-03"></span></span>
                 <h3>Buttons Panel</h3>
                 <p>Check the "Armed" checkbox to transmit orders instantaneously when you click the Transmit All button. Otherwise you will received a confirmation message before all orders are transmitted. Other buttons allow you to:</p>
                 <ul class="paralist">
-                    <li><strong>Import</strong> â€“ Migrates contract row data to the contracts panel.</li>
-                    <li><strong>Export</strong> â€“ Exports all existing rows to a .CSV file.</li>
-                    <li><strong>Create Rebalance Orders</strong> â€“ creates orders to execute the model. Send orders from the Orders tab in the Trading panel at the bottom of the tool.</li>
-                    <li><strong>Rebalance to Max</strong> â€“ Creates rebalance orders based on max percentages.</li>
-                    <li><strong>Cancel All Orders</strong> â€“ Immediately discards all un-submitted orders and cancels all working orders in the Orders panel.</li>
-                    <li><strong>Transmit All</strong> â€“ When the tool is "armed" this button will immediately transmit all rebalance orders from the Order panel. When unarmed, you will receive a confirmation message asking if you want to submit all orders.</li>
+                    <li><strong>Import</strong> â€?Migrates contract row data to the contracts panel.</li>
+                    <li><strong>Export</strong> â€?Exports all existing rows to a .CSV file.</li>
+                    <li><strong>Create Rebalance Orders</strong> â€?creates orders to execute the model. Send orders from the Orders tab in the Trading panel at the bottom of the tool.</li>
+                    <li><strong>Rebalance to Max</strong> â€?Creates rebalance orders based on max percentages.</li>
+                    <li><strong>Cancel All Orders</strong> â€?Immediately discards all un-submitted orders and cancels all working orders in the Orders panel.</li>
+                    <li><strong>Transmit All</strong> â€?When the tool is "armed" this button will immediately transmit all rebalance orders from the Order panel. When unarmed, you will receive a confirmation message asking if you want to submit all orders.</li>
                 </ul>
                 <span class="id-drop"><span id="02-04"></span></span>
                 <h3>Trading Panel</h3>
@@ -2593,7 +2593,7 @@ $(function() {
   });
   let page_id = 20160;
   $.ajax({
-    url: "https://interactivebrokers.com/webrest/relpages/pages-list-by-id?fileId="+page_id,
+    url: "#"+page_id,
     type: "GET",               
     dataType: "json",           
     success: function(response) {
